@@ -1,0 +1,86 @@
+{
+  "institution": "Mendocino College",
+  "academicYear": "2024-2025",
+  "policies": [
+    {
+      "code": "DSPS",
+      "title": "Disability Support Services",
+      "content": "Mendocino College is committed to providing equal access to education. Students with disabilities who need accommodations should contact Disabled Student Programs & Services (DSPS) as soon as possible.",
+      "contact": "DSPS Office: (707) 468-3031 | Email: dsps@mendocino.edu",
+      "link": "https://www.mendocino.edu/dsps"
+    },
+    {
+      "code": "CONDUCT",
+      "title": "Student Code of Conduct",
+      "content": "Students are expected to conduct themselves respectfully and contribute to a positive learning environment. Disruptive behavior may result in disciplinary action.",
+      "contact": "Dean of Student Services: (707) 468-3100",
+      "link": "https://www.mendocino.edu/student-conduct"
+    },
+    {
+      "code": "HONESTY",
+      "title": "Academic Honesty",
+      "content": "Academic dishonesty includes cheating, plagiarism, and fabrication. Violations may result in failing the assignment or course and additional disciplinary action. All work must be original and properly cited.",
+      "contact": "Report concerns to instructor or Academic Dean",
+      "link": "https://www.mendocino.edu/academic-integrity"
+    },
+    {
+      "code": "NONDISCRIM",
+      "title": "Non-Discrimination",
+      "content": "Mendocino College does not discriminate based on race, color, national origin, sex, gender identity, disability, age, sexual orientation, or other protected characteristics.",
+      "contact": "Equal Opportunity Officer: (707) 468-3000",
+      "link": "https://www.mendocino.edu/non-discrimination"
+    },
+    {
+      "code": "TITLEIX",
+      "title": "Title IX and Sexual Harassment",
+      "content": "The college is committed to an environment free from sexual harassment and violence. All reports are taken seriously and support is provided to affected individuals.",
+      "contact": "Title IX Coordinator: (707) 468-3000 | titleix@mendocino.edu",
+      "link": "https://www.mendocino.edu/title-ix"
+    },
+    {
+      "code": "FERPA",
+      "title": "Student Privacy (FERPA)",
+      "content": "FERPA protects student education records. The college will not disclose personally identifiable information without consent, except as permitted by law. Students have the right to inspect their records.",
+      "contact": "Admissions & Records: (707) 468-3103",
+      "link": "https://www.mendocino.edu/ferpa"
+    },
+    {
+      "code": "MENTAL",
+      "title": "Mental Health and Wellness",
+      "content": "Your well-being matters. Mental health support is available through Student Health Services. Crisis resources: National Suicide Prevention Lifeline (988), Crisis Text Line (text HOME to 741741).",
+      "contact": "Student Health: (707) 468-3031 | Crisis: 988",
+      "link": "https://www.mendocino.edu/student-health"
+    },
+    {
+      "code": "TUTORING",
+      "title": "Tutoring and Academic Support",
+      "content": "Free tutoring is available through the Learning Center, including drop-in help, study groups, writing assistance, and online tutoring. Use these resources early and often!",
+      "contact": "Learning Center: (707) 468-3120 | tutoring@mendocino.edu",
+      "link": "https://www.mendocino.edu/tutoring"
+    },
+    {
+      "code": "TECH",
+      "title": "Technology Support",
+      "content": "IT Help Desk provides support for Canvas, email, and college technology. Laptop loaners and computer labs available for students needing technology access.",
+      "contact": "IT Help Desk: (707) 468-3155 | helpdesk@mendocino.edu",
+      "link": "https://www.mendocino.edu/it-support"
+    }
+  ],
+  "emergencyContacts": [
+    {
+      "service": "Campus Security",
+      "phone": "(707) 468-3100",
+      "available": "24/7"
+    },
+    {
+      "service": "National Suicide Prevention Lifeline",
+      "phone": "988",
+      "available": "24/7"
+    },
+    {
+      "service": "Crisis Text Line",
+      "phone": "Text HOME to 741741",
+      "available": "24/7"
+    }
+  ]
+}

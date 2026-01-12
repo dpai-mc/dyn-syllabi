@@ -1,0 +1,561 @@
+{
+  "metadata": {
+    "code": "CSC222",
+    "title": "Programming and Algorithms II",
+    "credits": "4",
+    "creditBreakdown": "3 lecture + 1 lab",
+    "format": "Hybrid (Online with weekly Zoom sessions)",
+    "term": "Spring 2025",
+    "prerequisite": "CSC221 (Introduction to Programming - Java) with grade of C or better",
+    "meetingInfo": {
+      "type": "Weekly Zoom",
+      "day": "Wednesdays",
+      "time": "6:00 PM - 7:30 PM",
+      "platform": "Zoom (link in Canvas)"
+    }
+  },
+  "description": {
+    "catalog": "This course continues the study of programming and problem-solving introduced in CSC221. Students transition from Java to C++ while exploring advanced topics including data structures (linked lists, stacks, queues, trees, graphs, hash tables), algorithm analysis, recursion, dynamic memory management, and software engineering practices.",
+    "expanded": "Emphasis is placed on understanding time and space complexity, implementing efficient algorithms, and applying object-oriented design principles. Students complete hands-on labs and programming projects that build progressively in complexity, culminating in a comprehensive capstone project."
+  },
+  "purpose": {
+    "why": "This course provides the essential foundation for computer science careers and advanced study. You'll learn how to choose and implement the right data structures for complex problems, analyze algorithm efficiency, and write professional-quality C++ code. These skills are crucial for technical interviews, software engineering roles, and upper-division CS courses.",
+    "beyond": "Beyond technical skills, you'll develop problem-solving strategies and the ability to evaluate tradeoffs between different algorithmic approaches—skills that transfer to any technical domain."
+  },
+  "slos": [
+    "Discuss the representation and use of primitive data types and built-in data structures",
+    "Describe common applications for each data structure in the topic outline",
+    "Analyze the time and space efficiency of algorithms using Big-O notation",
+    "Implement, test, and debug programs using dynamic structures and pointers",
+    "Identify and describe properties of variables including scope, persistence, and size",
+    "Implement object-oriented solutions using inheritance and polymorphism",
+    "Apply software engineering practices including documentation, testing, and version control"
+  ],
+  "schedule": {
+    "phases": [
+      {
+        "title": "Phase 1: Java to C++ Transition (Weeks 1-2)",
+        "description": "Build your C++ foundation by leveraging your Java knowledge",
+        "weeks": [
+          {
+            "weekNumber": 1,
+            "dates": "Jan 20-26",
+            "topics": [
+              "Course orientation & expectations",
+              "IDE setup (VS Code for Java AND C++)",
+              "Basic console programs: Hello World, I/O, data types",
+              "Syntax comparison: bool vs boolean, string vs String",
+              "cin/cout vs Scanner/System.out"
+            ],
+            "readings": "Savitch Ch. 1-2; Saylor CS102 Section 2.1-2.3",
+            "assignments": [
+              "Syllabus Quiz (5 pts)",
+              "Environment Check (required)",
+              "Pre-Session Quiz (5 pts)",
+              "Lab 1: Console Programs (40 pts)",
+              "Discussion: Setup & First Impressions (5 pts)"
+            ],
+            "deliverableDueDate": "Jan 29",
+            "notes": "Focus on simple console programs without classes"
+          },
+          {
+            "weekNumber": 2,
+            "dates": "Jan 27-Feb 2",
+            "topics": [
+              "Classes in C++ vs Java",
+              "Header files (.h) and implementation files (.cpp)",
+              "Constructors and destructors",
+              "Include guards",
+              "const correctness",
+              "Student class conversion example"
+            ],
+            "readings": "Savitch Ch. 10; Saylor CS102 Section 2.4-2.6; 43-min Student Class Video",
+            "assignments": [
+              "Pre-Session Quiz (5 pts)",
+              "Lab 2: Student Class (40 pts)",
+              "Discussion: Classes Comparison (5 pts)"
+            ],
+            "deliverableDueDate": "Feb 5",
+            "notes": "Header/implementation split introduced"
+          }
+        ]
+      },
+      {
+        "title": "Phase 2: C++ Fundamentals (Weeks 3-7)",
+        "description": "Master pointers, memory, and core C++ concepts",
+        "weeks": [
+          {
+            "weekNumber": 3,
+            "dates": "Feb 3-9",
+            "topics": [
+              "Functions and parameter passing",
+              "Pass-by-value vs pass-by-reference",
+              "Reference parameters (&)",
+              "const parameters",
+              "Stack vs heap introduction"
+            ],
+            "readings": "Savitch Ch. 3-4",
+            "assignments": [
+              "Pre-Session Quiz (5 pts)",
+              "Lab 3: Function Practice (40 pts)",
+              "Programming Assignment 1: Multi-Function Calculator (60 pts)",
+              "Discussion: When to Use Pass-by-Reference (5 pts)"
+            ],
+            "deliverableDueDate": "Feb 12",
+            "notes": "First major programming assignment"
+          },
+          {
+            "weekNumber": 4,
+            "dates": "Feb 10-16",
+            "topics": [
+              "Pointers syntax and operations",
+              "Dynamic memory allocation (new/delete)",
+              "References vs pointers",
+              "Memory leaks and dangling pointers",
+              "nullptr",
+              "RAII introduction"
+            ],
+            "readings": "Savitch Ch. 9",
+            "assignments": [
+              "Pre-Session Quiz (5 pts)",
+              "Lab 4: Pointer Practice (40 pts)",
+              "Discussion: Memory Management (5 pts)"
+            ],
+            "deliverableDueDate": "Feb 19",
+            "notes": "Critical foundation for data structures"
+          },
+          {
+            "weekNumber": 5,
+            "dates": "Feb 17-23",
+            "topics": [
+              "C-style arrays vs std::vector",
+              "C-strings vs std::string",
+              "String manipulation",
+              "Multi-dimensional arrays",
+              "Array-based algorithms"
+            ],
+            "readings": "Savitch Ch. 7-8",
+            "assignments": [
+              "Pre-Session Quiz (5 pts)",
+              "Lab 5: String Utilities (40 pts)",
+              "Programming Assignment 2: Text Processing Tool (60 pts)",
+              "Discussion: Arrays vs Vectors (5 pts)"
+            ],
+            "deliverableDueDate": "Feb 26",
+            "notes": "String processing skills essential"
+          },
+          {
+            "weekNumber": 6,
+            "dates": "Feb 24-Mar 2",
+            "topics": [
+              "Inheritance in C++",
+              "Virtual functions and polymorphism",
+              "Pure virtual functions (abstract classes)",
+              "Virtual destructors",
+              "Override keyword",
+              "SOLID principles"
+            ],
+            "readings": "Savitch Ch. 15",
+            "assignments": [
+              "Pre-Session Quiz (5 pts)",
+              "Lab 6: Shape Hierarchy (40 pts)",
+              "Discussion: Polymorphism Applications (5 pts)"
+            ],
+            "deliverableDueDate": "Mar 5",
+            "notes": "OOP mastery"
+          },
+          {
+            "weekNumber": 7,
+            "dates": "Mar 3-9",
+            "topics": [
+              "Recursive function structure",
+              "Base cases and recursive cases",
+              "Call stack visualization",
+              "Classic algorithms (factorial, Fibonacci, Tower of Hanoi)",
+              "Recursion vs iteration"
+            ],
+            "readings": "Carrano Ch. 2",
+            "assignments": [
+              "Pre-Session Quiz (5 pts)",
+              "Lab 7: Recursive Algorithms (40 pts)",
+              "Programming Assignment 3: Recursive File System (60 pts)",
+              "Discussion: Recursion vs Iteration (5 pts)"
+            ],
+            "deliverableDueDate": "Mar 12",
+            "notes": "Essential for trees and graphs"
+          }
+        ]
+      },
+      {
+        "title": "Phase 3: Algorithm Analysis & Data Structures (Weeks 8-14)",
+        "description": "Implement and analyze fundamental data structures",
+        "weeks": [
+          {
+            "weekNumber": 8,
+            "dates": "Mar 10-16",
+            "topics": [
+              "Big-O notation",
+              "Time and space complexity",
+              "Best, average, worst-case analysis",
+              "Common complexity classes",
+              "Empirical performance measurement"
+            ],
+            "readings": "Carrano Ch. 9",
+            "assignments": [
+              "Pre-Session Quiz (5 pts)",
+              "Lab 8: Complexity Benchmarking (40 pts)",
+              "Discussion: Real-World Complexity (5 pts)"
+            ],
+            "deliverableDueDate": "Mar 19",
+            "notes": "Foundation for algorithm selection"
+          },
+          {
+            "weekNumber": 9,
+            "dates": "Mar 17-23",
+            "topics": [
+              "SPRING BREAK - NO CLASS"
+            ],
+            "readings": "None - enjoy your break!",
+            "assignments": [
+              "Use this time to catch up on incomplete work"
+            ],
+            "deliverableDueDate": null,
+            "notes": "Rest and recharge!"
+          },
+          {
+            "weekNumber": 10,
+            "dates": "Mar 24-30",
+            "topics": [
+              "Singly and doubly linked lists",
+              "Node-based structures",
+              "List operations (insert, delete, traverse)",
+              "Dynamic memory in lists",
+              "Array vs linked list comparison"
+            ],
+            "readings": "Carrano Ch. 4",
+            "assignments": [
+              "Pre-Session Quiz (5 pts)",
+              "Lab 9: Linked List Implementation (40 pts)",
+              "Programming Assignment 4: Playlist Manager (60 pts)",
+              "Discussion: When to Use Linked Lists (5 pts)"
+            ],
+            "deliverableDueDate": "Apr 2",
+            "notes": "First dynamic data structure"
+          },
+          {
+            "weekNumber": 11,
+            "dates": "Mar 31-Apr 6",
+            "topics": [
+              "Stack ADT (LIFO)",
+              "Queue ADT (FIFO)",
+              "Array vs linked implementations",
+              "Circular queues",
+              "Expression evaluation",
+              "Syntax checking"
+            ],
+            "readings": "Carrano Ch. 6-7",
+            "assignments": [
+              "Pre-Session Quiz (5 pts)",
+              "Lab 10: Stack/Queue Applications (40 pts)",
+              "Discussion: Stack & Queue Use Cases (5 pts)"
+            ],
+            "deliverableDueDate": "Apr 9",
+            "notes": "Practical applications emphasized"
+          },
+          {
+            "weekNumber": 12,
+            "dates": "Apr 7-13",
+            "topics": [
+              "Binary tree structure",
+              "Binary search trees (BST)",
+              "Tree traversals (inorder, preorder, postorder, level-order)",
+              "BST operations",
+              "Tree balancing concepts",
+              "AVL trees introduction"
+            ],
+            "readings": "Carrano Ch. 15-16",
+            "assignments": [
+              "Pre-Session Quiz (5 pts)",
+              "Lab 11: BST Implementation (40 pts)",
+              "Programming Assignment 5: Word Frequency Analyzer (60 pts)",
+              "Discussion: Tree Applications (5 pts)"
+            ],
+            "deliverableDueDate": "Apr 16",
+            "notes": "Complex but powerful structure"
+          },
+          {
+            "weekNumber": 13,
+            "dates": "Apr 14-20",
+            "topics": [
+              "Hash functions and hashing",
+              "Collision resolution (chaining, open addressing)",
+              "Linear and quadratic probing",
+              "Load factor and rehashing",
+              "Hash table performance",
+              "std::unordered_map"
+            ],
+            "readings": "Carrano Ch. 18",
+            "assignments": [
+              "Pre-Session Quiz (5 pts)",
+              "Lab 12: Hash Table Implementation (40 pts)",
+              "Discussion: Hash Function Design (5 pts)"
+            ],
+            "deliverableDueDate": "Apr 23",
+            "notes": "Fast lookup structure"
+          },
+          {
+            "weekNumber": 14,
+            "dates": "Apr 21-27",
+            "topics": [
+              "Graph representations (adjacency matrix, list)",
+              "Breadth-first search (BFS)",
+              "Depth-first search (DFS)",
+              "Shortest path problems",
+              "Topological sorting",
+              "Graph applications"
+            ],
+            "readings": "Carrano Ch. 20",
+            "assignments": [
+              "Pre-Session Quiz (5 pts)",
+              "Lab 13: Graph Traversals (40 pts)",
+              "Programming Assignment 6: Route Planner (60 pts)",
+              "Discussion: Graph Use Cases (5 pts)"
+            ],
+            "deliverableDueDate": "Apr 30",
+            "notes": "Final major data structure"
+          }
+        ]
+      },
+      {
+        "title": "Phase 4: Advanced Topics & Capstone (Weeks 15-17)",
+        "description": "Polish your skills and complete comprehensive project",
+        "weeks": [
+          {
+            "weekNumber": 15,
+            "dates": "Apr 28-May 4",
+            "topics": [
+              "Advanced sorting (merge sort, quicksort, heapsort)",
+              "Divide-and-conquer paradigm",
+              "Greedy algorithms introduction",
+              "Dynamic programming introduction",
+              "Software engineering practices",
+              "Unit testing with Catch2",
+              "Version control with Git"
+            ],
+            "readings": "Carrano Ch. 11-12; Testing/Documentation resources",
+            "assignments": [
+              "Pre-Session Quiz (5 pts)",
+              "Lab 14: Sorting Benchmark (40 pts)",
+              "Lab 15: TDD Practice (40 pts)",
+              "Discussion: SE Importance (5 pts)"
+            ],
+            "deliverableDueDate": "May 7",
+            "notes": "Capstone project introduced"
+          },
+          {
+            "weekNumber": 16,
+            "dates": "May 5-11",
+            "topics": [
+              "Capstone project development",
+              "Integration of multiple data structures",
+              "Algorithm selection and optimization",
+              "Code review and refinement"
+            ],
+            "readings": "None - project work",
+            "assignments": [
+              "Pre-Session Quiz (5 pts) - Project planning",
+              "Capstone Proposal (10 pts)",
+              "Progress Check-in (10 pts)",
+              "Discussion: Project Challenges (5 pts)"
+            ],
+            "deliverableDueDate": "May 14",
+            "notes": "Zoom session: Project work time with consultations"
+          },
+          {
+            "weekNumber": 17,
+            "dates": "May 12-18",
+            "topics": [
+              "NO NEW CONTENT - Capstone completion only",
+              "Code refinement and testing",
+              "Documentation completion",
+              "Presentation preparation"
+            ],
+            "readings": "None",
+            "assignments": [
+              "Capstone Project Final Submission (200 pts)",
+              "  - Complete source code",
+              "  - Comprehensive documentation",
+              "  - Test cases and results",
+              "  - 10-minute video presentation OR live demo"
+            ],
+            "deliverableDueDate": "May 18",
+            "notes": "Optional: Live presentations during Zoom session"
+          }
+        ]
+      }
+    ]
+  },
+  "materials": {
+    "required": [
+      {
+        "type": "Textbook",
+        "title": "Problem Solving with C++",
+        "author": "Walter Savitch",
+        "edition": "10th Edition or newer",
+        "isbn": "978-0134448282",
+        "cost": "$100-150 (new) or $40-80 (used/rental)",
+        "notes": "Available as eBook. 9th edition acceptable.",
+        "link": null
+      }
+    ],
+    "recommended": [
+      {
+        "type": "Textbook",
+        "title": "Data Abstraction & Problem Solving with C++",
+        "author": "Frank Carrano & Timothy Henry",
+        "edition": "7th Edition",
+        "isbn": "978-0134463971",
+        "notes": "Optional supplement for data structures"
+      }
+    ],
+    "free": [
+      {
+        "type": "Software",
+        "title": "Visual Studio Code",
+        "link": "https://code.visualstudio.com/",
+        "notes": "Free IDE - setup instructions in Week 1"
+      },
+      {
+        "type": "Software",
+        "title": "C++ Compiler (MinGW/Clang/GCC)",
+        "link": null,
+        "notes": "Platform-specific - setup instructions in Week 1"
+      },
+      {
+        "type": "Online Resource",
+        "title": "Saylor Academy CS102",
+        "link": "https://learn.saylor.org/course/cs102",
+        "notes": "Free supplemental C++ course"
+      },
+      {
+        "type": "Reference",
+        "title": "LearnCpp.com",
+        "link": "https://www.learncpp.com/",
+        "notes": "Comprehensive free C++ tutorial"
+      },
+      {
+        "type": "Reference",
+        "title": "CPlusPlus.com",
+        "link": "https://www.cplusplus.com/",
+        "notes": "C++ language reference"
+      }
+    ]
+  },
+  "importantDates": [
+    { "date": "Jan 20", "event": "First day of class", "type": "start" },
+    { "date": "Jan 27", "event": "Last day to add without instructor signature", "type": "deadline" },
+    { "date": "Feb 10", "event": "Last day to drop without 'W'", "type": "deadline" },
+    { "date": "Mar 17-23", "event": "Spring Break - NO CLASS", "type": "break" },
+    { "date": "Apr 18", "event": "Last day to withdraw with 'W'", "type": "deadline" },
+    { "date": "May 18", "event": "Capstone projects due; Last day of instruction", "type": "end" }
+  ],
+  "workload": {
+    "weeklyHours": "12 hours per week (average)",
+    "breakdown": [
+      { "activity": "Zoom session", "hours": 1.5 },
+      { "activity": "Asynchronous learning (videos, reading, interactive modules)", "hours": "3-4" },
+      { "activity": "Lab work", "hours": "2-3" },
+      { "activity": "Programming assignments (on assignment weeks)", "hours": "4-6" },
+      { "activity": "Quizzes and discussions", "hours": "0.5-1" }
+    ],
+    "note": "Time commitment varies by week. Programming assignment weeks require 10-14 hours. Non-assignment weeks require 8-10 hours."
+  },
+  "grading": {
+    "scale": [
+      { "grade": "A", "min": 90, "max": 100, "description": "Excellent" },
+      { "grade": "B", "min": 80, "max": 89, "description": "Good" },
+      { "grade": "C", "min": 70, "max": 79, "description": "Satisfactory" },
+      { "grade": "D", "min": 60, "max": 69, "description": "Passing" },
+      { "grade": "F", "min": 0, "max": 59, "description": "Not passing" }
+    ],
+    "components": [
+      {
+        "category": "Weekly Labs",
+        "weight": 30,
+        "details": "15 labs × 40 points each = 600 points",
+        "description": "Hands-on programming during/after Zoom sessions"
+      },
+      {
+        "category": "Programming Assignments",
+        "weight": 30,
+        "details": "6 projects × 60 points each = 360 points",
+        "description": "Multi-week scaffolded projects"
+      },
+      {
+        "category": "Pre-Session Quizzes",
+        "weight": 10,
+        "details": "17 quizzes × 5 points each = 85 points",
+        "description": "Completion-based diagnostic quizzes"
+      },
+      {
+        "category": "Discussion Participation",
+        "weight": 10,
+        "details": "17 discussions × 5 points each = 85 points",
+        "description": "Weekly reflection posts and peer responses"
+      },
+      {
+        "category": "Capstone Project",
+        "weight": 20,
+        "details": "1 comprehensive project = 200 points",
+        "description": "Final project demonstrating course mastery"
+      }
+    ],
+    "bonusOpportunities": "Up to 10% bonus for early submissions, helping peers, and exceptional work",
+    "totalPoints": 1330,
+    "passingGrade": "C (70%) required for CSC majors and to progress to next course"
+  },
+  "policies": {
+    "attendance": "Weekly Zoom sessions are strongly recommended but not mandatory. Students who attend regularly perform significantly better. Watch recordings if you must miss a session.",
+    "lateWork": "Accepted up to 3 days late with 10% deduction per day. After 3 days: 0 points unless prior arrangement made with instructor.",
+    "makeupWork": "Pre-session quizzes cannot be made up (completion-based). Labs and assignments can be completed late with penalty. Contact instructor within 48 hours of emergency.",
+    "academicIntegrity": "All code must be your own work. Discussing concepts is allowed; copying code is not. AI assistance (ChatGPT, Copilot) must be disclosed. Plagiarism = 0 on assignment + possible course failure.",
+    "collaboration": "Pair programming during Zoom labs is encouraged. Discussion of concepts is welcome. Submitting identical code is not acceptable."
+  },
+  "successTips": [
+    "Complete asynchronous work BEFORE Zoom sessions - critical for flipped classroom",
+    "Start programming assignments early - don't wait until deadline week",
+    "Attend weekly Zoom sessions - hands-on practice with instructor support is invaluable",
+    "Use discussion boards - teaching others reinforces your understanding",
+    "Set up development environment in Week 1 - technical issues compound quickly",
+    "Test code frequently - debug in small increments, not all at once",
+    "Read compiler errors carefully - they're trying to help!",
+    "Practice regularly - programming improves with consistent practice, not cramming"
+  ],
+  "additionalResources": [
+    {
+      "title": "LearnCpp.com",
+      "url": "https://www.learncpp.com/",
+      "description": "Free comprehensive C++ tutorial"
+    },
+    {
+      "title": "CPlusPlus.com",
+      "url": "https://www.cplusplus.com/",
+      "description": "C++ reference and documentation"
+    },
+    {
+      "title": "Visualgo",
+      "url": "https://visualgo.net/",
+      "description": "Data structure and algorithm visualizations"
+    },
+    {
+      "title": "Big-O Cheat Sheet",
+      "url": "https://www.bigocheatsheet.com/",
+      "description": "Algorithm complexity reference"
+    },
+    {
+      "title": "Stack Overflow",
+      "url": "https://stackoverflow.com/questions/tagged/c++",
+      "description": "Programming Q&A community"
+    }
+  ]
+}
