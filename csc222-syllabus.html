@@ -574,15 +574,146 @@
             tab.innerHTML = html;
         }
 
-        function renderOutlineTab() {
-            // Same as previous template - renders schedule from courseData
-            // ... [use exact code from previous template]
-        }
 
-        function renderPoliciesTab() {
-            // Same as previous template - renders policies
-            // ... [use exact code from previous template]
+
+function renderOutlineTab() {
+    const tab = document.getElementById('outline-tab');
+    let html = `<section><h2>Course Schedule</h2>`;
+    
+    if (courseData.schedule && courseData.schedule.phases) {
+        courseData.schedule.phases.forEach(phase => {
+            html += `<div class="phase-container">`;
+            html += `<h3>${phase.title}</h3>`;
+            html += `<p>${phase.description}</p>`;
+            
+            phase.weeks.forEach(week => {
+                html += `<div class="week-item">`;
+                html += `<div class="week-header">`;
+                html += `<strong>Week ${week.weekNumber}</strong> (${week.dates})`;
+                html += `</div>`;
+                
+                html += `<div class="week-content">`;
+                
+                // Topics
+                if (week.topics && week.topics.length > 0) {
+                    html += `<h4>Topics:</h4><ul>`;
+                    week.topics.forEach(topic => {
+                        html += `<li>${topic}</li>`;
+                    });
+                    html += `</ul>`;
+                }
+                
+                // Readings
+                if (week.readings) {
+                    html += `<p><strong>Readings:</strong> ${week.readings}</p>`;
+                }
+                
+                // Assignments
+                if (week.assignments && week.assignments.length > 0) {
+                    html += `<h4>Assignments:</h4><ul>`;
+                    week.assignments.forEach(assignment => {
+                        html += `<li>${assignment}</li>`;
+                    });
+                    html += `</ul>`;
+                }
+                
+                // Due date
+                if (week.deliverableDueDate) {
+                    html += `<p><strong>Due Date:</strong> ${week.deliverableDueDate}</p>`;
+                }
+                
+                // Notes
+                if (week.notes) {
+                    html += `<p><em>${week.notes}</em></p>`;
+                }
+                
+                html += `</div></div>`;
+            });
+            
+            html += `</div>`;
+        });
+    }
+    
+    html += `</section>`;
+    tab.innerHTML = html;
+}
+
+function renderPoliciesTab() {
+    const tab = document.getElementById('policies-tab');
+    let html = `<section>`;
+    
+    // Course Policies
+    html += `<h2>Course Policies</h2>`;
+    html += `<div class="slo-list">`;
+    
+    if (courseData.policies) {
+        if (courseData.policies.attendance) {
+            html += `<h3>Attendance & Participation</h3>`;
+            html += `<p>${courseData.policies.attendance}</p>`;
         }
+        
+        if (courseData.policies.lateWork) {
+            html += `<h3>Late Work Policy</h3>`;
+            html += `<p>${courseData.policies.lateWork}</p>`;
+        }
+        
+        if (courseData.policies.makeupWork) {
+            html += `<h3>Makeup Work</h3>`;
+            html += `<p>${courseData.policies.makeupWork}</p>`;
+        }
+        
+        if (courseData.policies.academicIntegrity) {
+            html += `<h3>Academic Integrity</h3>`;
+            html += `<p>${courseData.policies.academicIntegrity}</p>`;
+        }
+        
+        if (courseData.policies.collaboration) {
+            html += `<h3>Collaboration Guidelines</h3>`;
+            html += `<p>${courseData.policies.collaboration}</p>`;
+        }
+    }
+    
+    html += `</div>`;
+    
+    // College Policies
+    html += `<h2 class="page-break">College Policies & Resources</h2>`;
+    
+    if (policiesData && policiesData.policies) {
+        policiesData.policies.forEach(policy => {
+            html += `<div class="collapsible" role="button" tabindex="0" aria-expanded="false">`;
+            html += `<strong>${policy.title}</strong>`;
+            html += `</div>`;
+            html += `<div class="collapsible-content">`;
+            html += `<p>${policy.content}</p>`;
+            if (policy.contact) {
+                html += `<p><strong>Contact:</strong> ${policy.contact}</p>`;
+            }
+            if (policy.link) {
+                html += `<p><a href="${policy.link}" target="_blank" rel="noopener" style="color: #1e3a8a;">More information →</a></p>`;
+            }
+            html += `</div>`;
+        });
+    }
+    
+    // Emergency Contacts
+    if (policiesData && policiesData.emergencyContacts) {
+        html += `<h2>Emergency Contacts</h2>`;
+        html += `<div class="phase-container">`;
+        html += `<ul>`;
+        policiesData.emergencyContacts.forEach(contact => {
+            html += `<li><strong>${contact.service}:</strong> ${contact.phone}`;
+            if (contact.available) {
+                html += ` (${contact.available})`;
+            }
+            html += `</li>`;
+        });
+        html += `</ul></div>`;
+    }
+    
+    html += `</section>`;
+    tab.innerHTML = html;
+}
+
 
         function initializeTabs() {
             const tabButtons = document.querySelectorAll('.nav-tab');
