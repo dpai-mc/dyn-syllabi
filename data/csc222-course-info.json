@@ -1,0 +1,203 @@
+{
+  "courseInfo": {
+    "code": "CSC222",
+    "title": "Programming and Algorithms II",
+    "department": "Computer Science",
+    "instructor": "David Pai, PhD",
+    "credits": {
+      "total": 4,
+      "lecture": 3,
+      "lab": 3,
+      "description": "4 units (3 hours lecture + 3 hours lab per week)"
+    },
+    "duration": {
+      "weeks": 17,
+      "totalContactHours": 102,
+      "totalOutOfClassHours": 102,
+      "totalStudentLearningHours": 204
+    },
+    "catalogDescription": "This course will explore the application of software engineering techniques, data structures, and associated algorithms to the design and development of computer programs. Programs are written in an appropriate and modern object-oriented language.",
+    "prerequisites": {
+      "required": [
+        {
+          "code": "CSC221",
+          "title": "Programming and Algorithms I"
+        }
+      ]
+    },
+    "transferability": {
+      "uc": true,
+      "csu": true,
+      "status": "Transferable to both UC and CSU"
+    },
+    "associatedPrograms": [
+      {
+        "name": "Associate in Science in Computer Science for Transfer",
+        "awardType": "AS-T"
+      },
+      {
+        "name": "Information Technology",
+        "awardType": "AS"
+      }
+    ]
+  },
+  "deliveryFormat": {
+    "modality": "Hybrid/Online",
+    "description": "Flipped classroom with weekly synchronous Zoom sessions",
+    "zoomMeetings": {
+      "day": "Wednesday",
+      "time": "2:00 - 3:20 PM",
+      "duration": "90 minutes",
+      "url": "https://mendocino-edu.zoom.us/j/82217358943?pwd=sx5BWFds63sSOT95n0kqPPTEz5Xlbq.1"
+    },
+    "weeklyStructure": {
+      "preZoom": {
+        "hours": "8-10 hours",
+        "activities": [
+          "Interactive learning module (primary content)",
+          "Video walkthrough or reference materials (optional)",
+          "Pre-session quiz (completion grade, due 2 hours before Zoom)"
+        ]
+      },
+      "zoomSession": {
+        "duration": "90 minutes",
+        "breakdown": [
+          "15-20 min: Q&A on pre-work, address quiz trouble spots",
+          "10-15 min: Instructor demo or walkthrough",
+          "50-60 min: Lab work (pairs/groups in breakout rooms)",
+          "5-10 min: Wrap-up and next week preview"
+        ]
+      },
+      "postZoom": {
+        "hours": "2-3 hours",
+        "activities": [
+          "Complete lab if unfinished",
+          "Programming assignments (on assignment weeks)",
+          "Discussion board reflection"
+        ]
+      }
+    }
+  },
+  "studentLearningOutcomes": [
+    {
+      "number": 1,
+      "text": "Discuss the representation and use of primitive data types and built-in data structures.",
+      "expectedPerformance": "75%",
+      "note": "Official CSLO from approved COR"
+    },
+    {
+      "number": 2,
+      "text": "Write programs that implement and use each of the following data structures: arrays, records, strings, linked lists, stacks, queues, and hash tables.",
+      "expectedPerformance": "75%",
+      "note": "Official CSLO from approved COR"
+    },
+    {
+      "number": 3,
+      "text": "Choose the appropriate data structure for modeling a given problem.",
+      "expectedPerformance": "75%",
+      "note": "Official CSLO from approved COR"
+    },
+    {
+      "number": 4,
+      "text": "Compare iterative and recursive solutions for elementary problems such as factorial.",
+      "expectedPerformance": "75%",
+      "note": "Official CSLO from approved COR"
+    },
+    {
+      "number": 5,
+      "text": "Identify and describe the properties of a variable such as its associated address, value, scope, persistence, and size.",
+      "expectedPerformance": "75%",
+      "note": "Official CSLO from approved COR"
+    },
+    {
+      "number": 6,
+      "text": "Describe how the class mechanism supports encapsulation and information hiding.",
+      "expectedPerformance": "75%",
+      "note": "Official CSLO from approved COR"
+    },
+    {
+      "number": 7,
+      "text": "Compare and contrast object-oriented analysis and design with structured analysis and design.",
+      "expectedPerformance": "75%",
+      "note": "Official CSLO from approved COR"
+    }
+  ],
+  "courseObjectives": [
+    "Write programs that use each of the following data structures: arrays, records, strings, linked-lists, stacks, queues and hash tables.",
+    "Implement, test and debug simple recursive functions and procedures.",
+    "Evaluate tradeoffs in lifetime management (reference counting vs garbage collection).",
+    "Explain how abstraction mechanisms support the creation of reusable software components.",
+    "Design, implement, test, and debug simple programs in an object-oriented programming language.",
+    "Compare and contrast object-oriented analysis and design with structured analysis and design."
+  ],
+  "grading": {
+    "components": [
+      {
+        "name": "Weekly Labs",
+        "count": 15,
+        "percentage": 30,
+        "description": "Hands-on programming practice"
+      },
+      {
+        "name": "Programming Assignments",
+        "count": 6,
+        "percentage": 30,
+        "description": "Larger scaffolded projects"
+      },
+      {
+        "name": "Pre-Session Quizzes",
+        "count": 17,
+        "percentage": 10,
+        "description": "Completion-based diagnostic"
+      },
+      {
+        "name": "Discussion Participation",
+        "percentage": 10,
+        "description": "Weekly reflection posts"
+      },
+      {
+        "name": "Capstone Project",
+        "percentage": 20,
+        "description": "Comprehensive final project"
+      }
+    ],
+    "bonusOpportunities": "Up to 10% for early submissions, helping peers, exceptional work",
+    "scale": "Standard letter grade scale (A-F)"
+  },
+  "requiredMaterials": {
+    "textbooks": [
+      {
+        "author": "Malik, D.",
+        "title": "C++ Programming: Program Design Including Data Structures, 8th Ed",
+        "publisher": "Cengage",
+        "year": 2017,
+        "isbn": "978-1337117562",
+        "required": true
+      },
+      {
+        "author": "Frank Carrano, Timothy Henry",
+        "title": "Data Structures and Algorithms with C++: Walls and Mirrors, 8th Edition",
+        "publisher": "Pearson",
+        "year": 2025,
+        "isbn": "978-0138122805",
+        "required": false,
+        "note": "Alternative reference"
+      }
+    ],
+    "technology": [
+      "Computer with ability to install and run development software",
+      "Visual Studio Code (VS Code) IDE",
+      "C++ compiler (MinGW for Windows, GCC for Linux/Mac)",
+      "Java JDK (for comparison in early weeks)",
+      "Stable internet connection for Zoom sessions",
+      "Webcam and microphone for Zoom participation"
+    ],
+    "otherRequirements": []
+  },
+  "aiPolicy": {
+    "approach": "Conditional",
+    "statement": "Generative AI can be used in specific assignments in this course. Students will receive guidelines for using AI responsibly, with clear expectations on what is permitted and how to cite your usage. The use of AI tools beyond the guidelines of each assignment is considered plagiarism in this course, and disciplinary actions fall under the plagiarism guidelines.",
+    "rationale": "Programming courses benefit from strategic AI use for learning C++ syntax and debugging, but core algorithmic thinking and problem-solving skills must be developed independently.",
+    "citationRequired": true
+  }
+}

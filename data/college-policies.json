@@ -1,0 +1,89 @@
+{
+  "disability": {
+    "title": "Students with Disabilities",
+    "content": "The College is committed to creating a learning environment that meets the needs of its diverse student body. If you anticipate or experience any barriers to learning in this course, please feel welcome to discuss your concerns with me. If you have a disability, or think you may have a disability, you may also want to meet with a Counselor at the Disability Resource Center to begin this conversation or request an official accommodation.",
+    "contact": {
+      "phone": "(707) 468-3031",
+      "email": "Department-drc@mendocino.edu"
+    },
+    "closingNote": "It is my goal to create a learning experience that is as accessible as possible."
+  },
+  "financialAid": {
+    "title": "Financial Aid",
+    "intro": "Don't miss out on available financial aid—visit https://www.mendocino.edu/financial-aid to apply today!",
+    "sapRequirements": "To receive financial aid, you must meet the Satisfactory Academic Progress (SAP) requirements. Making satisfactory academic progress means that you are maintaining a 2.0 GPA, you have successfully completed 67% of your coursework, and you will graduate within 150% of the units required for your program. If you do not maintain SAP, you may lose your financial aid.",
+    "appeal": "Students who do not meet satisfactory academic progress may appeal. Visit the Financial Aid Satisfactory Academic Progress website for more information.",
+    "links": {
+      "apply": "https://www.mendocino.edu/financial-aid",
+      "sapInfo": "https://www.mendocino.edu/enrollment-services/financial-aid/financial-aid-policies#tabs-30396",
+      "contact": "mailto:financialaid@mendocino.edu"
+    }
+  },
+  "eagleConnect": {
+    "title": "Eagle Connect Student Success Network",
+    "intro": "I care about your success! This course is part of the Eagle Connect Student Success Network. I will use Eagle Connect to schedule my student office hours through the calendar feature (syncs to Outlook and Google) and use Eagle Connect email notifications to communicate with you about your academic progress.",
+    "notifications": "Throughout the term, you may receive notifications regarding your attendance and academic performance. To benefit, it is important that you check your Eagle Connect Dashboard or school email regularly and follow through on my recommended actions. You may also be contacted directly by a Retention Specialist or Counselor.",
+    "access": "To access Eagle Connect, simply log into My Mendo, go to the Student Resources card, and click on Eagle Connect. You can even set up a student profile. If you need assistance, you can use the \"Raised Hand\" feature on the top right-hand corner of your dashboard. This allows you to connect with services Mendocino offers privately."
+  },
+  "academicHonesty": {
+    "title": "Student Conduct & Academic Honesty",
+    "intro": "You can succeed in this class through your own effort and collaboration with peers. Do not endanger your success by engaging in academic dishonesty.",
+    "policies": [
+      {
+        "title": "Student Conduct Guidelines",
+        "url": "https://www.mendocino.edu/sites/default/files/docs/BOT/Procedures/ap5500.1_.pdf",
+        "code": "AP 5500.1"
+      },
+      {
+        "title": "Academic Honesty Policy",
+        "url": "https://www.mendocino.edu/sites/default/files/docs/BOT/Procedures/ap5500.2.pdf",
+        "code": "AP 5500.2"
+      }
+    ],
+    "note": "These standards will be the expectation in this class."
+  },
+  "studentResources": {
+    "title": "Student Resources",
+    "links": [
+      {
+        "title": "Student Resources one-page guide",
+        "url": "https://mendocinocollege-my.sharepoint.com/:w:/g/personal/rmontes_mendocino_edu/EXsIVHBUzapFt8HHipDwbecB1u_mMiBL87F9YJJRXrbQyw?e=VKaZRT",
+        "language": "English"
+      },
+      {
+        "title": "Ayuda para estudiantes",
+        "url": "https://mendocinocollege-my.sharepoint.com/:w:/g/personal/rmontes_mendocino_edu/EcBFAFTUzxlAgOXegs0Bys0B1wpBYRlPyVcseBRNvR874Q?e=6qqc9b",
+        "language": "Spanish"
+      }
+    ]
+  },
+  "classroomCulture": {
+    "title": "Classroom Culture & Mutual Respect",
+    "sections": [
+      {
+        "subtitle": "Names and Gender Identity",
+        "content": "Class rosters are provided to me with students' legal names. I will gladly honor your request to address you by an alternate name or gender pronoun. Please let me know your preferences early in the semester."
+      },
+      {
+        "subtitle": "Respectful Interactions",
+        "content": "You are expected to treat your instructor and all other participants in the course with courtesy and respect. Your comments to each other should be factual, constructive, and free from harassing statements. You are encouraged to disagree with other students, but such disagreements need to be based upon facts and documentation (or sound reasoning in technical discussions).",
+        "goal": "It is my goal to promote an atmosphere of mutual respect in the classroom. Please contact me if you have suggestions for improving the classroom environment."
+      },
+      {
+        "subtitle": "Supporting All Students",
+        "content": "I support undocumented students. Undocumented students face unique challenges. Mendocino College values diversity and is committed to providing equitable opportunities to grow as individuals and as a community. We welcome all students regardless of their immigration status."
+      }
+    ]
+  },
+  "grievance": {
+    "title": "Student Grievance Process",
+    "content": "If you feel your instructor has treated you unfairly, please read the Policy on Student Rights and Grievances and contact the Instruction Office (707-468-3002) to be connected to the appropriate Dean.",
+    "policyUrl": "https://www.mendocino.edu/sites/default/files/docs/BOT/Procedures/ap5530.1.pdf"
+  },
+  "dropPolicy": {
+    "title": "Drop for Non-Attendance Policy",
+    "source": "Page 58 of the 2023-2024 College Catalog",
+    "policy": "A Student may be considered excessively absent from a class and may be dropped when the cumulative absences exceed the total number of hours that the class meets during a week.",
+    "note": "If you plan to exercise this policy, you must include a statement in your syllabus indicating that students may be dropped for excessive absences."
+  }
+}
