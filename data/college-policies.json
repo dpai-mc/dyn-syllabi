@@ -1,27 +1,62 @@
 {
   "institution": "Mendocino College",
-  "academicYear": "2024-2025",
+  "academicYear": "2025-2026",
   "policies": [
     {
+      "code": "CANVAS",
+      "title": "Canvas Learning Management System",
+      "content": "This course uses Canvas as its learning management system. Canvas Quick Start Guide available, and students can self-enroll at https://mendocino.instructure.com/enroll/MRGPRF. Free support available 24/7.",
+      "contact": "Canvas Student Helpline: 1-844-589-3850",
+      "link": "https://community.instructure.com/en/kb/articles/661192-student-getting-started-resources"
+    },
+    {
+      "code": "LATE",
+      "title": "Assignments & Late Submissions",
+      "content": "All assignments are expected to be submitted as defined in the assignment description and NO LATER THAN the provided Due Date. For major exams and major projects, NO LATE SUBMISSIONS will be accepted. For all other lab assignments, submissions will remain open however if submission is completed after we have reviewed the assignment in class (generally will review first class after due date), a 15% reduction in your score will be applied. If you are having difficulties, please communicate with the instructor before the deadline.",
+      "contact": "Contact instructor before deadline if having difficulties",
+      "link": null
+    },
+    {
       "code": "DSPS",
-      "title": "Disability Support Services",
-      "content": "Mendocino College is committed to providing equal access to education. Students with disabilities who need accommodations should contact Disabled Student Programs & Services (DSPS) as soon as possible.",
-      "contact": "DSPS Office: (707) 468-3031 | Email: dsps@mendocino.edu",
+      "title": "Students with Disabilities",
+      "content": "The College is committed to creating a learning environment that meets the needs of its diverse student body. If you have a disability, or think you may have one, please meet with the Disability Resource Center to request an official accommodation. It is the goal to create a learning experience that is as accessible as possible.",
+      "contact": "Disability Resource Center: (707) 468-3031 | Email: drc@mendocino.edu",
       "link": "https://www.mendocino.edu/dsps"
     },
     {
       "code": "CONDUCT",
-      "title": "Student Code of Conduct",
-      "content": "Students are expected to conduct themselves respectfully and contribute to a positive learning environment. Disruptive behavior may result in disciplinary action.",
+      "title": "Student Conduct",
+      "content": "Students are expected to behave in a courteous and respectful manner which is conducive to learning. Students should not engage in academic misconduct. These standards will be the expectation in this class.",
       "contact": "Dean of Student Services: (707) 468-3100",
-      "link": "https://www.mendocino.edu/student-conduct"
+      "link": "https://www.mendocino.edu/sites/default/files/docs/BOT/Procedures/ap5500.1_.pdf"
     },
     {
       "code": "HONESTY",
       "title": "Academic Honesty",
       "content": "Academic dishonesty includes cheating, plagiarism, and fabrication. Violations may result in failing the assignment or course and additional disciplinary action. All work must be original and properly cited.",
       "contact": "Report concerns to instructor or Academic Dean",
-      "link": "https://www.mendocino.edu/academic-integrity"
+      "link": "https://www.mendocino.edu/sites/default/files/docs/BOT/Procedures/ap5500.2.pdf"
+    },
+    {
+      "code": "FINAID",
+      "title": "Financial Aid",
+      "content": "Don't miss out on available financial aid! To receive financial aid, you must meet the Satisfactory Academic Progress (SAP) requirements. Making satisfactory academic progress means that you are maintaining a 2.0 GPA, you have successfully completed 67% of your coursework, and you will graduate within 150% of the units required for your program. If you do not maintain SAP, you may lose your financial aid.",
+      "contact": "Financial Aid Office: financialaid@mendocino.edu",
+      "link": "https://www.mendocino.edu/financial-aid"
+    },
+    {
+      "code": "PRIVACY",
+      "title": "Privacy & Session Tracking",
+      "content": "This course uses interactive web-based learning modules to enhance your educational experience. These modules track your progress during each session to provide personalized feedback and ensure you complete required activities. Session-Only Tracking: All progress tracking is limited to your current browser session only. No data persists after you close your browser, and no information is stored on external servers. No Personal Data Collection: The learning modules do not collect, store, or transmit any personally identifiable information. Progress tracking is anonymous and used solely to enhance your learning experience during each session. Your privacy is protected - no tracking data is shared with third parties, and no permanent records of your session activity are maintained outside of work you voluntarily submit through Canvas assignments.",
+      "contact": "Contact instructor with privacy questions",
+      "link": null
+    },
+    {
+      "code": "RESOURCES",
+      "title": "Student Resources",
+      "content": "A comprehensive summary of helpful resources for students is available in both English and Spanish, including information about tutoring, mental health services, food assistance, technology support, and more.",
+      "contact": "Various campus services - see resource guide for details",
+      "link": "https://mendocinocollege-my.sharepoint.com/:w:/g/personal/rmontes_mendocino_edu/EXsIVHBUzapFt8HHipDwbecB1u_mMiBL87F9YJJRXrbQyw"
     },
     {
       "code": "NONDISCRIM",
