@@ -1,6 +1,6 @@
 {
   "name": "David Pai, PhD",
-  "email (preferred)": "dpai@mendocino.edu",
+  "email": "dpai@mendocino.edu",
   "phone": "(707) 468-3126",
   "office": {
     "location": "Physical and online",
@@ -14,12 +14,11 @@
   },
   "studentHours": [
     {
-      "type": "appointment",
-      "method": "By Appointment (Online)",
+      "type": "online",
       "days": "Mondays",
       "time": "2:00 PM - 4:00 PM",
-      "link": "https://calendly.com/dpai",
-      "note": "Schedule a one-on-one online session at your convenience"
+      "link": "https://mendocino-edu.zoom.us/my/davepai",
+      "note": "By appointment only - schedule at https://calendly.com/dpai"
     },
     {
       "type": "in-office",
@@ -43,6 +42,6 @@
   ],
   "encouragementMessage": "Don't hesitate to reach out! Office hours are YOUR time. Whether you're stuck on a lab, confused about pointers, or just want to discuss programming, I'm here to help. Students who use office hours consistently perform better in the course.",
   "bio": "Dr. Pai has been teaching computer science at Mendocino College since 2014. He specializes in programming education and believes in hands-on, project-based learning. His teaching philosophy centers on building confidence through incremental challenges and supportive feedback.",
-  "preferredContact": "Canvas messages for course-related questions; email for personal/confidential matters",
+  "preferredContact": "Canvas InBox for course-related questions; email for personal/confidential matters",
   "responseTime": "24-48 hours on weekdays; 72 hours on weekends"
 }
