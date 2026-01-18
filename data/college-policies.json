@@ -82,7 +82,7 @@
       "code": "NONDISCRIM",
       "title": "Non-Discrimination",
       "content": "Mendocino College does not discriminate based on race, color, national origin, sex, gender identity, disability, age, sexual orientation, or other protected characteristics.",
-      "contact": "Equal Opportunity Officer: (707) 468-3000",
+      "contact": null,
       "link": "https://www.mendocino.edu/non-discrimination",
       "linkText": "Non-Discrimination Policy"
     },
@@ -90,8 +90,8 @@
       "code": "TITLEIX",
       "title": "Title IX and Sexual Harassment",
       "content": "The college is committed to an environment free from sexual harassment and violence. All reports are taken seriously and support is provided to affected individuals.",
-      "contact": "Title IX Coordinator: (707) 468-3000",
-      "contactEmail": "titleix@mendocino.edu",
+      "contact": null,
+      "contactEmail": null,
       "link": "https://www.mendocino.edu/title-ix-rights-resources",
       "linkText": "Title IX Rights & Resources"
     },
@@ -99,7 +99,7 @@
       "code": "FERPA",
       "title": "Student Privacy (FERPA)",
       "content": "FERPA protects student education records. The college will not disclose personally identifiable information without consent, except as permitted by law. Students have the right to inspect their records.",
-      "contact": "Admissions & Records: (707) 468-3103",
+      "contact": null,
       "link": "https://www.mendocino.edu/enrollment-services/records/confidentiality-ferpa",
       "linkText": "FERPA Privacy Rights"
     },
@@ -107,7 +107,7 @@
       "code": "MENTAL",
       "title": "Mental Health and Wellness",
       "content": "Your well-being matters. Mental health support is available through Student Health Services. Crisis resources: National Suicide Prevention Lifeline (988), Crisis Text Line (text HOME to 741741).",
-      "contact": "Student Health: (707) 468-3031 | Crisis: 988",
+      "contact": null,
       "link": "https://www.mendocino.edu/support-services/health-and-wellness",
       "linkText": "Health and Wellness Services"
     },
