@@ -18,7 +18,7 @@
       "days": "Mondays",
       "time": "2:00 PM - 4:00 PM",
       "link": "https://mendocino-edu.zoom.us/my/davepai",
-      "note": "Please pre-schedule an appointment:  <a href=\"https://calendly.com/dpai\">Calendar</a>"
+      "note": "Please pre-schedule an appointment:  <a href=\"https://calendly.com/dpai\" target=\"_blank\">Calendar</a>"
     },
     {
       "type": "in-office",
