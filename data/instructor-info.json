@@ -1,35 +1,48 @@
 {
-  "name": "Dr. David Pai",
-  "email": "dpai@mendocino.edu",
-  "phone": "(707) 468-3071",
+  "name": "David Pai, PhD",
+  "email (preferred)": "dpai@mendocino.edu",
+  "phone": "(707) 468-3126",
   "office": {
-    "location": "Online/Virtual Office",
-    "building": null,
-    "room": null
+    "location": "Physical and online",
+    "building": "Library and Learning Resource Center (LLRC)",
+    "room": 4170
   },
   "zoom": {
     "url": "https://mendocino.zoom.us/my/dpai",
     "label": "Join Dr. Pai's Zoom Room",
-    "meetingId": "See Canvas for Meeting ID",
-    "password": "See Canvas for Password"
+    "note": "Use this link during online office hours or by appointment."
   },
   "studentHours": [
     {
-      "type": "online",
-      "days": "Tuesdays",
-      "time": "5:00 PM - 6:00 PM",
-      "link": "https://mendocino.zoom.us/my/dpai",
-      "note": "Drop-in, no appointment needed"
+      "type": "appointment",
+      "method": "By Appointment (Online)",
+      "days": "Mondays",
+      "time": "2:00 PM - 4:00 PM",
+      "link": "https://calendly.com/dpai",
+      "note": "Schedule a one-on-one online session at your convenience"
     },
     {
-      "type": "appointment",
-      "method": "By Appointment (Flexible Scheduling)",
-      "link": "mailto:dpai@mendocino.edu",
-      "note": "Email to schedule Zoom or in-person meeting"
+      "type": "in-office",
+      "location": "Room 4170, LLRC",
+      "schedule": [
+        {
+          "day": "Tuesday",
+          "time": "1:00 PM - 2:00 PM"
+        },
+        {
+          "day": "Wednesday",
+          "time": "2:00 PM - 3:00 PM"
+        },
+        {
+          "day": "Thursday",
+          "time": "12:30 PM - 1:30 PM"
+        }
+      ],
+      "note": "Drop-in welcome, no appointment needed"
     }
   ],
   "encouragementMessage": "Don't hesitate to reach out! Office hours are YOUR time. Whether you're stuck on a lab, confused about pointers, or just want to discuss programming, I'm here to help. Students who use office hours consistently perform better in the course.",
-  "bio": "Dr. Pai has been teaching computer science at Mendocino College since 2015. He specializes in programming education and believes in hands-on, project-based learning. His teaching philosophy centers on building confidence through incremental challenges and supportive feedback.",
+  "bio": "Dr. Pai has been teaching computer science at Mendocino College since 2014. He specializes in programming education and believes in hands-on, project-based learning. His teaching philosophy centers on building confidence through incremental challenges and supportive feedback.",
   "preferredContact": "Canvas messages for course-related questions; email for personal/confidential matters",
   "responseTime": "24-48 hours on weekdays; 72 hours on weekends"
 }
