@@ -92,33 +92,33 @@
       "content": "The college is committed to an environment free from sexual harassment and violence. All reports are taken seriously and support is provided to affected individuals.",
       "contact": "Title IX Coordinator: (707) 468-3000",
       "contactEmail": "titleix@mendocino.edu",
-      "link": "https://www.mendocino.edu/title-ix",
-      "linkText": "Title IX Information"
+      "link": "https://www.mendocino.edu/title-ix-rights-resources",
+      "linkText": "Title IX Rights & Resources"
     },
     {
       "code": "FERPA",
       "title": "Student Privacy (FERPA)",
       "content": "FERPA protects student education records. The college will not disclose personally identifiable information without consent, except as permitted by law. Students have the right to inspect their records.",
       "contact": "Admissions & Records: (707) 468-3103",
-      "link": "https://www.mendocino.edu/ferpa",
-      "linkText": "FERPA Information"
+      "link": "https://www.mendocino.edu/enrollment-services/records/confidentiality-ferpa",
+      "linkText": "FERPA Privacy Rights"
     },
     {
       "code": "MENTAL",
       "title": "Mental Health and Wellness",
       "content": "Your well-being matters. Mental health support is available through Student Health Services. Crisis resources: National Suicide Prevention Lifeline (988), Crisis Text Line (text HOME to 741741).",
       "contact": "Student Health: (707) 468-3031 | Crisis: 988",
-      "link": "https://www.mendocino.edu/student-health",
-      "linkText": "Student Health Services"
+      "link": "https://www.mendocino.edu/support-services/health-and-wellness",
+      "linkText": "Health and Wellness Services"
     },
     {
       "code": "TUTORING",
       "title": "Tutoring and Academic Support",
-      "content": "Free tutoring is available through the Learning Center, including drop-in help, study groups, writing assistance, and online tutoring. Use these resources early and often!",
-      "contact": "Learning Center: (707) 468-3120",
-      "contactEmail": "tutoring@mendocino.edu",
-      "link": "https://www.mendocino.edu/tutoring",
-      "linkText": "Tutoring Services"
+      "content": "Free tutoring for Computer Science courses is available through MESA (Mathematics, Engineering, Science Achievement). MESA provides peer tutoring, study groups, and academic support specifically designed for STEM students. Use these resources early and often!",
+      "contact": "MESA Program",
+      "contactEmail": null,
+      "link": "https://www.mendocino.edu/support-services/all-support-services/mesa",
+      "linkText": "MESA Tutoring Services"
     },
     {
       "code": "TECH",
