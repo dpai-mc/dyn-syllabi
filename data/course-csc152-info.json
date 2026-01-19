@@ -30,7 +30,7 @@
         "weeks": [
           {
             "weekNumber": 1,
-            "dates": "TBD",
+            "dates": "1/20/2026 - 1/25/2026",
             "topics": [
               "Course overview, expectations, and resources",
               "Server roles in modern IT infrastructure",
@@ -47,7 +47,7 @@
           },
           {
             "weekNumber": 2,
-            "dates": "TBD",
+            "dates": "1/26/2026 - 2/1/2026",
             "topics": [
               "Server hardware components (CPU, RAM, storage, NICs)",
               "Power and cooling considerations",
@@ -64,7 +64,7 @@
           },
           {
             "weekNumber": 3,
-            "dates": "TBD",
+            "dates": "2/2/2026 - 2/8/2026",
             "topics": [
               "Linux distributions for servers (Ubuntu Server, CentOS/Rocky Linux)",
               "Linux installation and initial configuration",
@@ -81,7 +81,7 @@
           },
           {
             "weekNumber": 4,
-            "dates": "TBD",
+            "dates": "2/9/2026 - 2/15/2026",
             "topics": [
               "Windows Server editions and licensing",
               "Windows Server installation and initial configuration",
@@ -98,7 +98,7 @@
           },
           {
             "weekNumber": 5,
-            "dates": "TBD",
+            "dates": "2/16/2026 - 2/22/2026",
             "topics": [
               "Linux Bash shell fundamentals",
               "Windows PowerShell fundamentals",
@@ -121,7 +121,7 @@
         "weeks": [
           {
             "weekNumber": 6,
-            "dates": "TBD",
+            "dates": "2/23/2026 - 3/1/2026",
             "topics": [
               "User account creation and management (Linux & Windows)",
               "Group creation and membership management",
@@ -140,7 +140,7 @@
           },
           {
             "weekNumber": 7,
-            "dates": "TBD",
+            "dates": "3/2/2026 - 3/8/2026",
             "topics": [
               "Linux file permissions (read, write, execute)",
               "Windows NTFS permissions and ACLs",
@@ -163,7 +163,7 @@
         "weeks": [
           {
             "weekNumber": 8,
-            "dates": "TBD",
+            "dates": "3/9/2026 - 3/15/2026",
             "topics": [
               "IP addressing review (IPv4 and IPv6)",
               "Network interface configuration",
@@ -180,7 +180,7 @@
           },
           {
             "weekNumber": 9,
-            "dates": "TBD",
+            "dates": "3/16/2026 - 3/22/2026",
             "topics": [
               "DHCP server configuration",
               "DNS server basics",
@@ -205,7 +205,7 @@
         "weeks": [
           {
             "weekNumber": 10,
-            "dates": "TBD",
+            "dates": "3/23/2026 - 3/29/2026",
             "topics": [
               "Storage types (DAS, NAS, SAN)",
               "Disk partitioning and formatting",
@@ -218,11 +218,12 @@
               "Quiz 10: Storage Management (10 pts)",
               "Discussion 10: Storage Strategies (4 pts)"
             ],
-            "deliverableDueDate": "Week 10 Sunday 11:59 PM"
+            "deliverableDueDate": "Week 10 Sunday 11:59 PM",
+            "notes": "SPRING BREAK follows this week (3/30/2026 - 4/5/2026) - No classes"
           },
           {
             "weekNumber": 11,
-            "dates": "TBD",
+            "dates": "4/6/2026 - 4/12/2026",
             "topics": [
               "Active Directory Domain Services (AD DS) concepts",
               "Domain, tree, and forest structures",
@@ -241,7 +242,7 @@
           },
           {
             "weekNumber": 12,
-            "dates": "TBD",
+            "dates": "4/13/2026 - 4/19/2026",
             "topics": [
               "LDAP protocol and directory structure",
               "OpenLDAP installation and configuration",
@@ -264,7 +265,7 @@
         "weeks": [
           {
             "weekNumber": 13,
-            "dates": "TBD",
+            "dates": "4/20/2026 - 4/26/2026",
             "topics": [
               "Virtualization concepts and benefits",
               "Hypervisor types (Type 1 vs. Type 2)",
@@ -282,7 +283,7 @@
           },
           {
             "weekNumber": 14,
-            "dates": "TBD",
+            "dates": "4/27/2026 - 5/3/2026",
             "topics": [
               "Physical security methods",
               "Server hardening techniques",
@@ -300,7 +301,7 @@
           },
           {
             "weekNumber": 15,
-            "dates": "TBD",
+            "dates": "5/4/2026 - 5/10/2026",
             "topics": [
               "Disaster recovery principles (RTO, RPO, BIA)",
               "Backup types (full, incremental, differential)",
@@ -324,7 +325,7 @@
         "weeks": [
           {
             "weekNumber": 16,
-            "dates": "TBD",
+            "dates": "5/11/2026 - 5/17/2026",
             "topics": [
               "Performance monitoring tools and metrics",
               "Log file analysis and management",
@@ -342,7 +343,7 @@
           },
           {
             "weekNumber": 17,
-            "dates": "TBD",
+            "dates": "5/18/2026 - 5/22/2026",
             "topics": [
               "Comprehensive integration project",
               "Course review and synthesis",
