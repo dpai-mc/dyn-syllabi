@@ -1,0 +1,579 @@
+{
+  "courseInfo": {
+    "code": "CSC152",
+    "title": "Network Operating Systems and Administration",
+    "credits": 3,
+    "creditType": "units",
+    "contactHours": {
+      "total": 85,
+      "lecture": 34,
+      "lab": 51
+    },
+    "outOfClassHours": 68,
+    "totalStudentLearningHours": 153,
+    "term": "Spring 2026",
+    "format": "Hybrid",
+    "meetingTimes": {
+      "lecture": "TBD",
+      "lab": "TBD"
+    },
+    "description": "This course will provide students with the knowledge and skills required to maintain reliable computer systems in a multi-user environment. The student will learn about system hardware, software, storage, best practices, disaster recovery, and troubleshooting, with additional coverage of virtualization, cloud technologies, security, and scalability."
+  },
+  
+  "prerequisites": {
+    "required": [],
+    "advisory": [
+      {
+        "code": "CSC117",
+        "title": "Computer Network Fundamentals",
+        "type": "advisory"
+      },
+      {
+        "code": "CSC116",
+        "title": "Information & Communication Technology Essentials",
+        "type": "advisory",
+        "note": "OR CSC117"
+      }
+    ]
+  },
+  
+  "studentLearningOutcomes": [
+    {
+      "number": 1,
+      "text": "Manage and maintain servers, including operating system (OS) configuration, access control and virtualization.",
+      "expectedPerformance": 0.75
+    },
+    {
+      "number": 2,
+      "text": "Apply physical and network data security techniques.",
+      "expectedPerformance": 0.75
+    },
+    {
+      "number": 3,
+      "text": "Configure systems for network connectivity, including physical and logical elements.",
+      "expectedPerformance": 0.75
+    },
+    {
+      "number": 4,
+      "text": "Describe disaster recovery and implement backup techniques.",
+      "expectedPerformance": 0.75
+    }
+  ],
+  
+  "courseObjectives": [
+    "Install and configure server Operating Systems and components.",
+    "Develop and Implement Access Control Lists",
+    "Implement storage technologies, including capacity and growth planning.",
+    "Implement directory services, such as Active Directory and OpenLDAP, used to manage an organization's computers and users.",
+    "Diagnose and resolve system hardware, software, connectivity, storage and security issues."
+  ],
+  
+  "gradingScale": [
+    { "grade": "A", "min": 90, "max": 100 },
+    { "grade": "B", "min": 80, "max": 89 },
+    { "grade": "C", "min": 70, "max": 79 },
+    { "grade": "D", "min": 60, "max": 69 },
+    { "grade": "F", "min": 0, "max": 59 }
+  ],
+  
+  "gradingBreakdown": [
+    {
+      "category": "Lab Assignments",
+      "weight": 40,
+      "points": 400,
+      "quantity": 15,
+      "pointsEach": "26-27",
+      "description": "Weekly hands-on lab activities applying server administration, configuration, and troubleshooting skills",
+      "cslos": [1, 2, 3, 4]
+    },
+    {
+      "category": "Exams",
+      "weight": 25,
+      "points": 250,
+      "quantity": 2,
+      "pointsEach": 125,
+      "description": "Midterm (Week 9) and Final Exam (Week 17) assessing theoretical knowledge and application",
+      "cslos": [1, 2, 3, 4]
+    },
+    {
+      "category": "Quizzes",
+      "weight": 15,
+      "points": 150,
+      "quantity": 15,
+      "pointsEach": 10,
+      "description": "Weekly online quizzes assessing learning objectives and reading comprehension",
+      "cslos": [1, 2, 3, 4]
+    },
+    {
+      "category": "Projects",
+      "weight": 15,
+      "points": 150,
+      "quantity": 3,
+      "pointsEach": 50,
+      "description": "Comprehensive projects integrating multiple skills through real-world scenarios",
+      "cslos": [1, 2, 3, 4]
+    },
+    {
+      "category": "Discussions/Participation",
+      "weight": 5,
+      "points": 50,
+      "quantity": 15,
+      "pointsEach": "3-4",
+      "description": "Weekly discussion forums and in-class participation developing professional communication",
+      "cslos": [1, 2, 3, 4]
+    }
+  ],
+  
+  "totalPoints": 1000,
+  
+  "weeklyModules": [
+    {
+      "week": 1,
+      "title": "Course Introduction & Server Fundamentals",
+      "topics": [
+        "Course overview, expectations, and resources",
+        "Server roles in modern IT infrastructure",
+        "Server form factors (tower, rack-mount, blade)",
+        "Physical vs. virtual servers",
+        "Introduction to lab environment"
+      ],
+      "cslos": [1],
+      "assignments": {
+        "lab": "Lab 1: Lab Environment Setup & Server Form Factors (26 pts)",
+        "quiz": "Quiz 1: Course Introduction & Server Fundamentals (10 pts)",
+        "discussion": "Discussion 1: Introduction & Course Goals (3 pts)"
+      }
+    },
+    {
+      "week": 2,
+      "title": "Server Hardware Architecture & Components",
+      "topics": [
+        "Server hardware components (CPU, RAM, storage, NICs)",
+        "Power and cooling considerations",
+        "Server hardware installation and configuration",
+        "Hardware monitoring and management tools",
+        "Introduction to data center concepts"
+      ],
+      "cslos": [1],
+      "assignments": {
+        "lab": "Lab 2: Server Hardware Configuration & Monitoring (26 pts)",
+        "quiz": "Quiz 2: Server Hardware & Architecture (10 pts)",
+        "discussion": "Discussion 2: Hardware Considerations (3 pts)"
+      }
+    },
+    {
+      "week": 3,
+      "title": "Introduction to Linux Server Administration",
+      "topics": [
+        "Linux distributions for servers (Ubuntu Server, CentOS/Rocky Linux)",
+        "Linux installation and initial configuration",
+        "Basic system navigation and file structure",
+        "Package management fundamentals",
+        "System documentation and help resources"
+      ],
+      "cslos": [1],
+      "assignments": {
+        "lab": "Lab 3: Linux Server Installation & Basic Administration (27 pts)",
+        "quiz": "Quiz 3: Linux Fundamentals (10 pts)",
+        "discussion": "Discussion 3: Linux Experience (3 pts)"
+      }
+    },
+    {
+      "week": 4,
+      "title": "Introduction to Windows Server Administration",
+      "topics": [
+        "Windows Server editions and licensing",
+        "Windows Server installation and initial configuration",
+        "Server Manager and administration tools",
+        "Windows Server roles and features overview",
+        "Remote management options"
+      ],
+      "cslos": [1],
+      "assignments": {
+        "lab": "Lab 4: Windows Server Installation & Server Manager (26 pts)",
+        "quiz": "Quiz 4: Windows Server Basics (10 pts)",
+        "discussion": "Discussion 4: Linux vs. Windows Server (4 pts)"
+      }
+    },
+    {
+      "week": 5,
+      "title": "Command Line Administration",
+      "topics": [
+        "Linux Bash shell fundamentals",
+        "Windows PowerShell fundamentals",
+        "Essential command-line utilities",
+        "Basic scripting concepts",
+        "Remote command-line access (SSH, PowerShell Remoting)"
+      ],
+      "cslos": [1],
+      "assignments": {
+        "lab": "Lab 5: Command Line Administration & Scripting (27 pts)",
+        "quiz": "Quiz 5: Command Line (10 pts)",
+        "discussion": "Discussion 5: Command Line Tools (3 pts)"
+      }
+    },
+    {
+      "week": 6,
+      "title": "User & Group Administration",
+      "topics": [
+        "User account creation and management (Linux & Windows)",
+        "Group creation and membership management",
+        "Password policies and account security",
+        "User profiles and home directories",
+        "Privilege escalation (sudo, Run as Administrator)"
+      ],
+      "cslos": [1, 2],
+      "assignments": {
+        "lab": "Lab 6: User & Group Administration (26 pts)",
+        "quiz": "Quiz 6: User Management (10 pts)",
+        "project": "Project 1: Multi-User Server Configuration (50 pts)",
+        "discussion": "Discussion 6: Security Best Practices (3 pts)"
+      }
+    },
+    {
+      "week": 7,
+      "title": "File Systems, Ownership & Permissions",
+      "topics": [
+        "Linux file permissions (read, write, execute)",
+        "Windows NTFS permissions and ACLs",
+        "File and directory ownership",
+        "Special permissions (SetUID, SetGID, sticky bit)",
+        "Permission inheritance and effective permissions"
+      ],
+      "cslos": [1, 2],
+      "assignments": {
+        "lab": "Lab 7: File Permissions & ACLs (27 pts)",
+        "quiz": "Quiz 7: File Permissions (10 pts)",
+        "discussion": "Discussion 7: Permission Scenarios (4 pts)"
+      }
+    },
+    {
+      "week": 8,
+      "title": "Network Configuration Fundamentals",
+      "topics": [
+        "IP addressing review (IPv4 and IPv6)",
+        "Network interface configuration",
+        "Static vs. dynamic IP assignment",
+        "DNS and hostname resolution",
+        "Network testing and verification tools"
+      ],
+      "cslos": [3],
+      "assignments": {
+        "lab": "Lab 8: Network Configuration & Diagnostics (26 pts)",
+        "quiz": "Quiz 8: Networking Basics (10 pts)",
+        "discussion": "Discussion 8: Network Security (3 pts)"
+      }
+    },
+    {
+      "week": 9,
+      "title": "Network Services & Infrastructure",
+      "topics": [
+        "DHCP server configuration",
+        "DNS server basics",
+        "Common server ports and protocols",
+        "Firewall fundamentals (iptables, Windows Firewall)",
+        "Network cable management and documentation"
+      ],
+      "cslos": [2, 3],
+      "assignments": {
+        "lab": "Lab 9: Network Services (DHCP, DNS, Firewall) (27 pts)",
+        "quiz": "Quiz 9: Network Services (10 pts)",
+        "exam": "Midterm Exam (125 pts)",
+        "discussion": "Discussion 9: Network Infrastructure (4 pts)"
+      }
+    },
+    {
+      "week": 10,
+      "title": "Storage Technologies & Management",
+      "topics": [
+        "Storage types (DAS, NAS, SAN)",
+        "RAID levels and configurations",
+        "Logical Volume Management (LVM)",
+        "Windows Storage Spaces",
+        "Storage capacity planning and monitoring"
+      ],
+      "cslos": [1],
+      "assignments": {
+        "lab": "Lab 10: Storage Technologies & RAID (26 pts)",
+        "quiz": "Quiz 10: Storage Systems (10 pts)",
+        "discussion": "Discussion 10: Storage Solutions (3 pts)"
+      }
+    },
+    {
+      "week": 11,
+      "title": "Directory Services - Active Directory",
+      "topics": [
+        "Active Directory concepts and architecture",
+        "Domain Controllers and domain setup",
+        "Organizational Units (OUs) and structure",
+        "Group Policy Objects (GPOs)",
+        "User and computer management in AD"
+      ],
+      "cslos": [1, 2],
+      "assignments": {
+        "lab": "Lab 11: Active Directory Implementation (27 pts)",
+        "quiz": "Quiz 11: Active Directory (10 pts)",
+        "project": "Project 2: Network Infrastructure Implementation (50 pts)",
+        "discussion": "Discussion 11: Directory Services (4 pts)"
+      }
+    },
+    {
+      "week": 12,
+      "title": "Directory Services - LDAP & OpenLDAP",
+      "topics": [
+        "LDAP protocol and directory structure",
+        "OpenLDAP installation and configuration",
+        "LDAP directory information tree (DIT)",
+        "User and group management in LDAP",
+        "LDAP authentication integration"
+      ],
+      "cslos": [1, 2],
+      "assignments": {
+        "lab": "Lab 12: OpenLDAP Configuration (26 pts)",
+        "quiz": "Quiz 12: LDAP (10 pts)",
+        "discussion": "Discussion 12: LDAP vs. Active Directory (3 pts)"
+      }
+    },
+    {
+      "week": 13,
+      "title": "Virtualization & Cloud Technologies",
+      "topics": [
+        "Virtualization concepts and benefits",
+        "Hypervisor types (Type 1 vs. Type 2)",
+        "Virtual machine creation and management",
+        "Virtual networking and storage",
+        "Introduction to cloud computing (IaaS, PaaS, SaaS)",
+        "Cloud resource management"
+      ],
+      "cslos": [1],
+      "assignments": {
+        "lab": "Lab 13: Virtualization & Cloud Services (27 pts)",
+        "quiz": "Quiz 13: Virtualization (10 pts)",
+        "discussion": "Discussion 13: Cloud Technologies (4 pts)"
+      }
+    },
+    {
+      "week": 14,
+      "title": "Server Security & Hardening",
+      "topics": [
+        "Physical security methods",
+        "Server hardening techniques",
+        "Access control methods (authentication, authorization)",
+        "Security protocols (SSH, SSL/TLS, IPSec)",
+        "Data encryption and secure storage disposal",
+        "Security patch management"
+      ],
+      "cslos": [2],
+      "assignments": {
+        "lab": "Lab 14: Server Security & Hardening (26 pts)",
+        "quiz": "Quiz 14: Security (10 pts)",
+        "discussion": "Discussion 14: Security Incidents (3 pts)"
+      }
+    },
+    {
+      "week": 15,
+      "title": "Disaster Recovery & Backup Solutions",
+      "topics": [
+        "Disaster recovery principles (RTO, RPO, BIA)",
+        "Backup types (full, incremental, differential)",
+        "Backup strategies and schedules",
+        "Backup verification and testing",
+        "System recovery procedures",
+        "High availability and fault tolerance concepts"
+      ],
+      "cslos": [4],
+      "assignments": {
+        "lab": "Lab 15: Backup & Disaster Recovery (26 pts)",
+        "quiz": "Quiz 15: Disaster Recovery (10 pts)",
+        "discussion": "Discussion 15: Disaster Recovery Planning (4 pts)"
+      }
+    },
+    {
+      "week": 16,
+      "title": "System Monitoring & Troubleshooting",
+      "topics": [
+        "Performance monitoring tools and metrics",
+        "Log file analysis and management",
+        "Troubleshooting methodology",
+        "Hardware troubleshooting tools",
+        "Software and service troubleshooting",
+        "Network troubleshooting techniques",
+        "Storage and security issue diagnosis"
+      ],
+      "cslos": [1, 2, 3, 4],
+      "assignments": {
+        "lab": "Lab 16: System Monitoring & Troubleshooting (26 pts)"
+      }
+    },
+    {
+      "week": 17,
+      "title": "Integration Project & Course Review",
+      "topics": [
+        "Comprehensive integration project",
+        "Course review and synthesis",
+        "Best practices and industry standards",
+        "Career pathways and certifications",
+        "Final assessments"
+      ],
+      "cslos": [1, 2, 3, 4],
+      "assignments": {
+        "project": "Project 3: Comprehensive Integration Project (50 pts)",
+        "exam": "Final Exam (125 pts)"
+      }
+    }
+  ],
+  
+  "majorProjects": [
+    {
+      "number": 1,
+      "title": "Multi-User Server Configuration",
+      "dueWeek": 6,
+      "points": 50,
+      "description": "Configure a complete multi-user server environment with organizational user/group structure, file system permissions, and documentation.",
+      "cslos": [1, 2]
+    },
+    {
+      "number": 2,
+      "title": "Network Infrastructure Implementation",
+      "dueWeek": 11,
+      "points": 50,
+      "description": "Design and implement a small business network infrastructure with DHCP/DNS services, directory services, network security, and documentation.",
+      "cslos": [1, 2, 3]
+    },
+    {
+      "number": 3,
+      "title": "Comprehensive Integration Project",
+      "dueWeek": 17,
+      "points": 50,
+      "description": "Design and implement a complete server infrastructure solution with multiple servers, directory services, storage, backup/disaster recovery, security, and comprehensive documentation with presentation.",
+      "cslos": [1, 2, 3, 4]
+    }
+  ],
+  
+  "exams": [
+    {
+      "type": "Midterm",
+      "week": 9,
+      "points": 125,
+      "duration": "90 minutes",
+      "coverage": "Weeks 1-8",
+      "cslos": [1, 2, 3]
+    },
+    {
+      "type": "Final",
+      "week": 17,
+      "points": 125,
+      "duration": "120 minutes",
+      "coverage": "Comprehensive (emphasis on Weeks 9-17)",
+      "cslos": [1, 2, 3, 4]
+    }
+  ],
+  
+  "requiredMaterials": [
+    {
+      "type": "Access to computer with virtualization capability",
+      "required": true
+    },
+    {
+      "type": "Access to lab environment (provided)",
+      "required": true
+    },
+    {
+      "type": "Various open educational resources and vendor documentation (provided)",
+      "required": true
+    }
+  ],
+  
+  "recommendedResources": [
+    {
+      "name": "Linux Essentials Certification (LPI)",
+      "description": "Supplementary learning path for Linux administration skills",
+      "url": "https://www.lpi.org/our-certifications/linux-essentials-overview"
+    },
+    {
+      "name": "Microsoft Learn - Windows Server",
+      "description": "Free Microsoft training modules for Windows Server administration",
+      "url": "https://learn.microsoft.com/"
+    },
+    {
+      "name": "CompTIA Server+ Resources",
+      "description": "Study materials aligned with industry certification",
+      "url": "https://www.comptia.org/certifications/server"
+    }
+  ],
+  
+  "importantDates": [
+    {
+      "event": "Project 1 Due",
+      "week": 6,
+      "description": "Multi-User Server Configuration"
+    },
+    {
+      "event": "Midterm Exam",
+      "week": 9,
+      "description": "Covers Weeks 1-8"
+    },
+    {
+      "event": "Project 2 Due",
+      "week": 11,
+      "description": "Network Infrastructure Implementation"
+    },
+    {
+      "event": "Project 3 Due",
+      "week": 17,
+      "description": "Comprehensive Integration Project"
+    },
+    {
+      "event": "Final Exam",
+      "week": 17,
+      "description": "Comprehensive coverage"
+    }
+  ],
+  
+  "policies": {
+    "lateWork": {
+      "labs": "10% penalty per day late (maximum 3 days)",
+      "projects": "10% penalty per day late (maximum 5 days)",
+      "quizzes": "No late submissions accepted; lowest quiz grade dropped",
+      "discussions": "50% credit if submitted within 3 days"
+    },
+    "examPolicy": "No make-up exams except for documented emergencies. Must achieve minimum 60% on final exam to pass the course.",
+    "quizPolicy": "Two attempts allowed (highest score counts). Lowest quiz grade dropped.",
+    "passNoPassed": "Pass/No Pass option available per college policy"
+  },
+  
+  "weeklyTimeCommitment": {
+    "inClassLecture": 2,
+    "inClassLab": 3,
+    "outOfClass": 4,
+    "total": 9,
+    "note": "Peak weeks (project due dates) may require 12-15 hours during Weeks 6, 11, and 17"
+  },
+  
+  "industryAlignments": [
+    {
+      "certification": "CompTIA Server+",
+      "relevance": "Core server administration concepts"
+    },
+    {
+      "certification": "LPI Linux Essentials",
+      "relevance": "Linux server administration fundamentals (Weeks 3, 5, 6, 7, 8)"
+    },
+    {
+      "certification": "Microsoft AZ-800",
+      "relevance": "Windows Server administration (Weeks 4, 5, 6, 7, 9, 11, 14)"
+    }
+  ],
+  
+  "learningResources": {
+    "tutoring": {
+      "service": "Computer Science tutoring through MESA",
+      "location": "Library and Learning Center Building",
+      "url": "https://www.mendocino.edu/mesa"
+    },
+    "technicalSupport": {
+      "service": "IT Help Desk",
+      "contact": "helpdesk@mendocino.edu"
+    }
+  }
+}
