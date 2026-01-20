@@ -1,1252 +1,600 @@
 {
-  "courseInfo": {
-    "courseCode": "CSC159",
-    "courseTitle": "Fundamentals of Penetration Testing",
-    "credits": 4,
-    "lectureHours": 2.5,
-    "labHours": 4.5,
-    "totalContactHours": 119,
-    "totalOutOfClassHours": 85,
-    "totalStudentLearningHours": 204,
-    "prerequisite": "CSC 158 - Introduction to Cybersecurity: Ethical Hacking",
-    "textbook": {
-      "title": "CompTIA PenTest+ Study Guide: Exam PT0-003",
-      "publisher": "Sybex/Wiley"
-    },
-    "semester": "Spring 2026",
-    "startDate": "2026-01-20",
-    "endDate": "2026-05-22"
-  },
-  "courseLearningOutcomes": [
-    {
-      "cslo": 1,
-      "description": "Implement advanced methods to gain access to protected devices.",
-      "expectedPerformance": 0.75
-    },
-    {
-      "cslo": 2,
-      "description": "Locate and access hidden networks.",
-      "expectedPerformance": 0.75
-    },
-    {
-      "cslo": 3,
-      "description": "Use scripts to automate pen testing attacks.",
-      "expectedPerformance": 0.75
-    },
-    {
-      "cslo": 4,
-      "description": "Create a clear, concise and complete professional report of penetration testing findings.",
-      "expectedPerformance": 0.75
+  "metadata": {
+    "code": "CSC159",
+    "title": "Fundamentals of Penetration Testing",
+    "credits": "4",
+    "creditBreakdown": "2.5 lecture + 4.5 lab",
+    "format": "Hybrid (Online with weekly lab sessions)",
+    "term": "Spring 2026",
+    "prerequisite": "CSC 158 (Introduction to Cybersecurity: Ethical Hacking) with grade of C or better",
+    "meetingInfo": {
+      "type": "Weekly Lab/Lecture",
+      "day": "TBD",
+      "time": "TBD",
+      "platform": "Canvas (link in course)"
     }
+  },
+  "description": {
+    "catalog": "This course will explore the application of penetration testing methodologies, tools, and techniques to identify and exploit security vulnerabilities in networks, systems, and applications. Students will learn ethical hacking approaches following industry-standard frameworks and best practices.",
+    "expanded": "Emphasis is placed on understanding penetration testing phases from reconnaissance through reporting. Students complete hands-on labs that progressively build skills in OSINT, social engineering, vulnerability assessment, web application testing, network exploitation, Active Directory attacks, wireless security, cloud security, and automation scripting."
+  },
+  "purpose": {
+    "why": "This course provides essential cybersecurity skills for careers in penetration testing, red team operations, and security consulting. You'll learn how to identify vulnerabilities before attackers do, perform comprehensive security assessments, and communicate findings professionally. These skills are crucial for CompTIA PenTest+ certification, OSCP preparation, and cybersecurity analyst roles.",
+    "beyond": "Beyond technical skills, you'll develop critical thinking for security analysis, ethical decision-making under legal constraints, and the ability to communicate complex technical findings to both technical and non-technical audiences—skills essential for any cybersecurity professional."
+  },
+  "slos": [
+    "Implement advanced methods to gain access to protected devices",
+    "Locate and access hidden networks",
+    "Use scripts to automate pen testing attacks",
+    "Create a clear, concise and complete professional report of penetration testing findings"
   ],
-  "gradingScale": {
-    "A": { "min": 90, "max": 100, "points": { "min": 900, "max": 1000 } },
-    "B": { "min": 80, "max": 89, "points": { "min": 800, "max": 899 } },
-    "C": { "min": 70, "max": 79, "points": { "min": 700, "max": 799 } },
-    "D": { "min": 60, "max": 69, "points": { "min": 600, "max": 699 } },
-    "F": { "min": 0, "max": 59, "points": { "min": 0, "max": 599 } }
+  "schedule": {
+    "phases": [
+      {
+        "title": "Phase 1: Foundations & Planning (Weeks 1-2)",
+        "description": "Establish penetration testing fundamentals and ethical/legal framework",
+        "weeks": [
+          {
+            "weekNumber": 1,
+            "dates": "Jan 20-25",
+            "topics": [
+              "Penetration testing vs. vulnerability assessment",
+              "Types of penetration assessments (black box, white box, gray box)",
+              "Legal and ethical considerations",
+              "Industry standards and frameworks (PTES, OWASP, NIST)",
+              "Virtual lab environment setup"
+            ],
+            "readings": "CompTIA PenTest+ Ch. 1; PTES Technical Guidelines; OWASP Testing Guide (Introduction)",
+            "assignments": [
+              "Discussion 1: Introduce yourself (3 pts)",
+              "Lab 1: Virtual Lab Setup (12.5 pts)"
+            ],
+            "deliverableDueDate": "Jan 25",
+            "notes": "Focus on establishing ethical boundaries and lab environment"
+          },
+          {
+            "weekNumber": 2,
+            "dates": "Jan 26-Feb 1",
+            "topics": [
+              "Rules of engagement (ROE)",
+              "Scope definition and limitations",
+              "Target identification and profiling",
+              "Communication and escalation paths",
+              "Contracts and legal agreements"
+            ],
+            "readings": "CompTIA PenTest+ Ch. 2; Sample SOW templates",
+            "assignments": [
+              "Quiz 1: Penetration testing fundamentals (10 pts)",
+              "Discussion 2: Real-world contract failures (3 pts)",
+              "Lab 2: Scope Document & ROE Creation (12.5 pts)"
+            ],
+            "deliverableDueDate": "Feb 1",
+            "notes": "Create professional scope documents"
+          }
+        ]
+      },
+      {
+        "title": "Phase 2: Reconnaissance & Social Engineering (Weeks 3-4)",
+        "description": "Master information gathering and human-based attack vectors",
+        "weeks": [
+          {
+            "weekNumber": 3,
+            "dates": "Feb 2-8",
+            "topics": [
+              "Passive reconnaissance techniques",
+              "OSINT sources and tools (Maltego, theHarvester, Shodan)",
+              "DNS enumeration and subdomain discovery",
+              "Social media intelligence gathering",
+              "Search engine dorking (Google Hacking)"
+            ],
+            "readings": "CompTIA PenTest+ Ch. 3 (Sections 3.1-3.3); OSINT Framework documentation",
+            "assignments": [
+              "Quiz 2: OSINT techniques (10 pts)",
+              "Discussion 3: Ethical boundaries in OSINT (3 pts)",
+              "Lab 3: OSINT Intelligence Report (12.5 pts)",
+              "Assignment 1: OSINT Challenge (15 pts)"
+            ],
+            "deliverableDueDate": "Feb 8",
+            "notes": "First major assignment; focus on passive reconnaissance"
+          },
+          {
+            "weekNumber": 4,
+            "dates": "Feb 9-15",
+            "topics": [
+              "Social engineering attack vectors (phishing, vishing, smishing)",
+              "Pretexting and impersonation",
+              "Physical security testing",
+              "USB drop attacks",
+              "Social engineering toolkit (SET)"
+            ],
+            "readings": "CompTIA PenTest+ Ch. 4; 'The Art of Deception' excerpts",
+            "assignments": [
+              "Quiz 3: Social engineering techniques (10 pts)",
+              "Discussion 4: Case study analysis (3 pts)",
+              "Lab 4: Phishing Campaign Design (12.5 pts)"
+            ],
+            "deliverableDueDate": "Feb 15",
+            "notes": "Use GoPhish for controlled campaigns"
+          }
+        ]
+      },
+      {
+        "title": "Phase 3: Vulnerability Assessment & Web Application Testing (Weeks 5-7)",
+        "description": "Identify and exploit web application vulnerabilities",
+        "weeks": [
+          {
+            "weekNumber": 5,
+            "dates": "Feb 16-22",
+            "topics": [
+              "Vulnerability scanning vs. penetration testing",
+              "Scanner tools (Nessus, OpenVAS, Nikto)",
+              "Vulnerability databases (CVE, NVD, ExploitDB)",
+              "False positive identification",
+              "Prioritizing vulnerabilities (CVSS scoring)"
+            ],
+            "readings": "CompTIA PenTest+ Ch. 3 (Sections 3.4-3.6); CVSS v3.1 Specification",
+            "assignments": [
+              "Quiz 4: Vulnerability assessment (10 pts)",
+              "Discussion 5: Scanning vs. pen testing (3 pts)",
+              "Lab 5: Comprehensive Vulnerability Assessment (12.5 pts)",
+              "Assignment 2: Vulnerability Management Plan (20 pts)"
+            ],
+            "deliverableDueDate": "Feb 22",
+            "notes": "Learn CVSS scoring methodology"
+          },
+          {
+            "weekNumber": 6,
+            "dates": "Feb 23-Mar 1",
+            "topics": [
+              "OWASP Top 10 vulnerabilities",
+              "Web application reconnaissance",
+              "Injection attacks (SQL injection, command injection)",
+              "Cross-site scripting (XSS)",
+              "Burp Suite and OWASP ZAP"
+            ],
+            "readings": "CompTIA PenTest+ Ch. 6 (Sections 6.1-6.4); OWASP Top 10",
+            "assignments": [
+              "Quiz 5: OWASP Top 10 (10 pts)",
+              "Discussion 6: Recent web breach analysis (3 pts)",
+              "Lab 6: SQL Injection and XSS Exploitation (12.5 pts)"
+            ],
+            "deliverableDueDate": "Mar 1",
+            "notes": "Use DVWA for practice"
+          },
+          {
+            "weekNumber": 7,
+            "dates": "Mar 2-8",
+            "topics": [
+              "Authentication and session management flaws",
+              "Insecure direct object references (IDOR)",
+              "Cross-site request forgery (CSRF)",
+              "Security misconfigurations",
+              "API testing"
+            ],
+            "readings": "CompTIA PenTest+ Ch. 6 (Sections 6.5-6.8); OWASP API Security Top 10",
+            "assignments": [
+              "Quiz 6: Authentication flaws (10 pts)",
+              "Discussion 7: API security challenges (3 pts)",
+              "Lab 7: Authentication Bypass & API Testing (12.5 pts)",
+              "Assignment 3: Complete Web Application Assessment (15 pts)"
+            ],
+            "deliverableDueDate": "Mar 8",
+            "notes": "Use Postman for API testing"
+          }
+        ]
+      },
+      {
+        "title": "Phase 4: Network Penetration Testing (Weeks 8-10)",
+        "description": "Attack external and internal networks, culminating in midterm exam",
+        "weeks": [
+          {
+            "weekNumber": 8,
+            "dates": "Mar 9-15",
+            "topics": [
+              "External network reconnaissance",
+              "Port scanning and service enumeration (Nmap)",
+              "Banner grabbing and version detection",
+              "Firewall and IDS/IPS evasion techniques",
+              "Exploiting perimeter services (FTP, SSH, SMB)"
+            ],
+            "readings": "CompTIA PenTest+ Ch. 5 (Sections 5.1-5.3); Nmap Documentation",
+            "assignments": [
+              "Quiz 7: Network reconnaissance (10 pts)",
+              "Discussion 8: IDS/IPS evasion ethics (3 pts)",
+              "Lab 8: External Network Reconnaissance (12.5 pts)"
+            ],
+            "deliverableDueDate": "Mar 15",
+            "notes": "Advanced Nmap techniques"
+          },
+          {
+            "weekNumber": 9,
+            "dates": "Mar 16-22",
+            "topics": [
+              "Internal network reconnaissance and enumeration",
+              "LLMNR and NBT-NS poisoning (Responder)",
+              "SMB relay attacks",
+              "Credential harvesting and password cracking",
+              "Lateral movement techniques"
+            ],
+            "readings": "CompTIA PenTest+ Ch. 5 (Sections 5.4-5.6), Ch. 9 (Sections 9.1-9.2)",
+            "assignments": [
+              "Quiz 8: Internal network attacks (10 pts)",
+              "Discussion 9: Network segmentation (3 pts)",
+              "Lab 9: Internal Network Exploitation (12.5 pts)",
+              "MIDTERM PRACTICAL EXAM (150 pts)"
+            ],
+            "deliverableDueDate": "Mar 22",
+            "notes": "Take-home midterm exam (1 week to complete)"
+          },
+          {
+            "weekNumber": 10,
+            "dates": "Mar 23-29",
+            "topics": [
+              "Active Directory architecture and attack surface",
+              "BloodHound for AD enumeration",
+              "Kerberoasting and AS-REP roasting",
+              "Golden and Silver ticket attacks",
+              "Domain persistence techniques",
+              "DCSync attacks"
+            ],
+            "readings": "CompTIA PenTest+ Ch. 9 (Sections 9.3-9.5); Active Directory Security blog",
+            "assignments": [
+              "Quiz 9: Active Directory attacks (10 pts)",
+              "Discussion 10: Zero-trust architecture (3 pts)",
+              "Lab 10: Active Directory Attack Chain (12.5 pts)",
+              "Assignment 4: AD Compromise Scenario (20 pts)"
+            ],
+            "deliverableDueDate": "Mar 29",
+            "notes": "BloodHound enumeration and Kerberos attacks"
+          }
+        ]
+      },
+      {
+        "title": "Phase 5: Specialized Testing (Weeks 11-15)",
+        "description": "Wireless, exploitation, pivoting, IoT/OT, and cloud security",
+        "weeks": [
+          {
+            "weekNumber": 11,
+            "dates": "Apr 6-12",
+            "topics": [
+              "Wireless security protocols (WEP, WPA, WPA2, WPA3)",
+              "WPA2 handshake capture and cracking",
+              "Evil twin access point attacks",
+              "Wireless packet analysis with Wireshark",
+              "Rogue access point detection"
+            ],
+            "readings": "CompTIA PenTest+ Ch. 5 (Sections 5.7-5.9); Aircrack-ng documentation",
+            "assignments": [
+              "Quiz 10: Wireless security (10 pts)",
+              "Discussion 11: Public WiFi risks (3 pts)",
+              "Lab 11: Wireless Network Assessment (12.5 pts)"
+            ],
+            "deliverableDueDate": "Apr 12",
+            "notes": "Resumes after Spring Break"
+          },
+          {
+            "weekNumber": 12,
+            "dates": "Apr 13-19",
+            "topics": [
+              "Metasploit Framework architecture",
+              "Multi-stage exploitation",
+              "Privilege escalation (Windows and Linux)",
+              "Post-exploitation enumeration",
+              "Data exfiltration techniques",
+              "Establishing persistence"
+            ],
+            "readings": "CompTIA PenTest+ Ch. 9 (Sections 9.6-9.9); Metasploit Unleashed",
+            "assignments": [
+              "Quiz 11: Metasploit and privilege escalation (10 pts)",
+              "Discussion 12: Ethics of persistence (3 pts)",
+              "Lab 12: Complete Exploitation Chain (12.5 pts)",
+              "Assignment 5: Custom Exploit Modification (15 pts)"
+            ],
+            "deliverableDueDate": "Apr 19",
+            "notes": "Metasploit mastery"
+          },
+          {
+            "weekNumber": 13,
+            "dates": "Apr 20-26",
+            "topics": [
+              "Network pivoting concepts",
+              "Port forwarding and tunneling (SSH, Chisel)",
+              "Double pivoting to access segmented networks",
+              "Proxychains and SOCKS proxies",
+              "Accessing air-gapped networks"
+            ],
+            "readings": "CompTIA PenTest+ Ch. 9 (Sections 9.10-9.12); SSH tunneling guides",
+            "assignments": [
+              "Quiz 12: Pivoting and tunneling (10 pts)",
+              "Discussion 13: Network segmentation (3 pts)",
+              "Lab 13: Network Pivoting and Tunneling (12.5 pts)"
+            ],
+            "deliverableDueDate": "Apr 26",
+            "notes": "Multi-tiered network access"
+          },
+          {
+            "weekNumber": 14,
+            "dates": "Apr 27-May 3",
+            "topics": [
+              "IoT device security testing",
+              "Common IoT vulnerabilities (hardcoded credentials, firmware issues)",
+              "Operational Technology (OT) environments",
+              "SCADA system assessment",
+              "ICS/OT-specific tools and techniques"
+            ],
+            "readings": "CompTIA PenTest+ Ch. 8; OWASP IoT Top 10",
+            "assignments": [
+              "Quiz 13: IoT, OT, SCADA security (10 pts)",
+              "Discussion 14: Critical infrastructure (3 pts)",
+              "Lab 14: IoT and SCADA Assessment (12.5 pts)"
+            ],
+            "deliverableDueDate": "May 3",
+            "notes": "Specialized systems testing"
+          },
+          {
+            "weekNumber": 15,
+            "dates": "May 4-10",
+            "topics": [
+              "Cloud service models (IaaS, PaaS, SaaS) security",
+              "AWS/Azure/GCP misconfigurations",
+              "Cloud storage bucket enumeration",
+              "Identity and access management (IAM) exploitation",
+              "Container and Kubernetes security"
+            ],
+            "readings": "CompTIA PenTest+ Ch. 7; AWS/Azure security documentation",
+            "assignments": [
+              "Quiz 14: Cloud security (10 pts)",
+              "Discussion 15: Shared responsibility model (3 pts)",
+              "Lab 15: Cloud Environment Assessment (12.5 pts)"
+            ],
+            "deliverableDueDate": "May 10",
+            "notes": "Cloud penetration testing"
+          }
+        ]
+      },
+      {
+        "title": "Phase 6: Automation & Final Project (Weeks 16-17)",
+        "description": "Scripting automation and comprehensive final deliverables",
+        "weeks": [
+          {
+            "weekNumber": 16,
+            "dates": "May 11-17",
+            "topics": [
+              "Python for penetration testing",
+              "Bash scripting for automation",
+              "PowerShell for Windows exploitation",
+              "Customizing existing exploits",
+              "Building custom tools"
+            ],
+            "readings": "CompTIA PenTest+ Ch. 11; 'Black Hat Python' excerpts",
+            "assignments": [
+              "Quiz 15: Scripting and automation (10 pts)",
+              "Discussion 16: Ethics of automated tools (3 pts)",
+              "Lab 16: Custom Tool Development (12.5 pts)",
+              "Assignment 6: Custom Penetration Testing Tool (15 pts)"
+            ],
+            "deliverableDueDate": "May 17",
+            "notes": "Automation scripting mastery"
+          },
+          {
+            "weekNumber": 17,
+            "dates": "May 18-22",
+            "topics": [
+              "Executive summary writing",
+              "Technical findings documentation",
+              "Risk ratings and remediation recommendations",
+              "Report structure and formatting",
+              "Presentation skills and client communication"
+            ],
+            "readings": "CompTIA PenTest+ Ch. 10; SANS report writing guidelines; PTES reporting",
+            "assignments": [
+              "Discussion 17: Best practices in reporting (3 pts)",
+              "Lab 17: Professional Report Development (12.5 pts)",
+              "FINAL PROJECT: Comprehensive Penetration Test (250 pts)",
+              "FINAL REPORT & PRESENTATION (50 pts)",
+              "FINAL WRITTEN EXAM (50 pts)"
+            ],
+            "deliverableDueDate": "May 22",
+            "notes": "Final week - all capstone deliverables due"
+          }
+        ]
+      }
+    ]
   },
-  "gradeDistribution": [
-    {
-      "category": "Weekly Lab Reports",
-      "percentage": 20,
-      "points": 200,
-      "description": "16 lab reports (12.5 pts each)"
-    },
-    {
-      "category": "Weekly Quizzes",
-      "percentage": 15,
-      "points": 150,
-      "description": "15 quizzes (10 pts each)"
-    },
-    {
-      "category": "Discussion Board Participation",
-      "percentage": 5,
-      "points": 50,
-      "description": "Weekly participation (17 weeks @ ~3 pts each)"
-    },
-    {
-      "category": "Practical Assignments",
-      "percentage": 10,
-      "points": 100,
-      "description": "6 major assignments (varied points)"
-    },
-    {
-      "category": "Midterm Practical Exam",
-      "percentage": 15,
-      "points": 150,
-      "description": "Hands-on penetration test"
-    },
-    {
-      "category": "Final Project (Comprehensive Pen Test)",
-      "percentage": 25,
-      "points": 250,
-      "description": "Multi-phase penetration test"
-    },
-    {
-      "category": "Final Report & Presentation",
-      "percentage": 5,
-      "points": 50,
-      "description": "Professional report delivery"
-    },
-    {
-      "category": "Final Written Exam",
-      "percentage": 5,
-      "points": 50,
-      "description": "Comprehensive theory exam"
-    }
+  "materials": {
+    "required": [
+      {
+        "type": "Textbook",
+        "title": "CompTIA PenTest+ Study Guide: Exam PT0-003",
+        "author": "Mike Chapple & David Seidl",
+        "edition": "4th Edition",
+        "isbn": "978-1394212774",
+        "cost": "$40-60",
+        "notes": "Primary textbook aligned with CompTIA PenTest+ certification",
+        "link": null
+      }
+    ],
+    "recommended": [],
+    "free": [
+      {
+        "type": "Software",
+        "title": "Kali Linux",
+        "link": "https://www.kali.org/",
+        "notes": "Primary penetration testing distribution - setup in Week 1"
+      },
+      {
+        "type": "Software",
+        "title": "VirtualBox or VMware",
+        "link": "https://www.virtualbox.org/",
+        "notes": "Virtualization platform for lab environment"
+      },
+      {
+        "type": "Online Platform",
+        "title": "TryHackMe",
+        "link": "https://tryhackme.com/",
+        "notes": "Guided penetration testing labs and learning paths"
+      },
+      {
+        "type": "Online Platform",
+        "title": "HackTheBox",
+        "link": "https://www.hackthebox.com/",
+        "notes": "Advanced penetration testing challenges and machines"
+      },
+      {
+        "type": "Reference",
+        "title": "OWASP Testing Guide",
+        "link": "https://owasp.org/www-project-web-security-testing-guide/",
+        "notes": "Comprehensive web application testing methodology"
+      },
+      {
+        "type": "Reference",
+        "title": "PTES Technical Guidelines",
+        "link": "http://www.pentest-standard.org/",
+        "notes": "Penetration Testing Execution Standard"
+      },
+      {
+        "type": "Reference",
+        "title": "PortSwigger Web Security Academy",
+        "link": "https://portswigger.net/web-security",
+        "notes": "Free web application security training"
+      }
+    ]
+  },
+  "importantDates": [
+    { "date": "Jan 20", "event": "First day of class", "type": "start" },
+    { "date": "Jan 27", "event": "Last day to add without instructor signature", "type": "deadline" },
+    { "date": "Feb 10", "event": "Last day to drop without 'W'", "type": "deadline" },
+    { "date": "Mar 30-Apr 5", "event": "Spring Break - NO CLASS", "type": "break" },
+    { "date": "Apr 18", "event": "Last day to withdraw with 'W'", "type": "deadline" },
+    { "date": "May 22", "event": "Final project and exam due; Last day of instruction", "type": "end" }
   ],
-  "weeklyModules": [
-    {
-      "week": 1,
-      "dateRange": "Week 1 (1/20/2026 - 1/25/2026)",
-      "startDate": "2026-01-20",
-      "endDate": "2026-01-25",
-      "title": "Introduction to Penetration Testing",
-      "topics": [
-        "Penetration testing vs. vulnerability assessment",
-        "Types of penetration assessments (black box, white box, gray box)",
-        "Legal and ethical considerations",
-        "Industry standards and frameworks (PTES, OWASP, NIST)"
-      ],
-      "learningObjectives": [
-        "Define types of penetration assessments and their purposes",
-        "Explain the legal and ethical boundaries of penetration testing",
-        "Identify industry-standard methodologies and frameworks"
-      ],
-      "csloAlignment": [4],
-      "supplementalResources": [
-        "PTES Technical Guidelines: http://www.pentest-standard.org/index.php/Main_Page",
-        "OWASP Testing Guide: https://owasp.org/www-project-web-security-testing-guide/",
-        "NIST SP 800-115: Technical Guide to Information Security Testing"
-      ],
-      "labActivities": [
-        "Set up virtual lab environment (Kali Linux, vulnerable VMs)",
-        "Review sample penetration testing reports",
-        "Create code of ethics document"
-      ],
-      "textbookReading": {
-        "chapters": ["Chapter 1"],
-        "sections": ["Introduction to Penetration Testing"],
-        "pages": "30-40",
-        "estimatedTime": "2-3 hours",
-        "keyConcepts": [
-          "Penetration testing methodologies (PTES, OSSTMM, NIST)",
-          "Legal considerations and authorization",
-          "Rules of engagement",
-          "Ethical hacking principles"
-        ]
+  "workload": {
+    "weeklyHours": "12-14 hours per week (average)",
+    "breakdown": [
+      { "activity": "Lecture content and reading", "hours": "2-3" },
+      { "activity": "Lab work (hands-on practice)", "hours": "4.5" },
+      { "activity": "Lab reports and documentation", "hours": "2-3" },
+      { "activity": "Quiz preparation", "hours": "1" },
+      { "activity": "Programming assignments (on assignment weeks)", "hours": "4-6" }
+    ],
+    "note": "Time commitment varies by week. Assignment weeks require 14-16 hours. Non-assignment weeks require 10-12 hours. Final project weeks require 15-20 hours."
+  },
+  "grading": {
+    "scale": [
+      { "grade": "A", "min": 90, "max": 100, "description": "Excellent" },
+      { "grade": "B", "min": 80, "max": 89, "description": "Good" },
+      { "grade": "C", "min": 70, "max": 79, "description": "Satisfactory" },
+      { "grade": "D", "min": 60, "max": 69, "description": "Passing" },
+      { "grade": "F", "min": 0, "max": 59, "description": "Not passing" }
+    ],
+    "components": [
+      {
+        "category": "Weekly Lab Reports",
+        "weight": 20,
+        "details": "16 labs × 12.5 points each = 200 points",
+        "description": "Hands-on penetration testing lab exercises with documentation"
       },
-      "assessments": [
-        {
-          "type": "Discussion",
-          "points": 3,
-          "description": "Introduce yourself and share your cybersecurity interests"
-        },
-        {
-          "type": "Lab",
-          "points": 12.5,
-          "description": "Virtual Lab Environment Setup & Configuration"
-        }
-      ]
-    },
-    {
-      "week": 2,
-      "dateRange": "Week 2 (1/26/2026 - 2/1/2026)",
-      "startDate": "2026-01-26",
-      "endDate": "2026-02-01",
-      "title": "Scoping and Engagement Planning",
-      "topics": [
-        "Rules of engagement (ROE)",
-        "Scope definition and limitations",
-        "Target identification and profiling",
-        "Communication and escalation paths",
-        "Contracts and legal agreements"
-      ],
-      "learningObjectives": [
-        "Develop a comprehensive scope document for a penetration test",
-        "Identify targets to be tested within defined parameters",
-        "Create rules of engagement that protect both tester and client"
-      ],
-      "csloAlignment": [1, 2, 3, 4],
-      "supplementalResources": [
-        "SANS Pen Test Planning Checklists: https://www.sans.org/",
-        "Sample Statement of Work templates",
-        "Bug Bounty platforms (HackerOne, Bugcrowd) for real-world scoping examples"
-      ],
-      "labActivities": [
-        "Draft a scope document for a fictitious organization",
-        "Analyze case studies of scope creep and legal issues",
-        "Create a communication plan template"
-      ],
-      "textbookReading": {
-        "chapters": ["Chapter 2"],
-        "sections": ["Planning and Scoping an Assessment"],
-        "pages": "35-45",
-        "estimatedTime": "2-3 hours",
-        "keyConcepts": [
-          "Scope creep and how to avoid it",
-          "Target profiling",
-          "Resource allocation",
-          "Documentation requirements"
-        ]
+      {
+        "category": "Weekly Quizzes",
+        "weight": 15,
+        "details": "15 quizzes × 10 points each = 150 points",
+        "description": "Knowledge-based quizzes on key concepts and techniques"
       },
-      "assessments": [
-        {
-          "type": "Quiz",
-          "number": 1,
-          "points": 10,
-          "description": "Penetration testing fundamentals and methodologies"
-        },
-        {
-          "type": "Discussion",
-          "points": 3,
-          "description": "Analyze a real-world penetration testing contract failure"
-        },
-        {
-          "type": "Lab",
-          "points": 12.5,
-          "description": "Scope Document and Rules of Engagement Creation"
-        }
-      ]
-    },
-    {
-      "week": 3,
-      "dateRange": "Week 3 (2/2/2026 - 2/8/2026)",
-      "startDate": "2026-02-02",
-      "endDate": "2026-02-08",
-      "title": "Information Gathering and OSINT",
-      "topics": [
-        "Passive reconnaissance techniques",
-        "OSINT sources and tools (Maltego, theHarvester, Shodan)",
-        "DNS enumeration and subdomain discovery",
-        "Social media intelligence gathering",
-        "Search engine dorking (Google Hacking)"
-      ],
-      "learningObjectives": [
-        "Conduct passive reconnaissance without touching target systems",
-        "Utilize OSINT tools to gather actionable intelligence",
-        "Map an organization's external footprint"
-      ],
-      "csloAlignment": [1, 2],
-      "supplementalResources": [
-        "OSINT Framework: https://osintframework.com/",
-        "Shodan: https://www.shodan.io/",
-        "Google Hacking Database: https://www.exploit-db.com/google-hacking-database",
-        "Intelligence X: https://intelx.io/"
-      ],
-      "labActivities": [
-        "Perform OSINT on a designated target organization",
-        "DNS enumeration and subdomain discovery exercise",
-        "Create an intelligence report from gathered information"
-      ],
-      "textbookReading": {
-        "chapters": ["Chapter 3 (Part 1)"],
-        "sections": ["Sections 3.1-3.3"],
-        "pages": "25-30",
-        "estimatedTime": "2-3 hours",
-        "keyConcepts": [
-          "Passive vs. active reconnaissance",
-          "OSINT tools and frameworks",
-          "Subdomain enumeration",
-          "Information leakage"
-        ]
+      {
+        "category": "Discussion Board Participation",
+        "weight": 5,
+        "details": "17 discussions × 3 points each = 51 points",
+        "description": "Weekly reflection posts and peer engagement"
       },
-      "assessments": [
-        {
-          "type": "Quiz",
-          "number": 2,
-          "points": 10,
-          "description": "OSINT techniques and passive reconnaissance"
-        },
-        {
-          "type": "Discussion",
-          "points": 3,
-          "description": "Discuss ethical boundaries in OSINT gathering"
-        },
-        {
-          "type": "Lab",
-          "points": 12.5,
-          "description": "OSINT Intelligence Report"
-        },
-        {
-          "type": "Assignment",
-          "number": 1,
-          "points": 15,
-          "description": "OSINT Challenge - Complete multi-target OSINT investigation"
-        }
-      ]
-    },
-    {
-      "week": 4,
-      "dateRange": "Week 4 (2/9/2026 - 2/15/2026)",
-      "startDate": "2026-02-09",
-      "endDate": "2026-02-15",
-      "title": "Social Engineering Penetration Testing",
-      "topics": [
-        "Social engineering attack vectors (phishing, vishing, smishing)",
-        "Pretexting and impersonation",
-        "Physical security testing",
-        "USB drop attacks",
-        "Social engineering toolkit (SET)"
-      ],
-      "learningObjectives": [
-        "Design and execute email-based social engineering campaigns",
-        "Develop pretexts for telephony-based attacks",
-        "Understand physical security assessment techniques"
-      ],
-      "csloAlignment": [1, 4],
-      "supplementalResources": [
-        "Social Engineering Toolkit (SET): https://github.com/trustedsec/social-engineer-toolkit",
-        "GoPhish: https://getgophish.com/",
-        "SANS Social Engineering resources",
-        "\"The Art of Deception\" by Kevin Mitnick (reading excerpts)"
-      ],
-      "labActivities": [
-        "Create phishing campaign using GoPhish",
-        "Develop pretext scenarios for vishing",
-        "Conduct controlled USB drop test in lab environment"
-      ],
-      "textbookReading": {
-        "chapters": ["Chapter 4"],
-        "sections": ["Social Engineering"],
-        "pages": "30-40",
-        "estimatedTime": "2-3 hours",
-        "keyConcepts": [
-          "Psychological manipulation techniques",
-          "Email spoofing and domain reputation",
-          "Pretext development",
-          "Physical penetration testing"
-        ]
+      {
+        "category": "Practical Assignments",
+        "weight": 10,
+        "details": "6 assignments (15-20 pts each) = 100 points",
+        "description": "Major penetration testing projects and scenarios"
       },
-      "assessments": [
-        {
-          "type": "Quiz",
-          "number": 3,
-          "points": 10,
-          "description": "Social engineering techniques and ethics"
-        },
-        {
-          "type": "Discussion",
-          "points": 3,
-          "description": "Case study analysis of successful/failed social engineering attacks"
-        },
-        {
-          "type": "Lab",
-          "points": 12.5,
-          "description": "Phishing Campaign Design and Execution"
-        }
-      ]
-    },
-    {
-      "week": 5,
-      "dateRange": "Week 5 (2/16/2026 - 2/22/2026)",
-      "startDate": "2026-02-16",
-      "endDate": "2026-02-22",
-      "title": "Vulnerability Scanning and Analysis",
-      "topics": [
-        "Vulnerability scanning vs. penetration testing",
-        "Scanner tools (Nessus, OpenVAS, Nikto)",
-        "Vulnerability databases (CVE, NVD, ExploitDB)",
-        "False positive identification",
-        "Prioritizing vulnerabilities (CVSS scoring)"
-      ],
-      "learningObjectives": [
-        "Conduct comprehensive vulnerability scans using industry tools",
-        "Analyze scan results and prioritize findings",
-        "Differentiate between vulnerabilities and exploitable weaknesses"
-      ],
-      "csloAlignment": [1, 2],
-      "supplementalResources": [
-        "CVE Database: https://cve.mitre.org/",
-        "National Vulnerability Database: https://nvd.nist.gov/",
-        "Exploit Database: https://www.exploit-db.com/",
-        "CVSS Calculator: https://www.first.org/cvss/calculator/3.1"
-      ],
-      "labActivities": [
-        "Run vulnerability scans on lab VMs (Metasploitable, DVWA)",
-        "Analyze and categorize scan results",
-        "Create vulnerability matrix with CVSS scores"
-      ],
-      "textbookReading": {
-        "chapters": ["Chapter 3 (Part 2)"],
-        "sections": ["Sections 3.4-3.6"],
-        "pages": "25-30",
-        "estimatedTime": "2-3 hours",
-        "keyConcepts": [
-          "Scanner configuration and tuning",
-          "Authenticated vs. unauthenticated scans",
-          "CVSS metrics and scoring",
-          "Vulnerability correlation"
-        ]
+      {
+        "category": "Midterm Practical Exam",
+        "weight": 15,
+        "details": "1 comprehensive exam = 150 points",
+        "description": "Hands-on network penetration test (take-home, 1 week)"
       },
-      "assessments": [
-        {
-          "type": "Quiz",
-          "number": 4,
-          "points": 10,
-          "description": "Vulnerability assessment concepts and CVSS scoring"
-        },
-        {
-          "type": "Discussion",
-          "points": 3,
-          "description": "Debate: Vulnerability scanning vs. penetration testing value"
-        },
-        {
-          "type": "Lab",
-          "points": 12.5,
-          "description": "Comprehensive Vulnerability Assessment"
-        },
-        {
-          "type": "Assignment",
-          "number": 2,
-          "points": 20,
-          "description": "Vulnerability Management Plan"
-        }
-      ]
-    },
-    {
-      "week": 6,
-      "dateRange": "Week 6 (2/23/2026 - 3/1/2026)",
-      "startDate": "2026-02-23",
-      "endDate": "2026-03-01",
-      "title": "Web Application Penetration Testing - Part 1",
-      "topics": [
-        "OWASP Top 10 vulnerabilities",
-        "Web application reconnaissance",
-        "Injection attacks (SQL injection, command injection)",
-        "Cross-site scripting (XSS)",
-        "Burp Suite and OWASP ZAP"
-      ],
-      "learningObjectives": [
-        "Identify common web application vulnerabilities",
-        "Execute SQL injection attacks to extract data",
-        "Demonstrate XSS attacks and their impact"
-      ],
-      "csloAlignment": [1, 3],
-      "supplementalResources": [
-        "OWASP Top 10: https://owasp.org/www-project-top-ten/",
-        "PortSwigger Web Security Academy: https://portswigger.net/web-security",
-        "DVWA (Damn Vulnerable Web Application)",
-        "HackTheBox web challenges"
-      ],
-      "labActivities": [
-        "Manual SQL injection on DVWA",
-        "Automated scanning with Burp Suite",
-        "XSS exploitation exercises (stored, reflected, DOM-based)"
-      ],
-      "textbookReading": {
-        "chapters": ["Chapter 6 (Part 1)"],
-        "sections": ["Sections 6.1-6.4"],
-        "pages": "30-35",
-        "estimatedTime": "3-4 hours",
-        "keyConcepts": [
-          "SQL injection techniques and variants",
-          "XSS types (stored, reflected, DOM-based)",
-          "Input validation and sanitization",
-          "Web proxy usage"
-        ]
+      {
+        "category": "Final Project",
+        "weight": 25,
+        "details": "1 comprehensive project = 250 points",
+        "description": "Multi-phase penetration test demonstrating course mastery"
       },
-      "assessments": [
-        {
-          "type": "Quiz",
-          "number": 5,
-          "points": 10,
-          "description": "OWASP Top 10 and injection attacks"
-        },
-        {
-          "type": "Discussion",
-          "points": 3,
-          "description": "Analyze recent web application breach"
-        },
-        {
-          "type": "Lab",
-          "points": 12.5,
-          "description": "SQL Injection and XSS Exploitation"
-        }
-      ]
-    },
-    {
-      "week": 7,
-      "dateRange": "Week 7 (3/2/2026 - 3/8/2026)",
-      "startDate": "2026-03-02",
-      "endDate": "2026-03-08",
-      "title": "Web Application Penetration Testing - Part 2",
-      "topics": [
-        "Authentication and session management flaws",
-        "Insecure direct object references (IDOR)",
-        "Cross-site request forgery (CSRF)",
-        "Security misconfigurations",
-        "API testing"
-      ],
-      "learningObjectives": [
-        "Exploit authentication bypass vulnerabilities",
-        "Manipulate session tokens and cookies",
-        "Test API endpoints for security flaws"
-      ],
-      "csloAlignment": [1, 3],
-      "supplementalResources": [
-        "OWASP API Security Top 10: https://owasp.org/www-project-api-security/",
-        "JWT.io for token analysis: https://jwt.io/",
-        "Postman for API testing",
-        "WebGoat: https://owasp.org/www-project-webgoat/"
-      ],
-      "labActivities": [
-        "Session hijacking exercises",
-        "IDOR vulnerability exploitation",
-        "API fuzzing and testing with Postman",
-        "CSRF token bypass techniques"
-      ],
-      "textbookReading": {
-        "chapters": ["Chapter 6 (Part 2)"],
-        "sections": ["Sections 6.5-6.8"],
-        "pages": "30-35",
-        "estimatedTime": "3-4 hours",
-        "keyConcepts": [
-          "Session token analysis",
-          "JWT vulnerabilities",
-          "API authentication mechanisms",
-          "IDOR exploitation"
-        ]
+      {
+        "category": "Final Report & Presentation",
+        "weight": 5,
+        "details": "1 report = 50 points",
+        "description": "Professional penetration testing report and presentation"
       },
-      "assessments": [
-        {
-          "type": "Quiz",
-          "number": 6,
-          "points": 10,
-          "description": "Authentication flaws and session management"
-        },
-        {
-          "type": "Discussion",
-          "points": 3,
-          "description": "API security challenges in modern applications"
-        },
-        {
-          "type": "Lab",
-          "points": 12.5,
-          "description": "Authentication Bypass and API Testing"
-        },
-        {
-          "type": "Assignment",
-          "number": 3,
-          "points": 15,
-          "description": "Complete Web Application Assessment"
-        }
-      ]
-    },
-    {
-      "week": 8,
-      "dateRange": "Week 8 (3/9/2026 - 3/15/2026)",
-      "startDate": "2026-03-09",
-      "endDate": "2026-03-15",
-      "title": "Network Penetration Testing - External",
-      "topics": [
-        "External network reconnaissance",
-        "Port scanning and service enumeration (Nmap)",
-        "Banner grabbing and version detection",
-        "Firewall and IDS/IPS evasion techniques",
-        "Exploiting perimeter services (FTP, SSH, SMB)"
-      ],
-      "learningObjectives": [
-        "Conduct comprehensive external network reconnaissance",
-        "Identify and enumerate exposed services",
-        "Exploit common perimeter vulnerabilities"
-      ],
-      "csloAlignment": [1, 2],
-      "supplementalResources": [
-        "Nmap Documentation: https://nmap.org/book/",
-        "Nmap scripting engine (NSE) scripts",
-        "Metasploit Unleashed: https://www.offensive-security.com/metasploit-unleashed/",
-        "VulnHub machines for practice"
-      ],
-      "labActivities": [
-        "Advanced Nmap scanning techniques",
-        "Service enumeration and exploitation",
-        "Firewall evasion exercises"
-      ],
-      "textbookReading": {
-        "chapters": ["Chapter 5 (Part 1)"],
-        "sections": ["Sections 5.1-5.3"],
-        "pages": "25-30",
-        "estimatedTime": "2-3 hours",
-        "keyConcepts": [
-          "Port scanning techniques",
-          "Service fingerprinting",
-          "Firewall detection",
-          "IDS/IPS evasion"
-        ]
-      },
-      "assessments": [
-        {
-          "type": "Quiz",
-          "number": 7,
-          "points": 10,
-          "description": "Network reconnaissance and scanning techniques"
-        },
-        {
-          "type": "Discussion",
-          "points": 3,
-          "description": "IDS/IPS evasion ethics and legality"
-        },
-        {
-          "type": "Lab",
-          "points": 12.5,
-          "description": "External Network Reconnaissance and Exploitation"
-        }
-      ]
-    },
-    {
-      "week": 9,
-      "dateRange": "Week 9 (3/16/2026 - 3/22/2026)",
-      "startDate": "2026-03-16",
-      "endDate": "2026-03-22",
-      "title": "Network Penetration Testing - Internal",
-      "topics": [
-        "Internal network reconnaissance and enumeration",
-        "LLMNR and NBT-NS poisoning (Responder)",
-        "SMB relay attacks",
-        "Credential harvesting and password cracking",
-        "Lateral movement techniques"
-      ],
-      "learningObjectives": [
-        "Perform internal network reconnaissance",
-        "Execute credential harvesting attacks",
-        "Demonstrate lateral movement within a network"
-      ],
-      "csloAlignment": [1, 2],
-      "supplementalResources": [
-        "Responder tool: https://github.com/lgandx/Responder",
-        "Impacket toolkit: https://github.com/SecureAuthCorp/impacket",
-        "CrackMapExec: https://github.com/byt3bl33d3r/CrackMapExec",
-        "John the Ripper and Hashcat documentation"
-      ],
-      "labActivities": [
-        "LLMNR/NBT-NS poisoning with Responder",
-        "SMB relay attacks",
-        "Credential harvesting and cracking"
-      ],
-      "textbookReading": {
-        "chapters": ["Chapter 5 (Part 2)", "Chapter 9 (Part 1)"],
-        "sections": ["Sections 5.4-5.6, 9.1-9.2"],
-        "pages": "35-40",
-        "estimatedTime": "3-4 hours",
-        "keyConcepts": [
-          "Internal network enumeration",
-          "Credential attacks",
-          "Pass-the-hash techniques",
-          "Lateral movement strategies"
-        ]
-      },
-      "assessments": [
-        {
-          "type": "Quiz",
-          "number": 8,
-          "points": 10,
-          "description": "Internal network attacks and lateral movement"
-        },
-        {
-          "type": "Discussion",
-          "points": 3,
-          "description": "Network segmentation best practices"
-        },
-        {
-          "type": "Lab",
-          "points": 12.5,
-          "description": "Internal Network Exploitation"
-        },
-        {
-          "type": "Midterm Exam",
-          "points": 150,
-          "description": "Comprehensive Network Penetration Test (Take-home, 1 week)"
-        }
-      ]
-    },
-    {
-      "week": 10,
-      "dateRange": "Week 10 (3/23/2026 - 3/29/2026)",
-      "startDate": "2026-03-23",
-      "endDate": "2026-03-29",
-      "title": "Active Directory Penetration Testing",
-      "topics": [
-        "Active Directory architecture and attack surface",
-        "BloodHound for AD enumeration",
-        "Kerberoasting and AS-REP roasting",
-        "Golden and Silver ticket attacks",
-        "Domain persistence techniques",
-        "DCSync attacks"
-      ],
-      "learningObjectives": [
-        "Map Active Directory attack paths using BloodHound",
-        "Execute Kerberos-based attacks",
-        "Establish domain persistence"
-      ],
-      "csloAlignment": [1, 2, 3],
-      "supplementalResources": [
-        "BloodHound: https://github.com/BloodHoundAD/BloodHound",
-        "Rubeus: https://github.com/GhostPack/Rubeus",
-        "Mimikatz: https://github.com/gentilkiwi/mimikatz",
-        "Active Directory Security blog: https://adsecurity.org/"
-      ],
-      "labActivities": [
-        "BloodHound enumeration",
-        "Kerberoasting attack",
-        "Golden ticket generation",
-        "Domain persistence techniques"
-      ],
-      "textbookReading": {
-        "chapters": ["Chapter 9 (Part 2)"],
-        "sections": ["Sections 9.3-9.5"],
-        "pages": "25-30",
-        "estimatedTime": "3-4 hours",
-        "keyConcepts": [
-          "AD attack paths",
-          "Kerberos protocol weaknesses",
-          "Ticket-based attacks",
-          "Domain controller compromise"
-        ]
-      },
-      "assessments": [
-        {
-          "type": "Quiz",
-          "number": 9,
-          "points": 10,
-          "description": "Active Directory attack vectors"
-        },
-        {
-          "type": "Discussion",
-          "points": 3,
-          "description": "Zero-trust architecture and AD security"
-        },
-        {
-          "type": "Lab",
-          "points": 12.5,
-          "description": "Active Directory Attack Chain"
-        },
-        {
-          "type": "Assignment",
-          "number": 4,
-          "points": 20,
-          "description": "Active Directory Compromise Scenario"
-        }
-      ]
-    },
-    {
-      "week": 11,
-      "dateRange": "Week 11 (4/6/2026 - 4/12/2026)",
-      "startDate": "2026-04-06",
-      "endDate": "2026-04-12",
-      "title": "Wireless Network Penetration Testing",
-      "topics": [
-        "Wireless security protocols (WEP, WPA, WPA2, WPA3)",
-        "WPA2 handshake capture and cracking",
-        "Evil twin access point attacks",
-        "Wireless packet analysis with Wireshark",
-        "Rogue access point detection"
-      ],
-      "learningObjectives": [
-        "Assess wireless network security",
-        "Capture and crack WPA2 handshakes",
-        "Set up and execute evil twin attacks"
-      ],
-      "csloAlignment": [1, 2],
-      "supplementalResources": [
-        "Aircrack-ng suite: https://www.aircrack-ng.org/",
-        "Wifite: https://github.com/derv82/wifite2",
-        "WiFi Pineapple documentation",
-        "Wireshark wireless analysis tutorials"
-      ],
-      "labActivities": [
-        "WPA2 handshake capture and cracking",
-        "Evil twin access point setup",
-        "Wireless packet analysis"
-      ],
-      "textbookReading": {
-        "chapters": ["Chapter 5 (Part 3)"],
-        "sections": ["Sections 5.7-5.9"],
-        "pages": "20-25",
-        "estimatedTime": "2-3 hours",
-        "keyConcepts": [
-          "Wireless encryption protocols",
-          "Handshake capture techniques",
-          "Evil twin attacks",
-          "Wireless intrusion detection"
-        ]
-      },
-      "assessments": [
-        {
-          "type": "Quiz",
-          "number": 10,
-          "points": 10,
-          "description": "Wireless security protocols and attacks"
-        },
-        {
-          "type": "Discussion",
-          "points": 3,
-          "description": "Public WiFi security risks and mitigation"
-        },
-        {
-          "type": "Lab",
-          "points": 12.5,
-          "description": "Wireless Network Assessment"
-        }
-      ]
-    },
-    {
-      "week": 12,
-      "dateRange": "Week 12 (4/13/2026 - 4/19/2026)",
-      "startDate": "2026-04-13",
-      "endDate": "2026-04-19",
-      "title": "Exploitation and Post-Exploitation",
-      "topics": [
-        "Metasploit Framework architecture",
-        "Multi-stage exploitation",
-        "Privilege escalation (Windows and Linux)",
-        "Post-exploitation enumeration",
-        "Data exfiltration techniques",
-        "Establishing persistence"
-      ],
-      "learningObjectives": [
-        "Execute multi-stage exploits using Metasploit",
-        "Perform privilege escalation on compromised systems",
-        "Establish persistent access to compromised systems"
-      ],
-      "csloAlignment": [1, 3],
-      "supplementalResources": [
-        "Metasploit Unleashed (free course)",
-        "Windows Privilege Escalation Guide: https://www.fuzzysecurity.com/tutorials/16.html",
-        "Linux Privilege Escalation Guide: https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/",
-        "GTFOBins: https://gtfobins.github.io/"
-      ],
-      "labActivities": [
-        "Multi-stage exploitation with Metasploit",
-        "Windows and Linux privilege escalation exercises",
-        "Persistence mechanism implementation",
-        "Simulated data exfiltration"
-      ],
-      "textbookReading": {
-        "chapters": ["Chapter 9 (Part 3)"],
-        "sections": ["Sections 9.6-9.9"],
-        "pages": "30-35",
-        "estimatedTime": "3-4 hours",
-        "keyConcepts": [
-          "Metasploit modules and payloads",
-          "Privilege escalation vectors",
-          "Persistence mechanisms",
-          "Data exfiltration methods"
-        ]
-      },
-      "assessments": [
-        {
-          "type": "Quiz",
-          "number": 11,
-          "points": 10,
-          "description": "Metasploit Framework and privilege escalation"
-        },
-        {
-          "type": "Discussion",
-          "points": 3,
-          "description": "Ethical considerations in maintaining persistence"
-        },
-        {
-          "type": "Lab",
-          "points": 12.5,
-          "description": "Complete Exploitation Chain"
-        },
-        {
-          "type": "Assignment",
-          "number": 5,
-          "points": 15,
-          "description": "Custom Exploit Modification"
-        }
-      ]
-    },
-    {
-      "week": 13,
-      "dateRange": "Week 13 (4/20/2026 - 4/26/2026)",
-      "startDate": "2026-04-20",
-      "endDate": "2026-04-26",
-      "title": "Pivoting and Advanced Network Access",
-      "topics": [
-        "Network pivoting concepts",
-        "Port forwarding and tunneling (SSH, Chisel)",
-        "Double pivoting to access segmented networks",
-        "Proxychains and SOCKS proxies",
-        "Accessing air-gapped networks"
-      ],
-      "learningObjectives": [
-        "Establish network pivots to access hidden segments",
-        "Create tunnels through compromised hosts",
-        "Navigate complex, segmented network environments"
-      ],
-      "csloAlignment": [2, 3],
-      "supplementalResources": [
-        "Chisel: https://github.com/jpillora/chisel",
-        "Ligolo-ng: https://github.com/nicocha30/ligolo-ng",
-        "SSH tunneling guides",
-        "Network pivoting labs on HackTheBox/ProvingGrounds"
-      ],
-      "labActivities": [
-        "Single and double pivot exercises",
-        "Dynamic port forwarding setup",
-        "Accessing multi-tiered network environments",
-        "Tunneling through firewalls"
-      ],
-      "textbookReading": {
-        "chapters": ["Chapter 9 (Part 4)"],
-        "sections": ["Sections 9.10-9.12"],
-        "pages": "20-25",
-        "estimatedTime": "2-3 hours",
-        "keyConcepts": [
-          "Pivoting techniques",
-          "SSH tunneling",
-          "SOCKS proxies",
-          "Network segmentation bypass"
-        ]
-      },
-      "assessments": [
-        {
-          "type": "Quiz",
-          "number": 12,
-          "points": 10,
-          "description": "Pivoting and tunneling techniques"
-        },
-        {
-          "type": "Discussion",
-          "points": 3,
-          "description": "Network segmentation vs. flat networks security"
-        },
-        {
-          "type": "Lab",
-          "points": 12.5,
-          "description": "Network Pivoting and Tunneling"
-        }
-      ]
-    },
-    {
-      "week": 14,
-      "dateRange": "Week 14 (4/27/2026 - 5/3/2026)",
-      "startDate": "2026-04-27",
-      "endDate": "2026-05-03",
-      "title": "IoT, OT, and SCADA Penetration Testing",
-      "topics": [
-        "IoT device security testing",
-        "Common IoT vulnerabilities (hardcoded credentials, firmware issues)",
-        "Operational Technology (OT) environments",
-        "SCADA system assessment",
-        "ICS/OT-specific tools and techniques"
-      ],
-      "learningObjectives": [
-        "Identify security risks in IoT devices",
-        "Understand unique challenges of OT/SCADA penetration testing",
-        "Apply appropriate testing methodologies for industrial systems"
-      ],
-      "csloAlignment": [1],
-      "supplementalResources": [
-        "ICS-CERT advisories: https://www.cisa.gov/ics",
-        "Shodan for IoT device discovery",
-        "OWASP IoT Top 10: https://owasp.org/www-pdf-archive/OWASP-IoT-Top-10-2018-final.pdf",
-        "SANS ICS/SCADA resources"
-      ],
-      "labActivities": [
-        "IoT device firmware analysis",
-        "Exploiting IoT vulnerabilities (IP cameras, smart devices)",
-        "SCADA simulator testing",
-        "Protocol analysis (Modbus, DNP3)"
-      ],
-      "textbookReading": {
-        "chapters": ["Chapter 8"],
-        "sections": ["Specialized Systems"],
-        "pages": "25-30",
-        "estimatedTime": "2-3 hours",
-        "keyConcepts": [
-          "IoT attack surface",
-          "Firmware analysis",
-          "Industrial protocols",
-          "SCADA security"
-        ]
-      },
-      "assessments": [
-        {
-          "type": "Quiz",
-          "number": 13,
-          "points": 10,
-          "description": "IoT, OT, and SCADA security"
-        },
-        {
-          "type": "Discussion",
-          "points": 3,
-          "description": "Critical infrastructure security challenges"
-        },
-        {
-          "type": "Lab",
-          "points": 12.5,
-          "description": "IoT and SCADA Assessment"
-        }
-      ]
-    },
-    {
-      "week": 15,
-      "dateRange": "Week 15 (5/4/2026 - 5/10/2026)",
-      "startDate": "2026-05-04",
-      "endDate": "2026-05-10",
-      "title": "Cloud Penetration Testing",
-      "topics": [
-        "Cloud service models (IaaS, PaaS, SaaS) security",
-        "AWS/Azure/GCP misconfigurations",
-        "Cloud storage bucket enumeration",
-        "Identity and access management (IAM) exploitation",
-        "Container and Kubernetes security"
-      ],
-      "learningObjectives": [
-        "Identify common cloud misconfigurations",
-        "Assess cloud IAM policies for privilege escalation",
-        "Test containerized application security"
-      ],
-      "csloAlignment": [1, 2],
-      "supplementalResources": [
-        "ScoutSuite: https://github.com/nccgroup/ScoutSuite",
-        "Prowler for AWS: https://github.com/prowler-cloud/prowler",
-        "CloudGoat (vulnerable AWS environment): https://github.com/RhinoSecurityLabs/cloudgoat",
-        "Microsoft Azure security documentation"
-      ],
-      "labActivities": [
-        "AWS S3 bucket enumeration and exploitation",
-        "IAM privilege escalation exercises",
-        "Azure blob storage testing",
-        "Container escape techniques"
-      ],
-      "textbookReading": {
-        "chapters": ["Chapter 7"],
-        "sections": ["Cloud and Virtualization"],
-        "pages": "30-35",
-        "estimatedTime": "3-4 hours",
-        "keyConcepts": [
-          "Cloud security models",
-          "IAM misconfigurations",
-          "Storage bucket vulnerabilities",
-          "Container security"
-        ]
-      },
-      "assessments": [
-        {
-          "type": "Quiz",
-          "number": 14,
-          "points": 10,
-          "description": "Cloud security and exploitation"
-        },
-        {
-          "type": "Discussion",
-          "points": 3,
-          "description": "Shared responsibility model in cloud security"
-        },
-        {
-          "type": "Lab",
-          "points": 12.5,
-          "description": "Cloud Environment Assessment"
-        }
-      ]
-    },
-    {
-      "week": 16,
-      "dateRange": "Week 16 (5/11/2026 - 5/17/2026)",
-      "startDate": "2026-05-11",
-      "endDate": "2026-05-17",
-      "title": "Scripting and Automation for Penetration Testing",
-      "topics": [
-        "Python for penetration testing",
-        "Bash scripting for automation",
-        "PowerShell for Windows exploitation",
-        "Customizing existing exploits",
-        "Building custom tools"
-      ],
-      "learningObjectives": [
-        "Write Python scripts to automate reconnaissance and exploitation",
-        "Develop custom tools for specific testing scenarios",
-        "Modify existing exploits for target environments"
-      ],
-      "csloAlignment": [3],
-      "supplementalResources": [
-        "\"Black Hat Python\" by Justin Seitz (excerpts)",
-        "\"Violent Python\" cookbook",
-        "Python requests library documentation",
-        "PowerShell Empire: https://github.com/EmpireProject/Empire"
-      ],
-      "labActivities": [
-        "Write port scanner in Python",
-        "Create automated subdomain enumeration script",
-        "Develop custom PowerShell payload",
-        "Modify Metasploit module for specific target"
-      ],
-      "textbookReading": {
-        "chapters": ["Chapter 11"],
-        "sections": ["Tools and Code Analysis"],
-        "pages": "35-40",
-        "estimatedTime": "3-4 hours",
-        "keyConcepts": [
-          "Python libraries for security (requests, socket, scapy)",
-          "PowerShell Empire and Cobalt Strike",
-          "Exploit modification techniques",
-          "Regex for log parsing"
-        ]
-      },
-      "assessments": [
-        {
-          "type": "Quiz",
-          "number": 15,
-          "points": 10,
-          "description": "Scripting and automation for pen testing"
-        },
-        {
-          "type": "Discussion",
-          "points": 3,
-          "description": "Ethics of automated exploitation tools"
-        },
-        {
-          "type": "Lab",
-          "points": 12.5,
-          "description": "Custom Tool Development"
-        },
-        {
-          "type": "Assignment",
-          "number": 6,
-          "points": 15,
-          "description": "Custom Penetration Testing Tool"
-        }
-      ]
-    },
-    {
-      "week": 17,
-      "dateRange": "Week 17 (5/18/2026 - 5/22/2026)",
-      "startDate": "2026-05-18",
-      "endDate": "2026-05-22",
-      "title": "Report Writing and Professional Communication",
-      "topics": [
-        "Executive summary writing",
-        "Technical findings documentation",
-        "Risk ratings and remediation recommendations",
-        "Report structure and formatting",
-        "Presentation skills and client communication",
-        "Post-engagement activities"
-      ],
-      "learningObjectives": [
-        "Create professional penetration testing reports for technical and non-technical audiences",
-        "Effectively communicate findings and recommendations",
-        "Develop comprehensive documentation of testing methodology"
-      ],
-      "csloAlignment": [4],
-      "supplementalResources": [
-        "SANS report writing guidelines",
-        "Sample penetration testing reports (publicly available)",
-        "PTES reporting guidelines",
-        "\"The Art of Writing Penetration Test Reports\" (various online resources)"
-      ],
-      "labActivities": [
-        "Draft executive summary from previous lab findings",
-        "Create technical appendix with proof-of-concept screenshots",
-        "Develop remediation timeline and recommendations",
-        "Present findings to class (simulated client presentation)",
-        "Final comprehensive penetration test report (capstone deliverable)"
-      ],
-      "textbookReading": {
-        "chapters": ["Chapter 10"],
-        "sections": ["Reporting and Communication"],
-        "pages": "30-35",
-        "estimatedTime": "2-3 hours",
-        "keyConcepts": [
-          "Audience-appropriate communication",
-          "CVSS and custom risk rating",
-          "Proof-of-concept documentation",
-          "Remediation prioritization"
-        ]
-      },
-      "assessments": [
-        {
-          "type": "Discussion",
-          "points": 3,
-          "description": "Best practices in security reporting"
-        },
-        {
-          "type": "Lab",
-          "points": 12.5,
-          "description": "Professional Report Development"
-        },
-        {
-          "type": "Final Project",
-          "points": 250,
-          "description": "Comprehensive Penetration Test (Multi-phase)"
-        },
-        {
-          "type": "Final Report",
-          "points": 50,
-          "description": "Final Report & Presentation"
-        },
-        {
-          "type": "Final Exam",
-          "points": 50,
-          "description": "Comprehensive Written Exam"
-        }
-      ]
-    }
+      {
+        "category": "Final Written Exam",
+        "weight": 5,
+        "details": "1 exam = 50 points",
+        "description": "Comprehensive theory and methodology exam"
+      }
+    ],
+    "bonusOpportunities": "Up to 60 points extra credit: Bug bounty participation (20 pts), Security conference (15 pts), Tool tutorial (10 pts), CTF competition (15 pts)",
+    "totalPoints": 1001,
+    "passingGrade": "C (70%) required for Cybersecurity majors and to progress to advanced courses"
+  },
+  "policies": {
+    "attendance": "Lab sessions are strongly recommended for hands-on practice. Remote students should complete labs asynchronously. Students who actively participate in labs perform significantly better.",
+    "lateWork": "Standard: 10% deduction (0-24hrs), 25% (24-48hrs), 50% (48-72hrs), 0 points after 72hrs. Exceptions: Midterm/Final exams not accepted late. Final project: 10% per day, max 3 days. Labs: max 1 week late with penalties.",
+    "makeupWork": "Quizzes cannot be made up. Labs and assignments can be completed late with penalty. Contact instructor within 48 hours of emergency for consideration.",
+    "academicIntegrity": "All work must be your own. Discussing concepts is allowed; copying reports/code is not. AI assistance (ChatGPT, Copilot) must be disclosed for any assignment. Plagiarism = 0 on assignment + possible course failure. Unauthorized testing of systems outside lab environment is strictly prohibited and may result in legal consequences.",
+    "collaboration": "Collaboration on labs during class time is encouraged. Sharing of tools and techniques is welcome. Submitting identical reports or exploits is not acceptable. All deliverables must be individual work."
+  },
+  "successTips": [
+    "Set up virtual lab environment in Week 1 - delays compound quickly",
+    "Practice in your home lab regularly - hands-on experience is crucial",
+    "Start assignments early - penetration tests take longer than expected",
+    "Document everything - screenshots and notes are essential for reports",
+    "Attend lab sessions - instructor guidance accelerates learning",
+    "Join online communities (TryHackMe, HackTheBox) for additional practice",
+    "Read tool documentation - understanding tools deeply improves effectiveness",
+    "Focus on methodology over memorization - frameworks guide real engagements",
+    "Test ethically - only on authorized systems in controlled environments",
+    "Build professional reporting habits early - documentation is half the job"
   ],
-  "springBreak": {
-    "dateRange": "Spring Break (3/30/2026 - 4/5/2026)",
-    "startDate": "2026-03-30",
-    "endDate": "2026-04-05",
-    "note": "No classes - Spring Break"
-  },
-  "lateWorkPolicy": {
-    "standard": {
-      "0-24hours": "10% deduction",
-      "24-48hours": "25% deduction",
-      "48-72hours": "50% deduction",
-      "over72hours": "Not accepted (0 points)"
+  "additionalResources": [
+    {
+      "title": "TryHackMe Learning Paths",
+      "url": "https://tryhackme.com/",
+      "description": "Guided penetration testing labs for skill development"
     },
-    "exceptions": {
-      "midtermFinal": "No late submissions accepted",
-      "finalProject": "10% per day deduction, not accepted after 3 days",
-      "labs": "Maximum 1 week late with penalties"
+    {
+      "title": "HackTheBox Machines",
+      "url": "https://www.hackthebox.com/",
+      "description": "Advanced penetration testing challenges"
     },
-    "extensionRequests": {
-      "notice": "Must be requested at least 48 hours before due date",
-      "requirements": "Require documented extenuating circumstances",
-      "approval": "Instructor approval required"
+    {
+      "title": "PortSwigger Web Security Academy",
+      "url": "https://portswigger.net/web-security",
+      "description": "Free comprehensive web application security training"
+    },
+    {
+      "title": "OWASP Testing Guide",
+      "url": "https://owasp.org/www-project-web-security-testing-guide/",
+      "description": "Web application testing methodology and techniques"
+    },
+    {
+      "title": "Metasploit Unleashed",
+      "url": "https://www.offensive-security.com/metasploit-unleashed/",
+      "description": "Free Metasploit Framework training course"
+    },
+    {
+      "title": "VulnHub",
+      "url": "https://www.vulnhub.com/",
+      "description": "Vulnerable machines for penetration testing practice"
+    },
+    {
+      "title": "PentesterLab",
+      "url": "https://pentesterlab.com/",
+      "description": "Hands-on web application security exercises"
     }
-  },
-  "minimumPassingRequirements": {
-    "majorAssessments": "Complete all major assessments (Midterm, Final Project, Final Report, Final Exam)",
-    "labCompletion": "12 of 16 labs (75%)",
-    "quizAttempts": "13 of 15 quizzes (87%)",
-    "overallGrade": "70% or higher"
-  },
-  "extraCreditOpportunities": [
-    {
-      "name": "Bug Bounty Participation",
-      "maxPoints": 20,
-      "description": "Participate in ethical bug bounty program with detailed report"
-    },
-    {
-      "name": "Security Conference Participation",
-      "maxPoints": 15,
-      "description": "Attend cybersecurity conference with 3-page summary"
-    },
-    {
-      "name": "Security Tool Tutorial",
-      "maxPoints": 10,
-      "description": "Create 10-15 minute video tutorial on penetration testing tool"
-    },
-    {
-      "name": "CTF Competition",
-      "maxPoints": 15,
-      "description": "Participate in Capture The Flag competition with writeup"
-    }
-  ],
-  "weeklyTimeCommitment": {
-    "lecturePreparation": "2 hours",
-    "labWork": "4.5 hours",
-    "labReport": "2-3 hours",
-    "quizPreparation": "1 hour",
-    "readingStudy": "2-3 hours",
-    "total": "12-14 hours per week"
-  },
-  "totalReadingTime": "45-55 hours over 17 weeks (~3 hours per week)"
+  ]
 }
