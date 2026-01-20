@@ -1,0 +1,965 @@
+{
+  "courseInfo": {
+    "courseCode": "CSC 156",
+    "courseTitle": "Digital Forensics Fundamentals",
+    "credits": 3,
+    "semester": "Spring 2026",
+    "instructor": "Dr. David Pai",
+    "contactHours": {
+      "lecture": 34,
+      "lab": 51,
+      "total": 85
+    },
+    "duration": "17 weeks",
+    "format": "Hybrid (Lecture + Lab)",
+    "description": "This course will introduce the methods used to properly conduct a digital forensics investigation including device, network and cloud forensics. As part of this course, the core competencies of the International Association of Computer Investigative Specialists (IACIS) Certified Forensic Computer Examiner (CFCE) program are covered. Topics covered include an overview of computer forensics as a profession; the computer investigation process; understanding operating systems boot processes and disk structures; network forensics; malware forensics; and technical report writing. Students successfully completing this course will also qualify for EC-Council's Computer Hacking Forensic Investigator (CHFI) certification exam."
+  },
+  
+  "studentLearningOutcomes": [
+    {
+      "id": "CSLO1",
+      "outcome": "Describe the fundamental concepts of incident response and forensic investigation.",
+      "expectedPerformance": 0.75
+    },
+    {
+      "id": "CSLO2",
+      "outcome": "Conduct thorough examinations of computer hard disk drives, and other electronic data storage media to recover information and electronic data.",
+      "expectedPerformance": 0.75
+    },
+    {
+      "id": "CSLO3",
+      "outcome": "Perform data collection using forensic technology methods in accordance with evidence handling procedures.",
+      "expectedPerformance": 0.75
+    },
+    {
+      "id": "CSLO4",
+      "outcome": "Be able to generate reports which detail the approach and provide an audit trail that supports the integrity of the investigation process and any actions taken.",
+      "expectedPerformance": 0.75
+    }
+  ],
+
+  "courseObjectives": [
+    "List out the various steps involved in forensic readiness planning",
+    "Comprehend the Code of ethics that an Investigator needs to follow while implementing computer forensics",
+    "Analyze file systems and recover deleted files",
+    "Explain the process of finding evidences from Windows and Linux operating systems",
+    "Analyze system events and network traffic logs",
+    "Examine logs to determine attack signatures, identify the nature of the attacks, etc.",
+    "Scan an executable file and verify if it has malicious components by performing a thorough analysis of the file",
+    "Write a perfect forensic investigation report that meets the needs of all stakeholders"
+  ],
+
+  "gradingBreakdown": {
+    "totalPoints": 1000,
+    "categories": [
+      {
+        "name": "Weekly Lab Activities",
+        "points": 340,
+        "percentage": 34,
+        "description": "17 labs × 20 points each"
+      },
+      {
+        "name": "Quizzes",
+        "points": 150,
+        "percentage": 15,
+        "description": "5 quizzes × 30 points each"
+      },
+      {
+        "name": "Homework Assignments",
+        "points": 100,
+        "percentage": 10,
+        "description": "5 assignments × 20 points each"
+      },
+      {
+        "name": "Discussion Participation",
+        "points": 50,
+        "percentage": 5,
+        "description": "Weekly participation"
+      },
+      {
+        "name": "Midterm Exam",
+        "points": 120,
+        "percentage": 12,
+        "description": "Comprehensive exam (Weeks 1-8)"
+      },
+      {
+        "name": "Final Exam",
+        "points": 120,
+        "percentage": 12,
+        "description": "Comprehensive exam (All weeks)"
+      },
+      {
+        "name": "Final Project",
+        "points": 120,
+        "percentage": 12,
+        "description": "Forensic investigation report & presentation"
+      }
+    ],
+    "gradingScale": [
+      { "grade": "A", "min": 90, "max": 100, "points": "900-1000" },
+      { "grade": "B", "min": 80, "max": 89, "points": "800-899" },
+      { "grade": "C", "min": 70, "max": 79, "points": "700-799" },
+      { "grade": "D", "min": 60, "max": 69, "points": "600-699" },
+      { "grade": "F", "min": 0, "max": 59, "points": "Below 600" }
+    ]
+  },
+
+  "weeklySchedule": [
+    {
+      "week": 1,
+      "dates": "1/20/2026 - 1/25/2026",
+      "title": "Introduction to Digital Forensics",
+      "topics": [
+        "Overview of digital forensics as a profession",
+        "Role of digital forensics in incident response and cybersecurity",
+        "Overview of industry certifications (IACIS CFCE, GIAC GCFE, GIAC GCFA, EC-Council CHFI)",
+        "Course overview, lab environment setup, and expectations"
+      ],
+      "cslos": ["CSLO1"],
+      "assessments": [
+        {
+          "type": "Lab Activity 1",
+          "title": "Forensic Workstation Setup and Tool Familiarization",
+          "points": 20,
+          "dueDate": "End of Week 1"
+        },
+        {
+          "type": "Discussion Post 1",
+          "title": "Career Paths in Digital Forensics",
+          "points": 3,
+          "dueDate": "Day 3 & Day 5"
+        }
+      ],
+      "totalPoints": 23
+    },
+    {
+      "week": 2,
+      "dates": "1/26/2026 - 2/1/2026",
+      "title": "Digital Forensics Investigation Process",
+      "topics": [
+        "Computer forensics investigation methodology",
+        "Forensic readiness planning",
+        "Chain of custody and evidence handling",
+        "Documentation and note-taking best practices"
+      ],
+      "cslos": ["CSLO1", "CSLO3"],
+      "assessments": [
+        {
+          "type": "Lab Activity 2",
+          "title": "Chain of Custody Documentation Exercise",
+          "points": 20,
+          "dueDate": "End of Week 2"
+        },
+        {
+          "type": "Discussion Post 2",
+          "title": "Investigation Process Best Practices",
+          "points": 3,
+          "dueDate": "Day 3 & Day 5"
+        },
+        {
+          "type": "Homework 1",
+          "title": "Forensic Investigation Workflow Diagram",
+          "points": 20,
+          "dueDate": "End of Week 2"
+        }
+      ],
+      "totalPoints": 43
+    },
+    {
+      "week": 3,
+      "dates": "2/2/2026 - 2/8/2026",
+      "title": "Legal and Ethical Considerations",
+      "topics": [
+        "Laws governing digital evidence (Federal Rules of Evidence, Daubert Standard)",
+        "Code of ethics for digital forensic investigators",
+        "Privacy considerations and legal boundaries",
+        "Expert witness testimony fundamentals"
+      ],
+      "cslos": ["CSLO1", "CSLO4"],
+      "assessments": [
+        {
+          "type": "Lab Activity 3",
+          "title": "Legal Case Study Analysis",
+          "points": 20,
+          "dueDate": "End of Week 3"
+        },
+        {
+          "type": "Discussion Post 3",
+          "title": "Ethics in Digital Forensics",
+          "points": 3,
+          "dueDate": "Day 3 & Day 5"
+        },
+        {
+          "type": "Quiz 1",
+          "title": "Legal & Ethical Principles + Investigation Process",
+          "points": 30,
+          "dueDate": "End of Week 3",
+          "highlighted": true
+        }
+      ],
+      "totalPoints": 53
+    },
+    {
+      "week": 4,
+      "dates": "2/9/2026 - 2/15/2026",
+      "title": "Computer Hardware, Storage Media, and Boot Processes",
+      "topics": [
+        "Computer hardware components relevant to forensics",
+        "Hard disk drive (HDD) vs. Solid State Drive (SSD) architecture",
+        "Boot processes (BIOS/UEFI, MBR/GPT)",
+        "Storage interfaces and controllers"
+      ],
+      "cslos": ["CSLO2"],
+      "assessments": [
+        {
+          "type": "Lab Activity 4",
+          "title": "Storage Device Examination and Boot Process Analysis",
+          "points": 20,
+          "dueDate": "End of Week 4"
+        },
+        {
+          "type": "Discussion Post 4",
+          "title": "HDD vs SSD Forensic Implications",
+          "points": 3,
+          "dueDate": "Day 3 & Day 5"
+        }
+      ],
+      "totalPoints": 23
+    },
+    {
+      "week": 5,
+      "dates": "2/16/2026 - 2/22/2026",
+      "title": "File Systems and Data Structures",
+      "topics": [
+        "File system fundamentals (FAT12/16/32, exFAT, NTFS, ext2/3/4, HFS+, APFS)",
+        "File system metadata and artifacts",
+        "Master File Table (MFT) analysis",
+        "Deleted file recovery and file carving"
+      ],
+      "cslos": ["CSLO2"],
+      "assessments": [
+        {
+          "type": "Lab Activity 5",
+          "title": "File System Analysis and Deleted File Recovery",
+          "points": 20,
+          "dueDate": "End of Week 5"
+        },
+        {
+          "type": "Discussion Post 5",
+          "title": "File System Comparison (NTFS vs ext4)",
+          "points": 3,
+          "dueDate": "Day 3 & Day 5"
+        },
+        {
+          "type": "Homework 2",
+          "title": "Master File Table (MFT) Analysis Report",
+          "points": 20,
+          "dueDate": "End of Week 5"
+        }
+      ],
+      "totalPoints": 43
+    },
+    {
+      "week": 6,
+      "dates": "2/23/2026 - 3/1/2026",
+      "title": "Data Acquisition and Preservation",
+      "topics": [
+        "Write blockers and forensic imaging",
+        "Imaging tools (FTK Imager, dd, dcfldd)",
+        "Hash verification (MD5, SHA-1, SHA-256)",
+        "Forensic image formats (E01, AFF, raw)",
+        "Evidence preservation best practices"
+      ],
+      "cslos": ["CSLO3"],
+      "assessments": [
+        {
+          "type": "Lab Activity 6",
+          "title": "Forensic Imaging and Hash Verification",
+          "points": 20,
+          "dueDate": "End of Week 6"
+        },
+        {
+          "type": "Discussion Post 6",
+          "title": "Write Blocker Technologies",
+          "points": 3,
+          "dueDate": "Day 3 & Day 5"
+        },
+        {
+          "type": "Quiz 2",
+          "title": "Hardware, File Systems, and Data Acquisition",
+          "points": 30,
+          "dueDate": "End of Week 6",
+          "highlighted": true
+        }
+      ],
+      "totalPoints": 53
+    },
+    {
+      "week": 7,
+      "dates": "3/2/2026 - 3/8/2026",
+      "title": "Windows Forensics I - Registry and User Artifacts",
+      "topics": [
+        "Windows Registry structure and forensic value",
+        "User activity artifacts (ShimCache, Amcache, UserAssist)",
+        "Recent files and jump lists",
+        "Browser history and artifacts",
+        "Timeline analysis"
+      ],
+      "cslos": ["CSLO2"],
+      "assessments": [
+        {
+          "type": "Lab Activity 7",
+          "title": "Windows Registry Analysis for User Activity",
+          "points": 20,
+          "dueDate": "End of Week 7"
+        },
+        {
+          "type": "Discussion Post 7",
+          "title": "Windows Artifact Timeline Reconstruction",
+          "points": 3,
+          "dueDate": "Day 3 & Day 5"
+        }
+      ],
+      "totalPoints": 23
+    },
+    {
+      "week": 8,
+      "dates": "3/9/2026 - 3/15/2026",
+      "title": "Windows Forensics II - Event Logs and System Artifacts",
+      "topics": [
+        "Windows Event Logs (Security, System, Application)",
+        "Prefetch files and application execution",
+        "Link files (LNK) and USB artifacts",
+        "Volume Shadow Copies",
+        "NTFS artifacts ($MFT, $LogFile, $UsnJrnl)"
+      ],
+      "cslos": ["CSLO2"],
+      "assessments": [
+        {
+          "type": "Lab Activity 8",
+          "title": "Windows Event Log Analysis and Prefetch Examination",
+          "points": 20,
+          "dueDate": "End of Week 8"
+        },
+        {
+          "type": "Discussion Post 8",
+          "title": "NTFS Artifact Significance",
+          "points": 3,
+          "dueDate": "Day 3 & Day 5"
+        },
+        {
+          "type": "Homework 3",
+          "title": "Security Incident Investigation Using Event Logs",
+          "points": 20,
+          "dueDate": "End of Week 8"
+        }
+      ],
+      "totalPoints": 43
+    },
+    {
+      "week": 9,
+      "dates": "3/16/2026 - 3/22/2026",
+      "title": "Linux Forensics",
+      "topics": [
+        "Linux file system structure",
+        "Log files and system artifacts (/var/log)",
+        "User account and authentication analysis",
+        "Bash history and command artifacts",
+        "Linux memory and process analysis"
+      ],
+      "cslos": ["CSLO2"],
+      "assessments": [
+        {
+          "type": "Lab Activity 9",
+          "title": "Linux System Investigation and Log Analysis",
+          "points": 20,
+          "dueDate": "End of Week 9"
+        },
+        {
+          "type": "Discussion Post 9",
+          "title": "Linux vs Windows Forensic Approaches",
+          "points": 3,
+          "dueDate": "Day 3 & Day 5"
+        },
+        {
+          "type": "Midterm Exam",
+          "title": "Comprehensive Exam (Weeks 1-8)",
+          "points": 120,
+          "dueDate": "Week 9",
+          "highlighted": true
+        }
+      ],
+      "totalPoints": 143
+    },
+    {
+      "week": 10,
+      "dates": "3/23/2026 - 3/29/2026",
+      "title": "Memory (RAM) Forensics",
+      "topics": [
+        "Volatile data and memory acquisition",
+        "Volatility Framework fundamentals",
+        "Process analysis and malware detection",
+        "Network connection analysis from memory",
+        "Password and encryption key extraction"
+      ],
+      "cslos": ["CSLO2", "CSLO3"],
+      "assessments": [
+        {
+          "type": "Lab Activity 10",
+          "title": "Memory Acquisition and Analysis with Volatility",
+          "points": 20,
+          "dueDate": "End of Week 10"
+        },
+        {
+          "type": "Discussion Post 10",
+          "title": "Volatile Data Forensic Value",
+          "points": 3,
+          "dueDate": "Day 3 & Day 5"
+        }
+      ],
+      "totalPoints": 23
+    },
+    {
+      "week": 11,
+      "dates": "4/6/2026 - 4/12/2026",
+      "title": "Network Forensics I - Fundamentals",
+      "topics": [
+        "Network protocols and packet analysis",
+        "Packet capture with Wireshark and tcpdump",
+        "Flow analysis (NetFlow, IPFIX)",
+        "Network evidence preservation",
+        "Protocol analysis (HTTP, DNS, SMTP)"
+      ],
+      "cslos": ["CSLO1", "CSLO2"],
+      "assessments": [
+        {
+          "type": "Lab Activity 11",
+          "title": "Packet Capture and Analysis with Wireshark",
+          "points": 20,
+          "dueDate": "End of Week 11"
+        },
+        {
+          "type": "Discussion Post 11",
+          "title": "Network Forensics Challenges",
+          "points": 3,
+          "dueDate": "Day 3 & Day 5"
+        }
+      ],
+      "totalPoints": 23,
+      "note": "Return from Spring Break (3/30/2026 - 4/5/2026)"
+    },
+    {
+      "week": 12,
+      "dates": "4/13/2026 - 4/19/2026",
+      "title": "Network Forensics II - Intrusion Investigation and Web Attacks",
+      "topics": [
+        "Intrusion detection and analysis",
+        "Web server log analysis (Apache, IIS, nginx)",
+        "SQL injection and XSS attack investigation",
+        "Network timeline reconstruction",
+        "Correlating network and host evidence"
+      ],
+      "cslos": ["CSLO2"],
+      "assessments": [
+        {
+          "type": "Lab Activity 12",
+          "title": "Web Server Log Analysis and Attack Investigation",
+          "points": 20,
+          "dueDate": "End of Week 12"
+        },
+        {
+          "type": "Discussion Post 12",
+          "title": "Web Attack Indicators",
+          "points": 3,
+          "dueDate": "Day 3 & Day 5"
+        },
+        {
+          "type": "Quiz 3",
+          "title": "Windows/Linux Forensics, Memory & Network Forensics",
+          "points": 30,
+          "dueDate": "End of Week 12",
+          "highlighted": true
+        },
+        {
+          "type": "Homework 4",
+          "title": "Network Intrusion Timeline Report",
+          "points": 20,
+          "dueDate": "End of Week 12"
+        }
+      ],
+      "totalPoints": 73
+    },
+    {
+      "week": 13,
+      "dates": "4/20/2026 - 4/26/2026",
+      "title": "Malware Forensics",
+      "topics": [
+        "Malware types and characteristics",
+        "Static malware analysis (strings, PE headers, hashes)",
+        "Dynamic malware analysis (sandboxing, behavioral analysis)",
+        "Indicators of Compromise (IOCs)",
+        "Malware persistence mechanisms"
+      ],
+      "cslos": ["CSLO2"],
+      "assessments": [
+        {
+          "type": "Lab Activity 13",
+          "title": "Static and Dynamic Malware Analysis",
+          "points": 20,
+          "dueDate": "End of Week 13"
+        },
+        {
+          "type": "Discussion Post 13",
+          "title": "Malware Analysis Techniques",
+          "points": 3,
+          "dueDate": "Day 3 & Day 5"
+        }
+      ],
+      "totalPoints": 23
+    },
+    {
+      "week": 14,
+      "dates": "4/27/2026 - 5/3/2026",
+      "title": "Mobile Forensics",
+      "topics": [
+        "Mobile device architecture (iOS and Android)",
+        "Physical vs. logical acquisition",
+        "Mobile forensics tools (Cellebrite, XRY, UFED)",
+        "App data analysis",
+        "Location and communication artifacts"
+      ],
+      "cslos": ["CSLO2", "CSLO3"],
+      "assessments": [
+        {
+          "type": "Lab Activity 14",
+          "title": "Android Device Forensic Analysis",
+          "points": 20,
+          "dueDate": "End of Week 14"
+        },
+        {
+          "type": "Discussion Post 14",
+          "title": "Mobile vs Desktop Forensics",
+          "points": 3,
+          "dueDate": "Day 3 & Day 5"
+        },
+        {
+          "type": "Homework 5",
+          "title": "Mobile App Artifact Analysis Report",
+          "points": 20,
+          "dueDate": "End of Week 14"
+        },
+        {
+          "type": "Final Project Proposal",
+          "title": "Forensic Investigation Case Proposal",
+          "points": 0,
+          "dueDate": "End of Week 14",
+          "highlighted": true,
+          "note": "Required for final project"
+        }
+      ],
+      "totalPoints": 43
+    },
+    {
+      "week": 15,
+      "dates": "5/4/2026 - 5/10/2026",
+      "title": "Cloud Forensics and Anti-Forensics",
+      "topics": [
+        "Cloud service models and forensic challenges",
+        "Cloud evidence acquisition (AWS, Azure, Google Cloud)",
+        "SaaS forensics (Office 365, Google Workspace)",
+        "Anti-forensics techniques",
+        "Detecting and countering anti-forensics"
+      ],
+      "cslos": ["CSLO2", "CSLO3"],
+      "assessments": [
+        {
+          "type": "Lab Activity 15",
+          "title": "Cloud Service Log Analysis",
+          "points": 20,
+          "dueDate": "End of Week 15"
+        },
+        {
+          "type": "Discussion Post 15",
+          "title": "Cloud Forensics Challenges",
+          "points": 3,
+          "dueDate": "Day 3 & Day 5"
+        },
+        {
+          "type": "Quiz 4",
+          "title": "Malware, Mobile, and Cloud Forensics",
+          "points": 30,
+          "dueDate": "End of Week 15",
+          "highlighted": true
+        }
+      ],
+      "totalPoints": 53
+    },
+    {
+      "week": 16,
+      "dates": "5/11/2026 - 5/17/2026",
+      "title": "Email Forensics and Advanced Topics",
+      "topics": [
+        "Email architecture and protocols",
+        "Email header analysis",
+        "Email tracing and authentication",
+        "Phishing investigation",
+        "Emerging forensics topics (IoT, cryptocurrency, AI)"
+      ],
+      "cslos": ["CSLO2"],
+      "assessments": [
+        {
+          "type": "Lab Activity 16",
+          "title": "Email Investigation and Phishing Analysis",
+          "points": 20,
+          "dueDate": "End of Week 16"
+        },
+        {
+          "type": "Discussion Post 16",
+          "title": "Emerging Forensics Technologies",
+          "points": 3,
+          "dueDate": "Day 3 & Day 5"
+        }
+      ],
+      "totalPoints": 23,
+      "note": "Final project work continues"
+    },
+    {
+      "week": 17,
+      "dates": "5/18/2026 - 5/22/2026",
+      "title": "Forensic Reporting and Course Wrap-Up",
+      "topics": [
+        "Technical report writing for forensics",
+        "Chain of custody documentation",
+        "Expert witness testimony preparation",
+        "Professional development and career paths",
+        "Final project presentations"
+      ],
+      "cslos": ["CSLO4"],
+      "assessments": [
+        {
+          "type": "Lab Activity 17",
+          "title": "Professional Forensic Report Writing",
+          "points": 20,
+          "dueDate": "End of Week 17"
+        },
+        {
+          "type": "Discussion Post 17",
+          "title": "Course Reflection and Career Planning",
+          "points": 3,
+          "dueDate": "Day 3 & Day 5"
+        },
+        {
+          "type": "Quiz 5",
+          "title": "Reporting, Ethics, and Comprehensive Review",
+          "points": 30,
+          "dueDate": "Day 3",
+          "highlighted": true
+        },
+        {
+          "type": "Final Project",
+          "title": "Complete Forensic Investigation Report and Presentation",
+          "points": 120,
+          "dueDate": "Day 5",
+          "highlighted": true
+        },
+        {
+          "type": "Final Exam",
+          "title": "Comprehensive Final Exam",
+          "points": 120,
+          "dueDate": "Finals Week",
+          "highlighted": true
+        }
+      ],
+      "totalPoints": 293,
+      "note": "Last week of semester (ends Friday, 5/22/2026)"
+    }
+  ],
+
+  "importantDates": {
+    "semesterStart": "1/20/2026",
+    "springBreak": "3/30/2026 - 4/5/2026",
+    "lastDayOfClasses": "5/22/2026",
+    "midtermExam": "Week 9 (3/16/2026 - 3/22/2026)",
+    "finalProjectProposal": "Week 14 (4/27/2026 - 5/3/2026)",
+    "finalProjectDue": "Week 17, Day 5 (5/22/2026)",
+    "finalExam": "Finals Week",
+    "quizDates": [
+      "Week 3 - Legal & Ethical Principles",
+      "Week 6 - Hardware & File Systems",
+      "Week 9 - Midterm Exam (120 pts)",
+      "Week 12 - Forensics Techniques",
+      "Week 15 - Advanced Topics",
+      "Week 17 - Final Review"
+    ]
+  },
+
+  "coursePolicies": {
+    "attendance": "Regular attendance is essential for success in this course. Lab activities cannot be made up except in cases of documented emergencies or illness. Missing more than 3 labs without valid documentation may result in a failing grade.",
+    "lateWork": {
+      "labActivities": "10% per day late, maximum 3 days",
+      "homework": "10% per day late, maximum 5 days",
+      "quizzes": "No makeup without documentation; contact instructor within 24 hours",
+      "discussionPosts": "50% penalty if late, maximum 2 days",
+      "finalProject": "20% per day late, maximum 2 days",
+      "exams": "No makeup without documentation; schedule makeup within 1 week"
+    },
+    "academicIntegrity": "All work submitted must be your own. Collaboration is encouraged on labs and discussions but written submissions must be individual unless specifically designated as group work. Use of AI tools for code generation or analysis is permitted but must be documented and cited. Copying forensic reports or presenting others' analysis as your own constitutes academic dishonesty.",
+    "plagiarism": {
+      "firstOffense": "Zero on assignment + academic integrity meeting",
+      "secondOffense": "Failing grade in course + referral to college administration"
+    },
+    "aiUsage": {
+      "approach": "Conditional",
+      "statement": "Generative AI can be used in specific assignments in this course. Students will receive guidelines for using AI responsibly, with clear expectations on what is permitted and how to cite your usage. The use of AI tools beyond the guidelines of each assignment is considered plagiarism in this course, and disciplinary actions fall under the plagiarism guidelines."
+    },
+    "collaboration": {
+      "encouraged": "Discussing concepts, troubleshooting tools, comparing approaches",
+      "permitted": "Helping classmates understand errors or techniques",
+      "prohibited": "Copying lab reports, sharing quiz answers, submitting identical work"
+    }
+  },
+
+  "weeklyTimeCommitment": {
+    "inClassLecture": "2 hours",
+    "inClassLab": "3 hours",
+    "readingAssignments": "2 hours",
+    "labReportWriting": "1 hour",
+    "homeworkAssignments": "1-2 hours (5 weeks)",
+    "discussionParticipation": "0.5 hours",
+    "examPreparation": "2-3 hours (exam weeks)",
+    "finalProject": "15 hours total",
+    "totalWeekly": "~9-10 hours/week",
+    "totalSemester": "~181.5 hours"
+  },
+
+  "prerequisites": {
+    "advisory": "CSC 116 - Information & Communication Technology Essentials",
+    "entranceSkills": [
+      "Operate personal computers, devices, and software for end-users",
+      "Describe the basics of data networking and security/forensics techniques"
+    ]
+  },
+
+  "certificationAlignment": {
+    "primary": [
+      {
+        "name": "IACIS CFCE",
+        "fullName": "Certified Forensic Computer Examiner",
+        "coverageWeeks": "All weeks align with CFCE competencies"
+      },
+      {
+        "name": "EC-Council CHFI",
+        "fullName": "Computer Hacking Forensic Investigator",
+        "coverageWeeks": "All weeks align with CHFI exam domains"
+      }
+    ],
+    "secondary": [
+      {
+        "name": "GIAC GCFE",
+        "fullName": "GIAC Certified Forensic Examiner",
+        "coverageWeeks": "Weeks 3-17"
+      },
+      {
+        "name": "GIAC GCFA",
+        "fullName": "GIAC Certified Forensic Analyst",
+        "coverageWeeks": "Weeks 1-17"
+      }
+    ]
+  },
+
+  "requiredTools": {
+    "forensicTools": [
+      {
+        "name": "Autopsy/The Sleuth Kit",
+        "purpose": "File system and disk analysis",
+        "type": "Open Source",
+        "weeks": "Weeks 4-8, 13-16"
+      },
+      {
+        "name": "Volatility Framework",
+        "purpose": "Memory forensics",
+        "type": "Open Source",
+        "weeks": "Week 10"
+      },
+      {
+        "name": "Wireshark",
+        "purpose": "Network protocol analyzer",
+        "type": "Open Source",
+        "weeks": "Weeks 11-12"
+      },
+      {
+        "name": "FTK Imager",
+        "purpose": "Free disk imaging tool",
+        "type": "Free",
+        "weeks": "Week 6"
+      },
+      {
+        "name": "KAPE",
+        "purpose": "Kroll Artifact Parser and Extractor",
+        "type": "Free",
+        "weeks": "Weeks 7-9"
+      },
+      {
+        "name": "RegRipper",
+        "purpose": "Windows Registry analysis",
+        "type": "Open Source",
+        "weeks": "Weeks 7-8"
+      },
+      {
+        "name": "Eric Zimmerman Tools",
+        "purpose": "Suite of Windows forensics tools",
+        "type": "Free",
+        "weeks": "Weeks 7-8"
+      }
+    ],
+    "hardware": [
+      "Forensic workstations with adequate RAM (16GB+ recommended)",
+      "Various storage media for practice (USB drives, external HDDs)",
+      "Write blockers (hardware and/or software)",
+      "Test mobile devices (Android and iOS if possible)"
+    ],
+    "software": [
+      "Windows and Linux virtual machines",
+      "Virtualization software (VirtualBox, VMware)",
+      "Network analysis tools",
+      "Memory forensics tools"
+    ]
+  },
+
+  "learningResources": {
+    "documentation": [
+      {
+        "name": "NIST Computer Forensics Tool Testing (CFTT) Program",
+        "url": "https://www.nist.gov/itl/ssd/software-quality-group/computer-forensics-tool-testing-program-cftt",
+        "type": "Standards"
+      },
+      {
+        "name": "SANS Digital Forensics and Incident Response Blog",
+        "url": "https://www.sans.org/blog/?focus-area=digital-forensics",
+        "type": "Blog"
+      },
+      {
+        "name": "NIST SP 800-86: Guide to Integrating Forensic Techniques",
+        "url": "https://csrc.nist.gov/publications/detail/sp/800-86/final",
+        "type": "Standards"
+      }
+    ],
+    "practiceDatasets": [
+      {
+        "name": "Digital Corpora",
+        "url": "https://digitalcorpora.org/",
+        "description": "Forensic images and datasets"
+      },
+      {
+        "name": "CFReDS",
+        "url": "https://cfreds.nist.gov/",
+        "description": "Computer Forensic Reference Data Sets"
+      },
+      {
+        "name": "DFRWS Forensic Challenges",
+        "url": "https://dfrws.org/forensic-challenges/",
+        "description": "Annual forensic challenges"
+      }
+    ],
+    "tutorials": [
+      {
+        "name": "13Cubed YouTube Channel",
+        "url": "https://www.youtube.com/c/13cubed",
+        "description": "DFIR tutorials and tool demonstrations"
+      },
+      {
+        "name": "DFIR Diva Blog",
+        "url": "https://dfirdiva.com/",
+        "description": "Digital forensics resources and tutorials"
+      }
+    ]
+  },
+
+  "extraCredit": {
+    "maximum": 30,
+    "opportunities": [
+      {
+        "category": "Professional Development",
+        "points": 10,
+        "maxOccurrences": 2,
+        "activities": [
+          "Attend forensics conference or webinar and submit 2-page summary",
+          "Complete online forensics training course (with certificate)",
+          "Participate in forensics CTF competition and submit write-up"
+        ]
+      },
+      {
+        "category": "Peer Teaching",
+        "points": 10,
+        "maxOccurrences": 1,
+        "activities": [
+          "Create tutorial video or written guide on forensic technique",
+          "Lead study session for classmates before exam"
+        ]
+      },
+      {
+        "category": "Research Contribution",
+        "points": 10,
+        "maxOccurrences": 1,
+        "activities": [
+          "Write article on emerging forensic topic (3-5 pages)",
+          "Present on new forensic tool or technique to class"
+        ]
+      }
+    ],
+    "deadline": "Week 16",
+    "note": "All extra credit must be approved in advance"
+  },
+
+  "finalProject": {
+    "title": "Complete Forensic Investigation",
+    "totalPoints": 120,
+    "components": [
+      {
+        "name": "Written Report",
+        "points": 70,
+        "description": "Comprehensive forensic investigation report following industry standards"
+      },
+      {
+        "name": "Presentation",
+        "points": 20,
+        "description": "10-12 minute presentation of findings"
+      },
+      {
+        "name": "Evidence Documentation",
+        "points": 20,
+        "description": "Chain of custody and evidence handling documentation"
+      },
+      {
+        "name": "Technical Demonstration",
+        "points": 10,
+        "description": "Live demonstration of key forensic techniques used"
+      }
+    ],
+    "proposalDue": "Week 14",
+    "finalDue": "Week 17, Day 5",
+    "options": [
+      "Provided forensic image analysis (recommended)",
+      "Custom scenario with instructor approval",
+      "Participation in online forensic CTF with formal report"
+    ]
+  },
+
+  "studentSupport": {
+    "officeHours": "See instructor schedule in Canvas",
+    "tutoring": "MESA Computer Science tutoring available",
+    "technicalSupport": "IT Help Desk for lab access issues",
+    "accessibility": "Students with documented disabilities should contact instructor and DSPS within first two weeks",
+    "mentalHealth": "Campus counseling services available",
+    "financialAid": "Financial aid office for SAP and funding questions"
+  },
+
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "January 2026",
+    "author": "Dr. David Pai",
+    "institution": "Mendocino College",
+    "courseOutlineApproved": "2024-11-15",
+    "effectiveTerm": "Spring 2026"
+  }
+}
