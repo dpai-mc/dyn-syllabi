@@ -1,0 +1,670 @@
+{
+  "metadata": {
+    "code": "CSC240",
+    "title": "Discrete Structures",
+    "credits": "3",
+    "creditBreakdown": "3 lecture",
+    "format": "Lecture",
+    "term": "Spring 2026",
+    "prerequisite": "CSC221 (Programming and Algorithms I) AND MTH80 (Intermediate Algebra for STEM)",
+    "meetingInfo": {
+      "type": "Weekly Lecture",
+      "day": "To be announced",
+      "time": "See Canvas for schedule",
+      "platform": "On-campus or hybrid"
+    }
+  },
+  "description": {
+    "catalog": "This course covers the mathematical foundations of computer science including logic, proof techniques, sets, relations, functions, counting, discrete probability, graphs, and trees. Students will develop skills in mathematical reasoning, proof writing, and algorithm analysis while implementing key concepts in a programming language.",
+    "expanded": "Topics include symbolic logic and proof methods, combinatorics, set theory, graph and tree traversal methods, mathematical induction, recursion, and recurrence relations. Students apply discrete mathematics concepts through programming exercises in Java or C++, developing both theoretical understanding and practical implementation skills. This course provides essential foundations for advanced study in algorithms, data structures, software engineering, and theoretical computer science."
+  },
+  "purpose": {
+    "why": "Discrete mathematics is the mathematical foundation of computer science, essential for understanding algorithms, data structures, complexity analysis, and software correctness. This course develops the rigorous mathematical reasoning skills needed for advanced CS coursework and professional software development. The combination of theory and programming implementation prepares you for technical interviews, algorithm design, and system analysis.",
+    "beyond": "Beyond programming skills, you'll develop logical thinking, proof construction, and problem-solving abilities applicable across all STEM fields. You'll learn to analyze computational complexity, prove algorithm correctness, and make data-driven decisions—skills valued in software engineering, data science, cybersecurity, and research roles."
+  },
+  "slos": [
+    "Apply symbolic logic and proof methods to model and analyze program/algorithm correctness",
+    "Apply combinatorics and set theory to counting problems",
+    "Implement graph/tree traversal methods in a programming language",
+    "Explain the relationship between mathematical induction and recursion/recurrence equations, and their relationship to computing systems"
+  ],
+  "schedule": {
+    "phases": [
+      {
+        "title": "Phase 1: Sets, Relations, and Logic Foundations (Weeks 1-3)",
+        "description": "Introduction to set theory, relations, functions, and propositional logic",
+        "weeks": [
+          {
+            "weekNumber": 1,
+            "dates": "Week 1 (1/20/2026 - 1/25/2026)",
+            "topics": [
+              "Introduction to Discrete Structures",
+              "Set notation and representation",
+              "Set operations (union, intersection, complement)",
+              "Venn diagrams",
+              "Power sets and Cartesian products"
+            ],
+            "readings": "Saylor.org CS202 Unit 1: Sets, Set Relations, and Set Functions (Sections 1.1-1.2)",
+            "assignments": [
+              "Programming Exercise 1: Set Operations Implementation (15 pts)",
+              "Problem Set 1: Set Theory and Operations (10 pts)",
+              "Discussion Post 1: Why Discrete Structures Matters in CS (3 pts)"
+            ],
+            "deliverableDueDate": "1/25/2026",
+            "notes": "Course setup week - establish foundational concepts"
+          },
+          {
+            "weekNumber": 2,
+            "dates": "Week 2 (1/26/2026 - 2/1/2026)",
+            "topics": [
+              "Binary relations",
+              "Properties of relations (reflexive, symmetric, transitive)",
+              "Equivalence relations and partitions",
+              "Functions: injections, surjections, bijections",
+              "Function composition and inverses",
+              "Pigeonhole principle"
+            ],
+            "readings": "Saylor.org CS202 Unit 1: Sets, Set Relations, and Set Functions (Sections 1.3-1.5)",
+            "assignments": [
+              "Programming Exercise 2: Relations Property Checker (15 pts)",
+              "Problem Set 2: Relations and Functions (10 pts)",
+              "Discussion Post 2: Real-world Applications of Relations and Functions (3 pts)"
+            ],
+            "deliverableDueDate": "2/1/2026",
+            "notes": "Relations are fundamental for database theory"
+          },
+          {
+            "weekNumber": 3,
+            "dates": "Week 3 (2/2/2026 - 2/8/2026)",
+            "topics": [
+              "Cardinality and countability",
+              "Countable vs. uncountable sets",
+              "Propositional logic",
+              "Logical connectives (AND, OR, NOT, implication, biconditional)",
+              "Truth tables"
+            ],
+            "readings": "Saylor.org CS202 Unit 1 (Cardinality); Unit 3: Mathematical Logic (Sections 3.1-3.2)",
+            "assignments": [
+              "Programming Exercise 3: Truth Table Generator (15 pts)",
+              "Discussion Post 3: Logic in Programming - Boolean Expressions (3 pts)",
+              "Quiz 1: Sets, Relations, Functions, Basic Logic (30 pts)"
+            ],
+            "deliverableDueDate": "2/8/2026",
+            "notes": "First quiz - covers Weeks 1-3"
+          }
+        ]
+      },
+      {
+        "title": "Phase 2: Advanced Logic and Proof Techniques (Weeks 4-6)",
+        "description": "Predicate logic, proof methods, and mathematical induction",
+        "weeks": [
+          {
+            "weekNumber": 4,
+            "dates": "Week 4 (2/9/2026 - 2/15/2026)",
+            "topics": [
+              "Logical equivalences",
+              "Normal forms (CNF and DNF)",
+              "Predicate logic",
+              "Universal and existential quantifiers",
+              "Nested quantifiers",
+              "Negation of quantified statements"
+            ],
+            "readings": "Saylor.org CS202 Unit 3: Mathematical Logic (Sections 3.3-3.5)",
+            "assignments": [
+              "Programming Exercise 4: Logic Expression Simplifier (15 pts)",
+              "Problem Set 3: Predicate Logic and Quantifiers (10 pts)",
+              "Discussion Post 4: Quantifiers in Database Queries (3 pts)"
+            ],
+            "deliverableDueDate": "2/15/2026",
+            "notes": "Predicate logic essential for program specification"
+          },
+          {
+            "weekNumber": 5,
+            "dates": "Week 5 (2/16/2026 - 2/22/2026)",
+            "topics": [
+              "Introduction to mathematical proofs",
+              "Direct proof technique",
+              "Proof by contrapositive",
+              "Proof by counterexample",
+              "Proof structure and mathematical writing",
+              "Common proof strategies"
+            ],
+            "readings": "Saylor.org CS202 Unit 4: Mathematical Induction and Proofs (Sections 4.1-4.2)",
+            "assignments": [
+              "Problem Set 4: Direct Proofs and Contrapositive (15 pts)",
+              "Discussion Post 5: Famous Mathematical Proofs Discussion (3 pts)",
+              "Programming Project 1 ASSIGNED: Logic and Proof Systems (80 pts)"
+            ],
+            "deliverableDueDate": "2/22/2026 (Problem Set & Discussion); Project 1 assigned",
+            "notes": "Major Project 1 assigned this week - due end of Week 6"
+          },
+          {
+            "weekNumber": 6,
+            "dates": "Week 6 (2/23/2026 - 3/1/2026)",
+            "topics": [
+              "Mathematical induction fundamentals",
+              "Proof by induction (weak and strong)",
+              "Structural induction",
+              "Induction and recursion relationship",
+              "Well-ordering principle"
+            ],
+            "readings": "Saylor.org CS202 Unit 4: Mathematical Induction and Proofs (Sections 4.3-4.5)",
+            "assignments": [
+              "Programming Exercise 5: Induction Proof Portfolio (10 pts)",
+              "Discussion Post 6: Mathematical Induction vs. Recursion (4 pts)",
+              "Programming Project 1 DUE: Logic and Proof Systems (80 pts)",
+              "Quiz 2: Proof Techniques and Counting Basics (30 pts)"
+            ],
+            "deliverableDueDate": "3/1/2026",
+            "notes": "Major Project 1 due; Second quiz - covers Weeks 4-6"
+          }
+        ]
+      },
+      {
+        "title": "Phase 3: Counting and Probability (Weeks 7-9)",
+        "description": "Combinatorics, discrete probability, and recursion",
+        "weeks": [
+          {
+            "weekNumber": 7,
+            "dates": "Week 7 (3/2/2026 - 3/8/2026)",
+            "topics": [
+              "Basic counting principles (sum and product rules)",
+              "Permutations and combinations",
+              "Permutations with repetition",
+              "Combinations with repetition",
+              "Stars and bars method",
+              "Binomial coefficients and Pascal's triangle"
+            ],
+            "readings": "Saylor.org CS202 Unit 5: Counting (Sections 5.1-5.3)",
+            "assignments": [
+              "Programming Exercise 6: Counting Problems Implementation (10 pts)",
+              "Problem Set 5: Counting Principles and Applications (15 pts)",
+              "Discussion Post 7: Counting Problems in Everyday Life (3 pts)"
+            ],
+            "deliverableDueDate": "3/8/2026",
+            "notes": "Counting principles essential for algorithm analysis"
+          },
+          {
+            "weekNumber": 8,
+            "dates": "Week 8 (3/9/2026 - 3/15/2026)",
+            "topics": [
+              "Binomial theorem",
+              "Multinomial theorem",
+              "Pigeonhole principle applications",
+              "Inclusion-exclusion principle",
+              "Generating functions introduction"
+            ],
+            "readings": "Saylor.org CS202 Unit 5: Counting (Sections 5.4-5.6)",
+            "assignments": [
+              "Programming Exercise 7: Binomial Coefficient Calculator (10 pts)",
+              "Discussion Post 8: The Birthday Paradox and Probability (4 pts)"
+            ],
+            "deliverableDueDate": "3/15/2026",
+            "notes": "Advanced counting techniques for complex problems"
+          },
+          {
+            "weekNumber": 9,
+            "dates": "Week 9 (3/16/2026 - 3/22/2026)",
+            "topics": [
+              "Discrete probability spaces",
+              "Probability axioms and rules",
+              "Conditional probability",
+              "Bayes' theorem",
+              "Independent events",
+              "Random variables and expected value"
+            ],
+            "readings": "Saylor.org CS202 Unit 6: Discrete Probability (Sections 6.1-6.4)",
+            "assignments": [
+              "Problem Set 6: Probability and Bayes' Theorem (15 pts)",
+              "Discussion Post 9: Probability in Algorithm Analysis (3 pts)",
+              "Quiz 3: Discrete Probability and Recursion (30 pts)",
+              "Midterm Exam: Weeks 1-8 (150 pts)"
+            ],
+            "deliverableDueDate": "3/22/2026",
+            "notes": "Quiz 3 and Midterm Exam - major assessment week"
+          }
+        ]
+      },
+      {
+        "title": "SPRING BREAK - No Classes",
+        "description": "Spring Break - No assignments due",
+        "weeks": [
+          {
+            "weekNumber": "Spring Break",
+            "dates": "Spring Break (3/30/2026 - 4/5/2026)",
+            "topics": [
+              "NO CLASSES - Spring Break"
+            ],
+            "readings": "None - Enjoy your break!",
+            "assignments": [
+              "No assignments due during Spring Break"
+            ],
+            "deliverableDueDate": "N/A",
+            "notes": "Use this time to review and catch up if needed"
+          }
+        ]
+      },
+      {
+        "title": "Phase 4: Recursion and Recurrence Relations (Weeks 10-11)",
+        "description": "Recursive algorithms and solving recurrence relations",
+        "weeks": [
+          {
+            "weekNumber": 10,
+            "dates": "Week 10 (3/23/2026 - 3/29/2026)",
+            "topics": [
+              "Recursive algorithms and thinking",
+              "Recurrence relations",
+              "Solving linear recurrence relations",
+              "Characteristic equation method",
+              "Divide-and-conquer recurrences",
+              "Master theorem introduction"
+            ],
+            "readings": "Saylor.org CS202 Unit 7: Recurrence Relations (Sections 7.1-7.3)",
+            "assignments": [
+              "Problem Set 7: Recursion and Mathematical Induction (15 pts)",
+              "Discussion Post 10: Recursive Thinking in Problem Solving (4 pts)",
+              "Programming Project 2 ASSIGNED: Combinatorics and Probability Toolkit (85 pts)"
+            ],
+            "deliverableDueDate": "3/29/2026 (Problem Set & Discussion); Project 2 assigned",
+            "notes": "Major Project 2 assigned this week - due end of Week 11"
+          },
+          {
+            "weekNumber": 11,
+            "dates": "Week 11 (4/6/2026 - 4/12/2026)",
+            "topics": [
+              "Advanced recurrence solving techniques",
+              "Algorithm complexity via recurrences",
+              "Recursion tree method",
+              "Generating functions for recurrences",
+              "Applications to algorithm analysis"
+            ],
+            "readings": "Saylor.org CS202 Unit 7: Recurrence Relations (Sections 7.4-7.6)",
+            "assignments": [
+              "Programming Exercise 8: Recurrence Relation Solver (15 pts)",
+              "Discussion Post 11: Analyzing Algorithm Complexity (3 pts)",
+              "Programming Project 2 DUE: Combinatorics and Probability Toolkit (85 pts)"
+            ],
+            "deliverableDueDate": "4/12/2026",
+            "notes": "Major Project 2 due this week"
+          }
+        ]
+      },
+      {
+        "title": "Phase 5: Graph Theory and Algorithms (Weeks 12-14)",
+        "description": "Graph representations, traversals, and fundamental graph algorithms",
+        "weeks": [
+          {
+            "weekNumber": 12,
+            "dates": "Week 12 (4/13/2026 - 4/19/2026)",
+            "topics": [
+              "Graph terminology and definitions",
+              "Graph representations (adjacency matrix, adjacency list)",
+              "Graph types (directed, undirected, weighted)",
+              "Paths, cycles, and connectivity",
+              "Graph isomorphism",
+              "Euler and Hamiltonian paths"
+            ],
+            "readings": "Saylor.org CS202 Unit 8: Graph Theory (Sections 8.1-8.3)",
+            "assignments": [
+              "Programming Exercise 9: Graph Data Structure Library (20 pts)",
+              "Discussion Post 12: Graph Theory in Social Networks (3 pts)"
+            ],
+            "deliverableDueDate": "4/19/2026",
+            "notes": "Graph fundamentals - critical for algorithms"
+          },
+          {
+            "weekNumber": 13,
+            "dates": "Week 13 (4/20/2026 - 4/26/2026)",
+            "topics": [
+              "Graph traversal algorithms",
+              "Breadth-First Search (BFS)",
+              "Depth-First Search (DFS)",
+              "Applications of BFS and DFS",
+              "Topological sorting",
+              "Connected components"
+            ],
+            "readings": "Saylor.org CS202 Unit 8: Graph Theory (Sections 8.4-8.5)",
+            "assignments": [
+              "Programming Exercise 10: BFS and DFS Implementation (20 pts)",
+              "Problem Set 8: Graph Theory Problems (10 pts)",
+              "Discussion Post 13: Traversal Algorithms - When to Use Which? (3 pts)",
+              "Quiz 4: Graphs and Basic Trees (30 pts)"
+            ],
+            "deliverableDueDate": "4/26/2026",
+            "notes": "Fourth quiz - covers Weeks 12-13"
+          },
+          {
+            "weekNumber": 14,
+            "dates": "Week 14 (4/27/2026 - 5/3/2026)",
+            "topics": [
+              "Minimum Spanning Trees (MST)",
+              "Prim's algorithm",
+              "Kruskal's algorithm",
+              "Shortest path problems",
+              "Dijkstra's algorithm",
+              "Bellman-Ford algorithm introduction"
+            ],
+            "readings": "Saylor.org CS202 Unit 8: Graph Theory (Sections 8.6-8.7)",
+            "assignments": [
+              "Programming Exercise 11: MST and Shortest Path Algorithms (20 pts)",
+              "Discussion Post 14: Real-world MST Applications (3 pts)"
+            ],
+            "deliverableDueDate": "5/3/2026",
+            "notes": "Classic graph algorithms with practical applications"
+          }
+        ]
+      },
+      {
+        "title": "Phase 6: Tree Structures and Advanced Topics (Weeks 15-16)",
+        "description": "Binary trees, tree traversals, AVL trees, and hash tables",
+        "weeks": [
+          {
+            "weekNumber": 15,
+            "dates": "Week 15 (5/4/2026 - 5/10/2026)",
+            "topics": [
+              "Tree terminology and properties",
+              "Binary trees and binary search trees",
+              "Tree traversals (inorder, preorder, postorder, level-order)",
+              "Expression trees",
+              "Huffman coding trees",
+              "Tree applications in computing"
+            ],
+            "readings": "Saylor.org CS202 Supplementary tree materials; Review graph theory tree sections",
+            "assignments": [
+              "Programming Exercise 12: Tree Traversal Implementations (15 pts)",
+              "Discussion Post 15: Tree Structures in File Systems (3 pts)",
+              "Programming Project 3 ASSIGNED: Tree Data Structures Library (85 pts)"
+            ],
+            "deliverableDueDate": "5/10/2026 (Exercises & Discussion); Project 3 assigned",
+            "notes": "Major Project 3 assigned this week - due end of Week 16"
+          },
+          {
+            "weekNumber": 16,
+            "dates": "Week 16 (5/11/2026 - 5/17/2026)",
+            "topics": [
+              "Balanced search trees",
+              "AVL trees and rotations",
+              "AVL tree operations",
+              "Hash tables and hash functions",
+              "Collision resolution strategies",
+              "Hash table performance analysis"
+            ],
+            "readings": "Saylor.org CS202 Supplementary hashing materials",
+            "assignments": [
+              "Programming Exercise 13: AVL Tree Implementation (15 pts)",
+              "Programming Exercise 14: Hash Table with Collision Resolution (15 pts)",
+              "Programming Project 3 DUE: Tree Data Structures Library (85 pts)",
+              "Quiz 5: Advanced Trees and Hashing (30 pts)"
+            ],
+            "deliverableDueDate": "5/17/2026",
+            "notes": "Major Project 3 due; Fifth quiz - covers Weeks 14-16"
+          }
+        ]
+      },
+      {
+        "title": "Phase 7: Review and Final Assessment (Week 17)",
+        "description": "Comprehensive review and final examination",
+        "weeks": [
+          {
+            "weekNumber": 17,
+            "dates": "Week 17 (5/18/2026 - 5/22/2026)",
+            "topics": [
+              "Comprehensive course review",
+              "Integration of all concepts",
+              "Real-world applications of discrete structures",
+              "Algorithm correctness proofs",
+              "Data structure selection criteria",
+              "Career applications in computer science"
+            ],
+            "readings": "Review all Saylor.org CS202 materials",
+            "assignments": [
+              "Final Exam: Comprehensive (150 pts)"
+            ],
+            "deliverableDueDate": "5/22/2026",
+            "notes": "Finals week - Comprehensive final exam"
+          }
+        ]
+      }
+    ]
+  },
+  "grading": {
+    "scale": [
+      { "grade": "A", "min": 90, "max": 100, "description": "Excellent" },
+      { "grade": "B", "min": 80, "max": 89, "description": "Good" },
+      { "grade": "C", "min": 70, "max": 79, "description": "Satisfactory" },
+      { "grade": "D", "min": 60, "max": 69, "description": "Passing" },
+      { "grade": "F", "min": 0, "max": 59, "description": "Not passing" }
+    ],
+    "components": [
+      {
+        "category": "Weekly Programming Exercises",
+        "weight": 20,
+        "details": "14 exercises × 10-20 points each = 200 points",
+        "description": "Hands-on programming assignments implementing discrete structures concepts in Java or C++"
+      },
+      {
+        "category": "Problem Sets",
+        "weight": 10,
+        "details": "8 problem sets × variable points = 100 points",
+        "description": "Written mathematical proofs, analysis, and theoretical problem-solving"
+      },
+      {
+        "category": "Discussion Participation",
+        "weight": 5,
+        "details": "15 discussions × 3-4 points each = 50 points",
+        "description": "Weekly online discussion forums on concepts and applications"
+      },
+      {
+        "category": "Programming Projects",
+        "weight": 25,
+        "details": "3 major projects = 250 points (Project 1: 80 pts, Project 2: 85 pts, Project 3: 85 pts)",
+        "description": "Independent programming projects synthesizing multiple weeks of content"
+      },
+      {
+        "category": "Unit Quizzes",
+        "weight": 15,
+        "details": "5 quizzes × 30 points each = 150 points",
+        "description": "Knowledge checks at key milestones covering 2-4 weeks of material each"
+      },
+      {
+        "category": "Midterm Exam",
+        "weight": 15,
+        "details": "1 exam = 150 points",
+        "description": "Comprehensive exam covering Weeks 1-8 (before Spring Break)"
+      },
+      {
+        "category": "Final Exam",
+        "weight": 15,
+        "details": "1 exam = 150 points",
+        "description": "Comprehensive final examination covering all course content"
+      }
+    ],
+    "bonusOpportunities": "Up to 30 extra credit points available through optional assignments: Algorithm Visualization Video (10 pts), Research Paper Summary (10 pts), LeetCode Graph/Tree Challenge (10 pts). Extra credit cannot replace major assignments but can boost final grade by up to 3%.",
+    "totalPoints": 1000,
+    "passingGrade": "C (70%) required for CS majors and prerequisite for CSC222 and other advanced courses"
+  },
+  "policies": {
+    "attendance": "Attendance is not directly graded but strongly encouraged. Discussion participation (5% of grade) requires weekly engagement. Missing class may significantly impact understanding and performance.",
+    "lateWork": "Programming Exercises & Problem Sets: 10% deduction per day, accepted up to 3 days late. Programming Projects: 15% first 24 hours, 25% second 24 hours, 40% third 24 hours, then 0%. Quizzes: No makeup without documented emergency. Discussions: 50% penalty if late, maximum 2 days late.",
+    "makeupWork": "Quizzes and exams cannot be made up without documented emergency (medical, family emergency, etc.). Contact instructor within 24 hours for quizzes, 48 hours for exams. Labs and homework can be completed late with penalties as noted above.",
+    "academicIntegrity": "Acceptable: Discussing concepts and approaches with classmates, using course materials and recommended resources, asking clarifying questions, citing external resources properly. Not Acceptable: Copying code from others (students or internet), sharing solution code, using unauthorized resources during exams, submitting work done by someone else. Consequences: First offense: 0 on assignment + meeting with instructor. Second offense: F in course + referral to academic affairs. All incidents reported to department.",
+    "collaboration": "Encouraged: Discussing concepts, troubleshooting approaches, comparing strategies. Permitted: Helping classmates understand errors or techniques. Prohibited: Copying code, sharing quiz answers, submitting identical work.",
+    "aiUsage": "Generative AI can be used in specific assignments in this course. Students will receive guidelines for using AI responsibly, with clear expectations on what is permitted and how to cite your usage. The use of AI tools beyond the guidelines of each assignment is considered plagiarism in this course, and disciplinary actions fall under the plagiarism guidelines."
+  },
+  "successTips": [
+    "Start assignments early - proofs and programming both take longer than you expect",
+    "Practice regularly, not just before exams - discrete math requires consistent engagement",
+    "Work through textbook examples thoroughly before attempting homework",
+    "Attend office hours when stuck - mathematical concepts build on each other",
+    "Form study groups to discuss proofs and approaches",
+    "Keep detailed notes with worked examples for exam preparation",
+    "Test your programs thoroughly with edge cases and various inputs",
+    "Review fundamental algebra and logic concepts if needed",
+    "Use visualization tools (Visualgo, GeoGebra) to understand graphs and trees",
+    "Connect concepts to programming - discrete math is the foundation of CS theory",
+    "Prepare note sheets thoughtfully for exams - the process of creating them helps learning",
+    "Don't wait until project deadlines - start projects as soon as they're assigned",
+    "Practice LeetCode/HackerRank graph and tree problems for additional challenges",
+    "Explain concepts to classmates - teaching reinforces your own understanding",
+    "Plan for 9-10 hours per week on average, 12-15 hours during project weeks"
+  ],
+  "additionalResources": [
+    {
+      "title": "Visualgo",
+      "url": "https://visualgo.net/",
+      "description": "Interactive visualizations for algorithms and data structures"
+    },
+    {
+      "title": "Khan Academy - Discrete Math",
+      "url": "https://www.khanacademy.org/",
+      "description": "Video tutorials and practice problems for discrete mathematics"
+    },
+    {
+      "title": "MIT OpenCourseWare - Mathematics for Computer Science",
+      "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/",
+      "description": "Complete course materials including lectures, problem sets, and exams"
+    },
+    {
+      "title": "Book of Proof by Richard Hammack",
+      "url": "https://www.people.vcu.edu/~rhammack/BookOfProof/",
+      "description": "Free comprehensive proof-writing textbook"
+    },
+    {
+      "title": "Graph Online",
+      "url": "https://graphonline.ru/en/",
+      "description": "Create and visualize graphs, run algorithms interactively"
+    },
+    {
+      "title": "GeeksforGeeks - Discrete Mathematics",
+      "url": "https://www.geeksforgeeks.org/discrete-mathematics-tutorial/",
+      "description": "Tutorials and implementations for discrete math concepts"
+    },
+    {
+      "title": "Wolfram MathWorld",
+      "url": "https://mathworld.wolfram.com/",
+      "description": "Comprehensive mathematics reference"
+    },
+    {
+      "title": "LeetCode - Graphs and Trees",
+      "url": "https://leetcode.com/tag/graph/",
+      "description": "Practice problems for graph and tree algorithms"
+    },
+    {
+      "title": "Brilliant.org - Discrete Math",
+      "url": "https://brilliant.org/courses/discrete-mathematics/",
+      "description": "Interactive problem-solving for discrete mathematics"
+    },
+    {
+      "title": "CS50 Sandbox",
+      "url": "https://sandbox.cs50.io/",
+      "description": "Online coding environment for programming exercises"
+    }
+  ],
+  "certificationInfo": {
+    "alignedCertifications": [
+      {
+        "name": "C-ID COMP-152",
+        "fullName": "Discrete Structures for Computer Science",
+        "provider": "C-ID (California Course Identification Numbering System)",
+        "description": "State-wide curriculum standard for discrete structures courses",
+        "courseAlignment": "Course fully aligned with C-ID COMP-152 requirements: Functions, Relations and Sets; Basic Logic; Proof Techniques; Basics of Counting; Graphs and Trees; Discrete Probability"
+      }
+    ]
+  },
+  "textbookInfo": {
+    "primary": {
+      "title": "CS202: Discrete Structures",
+      "author": "Saylor Academy",
+      "publisher": "Saylor.org (Open Educational Resource)",
+      "year": "2024",
+      "isbn": "N/A - Free online resource",
+      "url": "https://learn.saylor.org/course/view.php?id=67",
+      "cost": "Free",
+      "required": true
+    },
+    "supplementary": [
+      {
+        "title": "Book of Proof",
+        "author": "Richard Hammack",
+        "publisher": "Virginia Commonwealth University",
+        "year": "2022",
+        "cost": "Free PDF available",
+        "url": "https://www.people.vcu.edu/~rhammack/BookOfProof/",
+        "notes": "Excellent free resource for proof writing"
+      },
+      {
+        "title": "Mathematics for Computer Science",
+        "author": "Eric Lehman, F. Thomson Leighton, Albert R. Meyer",
+        "publisher": "MIT OpenCourseWare",
+        "year": "2017",
+        "cost": "Free PDF available",
+        "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/",
+        "notes": "Comprehensive free reference material"
+      }
+    ]
+  },
+  "projectDetails": {
+    "project1": {
+      "name": "Logic and Proof Systems",
+      "assigned": "Week 5 (2/16/2026)",
+      "due": "Week 6 (3/1/2026)",
+      "points": 80,
+      "duration": "2 weeks",
+      "topics": "Propositional logic, truth tables, logical equivalences, CNF/DNF, proof validation",
+      "components": [
+        "Truth Table Generator (20 pts) - Parse expressions, generate tables, identify tautologies",
+        "Logical Equivalence Checker (20 pts) - Compare expressions, show counterexamples",
+        "Normal Form Converter (20 pts) - Convert to CNF/DNF, simplify expressions",
+        "Proof Step Validator (20 pts) - Validate inferences, detect fallacies"
+      ],
+      "deliverables": "Source code (Java/C++), README, test cases, design document (1-2 pages)",
+      "rubric": "Functionality 50%, Code Quality 20%, Documentation 15%, Testing 10%, Design Document 5%"
+    },
+    "project2": {
+      "name": "Combinatorics and Probability Toolkit",
+      "assigned": "Week 10 (3/30/2026)",
+      "due": "Week 11 (4/12/2026)",
+      "points": 85,
+      "duration": "2 weeks",
+      "topics": "Set operations, counting, permutations, combinations, probability, distributions",
+      "components": [
+        "Set Operations Module (15 pts) - Union, intersection, Cartesian product, power sets",
+        "Counting Module (20 pts) - Permutations, combinations, Pascal's triangle, factorials",
+        "Probability Calculator (25 pts) - Sample spaces, conditional probability, Bayes' theorem",
+        "Distribution Problems Solver (15 pts) - Stars and bars, constrained distributions",
+        "Binomial Theorem (10 pts) - Expand (a+b)^n, calculate specific terms"
+      ],
+      "deliverables": "Source code, user interface (console/GUI), README, test suite, user guide (2-3 pages)",
+      "rubric": "Functionality 50%, Integration 10%, Code Quality 15%, UI 10%, Documentation 10%, Testing 5%"
+    },
+    "project3": {
+      "name": "Tree Data Structures Library",
+      "assigned": "Week 15 (5/4/2026)",
+      "due": "Week 16 (5/17/2026)",
+      "points": 85,
+      "duration": "2 weeks",
+      "topics": "Binary trees, BST, tree traversals, AVL trees, expression trees",
+      "components": [
+        "Binary Tree Implementation (15 pts) - Node structure, basic operations",
+        "Binary Search Tree (25 pts) - Insert, delete, search, maintain BST property",
+        "Tree Traversals (20 pts) - Inorder, preorder, postorder, level-order (recursive and iterative)",
+        "AVL Tree (15 pts) - Rotations, balance maintenance (optional bonus)",
+        "Expression Tree (10 pts) - Parse and evaluate arithmetic expressions"
+      ],
+      "deliverables": "Source code with complete library, comprehensive test suite, API documentation, performance analysis report",
+      "rubric": "Functionality 50%, Correctness 20%, Code Quality 15%, Testing 10%, Documentation 5%"
+    }
+  },
+  "weeklyWorkloadEstimate": {
+    "typical": "9-10 hours per week",
+    "breakdown": {
+      "lecture": "3 hours (in class)",
+      "readings": "2-3 hours (Saylor.org materials)",
+      "programmingExercises": "2-3 hours",
+      "problemSets": "1-2 hours",
+      "discussions": "0.5-1 hour"
+    },
+    "projectWeeks": "12-15 hours (includes 5-6 hours additional for major project work)",
+    "examWeeks": "Additional 3-5 hours for exam preparation and review"
+  }
+}
