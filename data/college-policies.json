@@ -146,5 +146,27 @@
       "phone": "Text HOME to 741741",
       "available": "24/7"
     }
+  ],
+  "keyDates": [
+    {
+      "description": "Last Day to Add w/Instructor Approval",
+      "date": "January 30, 2026"
+    },
+    {
+      "description": "Last Day to Drop w/o a Notation",
+      "date": "January 30, 2026"
+    },
+    {
+      "description": "Last Day for a Refund of Enrollment Fees",
+      "date": "January 30, 2026"
+    },
+    {
+      "description": "Last Day to Drop with a W Notation",
+      "date": "April 17, 2026"
+    },
+    {
+      "description": "Last Day to Apply for Pass/No Pass Grading",
+      "date": "May 22, 2026"
+    }
   ]
 }
