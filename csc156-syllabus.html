@@ -689,6 +689,19 @@ function renderPoliciesTab() {
         
         html += `</ul></div>`;
     }
+
+    // Key Dates section
+    if (policiesData.keyDates && policiesData.keyDates.length > 0) {
+        html += `<h2 style="margin-top: 3rem;">Important Semester Dates</h2>`;
+        html += `<div class="slo-list">`;
+        html += `<ul style="list-style-type: none; padding-left: 0;">`;
+        
+        policiesData.keyDates.forEach(dateItem => {
+            html += `<li style="margin: 0.75rem 0;"><strong>${dateItem.description}:</strong> ${dateItem.date}</li>`;
+        });
+        
+        html += `</ul></div>`;
+    }
     
     html += `</section>`;
     tab.innerHTML = html;
