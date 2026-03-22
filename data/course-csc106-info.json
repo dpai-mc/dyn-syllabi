@@ -1,0 +1,350 @@
+{
+  "metadata": {
+    "code": "CSC106",
+    "title": "Introduction to Linux II",
+    "credits": "1.5",
+    "creditBreakdown": "Online asynchronous",
+    "format": "Online (Asynchronous)",
+    "term": "Spring 2026",
+    "prerequisite": "CSC105 (Introduction to Linux I)"
+  },
+  "description": {
+    "catalog": "This course continues from CSC 105 and explores intermediate Linux administration topics including installation, configuration, service management, shell scripting, user and group administration, file permissions, networking, and server security.",
+    "expanded": "Students will gain hands-on experience installing and configuring Ubuntu Server, managing system services with systemd, writing practical bash automation scripts, administering users and groups, setting file permissions, configuring basic network services, and applying Linux security hardening techniques. All work is performed on real virtual machines using industry-standard tools."
+  },
+  "purpose": {
+    "why": "This course builds practical, job-ready Linux skills on top of the foundations from CSC 105. You will move from using Linux to administering it—installing servers, automating tasks with scripts, managing users and permissions, and configuring network services. These skills align with roles in IT support, systems administration, DevOps, and cybersecurity, and are relevant to certifications such as CompTIA Linux+ and the LPI Linux Essentials.",
+    "beyond": "Beyond the technical skills, you will develop a professional approach to documentation and problem-solving—habits that distinguish capable administrators from beginners. The mini-projects ask you to produce work you could include in a portfolio or reference in a job interview."
+  },
+  "slos": [
+    "Install and configure a Linux operating system.",
+    "Configure a Linux operating system as a platform for web-based and other applications.",
+    "Describe Linux runlevels and startup scripts."
+  ],
+  "schedule": {
+    "phases": [
+      {
+        "title": "Phase 1: Installation and System Internals (Weeks 1-3)",
+        "description": "Install Ubuntu Server, explore hardware and kernel internals, and master the systemd service management model",
+        "weeks": [
+          {
+            "weekLabel": "Week 1 (3/23/2026 - 3/29/2026)",
+            "weekNumber": 1,
+            "dates": "3/23/2026 - 3/29/2026",
+            "topics": [
+              "Planning a Linux installation (hardware requirements, choosing a distribution)",
+              "Guided vs. manual partitioning, setting hostname, timezone, initial user",
+              "Package management with apt: search, install, update, upgrade, remove",
+              "Repositories and /etc/apt/sources.list",
+              "Verifying installed packages with dpkg",
+              "Where system and package data lives: /var, /etc, /proc (introduction)"
+            ],
+            "ciscoPrimaryContent": "Linux Essentials Chapters 12 and 13",
+            "assignments": [
+              "Linux Essentials Ch. 13 Lab – Where Data is Stored (Cisco VM) (15 pts)",
+              "Ubuntu Server Install – Install Ubuntu Server 24.04 LTS on a VM with screenshots and write-up (25 pts)",
+              "RSI Discussion 1 – 'Choosing and Installing Linux' (15 pts)"
+            ],
+            "extraCredit": [
+              "apt vs. yum/dnf Comparison – One-page comparison after reading Linux 1 Ch. 24 (5 pts)"
+            ],
+            "deliverableDueDate": "Week 1 Sunday 3/29/2026 11:59 PM",
+            "weekPoints": 55,
+            "cslosAddressed": ["CSLO 1"]
+          },
+          {
+            "weekLabel": "Spring Break (3/30/2026 - 4/5/2026)",
+            "weekNumber": null,
+            "dates": "3/30/2026 - 4/5/2026",
+            "topics": [],
+            "assignments": [],
+            "extraCredit": [],
+            "deliverableDueDate": null,
+            "weekPoints": 0,
+            "notes": "No class – Spring Break. No assignments due this week.",
+            "cslosAddressed": []
+          },
+          {
+            "weekLabel": "Week 2 (4/6/2026 - 4/12/2026)",
+            "weekNumber": 2,
+            "dates": "4/6/2026 - 4/12/2026",
+            "topics": [
+              "The Linux kernel: role, versioning, uname -a",
+              "Inspecting hardware: lspci, lsusb, lsblk, lscpu",
+              "The /dev directory and device files (block vs. character devices)",
+              "Kernel modules: lsmod, modprobe, modinfo",
+              "Reading boot and kernel messages: dmesg, journalctl -k",
+              "The boot sequence: firmware (BIOS/UEFI), bootloader (GRUB2), kernel loading, init/systemd",
+              "GRUB2 basics: /etc/default/grub, update-grub"
+            ],
+            "ciscoPrimaryContent": "Linux Essentials Chapter 12 (targeted review: kernel and device sections); Linux 1 Chapter 16 (The Boot Process)",
+            "assignments": [
+              "Hardware, Kernel, and Boot Exploration – Part A (hardware/kernel commands + annotations) and Part B (GRUB config + boot log questions) (35 pts)"
+            ],
+            "extraCredit": [
+              "GRUB Modification – Modify GRUB timeout, document with before/after screenshots after reading Linux 1 Ch. 17 (5 pts)"
+            ],
+            "deliverableDueDate": "Week 2 Sunday 4/12/2026 11:59 PM",
+            "weekPoints": 35,
+            "cslosAddressed": ["CSLO 1", "CSLO 3"]
+          },
+          {
+            "weekLabel": "Week 3 (4/13/2026 - 4/19/2026)",
+            "weekNumber": 3,
+            "dates": "4/13/2026 - 4/19/2026",
+            "topics": [
+              "Traditional SysVinit runlevels (0-6) and what each means",
+              "systemd targets as the modern replacement: multi-user.target, graphical.target, rescue.target, emergency.target",
+              "Mapping runlevels to targets",
+              "systemctl commands: start, stop, enable, disable, status, is-enabled, list-units, list-unit-files",
+              "Changing the default target: systemctl get-default, set-default, isolate",
+              "systemd unit files: where they live, basic structure",
+              "Viewing service logs: journalctl -u <service>",
+              "Shutdown and reboot: shutdown, reboot, systemctl poweroff"
+            ],
+            "ciscoPrimaryContent": "Linux Essentials Chapter 13 (targeted review: init/systemd sections); Linux 1 Chapter 18 (Runlevels)",
+            "assignments": [
+              "systemd Exploration – List services, check status, enable/disable a service, change default target, boot into rescue mode, and restore; submit screenshots and narrative (25 pts)",
+              "RSI Discussion 3 – 'Why Runlevels Still Matter' (15 pts)"
+            ],
+            "extraCredit": [
+              "Cron Job Setup – Read Linux 2 Ch. 7 (Scheduling Jobs), set up a working cron job on VM with documentation (5 pts)"
+            ],
+            "deliverableDueDate": "Week 3 Sunday 4/19/2026 11:59 PM",
+            "weekPoints": 40,
+            "cslosAddressed": ["CSLO 1", "CSLO 3"]
+          }
+        ]
+      },
+      {
+        "title": "Phase 2: Scripting and Mini-Project 1 (Week 4)",
+        "description": "Apply advanced bash scripting techniques—functions, arrays, conditionals, and debugging—in a practical server automation script",
+        "weeks": [
+          {
+            "weekLabel": "Week 4 (4/20/2026 - 4/26/2026)",
+            "weekNumber": 4,
+            "dates": "4/20/2026 - 4/26/2026",
+            "topics": [
+              "Review of basic scripting from CSC 105 (variables, if/else, for/while)",
+              "Functions: defining, calling, return values, local variables",
+              "Arrays: indexed arrays, declaring, iterating",
+              "I/O redirection review: >, >>, <, 2>, 2>&1, pipes",
+              "Command substitution: $(...)",
+              "Reading user input with read",
+              "Debugging: bash -x script.sh, set -e, set -u"
+            ],
+            "ciscoPrimaryContent": "Linux Essentials Chapter 11 (Basic Scripting); Linux 2 Chapter 2 (Shell Scripts – supplemental)",
+            "assignments": [
+              "Mini-Project 1 – Post-Install Configuration Script: bash script automating Ubuntu Server post-install setup; must include command-line arguments, package management, user creation, service enabling, timestamped log, function, array, conditional, comments, and error handling. Deliverables: script file, README, and screenshot or execution log (60 pts)"
+            ],
+            "extraCredit": [
+              "Advanced Shell Features – Demonstrate use of select menus or getopts after reading Linux 2 Ch. 1 (5 pts)"
+            ],
+            "deliverableDueDate": "Week 4 Sunday 4/26/2026 11:59 PM",
+            "weekPoints": 60,
+            "notes": "MINI-PROJECT 1 DUE",
+            "cslosAddressed": ["CSLO 1", "CSLO 2", "CSLO 3"]
+          }
+        ]
+      },
+      {
+        "title": "Phase 3: Users, Permissions, and Networking (Weeks 5-6)",
+        "description": "Administer users and groups, configure file permissions and ownership, and apply basic network diagnostic skills",
+        "weeks": [
+          {
+            "weekLabel": "Week 5 (4/27/2026 - 5/3/2026)",
+            "weekNumber": 5,
+            "dates": "4/27/2026 - 5/3/2026",
+            "topics": [
+              "User account types: root, system accounts, regular users",
+              "Creating and managing users: useradd, usermod, userdel",
+              "Creating and managing groups: groupadd, groupmod, groupdel",
+              "Assigning users to groups: /etc/passwd, /etc/group, /etc/shadow",
+              "sudo and the sudoers file: /etc/sudoers, visudo",
+              "Basic security concepts: why root login is discouraged, principle of least privilege, password policies"
+            ],
+            "ciscoPrimaryContent": "Linux Essentials Chapter 15 (System and User Security); Linux Essentials Chapter 16 (Creating Users and Groups)",
+            "assignments": [
+              "Linux Essentials Ch. 16 Lab – Creating Users and Groups (Cisco VM) (15 pts)",
+              "RSI Discussion 5 – 'Security Starts with Users' (15 pts)"
+            ],
+            "extraCredit": [
+              "Password Aging with chage – Read Linux 2 Ch. 16 (Account Security), configure password aging on VM with documentation (5 pts)"
+            ],
+            "deliverableDueDate": "Week 5 Sunday 5/3/2026 11:59 PM",
+            "weekPoints": 30,
+            "cslosAddressed": ["CSLO 1", "CSLO 2"]
+          },
+          {
+            "weekLabel": "Week 6 (5/4/2026 - 5/10/2026)",
+            "weekNumber": 6,
+            "dates": "5/4/2026 - 5/10/2026",
+            "topics": [
+              "File ownership: chown, chgrp",
+              "File permissions: chmod (symbolic and octal), umask",
+              "Special permissions: setuid, setgid, sticky bit",
+              "Setting up shared directories with proper group ownership",
+              "TCP/IP fundamentals: IPv4 addressing, subnet masks, gateways, DNS",
+              "Key network commands: ip addr, ip route, ping, ss, dig"
+            ],
+            "ciscoPrimaryContent": "Linux Essentials Chapter 17 (Ownership and Permissions); Linux Essentials Chapter 14 (Network Configuration)",
+            "assignments": [
+              "Linux Essentials Ch. 17 Lab – Ownership and Permissions (Cisco VM) (15 pts)",
+              "Network Basics Check – Run ip addr, ip route, ping 8.8.8.8, dig example.com, ss -tlnp on Ubuntu Server VM; paste output and explain each command (15 pts)"
+            ],
+            "extraCredit": [
+              "Network Troubleshooting Walkthrough – Read Linux 2 Ch. 15, document a structured troubleshooting process for a 'server cannot reach the internet' scenario (5 pts)"
+            ],
+            "deliverableDueDate": "Week 6 Sunday 5/10/2026 11:59 PM",
+            "weekPoints": 30,
+            "cslosAddressed": ["CSLO 1", "CSLO 2"]
+          }
+        ]
+      },
+      {
+        "title": "Phase 4: Server Configuration, Security, and Mini-Project 2 (Weeks 7-8)",
+        "description": "Configure network services, web server, SSH key authentication, and security hardening; integrate all course skills in a comprehensive server build",
+        "weeks": [
+          {
+            "weekLabel": "Week 7 (5/11/2026 - 5/17/2026)",
+            "weekNumber": 7,
+            "dates": "5/11/2026 - 5/17/2026",
+            "topics": [
+              "Netplan YAML files: configuring static IP, applying changes",
+              "/etc/hosts and /etc/resolv.conf",
+              "Installing and configuring Nginx: default site, custom HTML",
+              "Firewall configuration with ufw: allow, deny, status",
+              "SSH key-based authentication: generating keys, ssh-copy-id",
+              "Security hardening: disabling root SSH login, keeping packages updated",
+              "Scheduling tasks with cron and crontab",
+              "Checking service and server logs: journalctl -u nginx, /var/log/nginx/"
+            ],
+            "ciscoPrimaryContent": "Linux Essentials Chapter 18 (Special Directories and Files); Linux 2 Chapters 7 and 17 (supplemental)",
+            "assignments": [
+              "Server Configuration: Networking, Web, and SSH – Part A (static IP via Netplan, Nginx install, custom page, ufw rules, cron job) and Part B (SSH key pair generation and passwordless login); submit Netplan YAML, Nginx config, crontab entry, SSH verification output, and screenshots (45 pts)",
+              "RSI Discussion 7 – 'Securing Your Server' (15 pts)"
+            ],
+            "extraCredit": [
+              "Self-Signed TLS for Nginx – Read Linux 2 Ch. 18 (Encryption), generate a self-signed TLS certificate, configure Nginx for HTTPS, and document the process (5 pts)"
+            ],
+            "deliverableDueDate": "Week 7 Sunday 5/17/2026 11:59 PM",
+            "weekPoints": 60,
+            "cslosAddressed": ["CSLO 2", "CSLO 3"]
+          },
+          {
+            "weekLabel": "Week 8 (5/18/2026 - 5/22/2026)",
+            "weekNumber": 8,
+            "dates": "5/18/2026 - 5/22/2026",
+            "topics": [
+              "Integration and review of all major course themes: installation, package management, kernel and hardware, boot process and systemd, shell scripting, user and group administration, file permissions, networking, security",
+              "Planning a server deployment: thinking through requirements before typing commands",
+              "Documentation as a professional skill"
+            ],
+            "ciscoPrimaryContent": "No new chapters – review and reference previously assigned chapters as needed for Mini-Project 2",
+            "assignments": [
+              "Mini-Project 2 – Build and Document a Linux Server: fresh Ubuntu Server install with partitioning and non-root admin user; package installation via script or documented commands; boot to multi-user.target with 2+ enabled services; at least one automation script (backup or health-check); 2+ non-root users with proper groups, sudo, and shared directory permissions; static IP via Netplan, ufw configured, SSH key auth enabled; security hardening (disable root SSH, firewall, updates). Deliverables: README, scripts, config files, and 5-10 minute screencast (80 pts)",
+              "Course Reflection – 200-300 word written reflection on learning, challenges, and next steps; graded for completion (10 pts)"
+            ],
+            "extraCredit": [
+              "Additional Network Service – Add a Samba file share, CUPS print server, or simple mail relay to Mini-Project 2 using Linux 2 Ch. 11 or 12 content, with documentation (10 pts)"
+            ],
+            "deliverableDueDate": "Week 8 Friday 5/22/2026 11:59 PM",
+            "weekPoints": 90,
+            "notes": "MINI-PROJECT 2 DUE – Final week of semester ends Friday 5/22/2026",
+            "cslosAddressed": ["CSLO 1", "CSLO 2", "CSLO 3"]
+          }
+        ]
+      }
+    ]
+  },
+  "grading": {
+    "breakdown": [
+      {
+        "category": "Cisco Labs",
+        "percentage": 11,
+        "description": "Hands-on labs completed in the Cisco Networking Academy VM (3 labs @ 15 pts each = 45 pts) – Weeks 1, 5, 6"
+      },
+      {
+        "category": "Hands-on Assignments",
+        "percentage": 24,
+        "description": "Applied work completed on the student's Ubuntu Server VM (95 pts total) – Weeks 1, 2, 3, 6, 7"
+      },
+      {
+        "category": "RSI Discussions",
+        "percentage": 15,
+        "description": "Instructor-initiated, content-focused discussion forums (4 discussions @ 15 pts each = 60 pts) – Weeks 1, 3, 5, 7"
+      },
+      {
+        "category": "Mini-Project 1",
+        "percentage": 15,
+        "description": "Post-Install Configuration Script – bash automation script with full deliverables (60 pts) – Week 4"
+      },
+      {
+        "category": "Mini-Project 2",
+        "percentage": 20,
+        "description": "Build and Document a Linux Server – comprehensive server build with README, scripts, config files, and screencast (80 pts) – Week 8"
+      },
+      {
+        "category": "Course Reflection",
+        "percentage": 3,
+        "description": "Short written reflection on learning, challenges, and next steps; graded for completion (10 pts) – Week 8"
+      }
+    ],
+    "scale": [
+      { "grade": "A", "range": "90-100%" },
+      { "grade": "B", "range": "80-89%" },
+      { "grade": "C", "range": "70-79%" },
+      { "grade": "D", "range": "60-69%" },
+      { "grade": "F", "range": "Below 60%" }
+    ],
+    "totalPoints": 400,
+    "extraCreditAvailable": 45,
+    "extraCreditNote": "Extra credit points are added on top of earned points before calculating the percentage. The maximum possible score with all extra credit is 445 points, but the grade scale is based on the 400-point base."
+  },
+  "materials": {
+    "required": [
+      "Access to a computer capable of running virtualization software (VirtualBox or UTM recommended)",
+      "Cisco Networking Academy account – NDG Linux Essentials (provided via course enrollment link)",
+      "Ubuntu Server 24.04 LTS ISO – free download from ubuntu.com"
+    ],
+    "optional": [
+      "Cisco Networking Academy – NDG Linux 1 (supplemental; used for extension and extra credit content)",
+      "Cisco Networking Academy – NDG Linux 2 (supplemental; used for extension and extra credit content)",
+      "CompTIA Linux+ Study Guide – available from CompTIA Learning",
+      "LPI Linux Essentials Study Guide – available from LPI"
+    ]
+  },
+  "importantDates": [
+    {
+      "weekLabel": "Week 1 (3/23/2026 - 3/29/2026)",
+      "event": "Course Begins",
+      "description": "First week of instruction; Ubuntu Server install due Sunday 3/29/2026"
+    },
+    {
+      "weekLabel": "Spring Break (3/30/2026 - 4/5/2026)",
+      "event": "Spring Break – No Class",
+      "description": "No assignments due; use this week to catch up or get ahead on your VM setup"
+    },
+    {
+      "weekLabel": "Week 4 (4/20/2026 - 4/26/2026)",
+      "event": "Mini-Project 1 Due",
+      "description": "Post-Install Configuration Script – due Sunday 4/26/2026 11:59 PM"
+    },
+    {
+      "weekLabel": "Week 8 (5/18/2026 - 5/22/2026)",
+      "event": "Mini-Project 2 Due and Course Ends",
+      "description": "Build and Document a Linux Server + Course Reflection – due Friday 5/22/2026 11:59 PM. Final week of semester ends Friday."
+    }
+  ],
+  "workload": {
+    "hoursPerWeek": 9,
+    "breakdown": "Approximately 9 hours per week: reading Cisco content (4-8 hrs depending on week), hands-on VM work (1-4 hrs), and discussions (1 hr on discussion weeks)",
+    "notes": "Mini-Project weeks (4 and 8) may require 9-10 focused hours. Week 1 has the heaviest reading load due to two full Cisco chapters plus the Ubuntu Server installation."
+  },
+  "policies": {
+    "attendance": "This is a fully asynchronous online course. There are no scheduled meeting times. Students are expected to engage with course materials and complete assignments each week by the Sunday 11:59 PM deadline (Friday for Week 8).",
+    "lateWork": "Assignments: 10% penalty per day late (max 3 days). Mini-Projects: 10% penalty per day late (max 5 days). RSI Discussions: original post must be submitted by Wednesday of that week to receive full credit; late posts receive 50% credit on the original post component only. Replies cannot be made up after Sunday.",
+    "makeupExams": "There are no exams in this course. Mini-Projects serve as the primary summative assessments. Extensions for documented emergencies must be requested before the due date.",
+    "academicIntegrity": "All submitted work must be your own. You are encouraged to use documentation, man pages, and online resources, but you must write your own scripts, commands, and write-ups. Copying scripts or write-ups from classmates or AI tools and submitting them as your own is a violation of the college Academic Honesty Policy. Violations result in a zero on the assignment and may result in course failure."
+  }
+}
