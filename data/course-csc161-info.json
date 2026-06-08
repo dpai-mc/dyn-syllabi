@@ -1,0 +1,429 @@
+{
+  "metadata": {
+    "code": "CSC161",
+    "title": "Cloud Infrastructure and Security",
+    "credits": "3",
+    "creditBreakdown": "3 lecture",
+    "format": "Hybrid",
+    "term": "Fall 2026",
+    "prerequisite": "CSC152 or equivalent networking knowledge",
+    "meetingSchedule": {
+      "days": "Thursday",
+      "time": "5:30 PM - 6:50 PM",
+      "location": "Zoom",
+      "modality": "Synchronous online (Hybrid course: 1/2 synchronous Zoom, 1/2 asynchronous online)"
+    }
+  },
+  "description": {
+    "catalog": "Comprehensive study of cloud computing security, covering cloud service providers, security implementation, data protection, and cloud infrastructure design.",
+    "expanded": "This course provides in-depth coverage of cloud security principles, practices, and technologies. Students will learn to evaluate cloud service providers for security, implement cloud security controls, identify and mitigate cloud data risks, and build secure cloud infrastructures."
+  },
+  "purpose": {
+    "why": "This course prepares you for cloud security roles by developing expertise in cloud architecture security, compliance, and risk management. You'll gain practical skills in securing cloud environments across major platforms.",
+    "beyond": "Beyond technical implementation, you'll develop strategic thinking about cloud security governance, understand regulatory compliance requirements, and learn to design resilient cloud architectures."
+  },
+  "slos": [
+    "Evaluate cloud service providers for security capabilities and compliance",
+    "Implement cloud security controls and best practices",
+    "Identify and mitigate cloud data risks and vulnerabilities",
+    "Build secure cloud infrastructures following industry standards"
+  ],
+  "schedule": {
+    "phases": [
+      {
+        "title": "Phase 1: Cloud Computing Fundamentals (Weeks 1-4)",
+        "description": "Build foundation in cloud computing concepts, service models, and deployment strategies",
+        "weeks": [
+          {
+            "weekNumber": 1,
+            "dates": "8/17/2026 - 8/23/2026",
+            "topics": [
+              "Course overview and expectations",
+              "Introduction to cloud computing",
+              "Cloud service models (IaaS, PaaS, SaaS)",
+              "Cloud deployment models (public, private, hybrid)"
+            ],
+            "assignments": [
+              "Assignment 1: Cloud Platform Setup (20 pts)",
+              "Quiz 1: Cloud Fundamentals (10 pts)",
+              "Discussion 1: Cloud Adoption Trends (5 pts)"
+            ],
+            "deliverableDueDate": "Week 1 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 2,
+            "dates": "8/24/2026 - 8/30/2026",
+            "topics": [
+              "Major cloud service providers overview",
+              "AWS, Azure, and Google Cloud Platform comparison",
+              "Cloud pricing models and cost optimization",
+              "Shared responsibility model"
+            ],
+            "assignments": [
+              "Assignment 2: CSP Comparison Analysis (25 pts)",
+              "Quiz 2: Cloud Providers (10 pts)",
+              "Discussion 2: Choosing a Cloud Provider (5 pts)"
+            ],
+            "deliverableDueDate": "Week 2 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 3,
+            "dates": "8/31/2026 - 9/6/2026",
+            "topics": [
+              "Cloud security fundamentals",
+              "Cloud security challenges and threats",
+              "Identity and Access Management (IAM)",
+              "Authentication and authorization in the cloud"
+            ],
+            "assignments": [
+              "Assignment 3: IAM Configuration Lab (25 pts)",
+              "Quiz 3: Cloud Security Basics (10 pts)",
+              "Discussion 3: IAM Best Practices (5 pts)"
+            ],
+            "deliverableDueDate": "Week 3 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 4,
+            "dates": "9/7/2026 - 9/13/2026",
+            "topics": [
+              "Evaluating CSP security capabilities",
+              "Security certifications and compliance",
+              "Cloud security assessment frameworks",
+              "Project 1: CSP Security Evaluation"
+            ],
+            "assignments": [
+              "Project 1: CSP Security Evaluation Due (40 pts)",
+              "Quiz 4: Security Assessment (10 pts)",
+              "Discussion 4: Compliance Requirements (5 pts)"
+            ],
+            "deliverableDueDate": "Week 4 Sunday 11:59 PM"
+          }
+        ]
+      },
+      {
+        "title": "Phase 2: Cloud Security Implementation (Weeks 5-8)",
+        "description": "Learn to implement security controls, network security, and encryption in cloud environments",
+        "weeks": [
+          {
+            "weekNumber": 5,
+            "dates": "9/14/2026 - 9/20/2026",
+            "topics": [
+              "Cloud network security",
+              "Virtual private clouds (VPC)",
+              "Security groups and network ACLs",
+              "Cloud firewalls and DDoS protection"
+            ],
+            "assignments": [
+              "Assignment 4: VPC Security Lab (25 pts)",
+              "Quiz 5: Network Security (10 pts)",
+              "Discussion 5: Network Segmentation (5 pts)"
+            ],
+            "deliverableDueDate": "Week 5 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 6,
+            "dates": "9/21/2026 - 9/27/2026",
+            "topics": [
+              "Encryption in the cloud",
+              "Data encryption at rest and in transit",
+              "Key management services (KMS)",
+              "Certificate management"
+            ],
+            "assignments": [
+              "Assignment 5: Encryption Implementation Lab (25 pts)",
+              "Quiz 6: Encryption & KMS (10 pts)",
+              "Discussion 6: Key Management Challenges (5 pts)"
+            ],
+            "deliverableDueDate": "Week 6 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 7,
+            "dates": "9/28/2026 - 10/4/2026",
+            "topics": [
+              "Cloud security monitoring and logging",
+              "Cloud-native security tools",
+              "Security information and event management (SIEM)",
+              "Cloud audit and compliance tools"
+            ],
+            "assignments": [
+              "Assignment 6: Cloud Monitoring Setup (25 pts)",
+              "Quiz 7: Security Monitoring (10 pts)",
+              "Discussion 7: Log Management Strategies (5 pts)"
+            ],
+            "deliverableDueDate": "Week 7 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 8,
+            "dates": "10/5/2026 - 10/11/2026",
+            "topics": [
+              "Midterm review",
+              "Integration of cloud security controls",
+              "Case studies in cloud security implementation"
+            ],
+            "assignments": [
+              "Midterm Exam (40 pts)",
+              "Discussion 8: Midterm Reflections (5 pts)"
+            ],
+            "deliverableDueDate": "Week 8 Sunday 11:59 PM"
+          }
+        ]
+      },
+      {
+        "title": "Phase 3: Cloud Data Security & Risk Management (Weeks 9-12)",
+        "description": "Master data protection, risk assessment, and vulnerability management in cloud environments",
+        "weeks": [
+          {
+            "weekNumber": 9,
+            "dates": "10/12/2026 - 10/18/2026",
+            "topics": [
+              "Cloud data classification",
+              "Data loss prevention (DLP)",
+              "Data residency and sovereignty",
+              "Cloud backup and disaster recovery"
+            ],
+            "assignments": [
+              "Assignment 7: Data Classification Exercise (25 pts)",
+              "Quiz 9: Data Protection (10 pts)",
+              "Discussion 9: Data Sovereignty Issues (5 pts)"
+            ],
+            "deliverableDueDate": "Week 9 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 10,
+            "dates": "10/19/2026 - 10/25/2026",
+            "topics": [
+              "Cloud risk assessment methodologies",
+              "Cloud security posture management (CSPM)",
+              "Vulnerability management in the cloud",
+              "Cloud penetration testing"
+            ],
+            "assignments": [
+              "Assignment 8: Risk Assessment Exercise (25 pts)",
+              "Quiz 10: Risk Management (10 pts)",
+              "Discussion 10: CSPM Tools (5 pts)"
+            ],
+            "deliverableDueDate": "Week 10 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 11,
+            "dates": "10/26/2026 - 11/1/2026",
+            "topics": [
+              "Cloud incident response",
+              "Cloud forensics",
+              "Incident response planning for cloud environments",
+              "Project 2: Cloud Security Risk Assessment"
+            ],
+            "assignments": [
+              "Project 2: Cloud Security Risk Assessment Due (40 pts)",
+              "Quiz 11: Incident Response (10 pts)",
+              "Discussion 11: Cloud Forensics Challenges (5 pts)"
+            ],
+            "deliverableDueDate": "Week 11 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 12,
+            "dates": "11/2/2026 - 11/8/2026",
+            "topics": [
+              "Cloud compliance frameworks",
+              "GDPR, HIPAA, PCI-DSS in the cloud",
+              "Cloud audit preparation",
+              "Compliance automation"
+            ],
+            "assignments": [
+              "Assignment 9: Compliance Framework Analysis (25 pts)",
+              "Quiz 12: Cloud Compliance (10 pts)",
+              "Discussion 12: Compliance Automation (5 pts)"
+            ],
+            "deliverableDueDate": "Week 12 Sunday 11:59 PM"
+          }
+        ]
+      },
+      {
+        "title": "Phase 4: Secure Cloud Architecture & DevSecOps (Weeks 13-15)",
+        "description": "Advanced topics in cloud architecture, container security, and DevSecOps integration",
+        "weeks": [
+          {
+            "weekNumber": 13,
+            "dates": "11/9/2026 - 11/15/2026",
+            "topics": [
+              "Secure cloud architecture principles",
+              "Well-Architected Framework",
+              "Multi-cloud and hybrid cloud security",
+              "Cloud security patterns and anti-patterns"
+            ],
+            "assignments": [
+              "Assignment 10: Architecture Review Exercise (25 pts)",
+              "Quiz 13: Cloud Architecture (10 pts)",
+              "Discussion 13: Multi-Cloud Strategies (5 pts)"
+            ],
+            "deliverableDueDate": "Week 13 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 14,
+            "dates": "11/16/2026 - 11/22/2026",
+            "topics": [
+              "Container and Kubernetes security",
+              "Serverless security",
+              "DevSecOps practices",
+              "Infrastructure as Code (IaC) security"
+            ],
+            "assignments": [
+              "Assignment 11: Container Security Lab (25 pts)",
+              "Quiz 14: Container & Serverless Security (10 pts)",
+              "Discussion 14: DevSecOps Implementation (5 pts)"
+            ],
+            "deliverableDueDate": "Week 14 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 15,
+            "dates": "11/23/2026 - 11/29/2026",
+            "topics": [
+              "Cloud security automation",
+              "Security orchestration in the cloud",
+              "Zero trust architecture in cloud",
+              "Project 3: Secure Cloud Infrastructure Design"
+            ],
+            "assignments": [
+              "Project 3: Secure Cloud Infrastructure Design Due (40 pts)",
+              "Discussion 15: Zero Trust in Cloud (5 pts)",
+              "Note: Thanksgiving Break - No Class 11/25-11/29"
+            ],
+            "deliverableDueDate": "Week 15 Sunday 11:59 PM"
+          }
+        ]
+      },
+      {
+        "title": "Phase 5: Certification Prep & Final Assessment (Weeks 16-17)",
+        "description": "CCSSE certification preparation and course culmination",
+        "weeks": [
+          {
+            "weekNumber": 16,
+            "dates": "11/30/2026 - 12/6/2026",
+            "topics": [
+              "CCSSE certification overview",
+              "Exam objectives review",
+              "Practice scenarios and case studies",
+              "Career pathways in cloud security"
+            ],
+            "assignments": [
+              "Assignment 12: Certification Study Plan (20 pts)",
+              "Quiz 16: CCSSE Review (10 pts)",
+              "Discussion 16: Career Goals (5 pts)"
+            ],
+            "deliverableDueDate": "Week 16 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 17,
+            "dates": "12/7/2026 - 12/11/2026",
+            "topics": [
+              "Course review and synthesis",
+              "Final exam preparation",
+              "Professional development resources"
+            ],
+            "assignments": [
+              "Final Exam (50 pts)",
+              "Course Evaluation"
+            ],
+            "deliverableDueDate": "Week 17 - Final Exam Period"
+          }
+        ]
+      }
+    ]
+  },
+  "grading": {
+    "breakdown": [
+      {
+        "category": "Assignments",
+        "weight": 35,
+        "points": 280,
+        "description": "Weekly assignments, labs, and exercises"
+      },
+      {
+        "category": "Quizzes",
+        "weight": 20,
+        "points": 160,
+        "description": "Weekly knowledge checks"
+      },
+      {
+        "category": "Projects",
+        "weight": 20,
+        "points": 160,
+        "description": "Three major projects (40 pts each + 40 pts final)"
+      },
+      {
+        "category": "Exams",
+        "weight": 15,
+        "points": 120,
+        "description": "Midterm (40 pts) and Final (50 pts) + extra credit"
+      },
+      {
+        "category": "Discussion Participation",
+        "weight": 10,
+        "points": 80,
+        "description": "Weekly discussion forum participation"
+      }
+    ],
+    "scale": [
+      {"grade": "A", "minPercent": 90},
+      {"grade": "B", "minPercent": 80},
+      {"grade": "C", "minPercent": 70},
+      {"grade": "D", "minPercent": 60}
+    ]
+  },
+  "materials": {
+    "required": [
+      "EC-Council Certified Cloud Security Specialist (CCSSE) Study Guide",
+      "Practical Cloud Security (O'Reilly) - Latest Edition"
+    ],
+    "optional": [
+      "Cloud provider certification vouchers (AWS, Azure, GCP)",
+      "Cloud platform free tier accounts (provided)",
+      "Container and Kubernetes lab environment (provided)"
+    ]
+  },
+  "importantDates": [
+    {
+      "event": "Project 1: CSP Security Evaluation Due",
+      "date": "9/13/2026",
+      "week": 4
+    },
+    {
+      "event": "Midterm Exam",
+      "date": "10/11/2026",
+      "week": 8
+    },
+    {
+      "event": "Project 2: Cloud Security Risk Assessment Due",
+      "date": "11/1/2026",
+      "week": 11
+    },
+    {
+      "event": "Project 3: Secure Cloud Infrastructure Design Due",
+      "date": "11/29/2026",
+      "week": 15
+    },
+    {
+      "event": "Thanksgiving Break - No Class",
+      "date": "11/25/2026 - 11/29/2026",
+      "week": 15
+    },
+    {
+      "event": "Final Exam",
+      "date": "12/7/2026 - 12/11/2026",
+      "week": 17
+    }
+  ],
+  "workload": {
+    "hoursPerWeek": 9,
+    "breakdown": {
+      "synchronous": "1.5 hours/week (Zoom meetings)",
+      "asynchronous": "7.5 hours/week (labs, readings, assignments, discussions)"
+    }
+  },
+  "policies": {
+    "attendance": "Hybrid course requires attendance at synchronous Zoom sessions (Thursdays 5:30-6:50 PM). More than 3 unexcused absences may impact your grade.",
+    "lateWork": "Assignments submitted within 48 hours late receive 50% credit. After 48 hours, no credit unless prior arrangement made.",
+    "makeupExams": "Makeup exams require documented emergency and must be arranged within 48 hours of the original exam date.",
+    "academicIntegrity": "All work must be your own. Plagiarism or cheating will result in a minimum of failing the assignment and may result in course failure."
+  }
+}

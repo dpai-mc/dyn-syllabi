@@ -1,0 +1,406 @@
+{
+  "metadata": {
+    "code": "CSC210L",
+    "title": "Computer Organization and Architecture Lab",
+    "credits": "1",
+    "creditBreakdown": "1 lab",
+    "format": "Hybrid",
+    "term": "Fall 2026",
+    "prerequisite": "CSC221 - Programming and Algorithms I",
+    "corequisite": "CSC210 - Computer Organization and Architecture",
+    "transferable": "UC/CSU Transferable"
+  },
+  "description": {
+    "catalog": "Laboratory course accompanying CSC210. Hands-on experience with assembly language programming and computer architecture simulation.",
+    "expanded": "This lab course provides practical, hands-on experience with the concepts taught in CSC210. Students will write and debug assembly language programs, simulate computer architecture concepts, and gain practical skills in low-level programming and system analysis."
+  },
+  "purpose": {
+    "why": "This lab complements CSC210 by providing hands-on practice with assembly language programming and architecture simulation. You'll develop practical skills that reinforce theoretical concepts and prepare you for real-world low-level programming tasks.",
+    "beyond": "Beyond technical skills, you'll develop debugging expertise, systematic problem-solving approaches, and deeper understanding of how software interacts with hardware at the lowest levels."
+  },
+  "slos": [
+    "Write and debug assembly language programs for various tasks",
+    "Simulate computer architecture concepts using industry-standard tools",
+    "Analyze program performance at the instruction level",
+    "Apply low-level programming techniques to solve computational problems"
+  ],
+  "schedule": {
+    "phases": [
+      {
+        "title": "Phase 1: Digital Logic & Assembly Basics (Weeks 1-4)",
+        "description": "Introduction to lab tools, digital logic simulation, and basic assembly programming",
+        "weeks": [
+          {
+            "weekNumber": 1,
+            "dates": "8/17/2026 - 8/23/2026",
+            "topics": [
+              "Lab setup and tool introduction",
+              "Assembly language development environment",
+              "Basic program structure and syntax",
+              "Simple data movement programs"
+            ],
+            "assignments": [
+              "Lab 1: Environment Setup & First Program (15 pts)",
+              "Discussion 1: Lab Tools (5 pts)"
+            ],
+            "deliverableDueDate": "Week 1 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 2,
+            "dates": "8/24/2026 - 8/30/2026",
+            "topics": [
+              "Digital logic simulation tools",
+              "Boolean logic implementation",
+              "Binary arithmetic programs",
+              "Number representation exercises"
+            ],
+            "assignments": [
+              "Lab 2: Digital Logic Simulation (20 pts)",
+              "Discussion 2: Logic Design (5 pts)"
+            ],
+            "deliverableDueDate": "Week 2 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 3,
+            "dates": "8/31/2026 - 9/6/2026",
+            "topics": [
+              "Arithmetic instructions in assembly",
+              "Data type handling",
+              "Register operations",
+              "Memory addressing basics"
+            ],
+            "assignments": [
+              "Lab 3: Arithmetic Programs (20 pts)",
+              "Discussion 3: Assembly Techniques (5 pts)"
+            ],
+            "deliverableDueDate": "Week 3 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 4,
+            "dates": "9/7/2026 - 9/13/2026",
+            "topics": [
+              "Combinational circuit simulation",
+              "Sequential logic exercises",
+              "Project 1: Digital Logic Design Lab",
+              "Integration with CSC210 concepts"
+            ],
+            "assignments": [
+              "Project 1: Digital Logic Design Lab Due (25 pts)",
+              "Discussion 4: Circuit Simulation (5 pts)"
+            ],
+            "deliverableDueDate": "Week 4 Sunday 11:59 PM"
+          }
+        ]
+      },
+      {
+        "title": "Phase 2: CPU & Control Flow Labs (Weeks 5-8)",
+        "description": "CPU simulation, control flow programming, and pipeline visualization",
+        "weeks": [
+          {
+            "weekNumber": 5,
+            "dates": "9/14/2026 - 9/20/2026",
+            "topics": [
+              "CPU simulation tools",
+              "Instruction execution tracing",
+              "Control flow instructions",
+              "Branching and conditional execution"
+            ],
+            "assignments": [
+              "Lab 5: CPU Simulation (20 pts)",
+              "Discussion 5: CPU Architecture (5 pts)"
+            ],
+            "deliverableDueDate": "Week 5 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 6,
+            "dates": "9/21/2026 - 9/27/2026",
+            "topics": [
+              "Loop implementation in assembly",
+              "Subroutine creation and calling",
+              "Stack operations",
+              "Parameter passing techniques"
+            ],
+            "assignments": [
+              "Lab 6: Control Flow Programming (20 pts)",
+              "Discussion 6: Subroutine Design (5 pts)"
+            ],
+            "deliverableDueDate": "Week 6 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 7,
+            "dates": "9/28/2026 - 10/4/2026",
+            "topics": [
+              "Pipeline simulation",
+              "Pipeline hazard visualization",
+              "Performance measurement",
+              "Instruction-level parallelism"
+            ],
+            "assignments": [
+              "Lab 7: Pipeline Simulation (20 pts)",
+              "Discussion 7: Pipeline Optimization (5 pts)"
+            ],
+            "deliverableDueDate": "Week 7 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 8,
+            "dates": "10/5/2026 - 10/11/2026",
+            "topics": [
+              "Midterm lab review",
+              "Integration exercises",
+              "Comprehensive programming challenge"
+            ],
+            "assignments": [
+              "Midterm Lab Exam (25 pts)",
+              "Discussion 8: Midterm Reflections (5 pts)"
+            ],
+            "deliverableDueDate": "Week 8 Sunday 11:59 PM"
+          }
+        ]
+      },
+      {
+        "title": "Phase 3: Advanced Assembly Programming (Weeks 9-12)",
+        "description": "Complex assembly programs, memory management, and I/O operations",
+        "weeks": [
+          {
+            "weekNumber": 9,
+            "dates": "10/12/2026 - 10/18/2026",
+            "topics": [
+              "Array manipulation in assembly",
+              "String processing",
+              "Memory allocation techniques",
+              "Pointer operations"
+            ],
+            "assignments": [
+              "Lab 9: Array & String Programs (20 pts)",
+              "Discussion 9: Memory Management (5 pts)"
+            ],
+            "deliverableDueDate": "Week 9 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 10,
+            "dates": "10/19/2026 - 10/25/2026",
+            "topics": [
+              "I/O operations in assembly",
+              "System calls",
+              "File operations",
+              "User input handling"
+            ],
+            "assignments": [
+              "Lab 10: I/O Programming (20 pts)",
+              "Discussion 10: System Interface (5 pts)"
+            ],
+            "deliverableDueDate": "Week 10 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 11,
+            "dates": "10/26/2026 - 11/1/2026",
+            "topics": [
+              "Debugging techniques",
+              "Performance optimization",
+              "Code analysis tools",
+              "Project 2: Assembly Programming Project"
+            ],
+            "assignments": [
+              "Project 2: Assembly Programming Project Due (25 pts)",
+              "Discussion 11: Debugging Strategies (5 pts)"
+            ],
+            "deliverableDueDate": "Week 11 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 12,
+            "dates": "11/2/2026 - 11/8/2026",
+            "topics": [
+              "High-level to assembly translation",
+              "Compiler output analysis",
+              "Optimization comparison",
+              "Code efficiency evaluation"
+            ],
+            "assignments": [
+              "Lab 12: Compiler Analysis (20 pts)",
+              "Discussion 12: Optimization Results (5 pts)"
+            ],
+            "deliverableDueDate": "Week 12 Sunday 11:59 PM"
+          }
+        ]
+      },
+      {
+        "title": "Phase 4: Memory & Performance Labs (Weeks 13-15)",
+        "description": "Memory hierarchy simulation, cache analysis, and performance measurement",
+        "weeks": [
+          {
+            "weekNumber": 13,
+            "dates": "11/9/2026 - 11/15/2026",
+            "topics": [
+              "Cache simulation tools",
+              "Cache performance analysis",
+              "Memory hierarchy visualization",
+              "Access pattern optimization"
+            ],
+            "assignments": [
+              "Lab 13: Cache Simulation (20 pts)",
+              "Discussion 13: Cache Performance (5 pts)"
+            ],
+            "deliverableDueDate": "Week 13 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 14,
+            "dates": "11/16/2026 - 11/22/2026",
+            "topics": [
+              "I/O simulation",
+              "Interrupt handling exercises",
+              "DMA operations",
+              "Storage system analysis"
+            ],
+            "assignments": [
+              "Lab 14: I/O & Interrupt Simulation (20 pts)",
+              "Discussion 14: I/O Performance (5 pts)"
+            ],
+            "deliverableDueDate": "Week 14 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 15,
+            "dates": "11/23/2026 - 11/29/2026",
+            "topics": [
+              "Performance benchmarking",
+              "Amdahl's Law applications",
+              "Speedup calculations",
+              "Project 3: Performance Analysis Lab"
+            ],
+            "assignments": [
+              "Project 3: Performance Analysis Lab Due (25 pts)",
+              "Discussion 15: Benchmarking Results (5 pts)",
+              "Note: Thanksgiving Break - No Class 11/25-11/29"
+            ],
+            "deliverableDueDate": "Week 15 Sunday 11:59 PM"
+          }
+        ]
+      },
+      {
+        "title": "Phase 5: Final Project & Assessment (Weeks 16-17)",
+        "description": "Comprehensive lab project and final assessment",
+        "weeks": [
+          {
+            "weekNumber": 16,
+            "dates": "11/30/2026 - 12/6/2026",
+            "topics": [
+              "Advanced architecture simulation",
+              "Multicore programming concepts",
+              "Final project work session",
+              "Lab techniques review"
+            ],
+            "assignments": [
+              "Lab 16: Advanced Architecture Lab (15 pts)",
+              "Discussion 16: Final Project Progress (5 pts)"
+            ],
+            "deliverableDueDate": "Week 16 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 17,
+            "dates": "12/7/2026 - 12/11/2026",
+            "topics": [
+              "Final lab exam",
+              "Course synthesis",
+              "Skills assessment"
+            ],
+            "assignments": [
+              "Final Lab Exam (30 pts)",
+              "Course Evaluation"
+            ],
+            "deliverableDueDate": "Week 17 - Final Exam Period"
+          }
+        ]
+      }
+    ]
+  },
+  "grading": {
+    "breakdown": [
+      {
+        "category": "Lab Exercises",
+        "weight": 50,
+        "points": 250,
+        "description": "Weekly lab assignments and exercises"
+      },
+      {
+        "category": "Projects",
+        "weight": 30,
+        "points": 150,
+        "description": "Three major lab projects (25 pts each + 30 pts final)"
+      },
+      {
+        "category": "Exams",
+        "weight": 10,
+        "points": 50,
+        "description": "Midterm Lab (25 pts) and Final Lab (30 pts)"
+      },
+      {
+        "category": "Discussion Participation",
+        "weight": 10,
+        "points": 50,
+        "description": "Weekly discussion forum participation"
+      }
+    ],
+    "scale": [
+      {"grade": "A", "minPercent": 90},
+      {"grade": "B", "minPercent": 80},
+      {"grade": "C", "minPercent": 70},
+      {"grade": "D", "minPercent": 60}
+    ]
+  },
+  "materials": {
+    "required": [
+      "Assembly language simulator/software (provided)",
+      "Digital logic simulation software (provided)",
+      "CPU architecture simulator (provided)"
+    ],
+    "optional": [
+      "CSC210 textbook for reference",
+      "Online assembly language resources",
+      "Additional practice problems"
+    ]
+  },
+  "importantDates": [
+    {
+      "event": "Project 1: Digital Logic Design Lab Due",
+      "date": "9/13/2026",
+      "week": 4
+    },
+    {
+      "event": "Midterm Lab Exam",
+      "date": "10/11/2026",
+      "week": 8
+    },
+    {
+      "event": "Project 2: Assembly Programming Project Due",
+      "date": "11/1/2026",
+      "week": 11
+    },
+    {
+      "event": "Project 3: Performance Analysis Lab Due",
+      "date": "11/29/2026",
+      "week": 15
+    },
+    {
+      "event": "Thanksgiving Break - No Class",
+      "date": "11/25/2026 - 11/29/2026",
+      "week": 15
+    },
+    {
+      "event": "Final Lab Exam",
+      "date": "12/7/2026 - 12/11/2026",
+      "week": 17
+    }
+  ],
+  "workload": {
+    "hoursPerWeek": 3,
+    "breakdown": {
+      "synchronous": "1 hour/week (Zoom lab session)",
+      "asynchronous": "2 hours/week (lab exercises, readings, discussions)"
+    }
+  },
+  "policies": {
+    "attendance": "Hybrid lab course requires attendance at synchronous Zoom lab sessions (Tuesdays 2:00-3:20 PM). More than 3 unexcused absences may impact your grade.",
+    "lateWork": "Lab submissions within 48 hours late receive 50% credit. After 48 hours, no credit unless prior arrangement made.",
+    "makeupExams": "Makeup lab exams require documented emergency and must be arranged within 48 hours of the original exam date.",
+    "academicIntegrity": "All work must be your own. Plagiarism or cheating will result in a minimum of failing the assignment and may result in course failure."
+  }
+}

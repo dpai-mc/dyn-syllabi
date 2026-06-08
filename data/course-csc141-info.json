@@ -4,9 +4,15 @@
     "title": "AI Literacy",
     "credits": "3",
     "creditBreakdown": "3 lecture",
-    "format": "Online",
+    "format": "Hybrid",
     "term": "Fall 2026",
-    "prerequisite": "None"
+    "prerequisite": "None",
+    "meetingSchedule": {
+      "days": "Wednesday",
+      "time": "2:00 PM - 3:20 PM",
+      "location": "Room 1280",
+      "modality": "In-person (Hybrid course: 1/2 in-person, 1/2 asynchronous online)"
+    }
   },
   "description": {
     "catalog": "Introduction to artificial intelligence concepts, tools, and applications. Students will learn to use AI tools effectively, understand AI limitations, and develop critical thinking skills for evaluating AI-generated content.",

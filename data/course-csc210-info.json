@@ -1,0 +1,423 @@
+{
+  "metadata": {
+    "code": "CSC210",
+    "title": "Computer Organization and Architecture",
+    "credits": "3",
+    "creditBreakdown": "3 lecture",
+    "format": "Online",
+    "term": "Fall 2026",
+    "prerequisite": "CSC221 - Programming and Algorithms I",
+    "transferable": "UC/CSU Transferable"
+  },
+  "description": {
+    "catalog": "Study of computer organization and architecture, including digital logic, assembly language programming, and the relationship between high-level languages and machine language.",
+    "expanded": "This course provides a comprehensive understanding of how computers work at the hardware and low-level software interface. Students will learn digital logic design, computer architecture fundamentals, assembly language programming, and how high-level programming constructs map to machine instructions."
+  },
+  "purpose": {
+    "why": "This course builds essential understanding of computer systems from the ground up. You'll develop skills in low-level programming, understand how software interacts with hardware, and gain insights that improve your ability to write efficient code.",
+    "beyond": "Beyond technical skills, you'll develop systematic thinking about computational problems, understand performance trade-offs, and gain appreciation for the engineering decisions that shape modern computing systems."
+  },
+  "slos": [
+    "Describe fundamental concepts of computer architecture and organization",
+    "Discuss the mapping from high-level programming languages to machine language",
+    "Write and debug assembly language programs",
+    "Analyze the performance implications of architectural design decisions"
+  ],
+  "schedule": {
+    "phases": [
+      {
+        "title": "Phase 1: Digital Logic Fundamentals (Weeks 1-4)",
+        "description": "Build foundation in digital logic, Boolean algebra, and combinational circuits",
+        "weeks": [
+          {
+            "weekNumber": 1,
+            "dates": "8/17/2026 - 8/23/2026",
+            "topics": [
+              "Course overview and expectations",
+              "Introduction to computer organization",
+              "Number systems and representations",
+              "Binary arithmetic and overflow"
+            ],
+            "assignments": [
+              "Assignment 1: Number Systems Exercises (20 pts)",
+              "Quiz 1: Course Introduction (10 pts)",
+              "Discussion 1: Computer Evolution (5 pts)"
+            ],
+            "deliverableDueDate": "Week 1 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 2,
+            "dates": "8/24/2026 - 8/30/2026",
+            "topics": [
+              "Boolean algebra fundamentals",
+              "Logic gates and truth tables",
+              "Karnaugh maps",
+              "Logic minimization techniques"
+            ],
+            "assignments": [
+              "Assignment 2: Boolean Algebra Lab (25 pts)",
+              "Quiz 2: Boolean Algebra (10 pts)",
+              "Discussion 2: Logic Design Applications (5 pts)"
+            ],
+            "deliverableDueDate": "Week 2 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 3,
+            "dates": "8/31/2026 - 9/6/2026",
+            "topics": [
+              "Combinational logic circuits",
+              "Adders and subtractors",
+              "Multiplexers and decoders",
+              "Encoders and comparators"
+            ],
+            "assignments": [
+              "Assignment 3: Combinational Circuits Lab (25 pts)",
+              "Quiz 3: Combinational Logic (10 pts)",
+              "Discussion 3: Circuit Design Challenges (5 pts)"
+            ],
+            "deliverableDueDate": "Week 3 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 4,
+            "dates": "9/7/2026 - 9/13/2026",
+            "topics": [
+              "Sequential logic circuits",
+              "Flip-flops and latches",
+              "Registers and counters",
+              "Project 1: Digital Logic Design"
+            ],
+            "assignments": [
+              "Project 1: Digital Logic Design Due (40 pts)",
+              "Quiz 4: Sequential Logic (10 pts)",
+              "Discussion 4: Sequential vs Combinational (5 pts)"
+            ],
+            "deliverableDueDate": "Week 4 Sunday 11:59 PM"
+          }
+        ]
+      },
+      {
+        "title": "Phase 2: CPU Architecture & Instruction Sets (Weeks 5-8)",
+        "description": "Learn CPU organization, instruction set architecture, and processor design",
+        "weeks": [
+          {
+            "weekNumber": 5,
+            "dates": "9/14/2026 - 9/20/2026",
+            "topics": [
+              "CPU organization and components",
+              "Instruction cycle and control unit",
+              "Instruction set architectures (RISC vs CISC)",
+              "Addressing modes"
+            ],
+            "assignments": [
+              "Assignment 4: CPU Components Analysis (25 pts)",
+              "Quiz 5: CPU Organization (10 pts)",
+              "Discussion 5: RISC vs CISC Debate (5 pts)"
+            ],
+            "deliverableDueDate": "Week 5 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 6,
+            "dates": "9/21/2026 - 9/27/2026",
+            "topics": [
+              "Instruction formats and encoding",
+              "Data path design",
+              "Hardwired vs microprogrammed control",
+              "Pipeline fundamentals"
+            ],
+            "assignments": [
+              "Assignment 5: Instruction Encoding Lab (25 pts)",
+              "Quiz 6: Instruction Sets (10 pts)",
+              "Discussion 6: Pipeline Hazards (5 pts)"
+            ],
+            "deliverableDueDate": "Week 6 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 7,
+            "dates": "9/28/2026 - 10/4/2026",
+            "topics": [
+              "Pipelining techniques",
+              "Pipeline hazards and solutions",
+              "Superscalar processors",
+              "Parallel processing concepts"
+            ],
+            "assignments": [
+              "Assignment 7: Pipeline Analysis Exercise (25 pts)",
+              "Quiz 7: Pipelining (10 pts)",
+              "Discussion 7: Modern Processor Design (5 pts)"
+            ],
+            "deliverableDueDate": "Week 7 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 8,
+            "dates": "10/5/2026 - 10/11/2026",
+            "topics": [
+              "Midterm review",
+              "Integration of digital logic and CPU design",
+              "Case studies in processor architecture"
+            ],
+            "assignments": [
+              "Midterm Exam (40 pts)",
+              "Discussion 8: Midterm Reflections (5 pts)"
+            ],
+            "deliverableDueDate": "Week 8 Sunday 11:59 PM"
+          }
+        ]
+      },
+      {
+        "title": "Phase 3: Assembly Language Programming (Weeks 9-12)",
+        "description": "Master assembly language programming and low-level code development",
+        "weeks": [
+          {
+            "weekNumber": 9,
+            "dates": "10/12/2026 - 10/18/2026",
+            "topics": [
+              "Assembly language fundamentals",
+              "Assembly language syntax and structure",
+              "Data movement instructions",
+              "Arithmetic and logic instructions"
+            ],
+            "assignments": [
+              "Assignment 9: Basic Assembly Programs (25 pts)",
+              "Quiz 9: Assembly Basics (10 pts)",
+              "Discussion 9: Assembly vs High-Level Languages (5 pts)"
+            ],
+            "deliverableDueDate": "Week 9 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 10,
+            "dates": "10/19/2026 - 10/25/2026",
+            "topics": [
+              "Control flow instructions",
+              "Loops and branching",
+              "Subroutines and function calls",
+              "Stack operations"
+            ],
+            "assignments": [
+              "Assignment 10: Control Flow Assembly Lab (25 pts)",
+              "Quiz 10: Control Flow (10 pts)",
+              "Discussion 10: Stack Management (5 pts)"
+            ],
+            "deliverableDueDate": "Week 10 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 11,
+            "dates": "10/26/2026 - 11/1/2026",
+            "topics": [
+              "Memory addressing in assembly",
+              "Arrays and strings in assembly",
+              "Input/output operations",
+              "Project 2: Assembly Programming Project"
+            ],
+            "assignments": [
+              "Project 2: Assembly Programming Project Due (40 pts)",
+              "Quiz 11: Memory & I/O (10 pts)",
+              "Discussion 11: Assembly Programming Challenges (5 pts)"
+            ],
+            "deliverableDueDate": "Week 11 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 12,
+            "dates": "11/2/2026 - 11/8/2026",
+            "topics": [
+              "High-level to assembly mapping",
+              "Compiler fundamentals",
+              "Optimization techniques",
+              "Debugging assembly programs"
+            ],
+            "assignments": [
+              "Assignment 12: HLL to Assembly Translation (25 pts)",
+              "Quiz 12: Compiler Basics (10 pts)",
+              "Discussion 12: Optimization Strategies (5 pts)"
+            ],
+            "deliverableDueDate": "Week 12 Sunday 11:59 PM"
+          }
+        ]
+      },
+      {
+        "title": "Phase 4: Memory & I/O Systems (Weeks 13-15)",
+        "description": "Study memory hierarchy, storage systems, and input/output organization",
+        "weeks": [
+          {
+            "weekNumber": 13,
+            "dates": "11/9/2026 - 11/15/2026",
+            "topics": [
+              "Memory hierarchy and organization",
+              "Cache memory and mapping",
+              "Virtual memory concepts",
+              "Memory management techniques"
+            ],
+            "assignments": [
+              "Assignment 13: Cache Performance Analysis (25 pts)",
+              "Quiz 13: Memory Hierarchy (10 pts)",
+              "Discussion 13: Cache Design Trade-offs (5 pts)"
+            ],
+            "deliverableDueDate": "Week 13 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 14,
+            "dates": "11/16/2026 - 11/22/2026",
+            "topics": [
+              "I/O organization and interfaces",
+              "Interrupt handling",
+              "DMA and I/O processors",
+              "Storage systems overview"
+            ],
+            "assignments": [
+              "Assignment 14: Interrupt Handling Lab (25 pts)",
+              "Quiz 14: I/O Systems (10 pts)",
+              "Discussion 14: Modern I/O Architectures (5 pts)"
+            ],
+            "deliverableDueDate": "Week 14 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 15,
+            "dates": "11/23/2026 - 11/29/2026",
+            "topics": [
+              "Performance measurement and analysis",
+              "Amdahl's Law and speedup",
+              "Benchmarking techniques",
+              "Project 3: Performance Analysis Report"
+            ],
+            "assignments": [
+              "Project 3: Performance Analysis Report Due (40 pts)",
+              "Discussion 15: Performance Optimization (5 pts)",
+              "Note: Thanksgiving Break - No Class 11/25-11/29"
+            ],
+            "deliverableDueDate": "Week 15 Sunday 11:59 PM"
+          }
+        ]
+      },
+      {
+        "title": "Phase 5: Advanced Topics & Final Assessment (Weeks 16-17)",
+        "description": "Explore advanced architecture topics and course synthesis",
+        "weeks": [
+          {
+            "weekNumber": 16,
+            "dates": "11/30/2026 - 12/6/2026",
+            "topics": [
+              "Advanced processor architectures",
+              "Multicore and many-core processors",
+              "GPU architecture overview",
+              "Future trends in computer architecture"
+            ],
+            "assignments": [
+              "Assignment 16: Advanced Architecture Research (20 pts)",
+              "Quiz 16: Advanced Topics (10 pts)",
+              "Discussion 16: Future of Computing (5 pts)"
+            ],
+            "deliverableDueDate": "Week 16 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 17,
+            "dates": "12/7/2026 - 12/11/2026",
+            "topics": [
+              "Course review and synthesis",
+              "Final exam preparation",
+              "Career pathways in computer architecture"
+            ],
+            "assignments": [
+              "Final Exam (50 pts)",
+              "Course Evaluation"
+            ],
+            "deliverableDueDate": "Week 17 - Final Exam Period"
+          }
+        ]
+      }
+    ]
+  },
+  "grading": {
+    "breakdown": [
+      {
+        "category": "Assignments",
+        "weight": 35,
+        "points": 280,
+        "description": "Weekly assignments, labs, and exercises"
+      },
+      {
+        "category": "Quizzes",
+        "weight": 20,
+        "points": 160,
+        "description": "Weekly knowledge checks"
+      },
+      {
+        "category": "Projects",
+        "weight": 20,
+        "points": 160,
+        "description": "Three major projects (40 pts each + 40 pts final)"
+      },
+      {
+        "category": "Exams",
+        "weight": 15,
+        "points": 120,
+        "description": "Midterm (40 pts) and Final (50 pts) + extra credit"
+      },
+      {
+        "category": "Discussion Participation",
+        "weight": 10,
+        "points": 80,
+        "description": "Weekly discussion forum participation"
+      }
+    ],
+    "scale": [
+      {"grade": "A", "minPercent": 90},
+      {"grade": "B", "minPercent": 80},
+      {"grade": "C", "minPercent": 70},
+      {"grade": "D", "minPercent": 60}
+    ]
+  },
+  "materials": {
+    "required": [
+      "Computer Organization and Design: The Hardware/Software Interface (Patterson & Hennessy)",
+      "Assembly language simulator/software (provided)"
+    ],
+    "optional": [
+      "Digital logic simulation software (free versions available)",
+      "Online assembly language resources",
+      "Processor architecture reference materials"
+    ]
+  },
+  "importantDates": [
+    {
+      "event": "Project 1: Digital Logic Design Due",
+      "date": "9/13/2026",
+      "week": 4
+    },
+    {
+      "event": "Midterm Exam",
+      "date": "10/11/2026",
+      "week": 8
+    },
+    {
+      "event": "Project 2: Assembly Programming Project Due",
+      "date": "11/1/2026",
+      "week": 11
+    },
+    {
+      "event": "Project 3: Performance Analysis Report Due",
+      "date": "11/29/2026",
+      "week": 15
+    },
+    {
+      "event": "Thanksgiving Break - No Class",
+      "date": "11/25/2026 - 11/29/2026",
+      "week": 15
+    },
+    {
+      "event": "Final Exam",
+      "date": "12/7/2026 - 12/11/2026",
+      "week": 17
+    }
+  ],
+  "workload": {
+    "hoursPerWeek": 9,
+    "breakdown": {
+      "asynchronous": "9 hours/week (lectures, labs, readings, assignments, discussions)"
+    }
+  },
+  "policies": {
+    "attendance": "Fully online asynchronous course. Regular participation in weekly activities and discussions is expected.",
+    "lateWork": "Assignments submitted within 48 hours late receive 50% credit. After 48 hours, no credit unless prior arrangement made.",
+    "makeupExams": "Makeup exams require documented emergency and must be arranged within 48 hours of the original exam date.",
+    "academicIntegrity": "All work must be your own. Plagiarism or cheating will result in a minimum of failing the assignment and may result in course failure."
+  }
+}

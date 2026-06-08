@@ -1,0 +1,429 @@
+{
+  "metadata": {
+    "code": "CSC154",
+    "title": "Network Security",
+    "credits": "3",
+    "creditBreakdown": "3 lecture",
+    "format": "Hybrid",
+    "term": "Fall 2026",
+    "prerequisite": "CSC152 or equivalent networking knowledge",
+    "meetingSchedule": {
+      "days": "Tuesday",
+      "time": "5:30 PM - 6:50 PM",
+      "location": "Zoom",
+      "modality": "Synchronous online (Hybrid course: 1/2 synchronous Zoom, 1/2 asynchronous online)"
+    }
+  },
+  "description": {
+    "catalog": "Introduction to network security concepts, threat analysis, and security monitoring. Prepares students for CompTIA CySA+ certification.",
+    "expanded": "This course provides comprehensive coverage of network security analysis, threat detection, vulnerability assessment, and incident response. Students will learn to apply security monitoring tools, analyze security data, and implement threat responses in real-world scenarios."
+  },
+  "purpose": {
+    "why": "This course prepares you for a career in cybersecurity by developing practical skills in threat detection, vulnerability analysis, and incident response. You'll gain knowledge aligned with the CompTIA CySA+ certification.",
+    "beyond": "Beyond technical skills, you'll develop analytical thinking for security assessments, understand risk management principles, and learn to communicate security findings effectively."
+  },
+  "slos": [
+    "Apply reconnaissance techniques to identify potential security threats",
+    "Implement appropriate responses to security threats and vulnerabilities",
+    "Distinguish between different types of threat data and security events",
+    "Summarize incident recovery procedures and best practices"
+  ],
+  "schedule": {
+    "phases": [
+      {
+        "title": "Phase 1: Security Fundamentals & Threat Intelligence (Weeks 1-4)",
+        "description": "Build foundation in security concepts, threat intelligence, and reconnaissance techniques",
+        "weeks": [
+          {
+            "weekNumber": 1,
+            "dates": "8/17/2026 - 8/23/2026",
+            "topics": [
+              "Course overview and expectations",
+              "Introduction to cybersecurity analytics",
+              "Security concepts and terminology",
+              "Threat intelligence fundamentals"
+            ],
+            "assignments": [
+              "Assignment 1: Security Tools Setup (20 pts)",
+              "Quiz 1: Security Fundamentals (10 pts)",
+              "Discussion 1: Current Threat Landscape (5 pts)"
+            ],
+            "deliverableDueDate": "Week 1 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 2,
+            "dates": "8/24/2026 - 8/30/2026",
+            "topics": [
+              "Reconnaissance techniques",
+              "Network scanning and enumeration",
+              "Vulnerability identification",
+              "Security assessment methodologies"
+            ],
+            "assignments": [
+              "Assignment 2: Reconnaissance Lab (25 pts)",
+              "Quiz 2: Threat Intelligence (10 pts)",
+              "Discussion 2: Ethical Reconnaissance (5 pts)"
+            ],
+            "deliverableDueDate": "Week 2 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 3,
+            "dates": "8/31/2026 - 9/6/2026",
+            "topics": [
+              "Threat actors and attack vectors",
+              "Malware analysis basics",
+              "Social engineering threats",
+              "Attack surface analysis"
+            ],
+            "assignments": [
+              "Assignment 3: Threat Actor Analysis (25 pts)",
+              "Quiz 3: Reconnaissance Techniques (10 pts)",
+              "Discussion 3: Malware Trends (5 pts)"
+            ],
+            "deliverableDueDate": "Week 3 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 4,
+            "dates": "9/7/2026 - 9/13/2026",
+            "topics": [
+              "Security monitoring fundamentals",
+              "Log analysis basics",
+              "SIEM introduction",
+              "Project 1: Threat Intelligence Report"
+            ],
+            "assignments": [
+              "Project 1: Threat Intelligence Report Due (40 pts)",
+              "Quiz 4: Security Monitoring (10 pts)",
+              "Discussion 4: SIEM Tools (5 pts)"
+            ],
+            "deliverableDueDate": "Week 4 Sunday 11:59 PM"
+          }
+        ]
+      },
+      {
+        "title": "Phase 2: Vulnerability Management & Risk Assessment (Weeks 5-8)",
+        "description": "Learn vulnerability assessment, risk analysis, and security compliance",
+        "weeks": [
+          {
+            "weekNumber": 5,
+            "dates": "9/14/2026 - 9/20/2026",
+            "topics": [
+              "Vulnerability management lifecycle",
+              "Vulnerability scanning tools",
+              "CVSS scoring and prioritization",
+              "Patch management strategies"
+            ],
+            "assignments": [
+              "Assignment 4: Vulnerability Scan Lab (25 pts)",
+              "Quiz 5: Vulnerability Management (10 pts)",
+              "Discussion 5: Patch Management Challenges (5 pts)"
+            ],
+            "deliverableDueDate": "Week 5 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 6,
+            "dates": "9/21/2026 - 9/27/2026",
+            "topics": [
+              "Risk assessment methodologies",
+              "Risk quantification techniques",
+              "Security controls and countermeasures",
+              "Risk mitigation strategies"
+            ],
+            "assignments": [
+              "Assignment 5: Risk Assessment Exercise (25 pts)",
+              "Quiz 6: Risk Assessment (10 pts)",
+              "Discussion 6: Risk vs. Threat (5 pts)"
+            ],
+            "deliverableDueDate": "Week 6 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 7,
+            "dates": "9/28/2026 - 10/4/2026",
+            "topics": [
+              "Security compliance frameworks",
+              "Industry standards (NIST, ISO, CIS)",
+              "Audit and assessment processes",
+              "Compliance reporting"
+            ],
+            "assignments": [
+              "Assignment 6: Compliance Framework Analysis (25 pts)",
+              "Quiz 7: Security Compliance (10 pts)",
+              "Discussion 7: Compliance Challenges (5 pts)"
+            ],
+            "deliverableDueDate": "Week 7 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 8,
+            "dates": "10/5/2026 - 10/11/2026",
+            "topics": [
+              "Midterm review",
+              "Integration of threat intelligence and vulnerability management",
+              "Case studies in security assessment"
+            ],
+            "assignments": [
+              "Midterm Exam (40 pts)",
+              "Discussion 8: Midterm Reflections (5 pts)"
+            ],
+            "deliverableDueDate": "Week 8 Sunday 11:59 PM"
+          }
+        ]
+      },
+      {
+        "title": "Phase 3: Incident Detection & Response (Weeks 9-12)",
+        "description": "Master incident detection, analysis, and response procedures",
+        "weeks": [
+          {
+            "weekNumber": 9,
+            "dates": "10/12/2026 - 10/18/2026",
+            "topics": [
+              "Incident detection techniques",
+              "Security event correlation",
+              "Anomaly detection",
+              "Behavioral analysis"
+            ],
+            "assignments": [
+              "Assignment 7: Incident Detection Lab (25 pts)",
+              "Quiz 9: Incident Detection (10 pts)",
+              "Discussion 9: Detection Challenges (5 pts)"
+            ],
+            "deliverableDueDate": "Week 9 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 10,
+            "dates": "10/19/2026 - 10/25/2026",
+            "topics": [
+              "Incident response lifecycle",
+              "IR team roles and responsibilities",
+              "Incident containment strategies",
+              "Eradication procedures"
+            ],
+            "assignments": [
+              "Assignment 8: IR Plan Development (25 pts)",
+              "Quiz 10: Incident Response (10 pts)",
+              "Discussion 10: IR Team Structure (5 pts)"
+            ],
+            "deliverableDueDate": "Week 10 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 11,
+            "dates": "10/26/2026 - 11/1/2026",
+            "topics": [
+              "Digital forensics fundamentals",
+              "Evidence collection and preservation",
+              "Forensic analysis tools",
+              "Chain of custody"
+            ],
+            "assignments": [
+              "Project 2: Incident Response Simulation Due (40 pts)",
+              "Quiz 11: Digital Forensics (10 pts)",
+              "Discussion 11: Forensics in Practice (5 pts)"
+            ],
+            "deliverableDueDate": "Week 11 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 12,
+            "dates": "11/2/2026 - 11/8/2026",
+            "topics": [
+              "Recovery procedures",
+              "Business continuity planning",
+              "Disaster recovery strategies",
+              "Lessons learned and post-incident analysis"
+            ],
+            "assignments": [
+              "Assignment 9: Recovery Plan Exercise (25 pts)",
+              "Quiz 12: Recovery & Continuity (10 pts)",
+              "Discussion 12: Post-Incident Analysis (5 pts)"
+            ],
+            "deliverableDueDate": "Week 12 Sunday 11:59 PM"
+          }
+        ]
+      },
+      {
+        "title": "Phase 4: Advanced Security Analytics (Weeks 13-15)",
+        "description": "Advanced topics in security analytics, automation, and cloud security",
+        "weeks": [
+          {
+            "weekNumber": 13,
+            "dates": "11/9/2026 - 11/15/2026",
+            "topics": [
+              "Security analytics and metrics",
+              "KPIs and security dashboards",
+              "Threat hunting techniques",
+              "Proactive security monitoring"
+            ],
+            "assignments": [
+              "Assignment 10: Security Dashboard Design (25 pts)",
+              "Quiz 13: Security Analytics (10 pts)",
+              "Discussion 13: Threat Hunting (5 pts)"
+            ],
+            "deliverableDueDate": "Week 13 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 14,
+            "dates": "11/16/2026 - 11/22/2026",
+            "topics": [
+              "Security automation and orchestration",
+              "SOAR fundamentals",
+              "Playbook development",
+              "API integration for security tools"
+            ],
+            "assignments": [
+              "Assignment 11: Automation Playbook Design (25 pts)",
+              "Quiz 14: Security Automation (10 pts)",
+              "Discussion 14: SOAR Implementation (5 pts)"
+            ],
+            "deliverableDueDate": "Week 14 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 15,
+            "dates": "11/23/2026 - 11/29/2026",
+            "topics": [
+              "Cloud security monitoring",
+              "Container security",
+              "DevSecOps integration",
+              "Project 3: Comprehensive Security Assessment"
+            ],
+            "assignments": [
+              "Project 3: Comprehensive Security Assessment Due (40 pts)",
+              "Discussion 15: Cloud Security Trends (5 pts)",
+              "Note: Thanksgiving Break - No Class 11/25-11/29"
+            ],
+            "deliverableDueDate": "Week 15 Sunday 11:59 PM"
+          }
+        ]
+      },
+      {
+        "title": "Phase 5: Certification Prep & Final Assessment (Weeks 16-17)",
+        "description": "CySA+ certification preparation and course culmination",
+        "weeks": [
+          {
+            "weekNumber": 16,
+            "dates": "11/30/2026 - 12/6/2026",
+            "topics": [
+              "CySA+ certification overview",
+              "Exam objectives review",
+              "Practice exam scenarios",
+              "Career pathways in security analytics"
+            ],
+            "assignments": [
+              "Assignment 12: Certification Study Plan (20 pts)",
+              "Quiz 16: CySA+ Review (10 pts)",
+              "Discussion 16: Career Goals (5 pts)"
+            ],
+            "deliverableDueDate": "Week 16 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 17,
+            "dates": "12/7/2026 - 12/11/2026",
+            "topics": [
+              "Course review and synthesis",
+              "Final exam preparation",
+              "Professional development resources"
+            ],
+            "assignments": [
+              "Final Exam (50 pts)",
+              "Course Evaluation"
+            ],
+            "deliverableDueDate": "Week 17 - Final Exam Period"
+          }
+        ]
+      }
+    ]
+  },
+  "grading": {
+    "breakdown": [
+      {
+        "category": "Assignments",
+        "weight": 35,
+        "points": 280,
+        "description": "Weekly assignments, labs, and exercises"
+      },
+      {
+        "category": "Quizzes",
+        "weight": 20,
+        "points": 160,
+        "description": "Weekly knowledge checks"
+      },
+      {
+        "category": "Projects",
+        "weight": 20,
+        "points": 160,
+        "description": "Three major projects (40 pts each + 40 pts final)"
+      },
+      {
+        "category": "Exams",
+        "weight": 15,
+        "points": 120,
+        "description": "Midterm (40 pts) and Final (50 pts) + extra credit"
+      },
+      {
+        "category": "Discussion Participation",
+        "weight": 10,
+        "points": 80,
+        "description": "Weekly discussion forum participation"
+      }
+    ],
+    "scale": [
+      {"grade": "A", "minPercent": 90},
+      {"grade": "B", "minPercent": 80},
+      {"grade": "C", "minPercent": 70},
+      {"grade": "D", "minPercent": 60}
+    ]
+  },
+  "materials": {
+    "required": [
+      "CompTIA CySA+ Study Guide (Sybex) - Latest Edition",
+      "CompTIA CySA+ All-in-One Exam Guide (McGraw Hill) - Latest Edition"
+    ],
+    "optional": [
+      "CompTIA CySA+ Certification Voucher (optional)",
+      "Virtual lab environment access (provided)",
+      "Security tools (free tiers provided)"
+    ]
+  },
+  "importantDates": [
+    {
+      "event": "Project 1: Threat Intelligence Report Due",
+      "date": "9/13/2026",
+      "week": 4
+    },
+    {
+      "event": "Midterm Exam",
+      "date": "10/11/2026",
+      "week": 8
+    },
+    {
+      "event": "Project 2: Incident Response Simulation Due",
+      "date": "11/1/2026",
+      "week": 11
+    },
+    {
+      "event": "Project 3: Comprehensive Security Assessment Due",
+      "date": "11/29/2026",
+      "week": 15
+    },
+    {
+      "event": "Thanksgiving Break - No Class",
+      "date": "11/25/2026 - 11/29/2026",
+      "week": 15
+    },
+    {
+      "event": "Final Exam",
+      "date": "12/7/2026 - 12/11/2026",
+      "week": 17
+    }
+  ],
+  "workload": {
+    "hoursPerWeek": 9,
+    "breakdown": {
+      "synchronous": "1.5 hours/week (Zoom meetings)",
+      "asynchronous": "7.5 hours/week (labs, readings, assignments, discussions)"
+    }
+  },
+  "policies": {
+    "attendance": "Hybrid course requires attendance at synchronous Zoom sessions (Tuesdays 5:30-6:50 PM). More than 3 unexcused absences may impact your grade.",
+    "lateWork": "Assignments submitted within 48 hours late receive 50% credit. After 48 hours, no credit unless prior arrangement made.",
+    "makeupExams": "Makeup exams require documented emergency and must be arranged within 48 hours of the original exam date.",
+    "academicIntegrity": "All work must be your own. Plagiarism or cheating will result in a minimum of failing the assignment and may result in course failure."
+  }
+}
