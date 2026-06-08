@@ -3,19 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSC154 - Network Security Syllabus</title>
+    <title id="page-title">Course Syllabus</title>
     <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --light-bg: #ecf0f1;
-            --border-color: #bdc3c7;
-            --text-color: #2c3e50;
-            --success-color: #27ae60;
-            --warning-color: #f39c12;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -23,10 +12,10 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: #f5f5f5;
+            color: #333;
+            background-color: #ffffff;
         }
 
         .container {
@@ -36,599 +25,781 @@
         }
 
         header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background-color: #1e3a8a;
             color: white;
-            padding: 3rem 0;
+            padding: 2rem 0;
             margin-bottom: 2rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        header h1 {
+        h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
+            text-align: center;
         }
 
-        header .course-code {
+        .course-subtitle {
+            text-align: center;
             font-size: 1.2rem;
             opacity: 0.9;
         }
 
-        #syllabus-content {
-            background: white;
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+            border-bottom: 3px solid #1e3a8a;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: #1e3a8a;
+            font-size: 1.4rem;
+            margin: 1.5rem 0 0.8rem 0;
+        }
+
+        h4 {
+            color: #1e3a8a;
+            font-size: 1.2rem;
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        .description-box {
+            background-color: #f8fafc;
+            border-left: 4px solid #1e3a8a;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .slo-list {
+            background-color: #f1f5f9;
+            padding: 1.5rem;
             border-radius: 8px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            margin: 1rem 0;
+        }
+
+        .slo-list ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .slo-list li {
+            margin: 1rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .slo-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #1e3a8a;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .phase-container {
+            background-color: #f8fafc;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid #e2e8f0;
+        }
+
+        .phase-header {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .week-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 0.8rem 0;
+            border-left: 4px solid #1e3a8a;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .week-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .week-title {
+            font-weight: bold;
+            color: #1e3a8a;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .week-topics {
+            color: #4b5563;
+            margin: 0.5rem 0;
+        }
+
+        .week-details {
+            font-size: 0.9rem;
+            color: #6b7280;
+            line-height: 1.4;
+        }
+
+        .collapsible {
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+            padding-right: 2rem;
+        }
+
+        .collapsible::after {
+            content: "▼";
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease;
+            color: #1e3a8a;
+        }
+
+        .collapsible.active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .collapsible-content {
+            max-height: 0;
             overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .collapsible-content.active {
+            max-height: 1000px;
+        }
+
+        .checkpoint {
+            background-color: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.9rem;
+        }
+
+        .quiz-exam {
+            background-color: #fee2e2;
+            border-left: 4px solid #ef4444;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.9rem;
         }
 
         .nav-tabs {
             display: flex;
-            background: var(--light-bg);
-            border-bottom: 2px solid var(--border-color);
-            overflow-x: auto;
+            border-bottom: 2px solid #e2e8f0;
+            margin: 2rem 0 1rem 0;
+            flex-wrap: wrap;
         }
 
-        .nav-tabs button {
-            flex: 1;
-            padding: 1rem 1.5rem;
+        .nav-tab {
+            background: none;
             border: none;
-            background: transparent;
+            padding: 1rem 2rem;
             cursor: pointer;
             font-size: 1rem;
-            font-weight: 500;
-            color: var(--text-color);
-            transition: all 0.3s ease;
-            white-space: nowrap;
+            color: #6b7280;
             border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
         }
 
-        .nav-tabs button:hover {
-            background: rgba(52, 152, 219, 0.1);
-            color: var(--secondary-color);
+        .nav-tab:hover {
+            color: #1e3a8a;
+            background-color: #f8fafc;
         }
 
-        .nav-tabs button.active {
-            color: var(--secondary-color);
-            border-bottom-color: var(--secondary-color);
-            background: white;
+        .nav-tab.active {
+            color: #1e3a8a;
+            border-bottom-color: #1e3a8a;
+            font-weight: bold;
         }
 
         .tab-content {
             display: none;
-            padding: 2rem;
-            animation: fadeIn 0.3s ease;
         }
 
         .tab-content.active {
             display: block;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-        }
-
-        h3 {
-            color: var(--secondary-color);
-            margin: 1.5rem 0 1rem;
-            font-size: 1.3rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-            text-align: justify;
-        }
-
-        ul, ol {
-            margin-left: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 1.5rem 0;
-        }
-
-        .info-card {
-            background: var(--light-bg);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--secondary-color);
-        }
-
-        .info-card h4 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .phase {
-            background: var(--light-bg);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .phase-header {
-            background: var(--secondary-color);
+        .btn {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.5);
             color: white;
-            padding: 1rem;
+            font-size: 1rem;
+            padding: 0.8rem 1.5rem;
             border-radius: 6px;
-            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
-        .phase-header h3 {
-            color: white;
-            margin: 0;
-            font-size: 1.2rem;
-        }
-
-        .week {
-            background: white;
-            border-left: 3px solid var(--border-color);
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border-radius: 0 6px 6px 0;
-        }
-
-        .week-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 0.5rem;
-        }
-
-        .week-number {
-            font-weight: bold;
-            color: var(--secondary-color);
-        }
-
-        .week-dates {
-            color: #7f8c8d;
-            font-size: 0.9rem;
-        }
-
-        .topics-list, .assignments-list {
-            margin: 0.5rem 0;
-        }
-
-        .topics-list strong, .assignments-list strong {
-            color: var(--primary-color);
+        .btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
         }
 
         .grading-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 1.5rem 0;
-        }
-
-        .grading-table th, .grading-table td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid var(--border-color);
+            margin: 1rem 0;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .grading-table th {
-            background: var(--primary-color);
+            background-color: #1e3a8a;
             color: white;
-        }
-
-        .grading-table tr:hover {
-            background: var(--light-bg);
-        }
-
-        .percentage {
-            font-weight: bold;
-            color: var(--secondary-color);
-        }
-
-        .important-dates {
-            background: #fff3cd;
-            border-left: 4px solid var(--warning-color);
             padding: 1rem;
-            border-radius: 6px;
-            margin: 1rem 0;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .grading-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .grading-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .grading-table tr:nth-child(even) {
+            background-color: #f8fafc;
         }
 
         .loading {
             text-align: center;
             padding: 3rem;
-            color: var(--secondary-color);
             font-size: 1.2rem;
-        }
-
-        .error {
-            background: #f8d7da;
-            border: 1px solid #f5c6cb;
-            color: #721c24;
-            padding: 1rem;
-            border-radius: 6px;
-            margin: 1rem 0;
+            color: #6b7280;
         }
 
         @media (max-width: 768px) {
-            header h1 {
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
                 font-size: 2rem;
             }
 
-            .nav-tabs {
-                flex-wrap: wrap;
-            }
-
-            .nav-tabs button {
-                flex-basis: 50%;
+            .nav-tab {
+                padding: 0.8rem 1rem;
                 font-size: 0.9rem;
             }
 
-            .tab-content {
+            .phase-container {
                 padding: 1rem;
+            }
+
+            .week-item {
+                padding: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            .nav-tabs {
+                flex-direction: column;
+            }
+
+            .nav-tab {
+                text-align: center;
+                border-bottom: 1px solid #e2e8f0;
+                border-radius: 0;
+            }
+
+            .nav-tab.active {
+                border-bottom: 1px solid #1e3a8a;
+                background-color: #f8fafc;
+            }
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #1e3a8a;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .skip-link:focus {
+            top: 6px;
+        }
+
+        @media print {
+            body {
+                font-family: Arial, sans-serif;
+                font-size: 12px;
+                line-height: 1.4;
+                color: #000;
+            }
+            
+            .container {
+                max-width: none;
+                padding: 0;
+            }
+            
+            header {
+                background: none !important;
+                color: #000 !important;
+                padding: 1rem 0;
+                border-bottom: 2px solid #000;
+            }
+            
+            .nav-tabs, .btn, .collapsible::after {
+                display: none !important;
+            }
+            
+            .tab-content {
+                display: block !important;
+            }
+            
+            .collapsible-content {
+                max-height: none !important;
+                overflow: visible !important;
+            }
+            
+            .phase-container, .description-box, .slo-list {
+                border: 1px solid #ccc;
+                background: none;
+                break-inside: avoid;
+            }
+            
+            .week-item {
+                border: 1px solid #ccc;
+                break-inside: avoid;
+                margin: 0.5rem 0;
+            }
+            
+            h2 {
+                page-break-after: avoid;
+                border-bottom: 2px solid #000;
+            }
+            
+            .page-break {
+                page-break-before: always;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1 id="course-title">Loading...</h1>
-            <p class="course-code" id="course-code">Loading...</p>
-            <div style="margin-top: 1.5rem;">
-                <span id="course-term">Loading...</span> | 
-                <span id="course-credits">Loading...</span> | 
-                <span id="course-format">Loading...</span>
-            </div>
-        </div>
-    </header>
-
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <div class="loading" id="loading">Loading syllabus data...</div>
+    
     <div id="syllabus-content" style="display: none;">
+        <header>
+            <div class="container">
+                <h1 id="course-title"></h1>
+                <p class="course-subtitle" id="course-subtitle"></p>
+                <div style="margin-top: 1.5rem;">
+                    <button class="btn" onclick="downloadSyllabusAsPDF()">
+                        📄 Download Syllabus (pdf)
+                    </button>
+                </div>
+            </div>
+        </header>
+
         <main id="main-content" class="container">
             <div class="nav-tabs" role="tablist">
-                <button class="active" onclick="showTab('overview')" role="tab" aria-selected="true">Course Overview</button>
-                <button onclick="showTab('instructor')" role="tab" aria-selected="false">Instructor & Course Info</button>
-                <button onclick="showTab('outline')" role="tab" aria-selected="false">Course Outline</button>
-                <button onclick="showTab('policies')" role="tab" aria-selected="false">Policies & Resources</button>
+                <button class="nav-tab active" role="tab" aria-selected="true" aria-controls="overview-tab" id="overview-btn">Course Overview</button>
+                <button class="nav-tab" role="tab" aria-selected="false" aria-controls="instructor-tab" id="instructor-btn">Instructor & Course Info</button>
+                <button class="nav-tab" role="tab" aria-selected="false" aria-controls="outline-tab" id="outline-btn">Course Outline</button>
+                <button class="nav-tab" role="tab" aria-selected="false" aria-controls="policies-tab" id="policies-btn">Policies & Resources</button>
             </div>
 
-            <div id="overview" class="tab-content active" role="tabpanel">
-                <h2>Course Description</h2>
-                <div id="course-description"></div>
-
-                <h2>Course Purpose</h2>
-                <div id="course-purpose"></div>
-
-                <h2>Student Learning Outcomes</h2>
-                <ul id="slos-list"></ul>
-
-                <h2>Important Dates</h2>
-                <div id="important-dates"></div>
-            </div>
-
-            <div id="instructor" class="tab-content" role="tabpanel">
-                <h2>Instructor Information</h2>
-                <div id="instructor-info"></div>
-
-                <h2>Course Materials</h2>
-                <div id="course-materials"></div>
-
-                <h2>Grading Breakdown</h2>
-                <table class="grading-table" id="grading-table"></table>
-
-                <h2>Grade Scale</h2>
-                <div id="grade-scale"></div>
-
-                <h2>Workload Expectations</h2>
-                <div id="workload-info"></div>
-            </div>
-
-            <div id="outline" class="tab-content" role="tabpanel">
-                <h2>Course Schedule</h2>
-                <div id="course-schedule"></div>
-            </div>
-
-            <div id="policies" class="tab-content" role="tabpanel">
-                <h2>Course Policies</h2>
-                <div id="course-policies"></div>
-
-                <h2>College Policies</h2>
-                <div id="college-policies"></div>
-
-                <h2>Emergency Contacts</h2>
-                <div id="emergency-contacts"></div>
-            </div>
+            <div id="overview-tab" class="tab-content active" role="tabpanel" aria-labelledby="overview-btn"></div>
+            <div id="instructor-tab" class="tab-content" role="tabpanel" aria-labelledby="instructor-btn"></div>
+            <div id="outline-tab" class="tab-content" role="tabpanel" aria-labelledby="outline-btn"></div>
+            <div id="policies-tab" class="tab-content" role="tabpanel" aria-labelledby="policies-btn"></div>
         </main>
     </div>
 
     <script>
+        // ============================================
+        // GITHUB CONFIGURATION
+        // ============================================
+        // Update these URLs to point to YOUR GitHub repository
         const GITHUB_BASE_URL = 'https://raw.githubusercontent.com/dpai-mc/dyn-syllabi/main';
-        const COURSE_CODE = 'csc154';
+        
+        // Course code - CHANGE THIS FOR EACH COURSE
+        const COURSE_CODE = 'csc154';  // Change to: csc104, csc106, csc150, etc.
+        
+        // Data file URLs (automatically constructed)
         const COURSE_DATA_URL = `${GITHUB_BASE_URL}/data/course-${COURSE_CODE}-info.json`;
         const INSTRUCTOR_DATA_URL = `${GITHUB_BASE_URL}/data/instructor-info.json`;
         const POLICIES_DATA_URL = `${GITHUB_BASE_URL}/data/college-policies.json`;
+        // ============================================
 
         let courseData, instructorData, policiesData;
 
-        async function loadData() {
+        // Load all JSON data files from GitHub
+        async function loadAllData() {
             try {
-                const [courseResponse, instructorResponse, policiesResponse] = await Promise.all([
-                    fetch(COURSE_DATA_URL),
-                    fetch(INSTRUCTOR_DATA_URL),
-                    fetch(POLICIES_DATA_URL)
+                const [course, instructor, policies] = await Promise.all([
+                    fetch(COURSE_DATA_URL).then(r => {
+                        if (!r.ok) throw new Error(`Failed to load course data: ${r.status}`);
+                        return r.json();
+                    }),
+                    fetch(INSTRUCTOR_DATA_URL).then(r => {
+                        if (!r.ok) throw new Error(`Failed to load instructor data: ${r.status}`);
+                        return r.json();
+                    }),
+                    fetch(POLICIES_DATA_URL).then(r => {
+                        if (!r.ok) throw new Error(`Failed to load policies data: ${r.status}`);
+                        return r.json();
+                    })
                 ]);
-
-                if (!courseResponse.ok || !instructorResponse.ok || !policiesResponse.ok) {
-                    throw new Error('Failed to load course data');
-                }
-
-                courseData = await courseResponse.json();
-                instructorData = await instructorResponse.json();
-                policiesData = await policiesResponse.json();
-
+                
+                courseData = course;
+                instructorData = instructor;
+                policiesData = policies;
+                
+                renderSyllabus();
+                
+                document.getElementById('loading').style.display = 'none';
                 document.getElementById('syllabus-content').style.display = 'block';
                 
-                renderOverviewTab();
-                renderInstructorTab();
-                renderOutlineTab();
-                renderPoliciesTab();
+                initializeTabs();
+                initializeCollapsibles();
             } catch (error) {
-                console.error('Error loading data:', error);
-                document.body.innerHTML += `
-                    <div class="container">
-                        <div class="error">
-                            <strong>Error loading syllabus:</strong> ${error.message}<br>
-                            Please check your internet connection or contact the instructor.
-                        </div>
-                    </div>
-                `;
+                document.getElementById('loading').innerHTML = 
+                    `<p style="color: #ef4444;">Error loading syllabus data: ${error.message}</p>
+                     <p style="margin-top: 1rem;">Please check:</p>
+                     <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
+                        <li>GITHUB_BASE_URL is set correctly (line 492)</li>
+                        <li>COURSE_CODE is set correctly (line 495)</li>
+                        <li>JSON files exist in your GitHub repository</li>
+                        <li>Repository is public or files are accessible</li>
+                     </ul>`;
+                console.error('Full error:', error);
             }
         }
 
-        function showTab(tabName) {
-            document.querySelectorAll('.tab-content').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            document.querySelectorAll('.nav-tabs button').forEach(btn => {
-                btn.classList.remove('active');
-                btn.setAttribute('aria-selected', 'false');
-            });
-            
-            document.getElementById(tabName).classList.add('active');
-            event.target.classList.add('active');
-            event.target.setAttribute('aria-selected', 'true');
+        function renderSyllabus() {
+            document.getElementById('page-title').textContent = 
+                `${courseData.metadata.code}: ${courseData.metadata.title}`;
+            document.getElementById('course-title').textContent = 
+                `${courseData.metadata.code}: ${courseData.metadata.title}`;
+            document.getElementById('course-subtitle').textContent = 
+                `${courseData.metadata.credits}-Credit ${courseData.metadata.format} Course (${courseData.metadata.creditBreakdown})`;
+
+            renderOverviewTab();
+            renderInstructorTab();
+            renderOutlineTab();
+            renderPoliciesTab();
         }
 
         function renderOverviewTab() {
-            const metadata = courseData.metadata;
-            
-            document.getElementById('course-title').textContent = `${metadata.code} - ${metadata.title}`;
-            document.getElementById('course-code').textContent = metadata.code;
-            document.getElementById('course-term').textContent = metadata.term;
-            document.getElementById('course-credits').textContent = `${metadata.credits} Credits`;
-            document.getElementById('course-format').textContent = metadata.format;
-
-            if (metadata.meetingSchedule) {
-                const ms = metadata.meetingSchedule;
-                document.getElementById('course-format').innerHTML += ` | <strong>Meets:</strong> ${ms.days} ${ms.time} @ ${ms.location}`;
+            const tab = document.getElementById('overview-tab');
+            let html = `<section><h2>Course Description</h2><div class="description-box"><p>${courseData.description.catalog}</p>`;
+            if (courseData.description.expanded) html += `<p style="margin-top: 1rem;">${courseData.description.expanded}</p>`;
+            html += `</div><h2>Student Learning Outcomes</h2><div class="slo-list"><p>Upon successful completion of this course, students will be able to:</p><ul>`;
+            courseData.slos.forEach(slo => html += `<li>${slo}</li>`);
+            html += `</ul></div>`;
+            if (courseData.purpose) {
+                html += `<h2>Why Take This Course?</h2><div class="phase-container"><p>${courseData.purpose.why}</p>`;
+                if (courseData.purpose.beyond) html += `<p style="margin-top: 1rem;">${courseData.purpose.beyond}</p>`;
+                html += `</div>`;
             }
-
-            document.getElementById('course-description').innerHTML = `
-                <p><strong>Catalog Description:</strong> ${courseData.description.catalog}</p>
-                <p><strong>Expanded Description:</strong> ${courseData.description.expanded}</p>
-            `;
-
-            document.getElementById('course-purpose').innerHTML = `
-                <p><strong>Why Take This Course:</strong> ${courseData.purpose.why}</p>
-                <p><strong>Beyond Technical Skills:</strong> ${courseData.purpose.beyond}</p>
-            `;
-
-            const slosList = document.getElementById('slos-list');
-            courseData.slos.forEach(slo => {
-                const li = document.createElement('li');
-                li.textContent = slo;
-                slosList.appendChild(li);
-            });
-
-            const datesDiv = document.getElementById('important-dates');
-            if (courseData.importantDates && courseData.importantDates.length > 0) {
-                courseData.importantDates.forEach(date => {
-                    const dateCard = document.createElement('div');
-                    dateCard.className = 'important-dates';
-                    dateCard.innerHTML = `<strong>${date.event}</strong>: ${date.date} (Week ${date.week})`;
-                    datesDiv.appendChild(dateCard);
-                });
-            }
+            html += `</section>`;
+            tab.innerHTML = html;
         }
 
         function renderInstructorTab() {
-            const instructor = instructorData;
-            document.getElementById('instructor-info').innerHTML = `
-                <div class="info-grid">
-                    <div class="info-card">
-                        <h4>Instructor</h4>
-                        <p>${instructor.name}</p>
-                        <p>Email: ${instructor.email}</p>
-                        <p>Phone: ${instructor.phone}</p>
-                    </div>
-                    <div class="info-card">
-                        <h4>Office</h4>
-                        <p>${instructor.office.location}</p>
-                        <p>Hours: ${instructor.office.hours}</p>
-                    </div>
-                    <div class="info-card">
-                        <h4>Student Hours</h4>
-                        ${instructor.studentHours.map(sh => `
-                            <p><strong>${sh.day}</strong>: ${sh.time}</p>
-                            <p>${sh.location}</p>
-                            ${sh.zoom ? `<p><a href="${sh.zoom.link}" target="_blank">${sh.zoom.link}</a></p>` : ''}
-                        `).join('')}
-                    </div>
-                </div>
-            `;
-
-            const materials = courseData.materials;
-            document.getElementById('course-materials').innerHTML = `
-                <h3>Required Materials</h3>
-                <ul>
-                    ${materials.required.map(item => `<li>${item}</li>`).join('')}
-                </ul>
-                <h3>Optional Materials</h3>
-                <ul>
-                    ${materials.optional.map(item => `<li>${item}</li>`).join('')}
-                </ul>
-            `;
-
-            const gradingTable = document.getElementById('grading-table');
-            gradingTable.innerHTML = `
-                <thead>
-                    <tr>
-                        <th>Category</th>
-                        <th>Weight</th>
-                        <th>Points</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    ${courseData.grading.breakdown.map(item => `
-                        <tr>
-                            <td>${item.category}</td>
-                            <td class="percentage">${item.weight}%</td>
-                            <td>${item.points}</td>
-                            <td>${item.description}</td>
-                        </tr>
-                    `).join('')}
-                    <tr style="background: var(--light-bg); font-weight: bold;">
-                        <td>Total</td>
-                        <td class="percentage">100%</td>
-                        <td>${courseData.grading.breakdown.reduce((sum, item) => sum + item.points, 0)}</td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            `;
-
-            const gradeScale = document.getElementById('grade-scale');
-            courseData.grading.scale.forEach(grade => {
-                const gradeDiv = document.createElement('div');
-                gradeDiv.style.marginBottom = '0.5rem';
-                gradeDiv.innerHTML = `<strong>${grade.grade}</strong>: ${grade.minPercent}% and above`;
-                gradeScale.appendChild(gradeDiv);
+            const tab = document.getElementById('instructor-tab');
+            let html = `<section><h2>Instructor Information</h2><div class="description-box">`;
+            html += `<p><strong>Instructor:</strong> ${instructorData.name}<br>`;
+            html += `<strong>Office:</strong> ${instructorData.office.location}<br>`;
+            html += `<strong>Email:</strong> <a href="mailto:${instructorData.email}" style="color: #1e3a8a;">${instructorData.email}</a><br>`;
+            html += `<strong>Phone:</strong> ${instructorData.phone}<br>`;
+            html += `<strong>Zoom Room:</strong> <a href="${instructorData.zoom.url}" style="color: #1e3a8a;" target="_blank" rel="noopener">${instructorData.zoom.label}</a></p></div>`;
+            
+            html += `<h2>Class Meeting Information</h2><div class="slo-list">`;
+            html += `<p><strong>Format:</strong> ${courseData.metadata.format}<br>`;
+            if (courseData.metadata.meetingSchedule) {
+                html += `<strong>Meeting Schedule:</strong> ${courseData.metadata.meetingSchedule.days}, ${courseData.metadata.meetingSchedule.time} @ ${courseData.metadata.meetingSchedule.location}<br>`;
+                html += `<strong>Modality:</strong> ${courseData.metadata.meetingSchedule.modality}<br>`;
+            }
+            html += `<strong>Credit Hours:</strong> ${courseData.metadata.credits} units (${courseData.metadata.creditBreakdown})<br>`;
+            html += `<strong>Semester:</strong> ${courseData.metadata.term}<br>`;
+            html += `<strong>Prerequisite:</strong> ${courseData.metadata.prerequisite}</p></div>`;
+            
+            html += `<h2>Student Hours (Office Hours)</h2><div class="phase-container">`;
+            instructorData.studentHours.forEach(hours => {
+                if (hours.type === 'online') {
+                    html += `<h4><a href="${hours.link}" style="color: #1e3a8a;" target="_blank" rel="noopener">Online via Zoom</a></h4>`;
+                    html += `<p>${hours.days} ${hours.time}${hours.note ? ` (${hours.note})` : ''}</p>`;
+                } else if (hours.type === 'in-office') {
+                    html += `<h4>In Office (${hours.location})</h4><ul style="list-style-type: disc; padding-left: 2rem; margin: 1rem 0;">`;
+                    hours.schedule.forEach(s => html += `<li>${s.day}: ${s.time}</li>`);
+                    html += `</ul>`;
+                } else if (hours.type === 'appointment') {
+                    html += `<h4>${hours.method}</h4><p>Schedule via <a href="${hours.link}" style="color: #1e3a8a;" target="_blank" rel="noopener">online calendar</a></p>`;
+                }
             });
-
-            const workload = courseData.workload;
-            document.getElementById('workload-info').innerHTML = `
-                <p><strong>Expected Time Commitment:</strong> ${workload.hoursPerWeek} hours per week</p>
-                ${workload.breakdown ? `
-                    <ul>
-                        ${Object.entries(workload.breakdown).map(([key, value]) => `<li>${key}: ${value}</li>`).join('')}
-                    </ul>
-                ` : ''}
-            `;
+            if (instructorData.encouragementMessage) {
+                html += `<p style="margin-top: 1rem; padding: 1rem; background-color: #fef3c7; border-radius: 6px;"><strong>Please use student hours!</strong> ${instructorData.encouragementMessage}</p>`;
+            }
+            html += `</div>`;
+            
+            // Materials
+            html += `<h2>Course Materials</h2><div class="phase-container">`;
+            html += `<h3>Required Materials</h3><ul style="list-style-type: disc; padding-left: 2rem;">`;
+            courseData.materials.required.forEach(material => html += `<li>${material}</li>`);
+            html += `</ul>`;
+            if (courseData.materials.optional && courseData.materials.optional.length > 0) {
+                html += `<h3>Optional Materials</h3><ul style="list-style-type: disc; padding-left: 2rem;">`;
+                courseData.materials.optional.forEach(material => html += `<li>${material}</li>`);
+                html += `</ul>`;
+            }
+            html += `</div>`;
+            
+            // Important Dates
+            if (courseData.importantDates && courseData.importantDates.length > 0) {
+                html += `<h2>Important Course Dates</h2><div class="slo-list">`;
+                html += `<ul style="list-style-type: none; padding-left: 0;">`;
+                courseData.importantDates.forEach(date => {
+                    html += `<li style="margin: 0.75rem 0;"><strong>Week ${date.week} - ${date.event}:</strong> ${date.description}</li>`;
+                });
+                html += `</ul></div>`;
+            }
+            
+            // Workload
+            if (courseData.workload) {
+                html += `<h2>Expected Workload</h2><div class="description-box">`;
+                html += `<p><strong>Time Commitment:</strong> Approximately ${courseData.workload.hoursPerWeek} hours per week</p>`;
+                html += `<p><strong>Breakdown:</strong> ${courseData.workload.breakdown}</p>`;
+                if (courseData.workload.notes) {
+                    html += `<p style="margin-top: 0.5rem;"><em>${courseData.workload.notes}</em></p>`;
+                }
+                html += `</div>`;
+            }
+            
+            // Grading
+            html += `<h2>Grading Breakdown</h2><div class="phase-container">`;
+            html += `<table class="grading-table">`;
+            html += `<thead><tr><th>Category</th><th>Percentage</th><th>Description</th></tr></thead>`;
+            html += `<tbody>`;
+            courseData.grading.breakdown.forEach(item => {
+                html += `<tr><td>${item.category}</td><td>${item.percentage}%</td><td>${item.description}</td></tr>`;
+            });
+            html += `</tbody></table>`;
+            html += `<h3>Grade Scale</h3><ul style="list-style-type: none; padding-left: 0;">`;
+            courseData.grading.scale.forEach(grade => {
+                html += `<li style="margin: 0.5rem 0;"><strong>${grade.grade}:</strong> ${grade.range}</li>`;
+            });
+            html += `</ul></div>`;
+            
+            // Course Policies
+            if (courseData.policies) {
+                html += `<h2>Course Policies</h2><div class="phase-container">`;
+                if (courseData.policies.attendance) {
+                    html += `<h3>Attendance</h3><p>${courseData.policies.attendance}</p>`;
+                }
+                if (courseData.policies.lateWork) {
+                    html += `<h3>Late Work Policy</h3><p>${courseData.policies.lateWork}</p>`;
+                }
+                if (courseData.policies.makeupExams) {
+                    html += `<h3>Makeup Exams</h3><p>${courseData.policies.makeupExams}</p>`;
+                }
+                if (courseData.policies.academicIntegrity) {
+                    html += `<h3>Academic Integrity</h3><p>${courseData.policies.academicIntegrity}</p>`;
+                }
+                html += `</div>`;
+            }
+            
+            html += `</section>`;
+            tab.innerHTML = html;
         }
 
         function renderOutlineTab() {
-            const scheduleDiv = document.getElementById('course-schedule');
+            const tab = document.getElementById('outline-tab');
+            let html = `<section><h2>Course Schedule</h2>`;
             
-            courseData.schedule.phases.forEach(phase => {
-                const phaseDiv = document.createElement('div');
-                phaseDiv.className = 'phase';
-                
-                let weeksHtml = '';
-                phase.weeks.forEach(week => {
-                    weeksHtml += `
-                        <div class="week">
-                            <div class="week-header">
-                                <span class="week-number">Week ${week.weekNumber}</span>
-                                <span class="week-dates">${week.dates}</span>
-                            </div>
-                            <div class="topics-list">
-                                <strong>Topics:</strong>
-                                <ul>
-                                    ${week.topics.map(topic => `<li>${topic}</li>`).join('')}
-                                </ul>
-                            </div>
-                            <div class="assignments-list">
-                                <strong>Assignments:</strong>
-                                <ul>
-                                    ${week.assignments.map(assignment => `<li>${assignment}</li>`).join('')}
-                                </ul>
-                            </div>
-                            ${week.deliverableDueDate ? `<p><strong>Due:</strong> ${week.deliverableDueDate}</p>` : ''}
-                        </div>
-                    `;
+            if (courseData.schedule && courseData.schedule.phases) {
+                courseData.schedule.phases.forEach(phase => {
+                    html += `<div class="phase-container">`;
+                    html += `<h3>${phase.title}</h3>`;
+                    html += `<p>${phase.description}</p>`;
+                    
+                    phase.weeks.forEach(week => {
+                        html += `<div class="week-item">`;
+                        html += `<div class="week-header">`;
+                        html += `<strong>Week ${week.weekNumber}</strong> (${week.dates})`;
+                        html += `</div>`;
+                        
+                        html += `<div class="week-content">`;
+                        
+                        // Topics
+                        if (week.topics && week.topics.length > 0) {
+                            html += `<h4>Topics:</h4><ul>`;
+                            week.topics.forEach(topic => {
+                                html += `<li>${topic}</li>`;
+                            });
+                            html += `</ul>`;
+                        }
+                        
+                        // Readings
+                        if (week.readings) {
+                            html += `<p><strong>Readings:</strong> ${week.readings}</p>`;
+                        }
+                        
+                        // Assignments
+                        if (week.assignments && week.assignments.length > 0) {
+                            html += `<h4>Assignments:</h4><ul>`;
+                            week.assignments.forEach(assignment => {
+                                html += `<li>${assignment}</li>`;
+                            });
+                            html += `</ul>`;
+                        }
+                        
+                        // Due date
+                        if (week.deliverableDueDate) {
+                            html += `<p><strong>Due Date:</strong> ${week.deliverableDueDate}</p>`;
+                        }
+                        
+                        // Notes
+                        if (week.notes) {
+                            html += `<p><em>${week.notes}</em></p>`;
+                        }
+                        
+                        html += `</div></div>`;
+                    });
+                    
+                    html += `</div>`;
                 });
-
-                phaseDiv.innerHTML = `
-                    <div class="phase-header">
-                        <h3>${phase.title}</h3>
-                        <p>${phase.description}</p>
-                    </div>
-                    ${weeksHtml}
-                `;
-                
-                scheduleDiv.appendChild(phaseDiv);
-            });
+            }
+            
+            html += `</section>`;
+            tab.innerHTML = html;
         }
 
         function renderPoliciesTab() {
-            const policies = courseData.policies;
-            document.getElementById('course-policies').innerHTML = `
-                <div class="info-grid">
-                    <div class="info-card">
-                        <h4>Attendance</h4>
-                        <p>${policies.attendance}</p>
-                    </div>
-                    <div class="info-card">
-                        <h4>Late Work</h4>
-                        <p>${policies.lateWork}</p>
-                    </div>
-                    <div class="info-card">
-                        <h4>Makeup Exams</h4>
-                        <p>${policies.makeupExams}</p>
-                    </div>
-                    <div class="info-card">
-                        <h4>Academic Integrity</h4>
-                        <p>${policies.academicIntegrity}</p>
-                    </div>
-                </div>
-            `;
-
-            const collegePoliciesDiv = document.getElementById('college-policies');
+            const tab = document.getElementById('policies-tab');
+            let html = `<section><h2>Course Policies & Student Support</h2>`;
+            
             policiesData.policies.forEach(policy => {
-                const policyDiv = document.createElement('div');
-                policyDiv.style.marginBottom = '1.5rem';
-                policyDiv.innerHTML = `
-                    <h3>${policy.title}</h3>
-                    <p>${policy.description}</p>
-                `;
-                collegePoliciesDiv.appendChild(policyDiv);
+                html += `<h3>${policy.title}</h3>`;
+                html += `<div class="description-box">`;
+                html += `<p>${policy.content}</p>`;
+                
+                // Render contact information with mailto links for emails
+                if (policy.contact) {
+                    html += `<p style="margin-top: 1rem;"><strong>Contact:</strong> ${policy.contact}`;
+                    
+                    // Add mailto link if contactEmail field exists
+                    if (policy.contactEmail) {
+                        html += ` | <a href="mailto:${policy.contactEmail}" style="color: #1e3a8a;">${policy.contactEmail}</a>`;
+                    }
+                    html += `</p>`;
+                }
+                
+                // Render link with proper link text (not bare URL)
+                if (policy.link && policy.linkText) {
+                    html += `<p style="margin-top: 0.5rem;"><strong>More Info:</strong> `;
+                    html += `<a href="${policy.link}" style="color: #1e3a8a;" target="_blank" rel="noopener">${policy.linkText}</a>`;
+                    html += `</p>`;
+                }
+                
+                // Handle Spanish link for RESOURCES policy
+                if (policy.code === 'RESOURCES' && policy.linkSpanish && policy.linkTextSpanish) {
+                    html += ` | <a href="${policy.linkSpanish}" style="color: #1e3a8a;" target="_blank" rel="noopener">${policy.linkTextSpanish}</a>`;
+                }
+                
+                html += `</div>`;
             });
+            
+            // Emergency Contacts section
+            if (policiesData.emergencyContacts && policiesData.emergencyContacts.length > 0) {
+                html += `<h2 style="margin-top: 3rem;">Emergency Contacts</h2>`;
+                html += `<div class="slo-list">`;
+                html += `<p><strong>Available 24/7:</strong></p><ul style="list-style-type: disc; padding-left: 2rem;">`;
+                
+                policiesData.emergencyContacts.forEach(contact => {
+                    html += `<li><strong>${contact.service}:</strong> ${contact.phone}</li>`;
+                });
+                
+                html += `</ul></div>`;
+            }
+            
+            // Key Dates section
+            if (policiesData.keyDates && policiesData.keyDates.length > 0) {
+                html += `<h2 style="margin-top: 3rem;">Important Semester Dates</h2>`;
+                html += `<div class="slo-list">`;
+                html += `<ul style="list-style-type: none; padding-left: 0;">`;
+                
+                policiesData.keyDates.forEach(dateItem => {
+                    html += `<li style="margin: 0.75rem 0;"><strong>${dateItem.description}:</strong> ${dateItem.date}</li>`;
+                });
+                
+                html += `</ul></div>`;
+            }
+            
+            html += `</section>`;
+            tab.innerHTML = html;
+        }
 
-            const emergencyDiv = document.getElementById('emergency-contacts');
-            policiesData.emergencyContacts.forEach(contact => {
-                const contactDiv = document.createElement('div');
-                contactDiv.className = 'info-card';
-                contactDiv.style.marginBottom = '1rem';
-                contactDiv.innerHTML = `
-                    <h4>${contact.department}</h4>
-                    <p>${contact.name}</p>
-                    <p>Phone: ${contact.phone}</p>
-                    <p>Email: ${contact.email}</p>
-                `;
-                emergencyDiv.appendChild(contactDiv);
+        function initializeTabs() {
+            const tabButtons = document.querySelectorAll('.nav-tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    tabButtons.forEach(tab => {
+                        tab.classList.remove('active');
+                        tab.setAttribute('aria-selected', 'false');
+                    });
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    button.classList.add('active');
+                    button.setAttribute('aria-selected', 'true');
+                    document.getElementById(button.getAttribute('aria-controls')).classList.add('active');
+                });
             });
         }
 
-        document.addEventListener('DOMContentLoaded', loadData);
+        function initializeCollapsibles() {
+            document.querySelectorAll('.collapsible').forEach(collapsible => {
+                collapsible.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    const content = this.nextElementSibling;
+                    if (content.classList.contains('active')) {
+                        content.classList.remove('active');
+                        this.setAttribute('aria-expanded', 'false');
+                    } else {
+                        content.classList.add('active');
+                        this.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+        }
+
+        function downloadSyllabusAsPDF() {
+            window.print();
+        }
+
+        window.addEventListener('DOMContentLoaded', loadAllData);
     </script>
 </body>
 </html>

@@ -539,8 +539,9 @@
             
             html += `<h2>Class Meeting Information</h2><div class="slo-list">`;
             html += `<p><strong>Format:</strong> ${courseData.metadata.format}<br>`;
-            if (courseData.metadata.meetingInfo) {
-                html += `<strong>${courseData.metadata.meetingInfo.type} Meeting:</strong> ${courseData.metadata.meetingInfo.day}, ${courseData.metadata.meetingInfo.time} via ${courseData.metadata.meetingInfo.platform}<br>`;
+            if (courseData.metadata.meetingSchedule) {
+                html += `<strong>Meeting Schedule:</strong> ${courseData.metadata.meetingSchedule.days}, ${courseData.metadata.meetingSchedule.time} @ ${courseData.metadata.meetingSchedule.location}<br>`;
+                html += `<strong>Modality:</strong> ${courseData.metadata.meetingSchedule.modality}<br>`;
             }
             html += `<strong>Credit Hours:</strong> ${courseData.metadata.credits} units (${courseData.metadata.creditBreakdown})<br>`;
             html += `<strong>Semester:</strong> ${courseData.metadata.term}<br>`;

@@ -3,19 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSC210L - Computer Organization and Architecture Lab - Course Syllabus</title>
+    <title id="page-title">Course Syllabus</title>
     <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --light-bg: #ecf0f1;
-            --border-color: #bdc3c7;
-            --text-color: #2c3e50;
-            --success-color: #27ae60;
-            --warning-color: #f39c12;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -23,10 +12,10 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: #f5f5f5;
+            color: #333;
+            background-color: #ffffff;
         }
 
         .container {
@@ -36,801 +25,781 @@
         }
 
         header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background-color: #1e3a8a;
             color: white;
             padding: 2rem 0;
             margin-bottom: 2rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        header h1 {
+        h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
+            text-align: center;
         }
 
-        header h2 {
-            font-size: 1.5rem;
-            font-weight: 400;
+        .course-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
             opacity: 0.9;
         }
 
-        header .course-code {
-            background: var(--accent-color);
-            padding: 0.25rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 1rem;
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+            border-bottom: 3px solid #1e3a8a;
+            padding-bottom: 0.5rem;
         }
 
-        .meeting-info {
-            background: rgba(255,255,255,0.1);
+        h3 {
+            color: #1e3a8a;
+            font-size: 1.4rem;
+            margin: 1.5rem 0 0.8rem 0;
+        }
+
+        h4 {
+            color: #1e3a8a;
+            font-size: 1.2rem;
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        .description-box {
+            background-color: #f8fafc;
+            border-left: 4px solid #1e3a8a;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .slo-list {
+            background-color: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .slo-list ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .slo-list li {
+            margin: 1rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .slo-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #1e3a8a;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .phase-container {
+            background-color: #f8fafc;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid #e2e8f0;
+        }
+
+        .phase-header {
+            background-color: #1e3a8a;
+            color: white;
             padding: 1rem;
             border-radius: 8px;
-            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            text-align: center;
         }
 
-        .meeting-info h3 {
-            font-size: 1rem;
+        .week-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 0.8rem 0;
+            border-left: 4px solid #1e3a8a;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .week-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .week-title {
+            font-weight: bold;
+            color: #1e3a8a;
+            font-size: 1.1rem;
             margin-bottom: 0.5rem;
-            color: #f39c12;
         }
 
-        .meeting-info p {
-            font-size: 0.95rem;
-            margin: 0.25rem 0;
+        .week-topics {
+            color: #4b5563;
+            margin: 0.5rem 0;
+        }
+
+        .week-details {
+            font-size: 0.9rem;
+            color: #6b7280;
+            line-height: 1.4;
+        }
+
+        .collapsible {
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+            padding-right: 2rem;
+        }
+
+        .collapsible::after {
+            content: "▼";
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease;
+            color: #1e3a8a;
+        }
+
+        .collapsible.active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .collapsible-content.active {
+            max-height: 1000px;
+        }
+
+        .checkpoint {
+            background-color: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.9rem;
+        }
+
+        .quiz-exam {
+            background-color: #fee2e2;
+            border-left: 4px solid #ef4444;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.9rem;
         }
 
         .nav-tabs {
             display: flex;
-            background: white;
-            border-radius: 8px 8px 0 0;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 0;
+            border-bottom: 2px solid #e2e8f0;
+            margin: 2rem 0 1rem 0;
+            flex-wrap: wrap;
         }
 
-        .nav-tabs button {
-            flex: 1;
-            padding: 1.2rem;
+        .nav-tab {
+            background: none;
             border: none;
-            background: white;
+            padding: 1rem 2rem;
             cursor: pointer;
             font-size: 1rem;
-            font-weight: 500;
-            color: var(--text-color);
-            transition: all 0.3s ease;
+            color: #6b7280;
             border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
         }
 
-        .nav-tabs button:hover {
-            background: var(--light-bg);
+        .nav-tab:hover {
+            color: #1e3a8a;
+            background-color: #f8fafc;
         }
 
-        .nav-tabs button.active {
-            color: var(--secondary-color);
-            border-bottom: 3px solid var(--secondary-color);
-            background: #f8f9fa;
+        .nav-tab.active {
+            color: #1e3a8a;
+            border-bottom-color: #1e3a8a;
+            font-weight: bold;
         }
 
         .tab-content {
-            background: white;
-            padding: 2rem;
-            border-radius: 0 0 8px 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            min-height: 600px;
-        }
-
-        .tab-pane {
             display: none;
         }
 
-        .tab-pane.active {
+        .tab-content.active {
             display: block;
-            animation: fadeIn 0.3s ease;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        .btn {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.5);
+            color: white;
+            font-size: 1rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
+        .btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
         }
 
-        h3 {
-            color: var(--secondary-color);
-            margin: 1.5rem 0 1rem 0;
-            font-size: 1.3rem;
-        }
-
-        h4 {
-            color: var(--primary-color);
-            margin: 1rem 0 0.5rem 0;
-            font-size: 1.1rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-            text-align: justify;
-        }
-
-        ul, ol {
-            margin-left: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        .highlight-box {
-            background: var(--light-bg);
-            border-left: 4px solid var(--secondary-color);
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .warning-box {
-            background: #fef9e7;
-            border-left: 4px solid var(--warning-color);
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .success-box {
-            background: #e9f7ef;
-            border-left: 4px solid var(--success-color);
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 0 8px 8px 0;
-        }
-
-        table {
+        .grading-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 1.5rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin: 1rem 0;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        th, td {
+        .grading-table th {
+            background-color: #1e3a8a;
+            color: white;
             padding: 1rem;
             text-align: left;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        th {
-            background: var(--primary-color);
-            color: white;
-            font-weight: 600;
-        }
-
-        tr:nth-child(even) {
-            background: #f8f9fa;
-        }
-
-        tr:hover {
-            background: #e9ecef;
-        }
-
-        .phase-header {
-            background: var(--secondary-color);
-            color: white;
-            padding: 0.75rem 1rem;
-            margin: 1.5rem 0 1rem 0;
-            border-radius: 8px;
-            font-weight: 600;
-        }
-
-        .week-card {
-            background: white;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .week-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .week-card h4 {
-            color: var(--primary-color);
-            margin-top: 0;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--light-bg);
-        }
-
-        .week-number {
-            background: var(--accent-color);
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.85rem;
             font-weight: bold;
-            display: inline-block;
-            margin-bottom: 0.5rem;
         }
 
-        .grade-scale {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            margin: 1.5rem 0;
+        .grading-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid #e2e8f0;
         }
 
-        .grade-item {
-            background: var(--light-bg);
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: 600;
-        }
-
-        .grade-item .letter {
-            font-size: 2rem;
-            color: var(--secondary-color);
-        }
-
-        .grade-item .range {
-            font-size: 0.9rem;
-            color: var(--text-color);
-            font-weight: normal;
-        }
-
-        .materials-list {
-            list-style: none;
-            margin-left: 0;
-        }
-
-        .materials-list li {
-            padding: 0.75rem;
-            background: var(--light-bg);
-            margin-bottom: 0.5rem;
-            border-radius: 4px;
-            border-left: 4px solid var(--secondary-color);
-        }
-
-        .policy-card {
-            background: white;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .policy-card h4 {
-            color: var(--secondary-color);
-            margin-top: 0;
-        }
-
-        .contact-info {
-            background: var(--light-bg);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 0.75rem;
-        }
-
-        .contact-item .icon {
-            width: 30px;
-            height: 30px;
-            background: var(--secondary-color);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .important-dates {
-            background: #fef9e7;
-            border: 2px solid var(--warning-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-        }
-
-        .important-dates h3 {
-            color: #d68910;
-            margin-top: 0;
-        }
-
-        .date-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.75rem;
-            border-bottom: 1px solid rgba(214, 137, 16, 0.2);
-        }
-
-        .date-item:last-child {
+        .grading-table tr:last-child td {
             border-bottom: none;
         }
 
-        .date-item .date {
-            font-weight: 600;
-            color: var(--primary-color);
+        .grading-table tr:nth-child(even) {
+            background-color: #f8fafc;
         }
 
-        .date-item .event {
-            color: var(--text-color);
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            font-size: 1.2rem;
+            color: #6b7280;
         }
 
         @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .nav-tab {
+                padding: 0.8rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .phase-container {
+                padding: 1rem;
+            }
+
+            .week-item {
+                padding: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.7rem;
+            }
+
             .nav-tabs {
                 flex-direction: column;
             }
 
-            .nav-tabs button {
-                border-bottom: 1px solid var(--border-color);
+            .nav-tab {
+                text-align: center;
+                border-bottom: 1px solid #e2e8f0;
+                border-radius: 0;
             }
 
-            header h1 {
-                font-size: 1.8rem;
+            .nav-tab.active {
+                border-bottom: 1px solid #1e3a8a;
+                background-color: #f8fafc;
             }
+        }
 
-            .grade-scale {
-                grid-template-columns: 1fr;
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #1e3a8a;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .skip-link:focus {
+            top: 6px;
+        }
+
+        @media print {
+            body {
+                font-family: Arial, sans-serif;
+                font-size: 12px;
+                line-height: 1.4;
+                color: #000;
             }
-
-            table {
-                font-size: 0.9rem;
+            
+            .container {
+                max-width: none;
+                padding: 0;
             }
-
-            th, td {
-                padding: 0.5rem;
+            
+            header {
+                background: none !important;
+                color: #000 !important;
+                padding: 1rem 0;
+                border-bottom: 2px solid #000;
+            }
+            
+            .nav-tabs, .btn, .collapsible::after {
+                display: none !important;
+            }
+            
+            .tab-content {
+                display: block !important;
+            }
+            
+            .collapsible-content {
+                max-height: none !important;
+                overflow: visible !important;
+            }
+            
+            .phase-container, .description-box, .slo-list {
+                border: 1px solid #ccc;
+                background: none;
+                break-inside: avoid;
+            }
+            
+            .week-item {
+                border: 1px solid #ccc;
+                break-inside: avoid;
+                margin: 0.5rem 0;
+            }
+            
+            h2 {
+                page-break-after: avoid;
+                border-bottom: 2px solid #000;
+            }
+            
+            .page-break {
+                page-break-before: always;
             }
         }
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <div class="loading" id="loading">Loading syllabus data...</div>
+    
     <div id="syllabus-content" style="display: none;">
         <header>
             <div class="container">
-                <span class="course-code">CSC210L</span>
-                <h1>Computer Organization and Architecture Lab</h1>
-                <h2>Hands-on Laboratory Course</h2>
-                
-                <div class="meeting-info">
-                    <h3>📅 Class Meeting Schedule</h3>
-                    <p><strong>Day:</strong> Tuesday</p>
-                    <p><strong>Time:</strong> 2:00 PM - 3:20 PM</p>
-                    <p><strong>Location:</strong> Zoom (Synchronous Online)</p>
-                    <p><strong>Format:</strong> Hybrid (1/2 synchronous, 1/2 asynchronous)</p>
+                <h1 id="course-title"></h1>
+                <p class="course-subtitle" id="course-subtitle"></p>
+                <div style="margin-top: 1.5rem;">
+                    <button class="btn" onclick="downloadSyllabusAsPDF()">
+                        📄 Download Syllabus (pdf)
+                    </button>
                 </div>
             </div>
         </header>
 
         <main id="main-content" class="container">
             <div class="nav-tabs" role="tablist">
-                <button class="active" onclick="showTab('overview')" id="tab-overview" role="tab" aria-selected="true">
-                    📚 Course Overview
-                </button>
-                <button onclick="showTab('instructor')" id="tab-instructor" role="tab" aria-selected="false">
-                    👨‍🏫 Instructor & Course Info
-                </button>
-                <button onclick="showTab('outline')" id="tab-outline" role="tab" aria-selected="false">
-                    📋 Course Outline
-                </button>
-                <button onclick="showTab('policies')" id="tab-policies" role="tab" aria-selected="false">
-                    📜 Policies & Resources
-                </button>
+                <button class="nav-tab active" role="tab" aria-selected="true" aria-controls="overview-tab" id="overview-btn">Course Overview</button>
+                <button class="nav-tab" role="tab" aria-selected="false" aria-controls="instructor-tab" id="instructor-btn">Instructor & Course Info</button>
+                <button class="nav-tab" role="tab" aria-selected="false" aria-controls="outline-tab" id="outline-btn">Course Outline</button>
+                <button class="nav-tab" role="tab" aria-selected="false" aria-controls="policies-tab" id="policies-btn">Policies & Resources</button>
             </div>
 
-            <div class="tab-content">
-                <!-- Course Overview Tab -->
-                <div id="overview" class="tab-pane active" role="tabpanel" aria-labelledby="tab-overview">
-                    <h2>Course Overview</h2>
-                    <div id="overview-content">
-                        <p>Loading course overview...</p>
-                    </div>
-                </div>
-
-                <!-- Instructor & Course Info Tab -->
-                <div id="instructor" class="tab-pane" role="tabpanel" aria-labelledby="tab-instructor">
-                    <h2>Instructor & Course Information</h2>
-                    <div id="instructor-content">
-                        <p>Loading instructor information...</p>
-                    </div>
-                </div>
-
-                <!-- Course Outline Tab -->
-                <div id="outline" class="tab-pane" role="tabpanel" aria-labelledby="tab-outline">
-                    <h2>Course Outline</h2>
-                    <div id="outline-content">
-                        <p>Loading course outline...</p>
-                    </div>
-                </div>
-
-                <!-- Policies & Resources Tab -->
-                <div id="policies" class="tab-pane" role="tabpanel" aria-labelledby="tab-policies">
-                    <h2>Policies & Resources</h2>
-                    <div id="policies-content">
-                        <p>Loading policies...</p>
-                    </div>
-                </div>
-            </div>
+            <div id="overview-tab" class="tab-content active" role="tabpanel" aria-labelledby="overview-btn"></div>
+            <div id="instructor-tab" class="tab-content" role="tabpanel" aria-labelledby="instructor-btn"></div>
+            <div id="outline-tab" class="tab-content" role="tabpanel" aria-labelledby="outline-btn"></div>
+            <div id="policies-tab" class="tab-content" role="tabpanel" aria-labelledby="policies-btn"></div>
         </main>
     </div>
 
     <script>
-        // Configuration - Change course code here
+        // ============================================
+        // GITHUB CONFIGURATION
+        // ============================================
+        // Update these URLs to point to YOUR GitHub repository
         const GITHUB_BASE_URL = 'https://raw.githubusercontent.com/dpai-mc/dyn-syllabi/main';
+        
+        // Course code - CHANGE THIS FOR EACH COURSE
         const COURSE_CODE = 'csc210l';  // Change to: csc104, csc106, csc150, etc.
+        
+        // Data file URLs (automatically constructed)
         const COURSE_DATA_URL = `${GITHUB_BASE_URL}/data/course-${COURSE_CODE}-info.json`;
         const INSTRUCTOR_DATA_URL = `${GITHUB_BASE_URL}/data/instructor-info.json`;
         const POLICIES_DATA_URL = `${GITHUB_BASE_URL}/data/college-policies.json`;
+        // ============================================
 
-        // Tab switching functionality
-        function showTab(tabName) {
-            // Hide all tab panes
-            document.querySelectorAll('.tab-pane').forEach(pane => {
-                pane.classList.remove('active');
-            });
+        let courseData, instructorData, policiesData;
 
-            // Deactivate all tab buttons
-            document.querySelectorAll('.nav-tabs button').forEach(btn => {
-                btn.classList.remove('active');
-                btn.setAttribute('aria-selected', 'false');
-            });
-
-            // Show selected tab pane
-            document.getElementById(tabName).classList.add('active');
-
-            // Activate selected tab button
-            document.getElementById(`tab-${tabName}`).classList.add('active');
-            document.getElementById(`tab-${tabName}`).setAttribute('aria-selected', 'true');
-        }
-
-        // Fetch and display course data
-        async function loadCourseData() {
+        // Load all JSON data files from GitHub
+        async function loadAllData() {
             try {
-                const [courseData, instructorData, policiesData] = await Promise.all([
-                    fetch(COURSE_DATA_URL).then(res => res.json()),
-                    fetch(INSTRUCTOR_DATA_URL).then(res => res.json()),
-                    fetch(POLICIES_DATA_URL).then(res => res.json())
+                const [course, instructor, policies] = await Promise.all([
+                    fetch(COURSE_DATA_URL).then(r => {
+                        if (!r.ok) throw new Error(`Failed to load course data: ${r.status}`);
+                        return r.json();
+                    }),
+                    fetch(INSTRUCTOR_DATA_URL).then(r => {
+                        if (!r.ok) throw new Error(`Failed to load instructor data: ${r.status}`);
+                        return r.json();
+                    }),
+                    fetch(POLICIES_DATA_URL).then(r => {
+                        if (!r.ok) throw new Error(`Failed to load policies data: ${r.status}`);
+                        return r.json();
+                    })
                 ]);
-
-                // Render all tabs
-                renderOverviewTab(courseData);
-                renderInstructorTab(courseData, instructorData);
-                renderOutlineTab(courseData);
-                renderPoliciesTab(policiesData, courseData);
-
-                // Show syllabus content
-                document.getElementById('syllabus-content').style.display = 'block';
-                document.body.style.backgroundColor = '#f5f5f5';
-
-            } catch (error) {
-                console.error('Error loading course data:', error);
-                displayError('Failed to load course data. Please check your internet connection and try again.');
-            }
-        }
-
-        // Render Course Overview Tab
-        function renderOverviewTab(data) {
-            const content = document.getElementById('overview-content');
-            
-            let html = `
-                <div class="highlight-box">
-                    <h3>📖 Course Description</h3>
-                    <p>${data.description.text}</p>
-                    ${data.description.additionalInfo ? `<p><em>${data.description.additionalInfo}</em></p>` : ''}
-                </div>
-
-                <div class="success-box">
-                    <h3>🎯 Course Purpose</h3>
-                    <p>${data.purpose.text}</p>
-                </div>
-
-                <h3>🎓 Student Learning Outcomes</h3>
-                <ol>
-                    ${data.slos.map(slo => `<li>${slo}</li>`).join('')}
-                </ol>
-            `;
-
-            // Add grading breakdown
-            html += `
-                <h3>📊 Grading Breakdown</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Component</th>
-                            <th>Points</th>
-                            <th>Percentage</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${data.grading.breakdown.map(item => `
-                            <tr>
-                                <td>${item.component}</td>
-                                <td>${item.points}</td>
-                                <td>${item.percentage}%</td>
-                            </tr>
-                        `).join('')}
-                        <tr style="font-weight: bold; background: var(--light-bg);">
-                            <td>TOTAL</td>
-                            <td>${data.grading.totalPoints}</td>
-                            <td>100%</td>
-                        </tr>
-                    </tbody>
-                </table>
-            `;
-
-            // Add grade scale
-            html += `
-                <h3>📈 Grade Scale</h3>
-                <div class="grade-scale">
-                    ${data.grading.scale.map(grade => `
-                        <div class="grade-item">
-                            <div class="letter">${grade.letter}</div>
-                            <div class="range">${grade.percentage}% and above</div>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
-
-            // Add materials
-            html += `
-                <h3>📚 Required Materials</h3>
-                <ul class="materials-list">
-                    ${data.materials.required.map(item => `<li>${item}</li>`).join('')}
-                </ul>
-            `;
-
-            if (data.materials.optional && data.materials.optional.length > 0) {
-                html += `
-                    <h3>📖 Optional Materials</h3>
-                    <ul class="materials-list">
-                        ${data.materials.optional.map(item => `<li>${item}</li>`).join('')}
-                    </ul>
-                `;
-            }
-
-            // Add important dates
-            if (data.importantDates && data.importantDates.length > 0) {
-                html += `
-                    <div class="important-dates">
-                        <h3>📅 Important Dates</h3>
-                        ${data.importantDates.map(date => `
-                            <div class="date-item">
-                                <span class="date">${date.date}</span>
-                                <span class="event">${date.event}</span>
-                            </div>
-                        `).join('')}
-                    </div>
-                `;
-            }
-
-            // Add workload
-            html += `
-                <div class="warning-box">
-                    <h3>⏱️ Expected Workload</h3>
-                    <p><strong>Weekly Time Commitment:</strong> ${data.workload.weeklyHours} hours/week</p>
-                    <p>${data.workload.breakdown}</p>
-                </div>
-            `;
-
-            content.innerHTML = html;
-        }
-
-        // Render Instructor & Course Info Tab
-        function renderInstructorTab(courseData, instructorData) {
-            const content = document.getElementById('instructor-content');
-            
-            let html = `
-                <div class="contact-info">
-                    <h3>👨‍🏫 Instructor Information</h3>
-                    <div class="contact-item">
-                        <div class="icon">👤</div>
-                        <div><strong>Name:</strong> ${instructorData.name}</div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="icon">📧</div>
-                        <div><strong>Email:</strong> <a href="mailto:${instructorData.email}">${instructorData.email}</a></div>
-                    </div>
-                    ${instructorData.phone ? `
-                    <div class="contact-item">
-                        <div class="icon">📞</div>
-                        <div><strong>Phone:</strong> ${instructorData.phone}</div>
-                    </div>
-                    ` : ''}
-                    ${instructorData.office.location ? `
-                    <div class="contact-item">
-                        <div class="icon">🏢</div>
-                        <div><strong>Office:</strong> ${instructorData.office.location}</div>
-                    </div>
-                    ` : ''}
-                    ${instructorData.zoom.link ? `
-                    <div class="contact-item">
-                        <div class="icon">💻</div>
-                        <div><strong>Zoom:</strong> <a href="${instructorData.zoom.link}" target="_blank">${instructorData.zoom.link}</a></div>
-                    </div>
-                    ` : ''}
-                </div>
-
-                <div class="highlight-box">
-                    <h3>🕐 Student Hours</h3>
-                    ${instructorData.studentHours.map(slot => `
-                        <p><strong>${slot.day}:</strong> ${slot.time}</p>
-                        ${slot.location ? `<p><em>Location: ${slot.location}</em></p>` : ''}
-                        ${slot.schedule ? `
-                            <ul>
-                                ${slot.schedule.map(s => `<li>${s.day}: ${s.time} ${s.location ? '- ' + s.location : ''}</li>`).join('')}
-                            </ul>
-                        ` : ''}
-                    `).join('')}
-                    <p><em>Please schedule an appointment during office hours or email to arrange an alternative time.</em></p>
-                </div>
-            `;
-
-            // Add course-specific policies if they exist
-            if (courseData.policies) {
-                html += `
-                    <h3>📋 Course-Specific Policies</h3>
-                `;
                 
-                if (courseData.policies.lateSubmission) {
-                    html += `
-                        <div class="policy-card">
-                            <h4>Late Submission Policy</h4>
-                            <p>${courseData.policies.lateSubmission}</p>
-                        </div>
-                    `;
-                }
-
-                if (courseData.policies.attendance) {
-                    html += `
-                        <div class="policy-card">
-                            <h4>Attendance Policy</h4>
-                            <p>${courseData.policies.attendance}</p>
-                        </div>
-                    `;
-                }
-
-                if (courseData.policies.communication) {
-                    html += `
-                        <div class="policy-card">
-                            <h4>Communication Policy</h4>
-                            <p>${courseData.policies.communication}</p>
-                        </div>
-                    `;
-                }
+                courseData = course;
+                instructorData = instructor;
+                policiesData = policies;
+                
+                renderSyllabus();
+                
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('syllabus-content').style.display = 'block';
+                
+                initializeTabs();
+                initializeCollapsibles();
+            } catch (error) {
+                document.getElementById('loading').innerHTML = 
+                    `<p style="color: #ef4444;">Error loading syllabus data: ${error.message}</p>
+                     <p style="margin-top: 1rem;">Please check:</p>
+                     <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
+                        <li>GITHUB_BASE_URL is set correctly (line 492)</li>
+                        <li>COURSE_CODE is set correctly (line 495)</li>
+                        <li>JSON files exist in your GitHub repository</li>
+                        <li>Repository is public or files are accessible</li>
+                     </ul>`;
+                console.error('Full error:', error);
             }
-
-            content.innerHTML = html;
         }
 
-        // Render Course Outline Tab
-        function renderOutlineTab(data) {
-            const content = document.getElementById('outline-content');
+        function renderSyllabus() {
+            document.getElementById('page-title').textContent = 
+                `${courseData.metadata.code}: ${courseData.metadata.title}`;
+            document.getElementById('course-title').textContent = 
+                `${courseData.metadata.code}: ${courseData.metadata.title}`;
+            document.getElementById('course-subtitle').textContent = 
+                `${courseData.metadata.credits}-Credit ${courseData.metadata.format} Course (${courseData.metadata.creditBreakdown})`;
+
+            renderOverviewTab();
+            renderInstructorTab();
+            renderOutlineTab();
+            renderPoliciesTab();
+        }
+
+        function renderOverviewTab() {
+            const tab = document.getElementById('overview-tab');
+            let html = `<section><h2>Course Description</h2><div class="description-box"><p>${courseData.description.catalog}</p>`;
+            if (courseData.description.expanded) html += `<p style="margin-top: 1rem;">${courseData.description.expanded}</p>`;
+            html += `</div><h2>Student Learning Outcomes</h2><div class="slo-list"><p>Upon successful completion of this course, students will be able to:</p><ul>`;
+            courseData.slos.forEach(slo => html += `<li>${slo}</li>`);
+            html += `</ul></div>`;
+            if (courseData.purpose) {
+                html += `<h2>Why Take This Course?</h2><div class="phase-container"><p>${courseData.purpose.why}</p>`;
+                if (courseData.purpose.beyond) html += `<p style="margin-top: 1rem;">${courseData.purpose.beyond}</p>`;
+                html += `</div>`;
+            }
+            html += `</section>`;
+            tab.innerHTML = html;
+        }
+
+        function renderInstructorTab() {
+            const tab = document.getElementById('instructor-tab');
+            let html = `<section><h2>Instructor Information</h2><div class="description-box">`;
+            html += `<p><strong>Instructor:</strong> ${instructorData.name}<br>`;
+            html += `<strong>Office:</strong> ${instructorData.office.location}<br>`;
+            html += `<strong>Email:</strong> <a href="mailto:${instructorData.email}" style="color: #1e3a8a;">${instructorData.email}</a><br>`;
+            html += `<strong>Phone:</strong> ${instructorData.phone}<br>`;
+            html += `<strong>Zoom Room:</strong> <a href="${instructorData.zoom.url}" style="color: #1e3a8a;" target="_blank" rel="noopener">${instructorData.zoom.label}</a></p></div>`;
             
-            let html = `
-                <div class="warning-box">
-                    <p><strong>Note:</strong> This schedule is subject to change at the instructor's discretion. Students will be notified of any changes via Canvas announcements.</p>
-                </div>
-            `;
+            html += `<h2>Class Meeting Information</h2><div class="slo-list">`;
+            html += `<p><strong>Format:</strong> ${courseData.metadata.format}<br>`;
+            if (courseData.metadata.meetingSchedule) {
+                html += `<strong>Meeting Schedule:</strong> ${courseData.metadata.meetingSchedule.days}, ${courseData.metadata.meetingSchedule.time} @ ${courseData.metadata.meetingSchedule.location}<br>`;
+                html += `<strong>Modality:</strong> ${courseData.metadata.meetingSchedule.modality}<br>`;
+            }
+            html += `<strong>Credit Hours:</strong> ${courseData.metadata.credits} units (${courseData.metadata.creditBreakdown})<br>`;
+            html += `<strong>Semester:</strong> ${courseData.metadata.term}<br>`;
+            html += `<strong>Prerequisite:</strong> ${courseData.metadata.prerequisite}</p></div>`;
+            
+            html += `<h2>Student Hours (Office Hours)</h2><div class="phase-container">`;
+            instructorData.studentHours.forEach(hours => {
+                if (hours.type === 'online') {
+                    html += `<h4><a href="${hours.link}" style="color: #1e3a8a;" target="_blank" rel="noopener">Online via Zoom</a></h4>`;
+                    html += `<p>${hours.days} ${hours.time}${hours.note ? ` (${hours.note})` : ''}</p>`;
+                } else if (hours.type === 'in-office') {
+                    html += `<h4>In Office (${hours.location})</h4><ul style="list-style-type: disc; padding-left: 2rem; margin: 1rem 0;">`;
+                    hours.schedule.forEach(s => html += `<li>${s.day}: ${s.time}</li>`);
+                    html += `</ul>`;
+                } else if (hours.type === 'appointment') {
+                    html += `<h4>${hours.method}</h4><p>Schedule via <a href="${hours.link}" style="color: #1e3a8a;" target="_blank" rel="noopener">online calendar</a></p>`;
+                }
+            });
+            if (instructorData.encouragementMessage) {
+                html += `<p style="margin-top: 1rem; padding: 1rem; background-color: #fef3c7; border-radius: 6px;"><strong>Please use student hours!</strong> ${instructorData.encouragementMessage}</p>`;
+            }
+            html += `</div>`;
+            
+            // Materials
+            html += `<h2>Course Materials</h2><div class="phase-container">`;
+            html += `<h3>Required Materials</h3><ul style="list-style-type: disc; padding-left: 2rem;">`;
+            courseData.materials.required.forEach(material => html += `<li>${material}</li>`);
+            html += `</ul>`;
+            if (courseData.materials.optional && courseData.materials.optional.length > 0) {
+                html += `<h3>Optional Materials</h3><ul style="list-style-type: disc; padding-left: 2rem;">`;
+                courseData.materials.optional.forEach(material => html += `<li>${material}</li>`);
+                html += `</ul>`;
+            }
+            html += `</div>`;
+            
+            // Important Dates
+            if (courseData.importantDates && courseData.importantDates.length > 0) {
+                html += `<h2>Important Course Dates</h2><div class="slo-list">`;
+                html += `<ul style="list-style-type: none; padding-left: 0;">`;
+                courseData.importantDates.forEach(date => {
+                    html += `<li style="margin: 0.75rem 0;"><strong>Week ${date.week} - ${date.event}:</strong> ${date.description}</li>`;
+                });
+                html += `</ul></div>`;
+            }
+            
+            // Workload
+            if (courseData.workload) {
+                html += `<h2>Expected Workload</h2><div class="description-box">`;
+                html += `<p><strong>Time Commitment:</strong> Approximately ${courseData.workload.hoursPerWeek} hours per week</p>`;
+                html += `<p><strong>Breakdown:</strong> ${courseData.workload.breakdown}</p>`;
+                if (courseData.workload.notes) {
+                    html += `<p style="margin-top: 0.5rem;"><em>${courseData.workload.notes}</em></p>`;
+                }
+                html += `</div>`;
+            }
+            
+            // Grading
+            html += `<h2>Grading Breakdown</h2><div class="phase-container">`;
+            html += `<table class="grading-table">`;
+            html += `<thead><tr><th>Category</th><th>Percentage</th><th>Description</th></tr></thead>`;
+            html += `<tbody>`;
+            courseData.grading.breakdown.forEach(item => {
+                html += `<tr><td>${item.category}</td><td>${item.percentage}%</td><td>${item.description}</td></tr>`;
+            });
+            html += `</tbody></table>`;
+            html += `<h3>Grade Scale</h3><ul style="list-style-type: none; padding-left: 0;">`;
+            courseData.grading.scale.forEach(grade => {
+                html += `<li style="margin: 0.5rem 0;"><strong>${grade.grade}:</strong> ${grade.range}</li>`;
+            });
+            html += `</ul></div>`;
+            
+            // Course Policies
+            if (courseData.policies) {
+                html += `<h2>Course Policies</h2><div class="phase-container">`;
+                if (courseData.policies.attendance) {
+                    html += `<h3>Attendance</h3><p>${courseData.policies.attendance}</p>`;
+                }
+                if (courseData.policies.lateWork) {
+                    html += `<h3>Late Work Policy</h3><p>${courseData.policies.lateWork}</p>`;
+                }
+                if (courseData.policies.makeupExams) {
+                    html += `<h3>Makeup Exams</h3><p>${courseData.policies.makeupExams}</p>`;
+                }
+                if (courseData.policies.academicIntegrity) {
+                    html += `<h3>Academic Integrity</h3><p>${courseData.policies.academicIntegrity}</p>`;
+                }
+                html += `</div>`;
+            }
+            
+            html += `</section>`;
+            tab.innerHTML = html;
+        }
 
-            // Render each phase
-            data.schedule.phases.forEach((phase, phaseIndex) => {
-                html += `
-                    <div class="phase-header">
-                        ${phase.title} (Weeks ${phase.weekRange.start}-${phase.weekRange.end})
-                    </div>
-                    <p>${phase.description}</p>
-                `;
+        function renderOutlineTab() {
+            const tab = document.getElementById('outline-tab');
+            let html = `<section><h2>Course Schedule</h2>`;
+            
+            if (courseData.schedule && courseData.schedule.phases) {
+                courseData.schedule.phases.forEach(phase => {
+                    html += `<div class="phase-container">`;
+                    html += `<h3>${phase.title}</h3>`;
+                    html += `<p>${phase.description}</p>`;
+                    
+                    phase.weeks.forEach(week => {
+                        html += `<div class="week-item">`;
+                        html += `<div class="week-header">`;
+                        html += `<strong>Week ${week.weekNumber}</strong> (${week.dates})`;
+                        html += `</div>`;
+                        
+                        html += `<div class="week-content">`;
+                        
+                        // Topics
+                        if (week.topics && week.topics.length > 0) {
+                            html += `<h4>Topics:</h4><ul>`;
+                            week.topics.forEach(topic => {
+                                html += `<li>${topic}</li>`;
+                            });
+                            html += `</ul>`;
+                        }
+                        
+                        // Readings
+                        if (week.readings) {
+                            html += `<p><strong>Readings:</strong> ${week.readings}</p>`;
+                        }
+                        
+                        // Assignments
+                        if (week.assignments && week.assignments.length > 0) {
+                            html += `<h4>Assignments:</h4><ul>`;
+                            week.assignments.forEach(assignment => {
+                                html += `<li>${assignment}</li>`;
+                            });
+                            html += `</ul>`;
+                        }
+                        
+                        // Due date
+                        if (week.deliverableDueDate) {
+                            html += `<p><strong>Due Date:</strong> ${week.deliverableDueDate}</p>`;
+                        }
+                        
+                        // Notes
+                        if (week.notes) {
+                            html += `<p><em>${week.notes}</em></p>`;
+                        }
+                        
+                        html += `</div></div>`;
+                    });
+                    
+                    html += `</div>`;
+                });
+            }
+            
+            html += `</section>`;
+            tab.innerHTML = html;
+        }
 
-                // Render weeks in this phase
-                phase.weeks.forEach(week => {
-                    html += `
-                        <div class="week-card">
-                            <span class="week-number">${week.weekLabel}</span>
-                            <h4>${week.topic}</h4>
-                            
-                            <h5>Topics Covered:</h5>
-                            <ul>
-                                ${week.topics.map(topic => `<li>${topic}</li>`).join('')}
-                            </ul>
-                            
-                            <h5>Assignments & Activities:</h5>
-                            <ul>
-                                ${week.assignments.map(assignment => `<li>${assignment}</li>`).join('')}
-                            </ul>
-                        </div>
-                    `;
+        function renderPoliciesTab() {
+            const tab = document.getElementById('policies-tab');
+            let html = `<section><h2>Course Policies & Student Support</h2>`;
+            
+            policiesData.policies.forEach(policy => {
+                html += `<h3>${policy.title}</h3>`;
+                html += `<div class="description-box">`;
+                html += `<p>${policy.content}</p>`;
+                
+                // Render contact information with mailto links for emails
+                if (policy.contact) {
+                    html += `<p style="margin-top: 1rem;"><strong>Contact:</strong> ${policy.contact}`;
+                    
+                    // Add mailto link if contactEmail field exists
+                    if (policy.contactEmail) {
+                        html += ` | <a href="mailto:${policy.contactEmail}" style="color: #1e3a8a;">${policy.contactEmail}</a>`;
+                    }
+                    html += `</p>`;
+                }
+                
+                // Render link with proper link text (not bare URL)
+                if (policy.link && policy.linkText) {
+                    html += `<p style="margin-top: 0.5rem;"><strong>More Info:</strong> `;
+                    html += `<a href="${policy.link}" style="color: #1e3a8a;" target="_blank" rel="noopener">${policy.linkText}</a>`;
+                    html += `</p>`;
+                }
+                
+                // Handle Spanish link for RESOURCES policy
+                if (policy.code === 'RESOURCES' && policy.linkSpanish && policy.linkTextSpanish) {
+                    html += ` | <a href="${policy.linkSpanish}" style="color: #1e3a8a;" target="_blank" rel="noopener">${policy.linkTextSpanish}</a>`;
+                }
+                
+                html += `</div>`;
+            });
+            
+            // Emergency Contacts section
+            if (policiesData.emergencyContacts && policiesData.emergencyContacts.length > 0) {
+                html += `<h2 style="margin-top: 3rem;">Emergency Contacts</h2>`;
+                html += `<div class="slo-list">`;
+                html += `<p><strong>Available 24/7:</strong></p><ul style="list-style-type: disc; padding-left: 2rem;">`;
+                
+                policiesData.emergencyContacts.forEach(contact => {
+                    html += `<li><strong>${contact.service}:</strong> ${contact.phone}</li>`;
+                });
+                
+                html += `</ul></div>`;
+            }
+            
+            // Key Dates section
+            if (policiesData.keyDates && policiesData.keyDates.length > 0) {
+                html += `<h2 style="margin-top: 3rem;">Important Semester Dates</h2>`;
+                html += `<div class="slo-list">`;
+                html += `<ul style="list-style-type: none; padding-left: 0;">`;
+                
+                policiesData.keyDates.forEach(dateItem => {
+                    html += `<li style="margin: 0.75rem 0;"><strong>${dateItem.description}:</strong> ${dateItem.date}</li>`;
+                });
+                
+                html += `</ul></div>`;
+            }
+            
+            html += `</section>`;
+            tab.innerHTML = html;
+        }
+
+        function initializeTabs() {
+            const tabButtons = document.querySelectorAll('.nav-tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    tabButtons.forEach(tab => {
+                        tab.classList.remove('active');
+                        tab.setAttribute('aria-selected', 'false');
+                    });
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    button.classList.add('active');
+                    button.setAttribute('aria-selected', 'true');
+                    document.getElementById(button.getAttribute('aria-controls')).classList.add('active');
                 });
             });
-
-            content.innerHTML = html;
         }
 
-        // Render Policies & Resources Tab
-        function renderPoliciesTab(policiesData, courseData) {
-            const content = document.getElementById('policies-content');
-            
-            let html = `
-                <h3>📜 College Policies</h3>
-            `;
-
-            // Render each policy
-            policiesData.policies.forEach(policy => {
-                html += `
-                    <div class="policy-card">
-                        <h4>${policy.title}</h4>
-                        <p>${policy.description}</p>
-                        ${policy.additionalInfo ? `<p><em>${policy.additionalInfo}</em></p>` : ''}
-                    </div>
-                `;
+        function initializeCollapsibles() {
+            document.querySelectorAll('.collapsible').forEach(collapsible => {
+                collapsible.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    const content = this.nextElementSibling;
+                    if (content.classList.contains('active')) {
+                        content.classList.remove('active');
+                        this.setAttribute('aria-expanded', 'false');
+                    } else {
+                        content.classList.add('active');
+                        this.setAttribute('aria-expanded', 'true');
+                    }
+                });
             });
-
-            // Add emergency contacts
-            html += `
-                <h3>🚨 Emergency Contacts</h3>
-                <div class="contact-info">
-                    ${policiesData.emergencyContacts.map(contact => `
-                        <div class="contact-item">
-                            <div class="icon">🆘</div>
-                            <div>
-                                <strong>${contact.department}:</strong> ${contact.phone}
-                                ${contact.hours ? `<br><em>Available: ${contact.hours}</em>` : ''}
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
-
-            // Add key dates from policies
-            if (policiesData.keyDates && policiesData.keyDates.length > 0) {
-                html += `
-                    <div class="important-dates">
-                        <h3>📅 Key Academic Dates</h3>
-                        ${policiesData.keyDates.map(date => `
-                            <div class="date-item">
-                                <span class="date">${date.date}</span>
-                                <span class="event">${date.event}</span>
-                            </div>
-                        `).join('')}
-                    </div>
-                `;
-            }
-
-            content.innerHTML = html;
         }
 
-        // Display error message
-        function displayError(message) {
-            const content = document.getElementById('syllabus-content');
-            content.innerHTML = `
-                <div class="container">
-                    <div class="warning-box" style="border-color: var(--accent-color); background: #fdeaea;">
-                        <h3 style="color: var(--accent-color);">⚠️ Error</h3>
-                        <p>${message}</p>
-                        <p>Please try refreshing the page or contact the instructor if the problem persists.</p>
-                    </div>
-                </div>
-            `;
-            content.style.display = 'block';
+        function downloadSyllabusAsPDF() {
+            window.print();
         }
 
-        // Initialize the syllabus when page loads
-        document.addEventListener('DOMContentLoaded', loadCourseData);
+        window.addEventListener('DOMContentLoaded', loadAllData);
     </script>
 </body>
 </html>
