@@ -16,7 +16,14 @@
     {
       "type": "online",
       "days": "Mondays",
-      "time": "2:00 PM - 4:00 PM",
+      "time": "3:00 PM - 5:00 PM",
+      "link": "https://mendocino-edu.zoom.us/my/davepai",
+      "note": "Please pre-schedule an appointment:  <a href=\"https://calendly.com/dpai\" target=\"_blank\">Calendar</a>"
+    },
+    {
+      "type": "online",
+      "days": "Thursdays",
+      "time": "4:00 PM - 5:00 PM",
       "link": "https://mendocino-edu.zoom.us/my/davepai",
       "note": "Please pre-schedule an appointment:  <a href=\"https://calendly.com/dpai\" target=\"_blank\">Calendar</a>"
     },
@@ -30,11 +37,7 @@
         },
         {
           "day": "Wednesday",
-          "time": "12:30 PM - 1:30 PM"
-        },
-        {
-          "day": "Thursday",
-          "time": "12:30 PM - 1:30 PM"
+          "time": "1:00 PM - 2:00 PM"
         }
       ],
       "note": "Drop-in welcome, no appointment needed"
