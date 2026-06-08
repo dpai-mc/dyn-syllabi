@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSC154 - Network Security Syllabus</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-bg: #ecf0f1;
+            --border-color: #bdc3c7;
+            --text-color: #2c3e50;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header .course-code {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        #syllabus-content {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .nav-tabs {
+            display: flex;
+            background: var(--light-bg);
+            border-bottom: 2px solid var(--border-color);
+            overflow-x: auto;
+        }
+
+        .nav-tabs button {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-tabs button:hover {
+            background: rgba(52, 152, 219, 0.1);
+            color: var(--secondary-color);
+        }
+
+        .nav-tabs button.active {
+            color: var(--secondary-color);
+            border-bottom-color: var(--secondary-color);
+            background: white;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 2rem;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.3rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .info-card {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .info-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .phase {
+            background: var(--light-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .phase-header {
+            background: var(--secondary-color);
+            color: white;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .phase-header h3 {
+            color: white;
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .week {
+            background: white;
+            border-left: 3px solid var(--border-color);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .week-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .week-number {
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .week-dates {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .topics-list, .assignments-list {
+            margin: 0.5rem 0;
+        }
+
+        .topics-list strong, .assignments-list strong {
+            color: var(--primary-color);
+        }
+
+        .grading-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .grading-table th, .grading-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .grading-table th {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .grading-table tr:hover {
+            background: var(--light-bg);
+        }
+
+        .percentage {
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .important-dates {
+            background: #fff3cd;
+            border-left: 4px solid var(--warning-color);
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+
+        .error {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .nav-tabs {
+                flex-wrap: wrap;
+            }
+
+            .nav-tabs button {
+                flex-basis: 50%;
+                font-size: 0.9rem;
+            }
+
+            .tab-content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 id="course-title">Loading...</h1>
+            <p class="course-code" id="course-code">Loading...</p>
+            <div style="margin-top: 1.5rem;">
+                <span id="course-term">Loading...</span> | 
+                <span id="course-credits">Loading...</span> | 
+                <span id="course-format">Loading...</span>
+            </div>
+        </div>
+    </header>
+
+    <div id="syllabus-content" style="display: none;">
+        <main id="main-content" class="container">
+            <div class="nav-tabs" role="tablist">
+                <button class="active" onclick="showTab('overview')" role="tab" aria-selected="true">Course Overview</button>
+                <button onclick="showTab('instructor')" role="tab" aria-selected="false">Instructor & Course Info</button>
+                <button onclick="showTab('outline')" role="tab" aria-selected="false">Course Outline</button>
+                <button onclick="showTab('policies')" role="tab" aria-selected="false">Policies & Resources</button>
+            </div>
+
+            <div id="overview" class="tab-content active" role="tabpanel">
+                <h2>Course Description</h2>
+                <div id="course-description"></div>
+
+                <h2>Course Purpose</h2>
+                <div id="course-purpose"></div>
+
+                <h2>Student Learning Outcomes</h2>
+                <ul id="slos-list"></ul>
+
+                <h2>Important Dates</h2>
+                <div id="important-dates"></div>
+            </div>
+
+            <div id="instructor" class="tab-content" role="tabpanel">
+                <h2>Instructor Information</h2>
+                <div id="instructor-info"></div>
+
+                <h2>Course Materials</h2>
+                <div id="course-materials"></div>
+
+                <h2>Grading Breakdown</h2>
+                <table class="grading-table" id="grading-table"></table>
+
+                <h2>Grade Scale</h2>
+                <div id="grade-scale"></div>
+
+                <h2>Workload Expectations</h2>
+                <div id="workload-info"></div>
+            </div>
+
+            <div id="outline" class="tab-content" role="tabpanel">
+                <h2>Course Schedule</h2>
+                <div id="course-schedule"></div>
+            </div>
+
+            <div id="policies" class="tab-content" role="tabpanel">
+                <h2>Course Policies</h2>
+                <div id="course-policies"></div>
+
+                <h2>College Policies</h2>
+                <div id="college-policies"></div>
+
+                <h2>Emergency Contacts</h2>
+                <div id="emergency-contacts"></div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const GITHUB_BASE_URL = 'https://raw.githubusercontent.com/dpai-mc/dyn-syllabi/main';
+        const COURSE_CODE = 'csc154';
+        const COURSE_DATA_URL = `${GITHUB_BASE_URL}/data/course-${COURSE_CODE}-info.json`;
+        const INSTRUCTOR_DATA_URL = `${GITHUB_BASE_URL}/data/instructor-info.json`;
+        const POLICIES_DATA_URL = `${GITHUB_BASE_URL}/data/college-policies.json`;
+
+        let courseData, instructorData, policiesData;
+
+        async function loadData() {
+            try {
+                const [courseResponse, instructorResponse, policiesResponse] = await Promise.all([
+                    fetch(COURSE_DATA_URL),
+                    fetch(INSTRUCTOR_DATA_URL),
+                    fetch(POLICIES_DATA_URL)
+                ]);
+
+                if (!courseResponse.ok || !instructorResponse.ok || !policiesResponse.ok) {
+                    throw new Error('Failed to load course data');
+                }
+
+                courseData = await courseResponse.json();
+                instructorData = await instructorResponse.json();
+                policiesData = await policiesResponse.json();
+
+                document.getElementById('syllabus-content').style.display = 'block';
+                
+                renderOverviewTab();
+                renderInstructorTab();
+                renderOutlineTab();
+                renderPoliciesTab();
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.body.innerHTML += `
+                    <div class="container">
+                        <div class="error">
+                            <strong>Error loading syllabus:</strong> ${error.message}<br>
+                            Please check your internet connection or contact the instructor.
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        function showTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.nav-tabs button').forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-selected', 'false');
+            });
+            
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+            event.target.setAttribute('aria-selected', 'true');
+        }
+
+        function renderOverviewTab() {
+            const metadata = courseData.metadata;
+            
+            document.getElementById('course-title').textContent = `${metadata.code} - ${metadata.title}`;
+            document.getElementById('course-code').textContent = metadata.code;
+            document.getElementById('course-term').textContent = metadata.term;
+            document.getElementById('course-credits').textContent = `${metadata.credits} Credits`;
+            document.getElementById('course-format').textContent = metadata.format;
+
+            if (metadata.meetingSchedule) {
+                const ms = metadata.meetingSchedule;
+                document.getElementById('course-format').innerHTML += ` | <strong>Meets:</strong> ${ms.days} ${ms.time} @ ${ms.location}`;
+            }
+
+            document.getElementById('course-description').innerHTML = `
+                <p><strong>Catalog Description:</strong> ${courseData.description.catalog}</p>
+                <p><strong>Expanded Description:</strong> ${courseData.description.expanded}</p>
+            `;
+
+            document.getElementById('course-purpose').innerHTML = `
+                <p><strong>Why Take This Course:</strong> ${courseData.purpose.why}</p>
+                <p><strong>Beyond Technical Skills:</strong> ${courseData.purpose.beyond}</p>
+            `;
+
+            const slosList = document.getElementById('slos-list');
+            courseData.slos.forEach(slo => {
+                const li = document.createElement('li');
+                li.textContent = slo;
+                slosList.appendChild(li);
+            });
+
+            const datesDiv = document.getElementById('important-dates');
+            if (courseData.importantDates && courseData.importantDates.length > 0) {
+                courseData.importantDates.forEach(date => {
+                    const dateCard = document.createElement('div');
+                    dateCard.className = 'important-dates';
+                    dateCard.innerHTML = `<strong>${date.event}</strong>: ${date.date} (Week ${date.week})`;
+                    datesDiv.appendChild(dateCard);
+                });
+            }
+        }
+
+        function renderInstructorTab() {
+            const instructor = instructorData;
+            document.getElementById('instructor-info').innerHTML = `
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4>Instructor</h4>
+                        <p>${instructor.name}</p>
+                        <p>Email: ${instructor.email}</p>
+                        <p>Phone: ${instructor.phone}</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>Office</h4>
+                        <p>${instructor.office.location}</p>
+                        <p>Hours: ${instructor.office.hours}</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>Student Hours</h4>
+                        ${instructor.studentHours.map(sh => `
+                            <p><strong>${sh.day}</strong>: ${sh.time}</p>
+                            <p>${sh.location}</p>
+                            ${sh.zoom ? `<p><a href="${sh.zoom.link}" target="_blank">${sh.zoom.link}</a></p>` : ''}
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+
+            const materials = courseData.materials;
+            document.getElementById('course-materials').innerHTML = `
+                <h3>Required Materials</h3>
+                <ul>
+                    ${materials.required.map(item => `<li>${item}</li>`).join('')}
+                </ul>
+                <h3>Optional Materials</h3>
+                <ul>
+                    ${materials.optional.map(item => `<li>${item}</li>`).join('')}
+                </ul>
+            `;
+
+            const gradingTable = document.getElementById('grading-table');
+            gradingTable.innerHTML = `
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Weight</th>
+                        <th>Points</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${courseData.grading.breakdown.map(item => `
+                        <tr>
+                            <td>${item.category}</td>
+                            <td class="percentage">${item.weight}%</td>
+                            <td>${item.points}</td>
+                            <td>${item.description}</td>
+                        </tr>
+                    `).join('')}
+                    <tr style="background: var(--light-bg); font-weight: bold;">
+                        <td>Total</td>
+                        <td class="percentage">100%</td>
+                        <td>${courseData.grading.breakdown.reduce((sum, item) => sum + item.points, 0)}</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            `;
+
+            const gradeScale = document.getElementById('grade-scale');
+            courseData.grading.scale.forEach(grade => {
+                const gradeDiv = document.createElement('div');
+                gradeDiv.style.marginBottom = '0.5rem';
+                gradeDiv.innerHTML = `<strong>${grade.grade}</strong>: ${grade.minPercent}% and above`;
+                gradeScale.appendChild(gradeDiv);
+            });
+
+            const workload = courseData.workload;
+            document.getElementById('workload-info').innerHTML = `
+                <p><strong>Expected Time Commitment:</strong> ${workload.hoursPerWeek} hours per week</p>
+                ${workload.breakdown ? `
+                    <ul>
+                        ${Object.entries(workload.breakdown).map(([key, value]) => `<li>${key}: ${value}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            `;
+        }
+
+        function renderOutlineTab() {
+            const scheduleDiv = document.getElementById('course-schedule');
+            
+            courseData.schedule.phases.forEach(phase => {
+                const phaseDiv = document.createElement('div');
+                phaseDiv.className = 'phase';
+                
+                let weeksHtml = '';
+                phase.weeks.forEach(week => {
+                    weeksHtml += `
+                        <div class="week">
+                            <div class="week-header">
+                                <span class="week-number">Week ${week.weekNumber}</span>
+                                <span class="week-dates">${week.dates}</span>
+                            </div>
+                            <div class="topics-list">
+                                <strong>Topics:</strong>
+                                <ul>
+                                    ${week.topics.map(topic => `<li>${topic}</li>`).join('')}
+                                </ul>
+                            </div>
+                            <div class="assignments-list">
+                                <strong>Assignments:</strong>
+                                <ul>
+                                    ${week.assignments.map(assignment => `<li>${assignment}</li>`).join('')}
+                                </ul>
+                            </div>
+                            ${week.deliverableDueDate ? `<p><strong>Due:</strong> ${week.deliverableDueDate}</p>` : ''}
+                        </div>
+                    `;
+                });
+
+                phaseDiv.innerHTML = `
+                    <div class="phase-header">
+                        <h3>${phase.title}</h3>
+                        <p>${phase.description}</p>
+                    </div>
+                    ${weeksHtml}
+                `;
+                
+                scheduleDiv.appendChild(phaseDiv);
+            });
+        }
+
+        function renderPoliciesTab() {
+            const policies = courseData.policies;
+            document.getElementById('course-policies').innerHTML = `
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4>Attendance</h4>
+                        <p>${policies.attendance}</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>Late Work</h4>
+                        <p>${policies.lateWork}</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>Makeup Exams</h4>
+                        <p>${policies.makeupExams}</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>Academic Integrity</h4>
+                        <p>${policies.academicIntegrity}</p>
+                    </div>
+                </div>
+            `;
+
+            const collegePoliciesDiv = document.getElementById('college-policies');
+            policiesData.policies.forEach(policy => {
+                const policyDiv = document.createElement('div');
+                policyDiv.style.marginBottom = '1.5rem';
+                policyDiv.innerHTML = `
+                    <h3>${policy.title}</h3>
+                    <p>${policy.description}</p>
+                `;
+                collegePoliciesDiv.appendChild(policyDiv);
+            });
+
+            const emergencyDiv = document.getElementById('emergency-contacts');
+            policiesData.emergencyContacts.forEach(contact => {
+                const contactDiv = document.createElement('div');
+                contactDiv.className = 'info-card';
+                contactDiv.style.marginBottom = '1rem';
+                contactDiv.innerHTML = `
+                    <h4>${contact.department}</h4>
+                    <p>${contact.name}</p>
+                    <p>Phone: ${contact.phone}</p>
+                    <p>Email: ${contact.email}</p>
+                `;
+                emergencyDiv.appendChild(contactDiv);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', loadData);
+    </script>
+</body>
+</html>
