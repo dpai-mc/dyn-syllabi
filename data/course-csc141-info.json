@@ -1,0 +1,437 @@
+{
+  "metadata": {
+    "code": "CSC141",
+    "title": "AI Literacy",
+    "credits": "3",
+    "creditBreakdown": "3 lecture",
+    "format": "Online",
+    "term": "Fall 2026",
+    "prerequisite": "None"
+  },
+  "description": {
+    "catalog": "Introduction to artificial intelligence concepts, tools, and applications. Students will learn to use AI tools effectively, understand AI limitations, and develop critical thinking skills for evaluating AI-generated content.",
+    "expanded": "This course provides a comprehensive foundation in artificial intelligence literacy, covering fundamental concepts, practical tool usage, prompt engineering, ethical considerations, and the societal impact of AI. Students will develop the skills needed to navigate an AI-augmented world responsibly and effectively."
+  },
+  "purpose": {
+    "why": "This course prepares you to work effectively with AI tools in academic, professional, and personal contexts. You'll develop critical evaluation skills, understand ethical implications, and gain practical experience with current AI technologies. These competencies are essential for success in any field in the AI era.",
+    "beyond": "Beyond technical skills, you'll develop critical thinking about AI's role in society, understand bias and fairness issues, and learn to protect your data privacy while leveraging AI capabilities."
+  },
+  "slos": [
+    "Define key artificial intelligence terminology and concepts",
+    "Demonstrate proficiency in using AI tools for various tasks",
+    "Design effective prompts for AI systems",
+    "Evaluate AI-generated content for accuracy and quality",
+    "Apply data protection principles when using AI tools",
+    "Analyze ethical frameworks related to AI development and use"
+  ],
+  "schedule": {
+    "phases": [
+      {
+        "title": "Phase 1: AI Foundations (Weeks 1-4)",
+        "description": "Build foundational understanding of AI concepts, history, and machine learning fundamentals",
+        "weeks": [
+          {
+            "weekNumber": 1,
+            "dates": "8/17/2026 - 8/23/2026",
+            "topics": [
+              "Course overview, expectations, and resources",
+              "What is Artificial Intelligence?",
+              "History and evolution of AI",
+              "Types of AI: narrow, general, and superintelligent",
+              "AI in everyday life"
+            ],
+            "assignments": [
+              "Assignment 1: AI Tools Setup & Introduction (20 pts)",
+              "Quiz 1: Course Introduction & AI Basics (10 pts)",
+              "Discussion 1: AI in Your Daily Life (5 pts)"
+            ],
+            "deliverableDueDate": "Week 1 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 2,
+            "dates": "8/24/2026 - 8/30/2026",
+            "topics": [
+              "AI vs. traditional programming",
+              "Key AI terminology and concepts",
+              "Neural networks overview",
+              "Deep learning fundamentals",
+              "AI capabilities and limitations"
+            ],
+            "assignments": [
+              "Assignment 2: AI Terminology & Concepts (20 pts)",
+              "Quiz 2: AI Fundamentals (10 pts)",
+              "Discussion 2: AI Capabilities Discussion (5 pts)"
+            ],
+            "deliverableDueDate": "Week 2 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 3,
+            "dates": "8/31/2026 - 9/6/2026",
+            "topics": [
+              "Machine Learning overview",
+              "Supervised learning concepts",
+              "Unsupervised learning concepts",
+              "Training data and models",
+              "Common ML applications"
+            ],
+            "assignments": [
+              "Assignment 3: Machine Learning Basics (20 pts)",
+              "Quiz 3: Machine Learning Fundamentals (10 pts)",
+              "Discussion 3: ML in the Real World (5 pts)"
+            ],
+            "deliverableDueDate": "Week 3 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 4,
+            "dates": "9/7/2026 - 9/13/2026",
+            "topics": [
+              "Reinforcement learning",
+              "Transfer learning",
+              "Model evaluation metrics",
+              "Overfitting and underfitting",
+              "Phase 1 review and assessment"
+            ],
+            "assignments": [
+              "Assignment 4: ML Applications Analysis (20 pts)",
+              "Quiz 4: ML Concepts Review (10 pts)",
+              "Project 1: AI Foundations Report (30 pts)"
+            ],
+            "deliverableDueDate": "Week 4 Sunday 11:59 PM"
+          }
+        ]
+      },
+      {
+        "title": "Phase 2: Generative AI & Prompt Engineering (Weeks 5-8)",
+        "description": "Explore generative AI technologies and master prompt engineering techniques",
+        "weeks": [
+          {
+            "weekNumber": 5,
+            "dates": "9/14/2026 - 9/20/2026",
+            "topics": [
+              "Introduction to Generative AI",
+              "Large Language Models (LLMs) overview",
+              "How LLMs work",
+              "Popular LLM platforms and tools",
+              "Getting started with AI chatbots"
+            ],
+            "assignments": [
+              "Assignment 5: LLM Platform Exploration (20 pts)",
+              "Quiz 5: Generative AI Basics (10 pts)",
+              "Discussion 5: First Impressions with LLMs (5 pts)"
+            ],
+            "deliverableDueDate": "Week 5 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 6,
+            "dates": "9/21/2026 - 9/27/2026",
+            "topics": [
+              "Prompt engineering fundamentals",
+              "Prompt design principles",
+              "Clear and specific prompting",
+              "Context and examples in prompts",
+              "Iterative refinement techniques"
+            ],
+            "assignments": [
+              "Assignment 6: Basic Prompt Engineering (20 pts)",
+              "Quiz 6: Prompt Design Principles (10 pts)",
+              "Discussion 6: Prompt Challenges (5 pts)"
+            ],
+            "deliverableDueDate": "Week 6 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 7,
+            "dates": "9/28/2026 - 10/4/2026",
+            "topics": [
+              "Advanced prompt techniques",
+              "Chain-of-thought prompting",
+              "Few-shot and zero-shot learning",
+              "Role-based prompting",
+              "Multi-step prompting strategies"
+            ],
+            "assignments": [
+              "Assignment 7: Advanced Prompting Techniques (20 pts)",
+              "Quiz 7: Advanced Prompt Engineering (10 pts)",
+              "Discussion 7: Prompt Engineering Success Stories (5 pts)"
+            ],
+            "deliverableDueDate": "Week 7 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 8,
+            "dates": "10/5/2026 - 10/11/2026",
+            "topics": [
+              "Image generation with AI",
+              "Video and audio generation",
+              "Multimodal AI systems",
+              "AI content creation workflows",
+              "Phase 2 review and midterm preparation"
+            ],
+            "assignments": [
+              "Assignment 8: Multimodal AI Exploration (20 pts)",
+              "Quiz 8: Generative AI Review (10 pts)",
+              "Midterm Exam: Covers Weeks 1-8 (50 pts)"
+            ],
+            "deliverableDueDate": "Week 8 Sunday 11:59 PM"
+          }
+        ]
+      },
+      {
+        "title": "Phase 3: AI Evaluation & Academic Integrity (Weeks 9-11)",
+        "description": "Develop critical evaluation skills and understand AI in academic contexts",
+        "weeks": [
+          {
+            "weekNumber": 9,
+            "dates": "10/12/2026 - 10/18/2026",
+            "topics": [
+              "Evaluating AI-generated content",
+              "Fact-checking AI outputs",
+              "Identifying AI hallucinations",
+              "Quality assessment criteria",
+              "Verification strategies"
+            ],
+            "assignments": [
+              "Assignment 9: AI Content Evaluation (20 pts)",
+              "Quiz 9: Evaluation Techniques (10 pts)",
+              "Discussion 9: AI Hallucination Examples (5 pts)"
+            ],
+            "deliverableDueDate": "Week 9 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 10,
+            "dates": "10/19/2026 - 10/25/2026",
+            "topics": [
+              "AI and academic integrity",
+              "Proper AI use in academic work",
+              "Citation and attribution guidelines",
+              "Institutional AI policies",
+              "Plagiarism and AI-generated content"
+            ],
+            "assignments": [
+              "Assignment 10: Academic Integrity Case Studies (20 pts)",
+              "Quiz 10: AI in Academia (10 pts)",
+              "Discussion 10: AI Policy Perspectives (5 pts)"
+            ],
+            "deliverableDueDate": "Week 10 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 11,
+            "dates": "10/26/2026 - 11/1/2026",
+            "topics": [
+              "AI detection tools",
+              "Best practices for AI-assisted writing",
+              "Disclosure and transparency",
+              "Building AI literacy in others",
+              "Phase 3 review and assessment"
+            ],
+            "assignments": [
+              "Assignment 11: AI Disclosure Guidelines (20 pts)",
+              "Quiz 11: Academic Integrity Review (10 pts)",
+              "Project 2: AI Evaluation Report (30 pts)"
+            ],
+            "deliverableDueDate": "Week 11 Sunday 11:59 PM"
+          }
+        ]
+      },
+      {
+        "title": "Phase 4: Ethics, Privacy & Society (Weeks 12-15)",
+        "description": "Explore ethical frameworks, privacy concerns, and societal impact of AI",
+        "weeks": [
+          {
+            "weekNumber": 12,
+            "dates": "11/2/2026 - 11/8/2026",
+            "topics": [
+              "AI bias and fairness",
+              "Sources of bias in AI systems",
+              "Detecting biased outputs",
+              "Mitigation strategies",
+              "Fairness in AI decision-making"
+            ],
+            "assignments": [
+              "Assignment 12: Bias Analysis Exercise (20 pts)",
+              "Quiz 12: AI Bias & Fairness (10 pts)",
+              "Discussion 12: Bias in AI Systems (5 pts)"
+            ],
+            "deliverableDueDate": "Week 12 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 13,
+            "dates": "11/9/2026 - 11/15/2026",
+            "topics": [
+              "Privacy and data protection",
+              "Data collection practices in AI",
+              "Privacy risks of AI tools",
+              "Protection strategies",
+              "GDPR and AI regulations"
+            ],
+            "assignments": [
+              "Assignment 13: Privacy Risk Assessment (20 pts)",
+              "Quiz 13: Data Privacy & Protection (10 pts)",
+              "Discussion 13: Privacy vs. Convenience (5 pts)"
+            ],
+            "deliverableDueDate": "Week 13 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 14,
+            "dates": "11/16/2026 - 11/22/2026",
+            "topics": [
+              "AI and employment",
+              "Job displacement concerns",
+              "New AI-related careers",
+              "Skills for AI-augmented work",
+              "Preparing for the AI workforce"
+            ],
+            "assignments": [
+              "Assignment 14: AI Career Impact Analysis (20 pts)",
+              "Quiz 14: AI & Employment (10 pts)",
+              "Discussion 14: Your Career in the AI Era (5 pts)"
+            ],
+            "deliverableDueDate": "Week 14 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 15,
+            "dates": "11/23/2026 - 11/29/2026",
+            "topics": [
+              "AI governance and policy",
+              "Regulatory frameworks",
+              "Industry standards",
+              "Future policy directions",
+              "NO CLASS: Thanksgiving Break 11/25-11/29"
+            ],
+            "assignments": [
+              "Assignment 15: AI Policy Research (20 pts)",
+              "Quiz 15: AI Governance (10 pts)",
+              "Project 3: Ethical AI Framework (30 pts)"
+            ],
+            "deliverableDueDate": "Week 15 Sunday 11:59 PM"
+          }
+        ]
+      },
+      {
+        "title": "Phase 5: Integration & Final Assessment (Weeks 16-17)",
+        "description": "Synthesize learning and complete final assessments",
+        "weeks": [
+          {
+            "weekNumber": 16,
+            "dates": "11/30/2026 - 12/6/2026",
+            "topics": [
+              "Course content review",
+              "AI literacy best practices summary",
+              "Future trends in AI",
+              "Building ongoing AI literacy",
+              "Final exam preparation"
+            ],
+            "assignments": [
+              "Assignment 16: Course Reflection (20 pts)",
+              "Quiz 16: Comprehensive Review (10 pts)",
+              "Discussion 16: Course Takeaways (5 pts)"
+            ],
+            "deliverableDueDate": "Week 16 Sunday 11:59 PM"
+          },
+          {
+            "weekNumber": 17,
+            "dates": "12/7/2026 - 12/11/2026",
+            "topics": [
+              "Final exam",
+              "Course evaluation",
+              "Next steps in AI learning",
+              "Resource recommendations",
+              "Course closure"
+            ],
+            "assignments": [
+              "Final Exam: Comprehensive Assessment (75 pts)",
+              "Course Evaluation (required)"
+            ],
+            "deliverableDueDate": "Week 17 (Finals Week) - See Canvas for specific due dates"
+          }
+        ]
+      }
+    ]
+  },
+  "grading": {
+    "breakdown": [
+      {
+        "category": "Assignments",
+        "percentage": 35,
+        "description": "Weekly assignments (16 assignments @ 20 pts each = 320 pts)"
+      },
+      {
+        "category": "Quizzes",
+        "percentage": 20,
+        "description": "Weekly quizzes (16 quizzes @ 10 pts each = 160 pts, lowest 2 dropped)"
+      },
+      {
+        "category": "Projects",
+        "percentage": 20,
+        "description": "Three major projects (3 projects @ 30 pts each = 90 pts)"
+      },
+      {
+        "category": "Exams",
+        "percentage": 15,
+        "description": "Midterm (50 pts) + Final Exam (75 pts) = 125 pts"
+      },
+      {
+        "category": "Discussions",
+        "percentage": 10,
+        "description": "Weekly discussion forums (16 discussions @ 5 pts each = 80 pts)"
+      }
+    ],
+    "scale": [
+      { "grade": "A", "range": "90-100%" },
+      { "grade": "B", "range": "80-89%" },
+      { "grade": "C", "range": "70-79%" },
+      { "grade": "D", "range": "60-69%" },
+      { "grade": "F", "range": "Below 60%" }
+    ],
+    "totalPoints": 800
+  },
+  "materials": {
+    "required": [
+      "Access to computer with internet connectivity",
+      "Access to AI tools (free tiers provided: ChatGPT, Claude, or similar)",
+      "Access to Canvas learning management system",
+      "Various open educational resources (provided via Canvas)"
+    ],
+    "optional": [
+      "Artificial Intelligence: A Modern Approach by Stuart Russell and Peter Norvig",
+      "Prompt Engineering Guide (online resource: promptengineering.guide)",
+      "AI literacy resources from reputable sources (MIT, Stanford, etc.)"
+    ]
+  },
+  "importantDates": [
+    {
+      "week": 4,
+      "event": "Project 1 Due",
+      "description": "AI Foundations Report"
+    },
+    {
+      "week": 8,
+      "event": "Midterm Exam",
+      "description": "Covers Weeks 1-8: AI Foundations and Generative AI"
+    },
+    {
+      "week": 11,
+      "event": "Project 2 Due",
+      "description": "AI Evaluation Report"
+    },
+    {
+      "week": 15,
+      "event": "Project 3 Due & Thanksgiving Break",
+      "description": "Ethical AI Framework; No class 11/25-11/29/2026"
+    },
+    {
+      "week": 17,
+      "event": "Final Exam",
+      "description": "Comprehensive assessment covering all course content"
+    }
+  ],
+  "workload": {
+    "hoursPerWeek": 9,
+    "breakdown": "3 hrs lecture/content + 6 hrs out-of-class work",
+    "notes": "Peak weeks (4, 8, 11, 15, 17) with projects and exams may require 10-12 hours"
+  },
+  "policies": {
+    "attendance": "As an online course, regular engagement is expected. Weekly participation in discussions and timely submission of assignments demonstrates attendance.",
+    "lateWork": "Assignments: 10% penalty per day (max 3 days). Projects: 10% penalty per day (max 5 days). Quizzes: no late submissions (lowest 2 dropped). Discussions: 50% credit within 3 days.",
+    "makeupExams": "No makeup exams except documented emergencies. Must contact instructor within 24 hours of emergency. Must achieve minimum 60% on final to pass course.",
+    "academicIntegrity": "All work must be your own. AI tools may be used as specified in course assignments. Unauthorized AI use or plagiarism results in zero on assignment and possible course failure. See Week 10 for detailed AI use guidelines."
+  }
+}
