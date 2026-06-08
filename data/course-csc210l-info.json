@@ -8,7 +8,13 @@
     "term": "Fall 2026",
     "prerequisite": "CSC221 - Programming and Algorithms I",
     "corequisite": "CSC210 - Computer Organization and Architecture",
-    "transferable": "UC/CSU Transferable"
+    "transferable": "UC/CSU Transferable",
+    "meetingSchedule": {
+      "days": "Tuesday",
+      "time": "2:00 PM - 3:20 PM",
+      "location": "Zoom",
+      "modality": "Synchronous online (Hybrid course: 1/2 synchronous Zoom, 1/2 asynchronous online)"
+    }
   },
   "description": {
     "catalog": "Laboratory course accompanying CSC210. Hands-on experience with assembly language programming and computer architecture simulation.",
