@@ -27,8 +27,12 @@
   "schedule": {
     "phases": [
       {
-        "title": "Phase 1: Digital Logic & Assembly Basics (Weeks 1-4)",
+        "title": "Phase 1: Digital Logic & Assembly Basics",
         "description": "Introduction to lab tools, digital logic simulation, and basic assembly programming",
+        "weekRange": {
+          "start": 1,
+          "end": 4
+        },
         "weeks": [
           {
             "weekNumber": 1,
@@ -93,8 +97,12 @@
         ]
       },
       {
-        "title": "Phase 2: CPU & Control Flow Labs (Weeks 5-8)",
+        "title": "Phase 2: CPU & Control Flow Labs",
         "description": "CPU simulation, control flow programming, and pipeline visualization",
+        "weekRange": {
+          "start": 5,
+          "end": 8
+        },
         "weeks": [
           {
             "weekNumber": 5,
@@ -158,8 +166,12 @@
         ]
       },
       {
-        "title": "Phase 3: Advanced Assembly Programming (Weeks 9-12)",
+        "title": "Phase 3: Advanced Assembly Programming",
         "description": "Complex assembly programs, memory management, and I/O operations",
+        "weekRange": {
+          "start": 9,
+          "end": 12
+        },
         "weeks": [
           {
             "weekNumber": 9,
@@ -224,8 +236,12 @@
         ]
       },
       {
-        "title": "Phase 4: Memory & Performance Labs (Weeks 13-15)",
+        "title": "Phase 4: Memory & Performance Labs",
         "description": "Memory hierarchy simulation, cache analysis, and performance measurement",
+        "weekRange": {
+          "start": 13,
+          "end": 15
+        },
         "weeks": [
           {
             "weekNumber": 13,
@@ -276,8 +292,12 @@
         ]
       },
       {
-        "title": "Phase 5: Final Project & Assessment (Weeks 16-17)",
+        "title": "Phase 5: Final Project & Assessment",
         "description": "Comprehensive lab project and final assessment",
+        "weekRange": {
+          "start": 16,
+          "end": 17
+        },
         "weeks": [
           {
             "weekNumber": 16,
