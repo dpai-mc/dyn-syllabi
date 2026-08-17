@@ -1,5 +1,5 @@
 {
-  "_updated": "2026-08-17 — Fall 2026. Student hours replaced with the confirmed Fall 2026 schedule (all online). Standardized all Zoom links to the mendocino-edu.zoom.us domain (the file previously mixed mendocino.zoom.us/my/dpai with mendocino-edu.zoom.us/my/davepai). Replaced CSC222-specific wording in encouragementMessage with course-neutral text, since this file is shared by every syllabus. Previous version: data/old/instructor-info.2026-08-17.json",
+  "_updated": "2026-08-17c — studentHours restored to the documented per-entry schema (one object per block, with separate `days` and `time` fields); the interim version that packed every line into `days` as raw HTML has been reverted. The renderer in all 13 syllabus HTML files was updated instead: consecutive `online` entries that share a `link` now print under a single 'Online via Zoom' heading, and an `appointment` entry renders inline as '<method> - schedule at my calendar'. Course-specific wording (the old 'immediately before and after the Monday class session' note) removed — this file is shared by every syllabus. Previous versions: data/old/instructor-info.2026-08-17{,b,c}.json",
   "name": "David Pai, PhD",
   "email": "dpai@mendocino.edu",
   "phone": "(707) 468-3126",
@@ -18,15 +18,18 @@
       "type": "online",
       "days": "Mondays",
       "time": "4:30 PM - 5:30 PM and 6:50 PM - 7:50 PM",
-      "link": "https://mendocino-edu.zoom.us/my/davepai",
-      "note": "immediately before and immediately after the Monday class session"
+      "link": "https://mendocino-edu.zoom.us/my/davepai"
     },
     {
       "type": "online",
       "days": "Tuesdays",
       "time": "1:00 PM - 2:00 PM and 3:20 PM - 4:20 PM",
-      "link": "https://mendocino-edu.zoom.us/my/davepai",
-      "note": "drop in, or pre-schedule at <a href=\"https://calendly.com/dpai\" target=\"_blank\" rel=\"noopener\">my calendar</a>"
+      "link": "https://mendocino-edu.zoom.us/my/davepai"
+    },
+    {
+      "type": "appointment",
+      "method": "OR by appointment (M-Th)",
+      "link": "https://calendly.com/dpai"
     }
   ],
   "encouragementMessage": "Don't hesitate to reach out! Student hours are YOUR time. Whether you're stuck on an assignment, want a second opinion on something a tool told you, or just want to talk through where the course is going, I'm here to help. Students who use student hours consistently do better in the course. If none of the posted times work with your job or childcare, email me and we'll find a time that does.",
