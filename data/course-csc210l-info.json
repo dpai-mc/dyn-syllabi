@@ -486,7 +486,7 @@
     ],
     "optional": [
       "<strong>Primary reference (free):</strong> Saylor Academy, <em>CS301: Computer Architecture</em> - free, openly licensed, self-paced. Shared with CSC 210. <a href=\"https://learn.saylor.org/mod/page/view.php?id=20643\" target=\"_blank\" rel=\"noopener\">CS301 syllabus and units</a>",
-      "<strong>Recommended:</strong> Plantz, R. G., <em>Introduction to Computer Organization: An Under the Hood Look at Hardware and x86-64 Assembly</em> (No Starch Press). Pairs especially well with the 8-bit circuit builds in Labs 5-8.",
+      "<strong>Recommended:</strong> Scott, J. C., <em>But How Do It Know? The Basic Principles of Computers for Everyone</em>. Builds a simple 8-bit computer step by step from basic gates up to a working CPU, so it pairs directly with the 8-bit circuit builds in Labs 5-8.",
       "<strong>Reference only, not assigned:</strong> Patterson, D. A., &amp; Hennessy, J. L., <em>Computer Organization and Design, MIPS Edition</em> (Morgan Kaufmann). A second reference for the MIPS instruction set and the performance and pipelining material in Labs 15-16.",
       "<strong>Graph paper or a notebook.</strong> Labs 4, 11, 14, and 16 all involve drawing before building - timing diagrams, control tables, hand-assembly, and pipeline traces. Paper first is not optional advice; it is how these labs are designed."
     ]

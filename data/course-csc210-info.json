@@ -449,7 +449,7 @@
     ],
     "optional": [
       "<strong>Primary reference (free):</strong> Saylor Academy, <em>CS301: Computer Architecture</em> - a free, openly licensed, self-paced online course used as this course's reference text. Its nine units map onto our four phases: Unit 3 with Phase 1, Units 2 and 4 with Phase 2, Unit 5 with Phase 3, and Units 6-8 with Phase 4. <a href=\"https://learn.saylor.org/mod/page/view.php?id=20643\" target=\"_blank\" rel=\"noopener\">CS301 syllabus and units</a>",
-      "<strong>Recommended:</strong> Plantz, R. G., <em>Introduction to Computer Organization: An Under the Hood Look at Hardware and x86-64 Assembly</em> (No Starch Press). Especially useful alongside the 8-bit circuit builds in Weeks 5-8; Plantz's hardware-level treatment pairs well with the Logisim checkpoints.",
+      "<strong>Recommended:</strong> Scott, J. C., <em>But How Do It Know? The Basic Principles of Computers for Everyone</em>. Written for readers with no prior background, it walks step by step through the construction of a simple 8-bit computer from basic gates up to a working CPU - the same path as the 8-bit circuit builds in Weeks 5-8, so it pairs directly with the Logisim checkpoints.",
       "<strong>Reference only, not assigned:</strong> Patterson, D. A., &amp; Hennessy, J. L., <em>Computer Organization and Design, MIPS Edition: The Hardware/Software Interface</em> (Morgan Kaufmann). A second reference for the MIPS instruction set and the pipelining and performance topics in Weeks 5-7 and 15-16."
     ]
   },
