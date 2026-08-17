@@ -1,432 +1,568 @@
 {
+  "_source": "Rebuilt 2026-08-17 for Fall 2026 from 'CSC 210L - Computer Organization & Architecture Lab, 17-Week Topical Outline (Fall 2026)' supplied by the instructor, and from course-csc210-info.json for the shared AI policy, term dates, and tool constraints. CSLOs pasted by the instructor 2026-08-17 as the COR text. Grading basis (completion checks on lab work) chosen by the instructor 2026-08-17, resolving Open Item #1 of the topical outline. Modality (hybrid: synchronous Zoom plus a required asynchronous portion) confirmed by the instructor 2026-08-17. Previous placeholder version should be backed up to data/old/course-csc210l-info.2026-08-17.json before this file replaces it. College add/drop (8/28/2026) and W-drop (11/6/2026) are the values in college-policies.json; the topical outline's 08/30 and 10/24 (est.) are superseded. Keys beginning with an underscore are ignored by the renderer.",
+  "_todoBeforePosting": [
+    "Section number and CRN once registration assigns them",
+    "Contact-hour verification (Open Item #2 in the topical outline): 90 min x 17 weeks = 25.5 synchronous contact hours. Confirm this satisfies the lab COR's unit/hour divisor before publishing; if the COR expects more contact time, adjust session length rather than content",
+    "AI Tutor URL and access instructions, to be added to materials.required and aiPolicy once the tool is live for Week 2 - same placeholder as CSC 210",
+    "Confirm the point value per completion check (currently 10 pts x 16 = 160) and the partial-credit language in grading.breakdown descriptions",
+    "Open Item #3 in the topical outline: if some lab students are not enrolled in CSC 210, add the short catch-up path for Labs 1 and 9 to the Week 1 and Week 9 notes",
+    "Confirm the late-work grace window in policies.lateWork matches your intent"
+  ],
   "metadata": {
     "code": "CSC210L",
     "title": "Computer Organization and Architecture Lab",
     "credits": "1",
     "creditBreakdown": "1 lab",
-    "format": "Hybrid",
+    "format": "Hybrid (synchronous Zoom lab plus asynchronous work)",
     "term": "Fall 2026",
-    "prerequisite": "CSC221 - Programming and Algorithms I",
-    "corequisite": "CSC210 - Computer Organization and Architecture",
+    "prerequisite": "CSC221 - Programming and Algorithms I. <strong>Recommended companion:</strong> concurrent enrollment in CSC 210 - Computer Organization and Architecture. CSC 210L is a <em>recommended, not required,</em> lab for CSC 210, and no CSC 210 grade depends on it.",
+    "corequisite": "CSC210 - Computer Organization and Architecture (recommended, not required)",
     "transferable": "UC/CSU Transferable",
     "meetingSchedule": {
-      "days": "Tuesday",
-      "time": "2:00 PM - 3:20 PM",
+      "days": "Tuesdays",
+      "time": "2:00 - 3:20 PM Pacific (90 minutes of instruction)",
       "location": "Zoom",
-      "modality": "Synchronous online (Hybrid course: 1/2 synchronous Zoom, 1/2 asynchronous online)"
+      "modality": "Hybrid. We meet live on Zoom every Tuesday for a 90-minute hands-on session, and you carry the work forward asynchronously between sessions. Labs marked <strong>[Completes in class]</strong> are sized to finish inside the session; labs marked <strong>[Finish on own]</strong> deliberately send you home with a working partial circuit and a short, clearly stated remaining task (typically 45-90 minutes).",
+      "zoomUrl": "https://mendocino-edu.zoom.us/j/86135333458?pwd=faSTCXN2zNVYvQehi5Dpue2aJsCEab.1",
+      "zoomLinkHtml": "<a href=\"https://mendocino-edu.zoom.us/j/86135333458?pwd=faSTCXN2zNVYvQehi5Dpue2aJsCEab.1\" style=\"color: #1e3a8a;\" target=\"_blank\" rel=\"noopener\">Join the Tuesday lab session</a> (same link every week)"
     }
   },
   "description": {
-    "catalog": "Laboratory course accompanying CSC210. Hands-on experience with assembly language programming and computer architecture simulation.",
-    "expanded": "This lab course provides practical, hands-on experience with the concepts taught in CSC210. Students will write and debug assembly language programs, simulate computer architecture concepts, and gain practical skills in low-level programming and system analysis."
+    "catalog": "Laboratory course accompanying CSC 210. Hands-on construction of digital logic circuits and assembly-language programs, using circuit simulation and a MIPS runtime simulator to build and test the components of a working processor.",
+    "expanded": "CSC 210L is the room where you build the machine with your hands. Each Tuesday works the material of that same week's CSC 210 lecture content, <strong>after</strong> you have seen it - you arrive knowing the concept and leave having built it.<br><br>The lab carries one continuous construction sequence. Labs 1-14 build a CPU out of primitive gates, one <code>.circ</code> tab at a time, in a single file you keep all term: gates from NAND, adders and decoders, latches and flip-flops, an 8-bit register, an ALU, a RAM matrix, a register file, a control unit, and finally a complete datapath executing your own instruction set. Interleaved with that, you write MIPS assembly in MARS and watch the registers, stack, and data segment move one instruction at a time - so the hardware and the software explain each other in the same 90 minutes.<br><br><strong>This lab scaffolds; it does not gate.</strong> Every circuit and program CSC 210 grades remains fully completable by a student who never attends lab. Lab reduces friction, gives you an instructor at your elbow when a circuit fails silently, and gets you started in company rather than alone at 11 PM."
   },
   "purpose": {
-    "why": "This lab complements CSC210 by providing hands-on practice with assembly language programming and architecture simulation. You'll develop practical skills that reinforce theoretical concepts and prepare you for real-world low-level programming tasks.",
-    "beyond": "Beyond technical skills, you'll develop debugging expertise, systematic problem-solving approaches, and deeper understanding of how software interacts with hardware at the lowest levels."
+    "why": "Circuits fail quietly and assembly does exactly what you wrote rather than what you meant. Both are far easier to learn with someone in the room. This lab gives you a guided, supported start on the same builds CSC 210 assesses - the 90 minutes where the tricky part gets demonstrated, the whole room builds in lockstep, and the instructor circulates while you debug. Students who use the lab typically arrive at the final CPU project with a working partial machine rather than a blank file.",
+    "beyond": "The lab teaches a debugging method, not just circuits: form a hypothesis, test the first stage that could fail, narrow down, and never guess downstream of a broken signal. Lab 13's debugging clinic makes that explicit, and it is the single most transferable skill in the course. You will also leave with a habit that is worth real points - one file, built continuously, audited weekly, so that nothing is invented at the last minute."
   },
   "slos": [
-    "Write and debug assembly language programs for various tasks",
-    "Simulate computer architecture concepts using industry-standard tools",
-    "Analyze program performance at the instruction level",
-    "Apply low-level programming techniques to solve computational problems"
+    "Write, execute and debug small programs or segments of larger programs using an assembly language.",
+    "Simulate basic computer architecture, organization and design concepts."
   ],
+  "_sloNote": "CSLOs supplied by the instructor 2026-08-17 as the Course Outline of Record text for CSC 210L, quoted verbatim as required by college syllabus policy. Both CSLOs are assessed continuously through the weekly completion checks rather than by exam: SLO 1 by the MARS/MIPS work in Labs 5-8, 12, 15, and 16; SLO 2 by the Logisim construction sequence in Labs 1-14 and the simulator experiments in Labs 15-16.",
+  "aiPolicy": {
+    "title": "AI Policy for This Course",
+    "approach": "Restricted - one sanctioned AI tool, the course AI Tutor. Other AI assistants are not permitted on graded work.",
+    "scopeNote": "<strong>This policy applies to CSC 210L only</strong>, and it is deliberately identical to the CSC 210 policy so that students enrolled in both courses have exactly one rule to follow across the lecture and the lab. Every course sets its own AI policy, and this one is narrower than most. What is permitted in another class - including other computer science classes - is not permitted here unless it is the AI Tutor.",
+    "summary": "This course has <strong>one approved AI tool: the CSC 210 AI Tutor</strong>, a web-based tutor introduced in Week 2. It is a frontier language model tuned specifically for this course - it knows our constraints, our tools, and where we are in the progression. Use it as much as you like. <strong>General-purpose AI assistants are not permitted on graded work in this course.</strong>",
+    "permitted": [
+      "<strong>Use the AI Tutor freely, as often as you want, at any hour.</strong> It is available from Week 2 onward and there is no limit on how much you use it. Asking it for help is not a sign you are behind - it is how the tool is meant to be used.",
+      "<strong>Ask it to explain anything.</strong> Why NAND is universal, what a gated D latch is actually doing, why your ripple-carry adder is off by one, what the calling convention expects on the stack. Ask it the same question three different ways until it lands.",
+      "<strong>Ask it to help you debug your own work.</strong> Describe what your circuit does versus what you expected, or paste the assembly that is not behaving, and work through it together. Debugging with the tutor is real learning, not a shortcut - and it is exactly what we do together in lab.",
+      "<strong>Ask it to check your understanding before a lab or a checkpoint.</strong> Have it quiz you, or explain your design back to it and let it find the gap."
+    ],
+    "required": [
+      "<strong>You build the circuits and you write the assembly.</strong> The tutor helps you understand and debug; it does not produce your deliverables. Every <code>.circ</code> tab and every line of MIPS you submit must be work you constructed.",
+      "<strong>Note substantial AI Tutor help when you submit.</strong> One line is enough - for example, \"worked through the carry chain with the AI Tutor.\" This is not a penalty and never costs you points; it tells me where the course content needs to be clearer.",
+      "<strong>Be able to explain your own work.</strong> For any completion check, you should be able to walk me through why each part of your build is there. If you cannot explain it, it is not finished - regardless of whether it appears to work."
+    ],
+    "notPermittedHeading": "What is not permitted",
+    "notPermitted": [
+      "<strong>General-purpose AI assistants on graded work.</strong> ChatGPT, Gemini, Claude, Copilot, and similar tools are not permitted for the weekly lab completion checks, or for any CSC 210 deliverable this lab scaffolds - the Logisim checkpoints, MIPS assignments, quizzes, exams, research paper, or final project.",
+      "<strong>Submitting AI-generated circuits or code as your own.</strong> A <code>.circ</code> file or an assembly listing that you did not build is not your work, whatever produced it.",
+      "<strong>Handing a partner a solution during peer testing.</strong> Lab 16 has you run each other's CPUs on purpose. Finding a classmate's bug is the point; generating their fix is not.",
+      "<strong>Sharing AI Tutor sessions as a substitute for another student's own build.</strong> Helping a classmate think is good; handing them a solution is not."
+    ],
+    "whyThisLine": "This is not a general suspicion of AI - it is specific to what this course does. <strong>The AI Tutor knows our constraints and general-purpose assistants do not.</strong> Ask ChatGPT how to build a register file and it will confidently hand you Logisim Evolution components, a built-in RAM block, and a multiplexer where this course requires a decoder - all of which are wrong here, and all of which will cost you a checkpoint in CSC 210. The tutor is tuned to Logisim Classic 2.7.1, primitive-gate construction, decoder-based selection, and the single-file build. Beyond that: both CSLOs require that <em>you</em> write, execute, and debug the programs and simulate the design. A circuit you did not build cannot demonstrate that.",
+    "consequences": "Work produced by a non-approved AI tool, or any work submitted as your own that you did not produce, falls under the College Academic Honesty Policy (AP 5500.2) and may result in a zero on the assignment, a failing grade in the course, and referral for disciplinary action. If you are behind and tempted, come to student hours or to Lab 17 instead - an extension is always available and costs you far less.",
+    "uncertainty": "<strong>If you are not sure whether a tool or a use is allowed, ask before you submit.</strong> Asking never counts against you. The short version: if it is the AI Tutor, yes; if it is anything else and the work is graded, no."
+  },
   "schedule": {
+    "_design": "Seventeen Tuesday lab sessions, 08/18/2026 - 12/08/2026, inside the 17-week term 08/17/2026 - 12/11/2026. Week numbering and week date ranges match course-csc210-info.json so the lecture and lab outlines line up week for week. Lab Week N works the material of Lecture Week N and meets after that week's lecture content has been introduced. Every structured session follows the same 90-minute arc: framing and demo (~15 min), guided build together (~40 min), independent build (~25 min), debrief and close (~10 min). Lab 17 is a deliberate exception - unstructured open studio. Tuesday resolves every holiday conflict: Labor Day (Mon 9/7), the campus holiday (Fri 9/25), and Veterans Day (Wed 11/11) all fall on non-lab days, and no session is lost. Each lab's completion check is due the following Monday at 11:59 PM, which gives the [Finish on own] labs a full week. Standing constraints in every Logisim lab: Logisim Classic 2.7.1 only, build from primitive gates, decoders for control and address selection, and one .circ file for the entire semester.",
     "phases": [
       {
-        "title": "Phase 1: Digital Logic & Assembly Basics",
-        "description": "Introduction to lab tools, digital logic simulation, and basic assembly programming",
-        "weekRange": {
-          "start": 1,
-          "end": 4
-        },
+        "title": "Phase 1: Digital Foundations (Labs 1-4, Weeks 1-4)",
+        "description": "Toolchain, gates, arithmetic, and memory. By the end of this phase your semester <code>.circ</code> file holds a NAND-built gate library, an adder, a decoder, and the three memory primitives every later lab instances. Primary CSLO: 2.",
         "weeks": [
           {
+            "weekLabel": "Week 1 - Lab 1, Tue 8/18",
             "weekNumber": 1,
-            "dates": "8/17/2026 - 8/23/2026",
+            "dates": "8/17/2026 - 8/23/2026 &middot; <strong>Lab 1 &mdash; Tue 8/18, 2:00-3:20 PM</strong>",
             "topics": [
-              "Lab setup and tool introduction",
-              "Assembly language development environment",
-              "Basic program structure and syntax",
-              "Simple data movement programs"
+              "<strong>Lab 1 &mdash; Toolchain Setup &amp; Seeing Binary</strong> [Completes in class]",
+              "Install and verify <strong>Logisim Classic 2.7.1</strong> &mdash; and see why Evolution is not acceptable, side by side",
+              "Install MARS and confirm the Java runtime works",
+              "Create the semester <code>LastName_CSC210.circ</code> file, name your first circuit tab, save it &mdash; this file is never replaced",
+              "Logisim orientation: toolbar, wiring, input and output pins, probes, the poke tool",
+              "First circuit: an 8-bit input pin driving a probe, reading the same byte in hex, unsigned decimal, and binary",
+              "Partner conversion drill, verified against the circuit rather than an answer key",
+              "MARS orientation: open a provided program, run it, find the Registers and Data Segment panes"
             ],
             "assignments": [
-              "Lab 1: Environment Setup & First Program (15 pts)",
-              "Discussion 1: Lab Tools (5 pts)"
+              "Completion check 1 (10 pts): both tools launch at the correct versions, and your semester <code>.circ</code> file exists with a named first tab"
             ],
-            "deliverableDueDate": "Week 1 Sunday 11:59 PM"
+            "deliverableDueDate": "Monday 8/24/2026 11:59 PM",
+            "notes": "Supports Lecture Step 1 (Binary &amp; Number Representation). The lab that pays for itself &mdash; week-one tool problems otherwise eat week-two learning time. Download links for Windows and macOS are on the course SharePoint. Leaves lab with: a working toolchain, the semester file created, and fluency reading a byte three ways."
           },
           {
+            "weekLabel": "Week 2 - Lab 2, Tue 8/25",
             "weekNumber": 2,
-            "dates": "8/24/2026 - 8/30/2026",
+            "dates": "8/24/2026 - 8/30/2026 &middot; <strong>Lab 2 &mdash; Tue 8/25, 2:00-3:20 PM</strong>",
             "topics": [
-              "Digital logic simulation tools",
-              "Boolean logic implementation",
-              "Binary arithmetic programs",
-              "Number representation exercises"
+              "<strong>Lab 2 &mdash; Gates from NAND</strong> [Completes in class]",
+              "Build AND, OR, and NOT using only NAND gates, each in its own tab, verified by exhaustive poking",
+              "Build XOR from NAND (5 gates) &mdash; the first circuit where you must think rather than copy",
+              "<strong>De Morgan verification circuit:</strong> drive <code>NOT(A AND B)</code> and <code>NOT(A) OR NOT(B)</code> from the same inputs into an XOR that lights an LED if they ever disagree. It never lights &mdash; a proof you can poke",
+              "Logisim technique: <strong>subcircuits</strong>, establishing the build-once-reuse-forever pattern the whole course depends on",
+              "Splitters and tunnels for wire management, introduced before circuits get wide"
             ],
             "assignments": [
-              "Lab 2: Digital Logic Simulation (20 pts)",
-              "Discussion 2: Logic Design (5 pts)"
+              "Completion check 2 (10 pts): NAND-built AND, OR, NOT, and XOR tabs plus the self-checking De Morgan circuit, all in the semester file",
+              "Meet the AI Tutor &mdash; the one approved AI tool for this course and CSC 210, available from this week onward"
             ],
-            "deliverableDueDate": "Week 2 Sunday 11:59 PM"
+            "deliverableDueDate": "Monday 8/31/2026 11:59 PM",
+            "notes": "Supports Lecture Step 2 (Logic Gates). The AI Tutor comes online this week &mdash; see the AI Policy under Policies &amp; Resources. <strong>College deadline: 8/28/2026</strong> is the last day to add, to drop without a notation, and for an enrollment-fee refund."
           },
           {
+            "weekLabel": "Week 3 - Lab 3, Tue 9/1",
             "weekNumber": 3,
-            "dates": "8/31/2026 - 9/6/2026",
+            "dates": "8/31/2026 - 9/6/2026 &middot; <strong>Lab 3 &mdash; Tue 9/1, 2:00-3:20 PM</strong>",
             "topics": [
-              "Arithmetic instructions in assembly",
-              "Data type handling",
-              "Register operations",
-              "Memory addressing basics"
+              "<strong>Lab 3 &mdash; Adders and Decoders</strong> [Finish on own]",
+              "Together: half adder from gates, then a full adder from two half adders plus OR, verified across all 8 input combinations",
+              "Together: chain four full adders into a 4-bit ripple-carry adder and watch the carry propagate on probes",
+              "Together: build a 2-to-4 decoder from gates",
+              "<strong>Decoder vs. multiplexer</strong> &mdash; a decoder answers \"<em>which one</em> do I activate?\", a mux answers \"<em>which one</em> do I let through?\". Build a 2-to-1 mux too, so the distinction is concrete rather than asserted",
+              "On your own: extend the ripple-carry adder to 8 bits and build the 3-to-8 decoder"
             ],
             "assignments": [
-              "Lab 3: Arithmetic Programs (20 pts)",
-              "Discussion 3: Assembly Techniques (5 pts)"
+              "Completion check 3 (10 pts): working 8-bit ripple-carry adder and 3-to-8 decoder tabs, built from primitive gates"
             ],
-            "deliverableDueDate": "Week 3 Sunday 11:59 PM"
+            "deliverableDueDate": "Monday 9/7/2026 11:59 PM",
+            "notes": "Supports Lecture Step 3 (Combinational Logic). The first lab that intentionally does not finish in 90 minutes. Connects forward: this adder becomes the ALU core in Lab 6, and this decoder becomes RAM address decoding in Lab 8 and instruction decoding in Lab 11. Both are needed in Lab 5 and Lab 8, so finish them."
           },
           {
+            "weekLabel": "Week 4 - Lab 4, Tue 9/8",
             "weekNumber": 4,
-            "dates": "9/7/2026 - 9/13/2026",
+            "dates": "9/7/2026 - 9/13/2026 &middot; <strong>Lab 4 &mdash; Tue 9/8, 2:00-3:20 PM</strong>",
             "topics": [
-              "Combinational circuit simulation",
-              "Sequential logic exercises",
-              "Project 1: Digital Logic Design Lab",
-              "Integration with CSC210 concepts"
+              "<strong>Lab 4 &mdash; Latches, Flip-Flops, and Timing</strong> [Completes in class]",
+              "Build the <strong>NAND-based S-R latch</strong> from two cross-coupled NANDs; poke SET, remove SET, watch the output hold",
+              "Explore the forbidden state deliberately, then discuss why it must be engineered away",
+              "Build the <strong>gated D latch</strong> &mdash; add ENABLE, watch transparency",
+              "Build the <strong>edge-triggered D flip-flop</strong>, drive it from a Logisim clock, confirm it samples only on the rising edge",
+              "<strong>Timing diagram exercise:</strong> hand-draw D, CLK, and Q for the latch and the flip-flop given the same input sequence, then verify against poke-and-step behavior",
+              "Close: Quiz 1 concept sweep &mdash; a verbal walk back down the ladder from flip-flop to voltage"
             ],
             "assignments": [
-              "Project 1: Digital Logic Design Lab Due (25 pts)",
-              "Discussion 4: Circuit Simulation (5 pts)"
+              "Completion check 4 (10 pts): S-R latch, gated D latch, and D flip-flop tabs, plus your hand-drawn timing diagrams"
             ],
-            "deliverableDueDate": "Week 4 Sunday 11:59 PM"
+            "deliverableDueDate": "Monday 9/14/2026 11:59 PM",
+            "notes": "Supports Lecture Step 4 (Sequential Logic) and CSC 210's Quiz 1 week. The pivot point of the course &mdash; logic becomes memory. <strong>Labor Day is Monday 9/7; lab meets normally on Tuesday 9/8.</strong> Leaves lab with the memory primitives every remaining lab instances."
           }
         ]
       },
       {
-        "title": "Phase 2: CPU & Control Flow Labs",
-        "description": "CPU simulation, control flow programming, and pipeline visualization",
-        "weekRange": {
-          "start": 5,
-          "end": 8
-        },
+        "title": "Phase 2: Registers, ALU, and MIPS (Labs 5-8, Weeks 5-8)",
+        "description": "Split-format sessions &mdash; roughly 50 minutes Logisim, 40 minutes MARS. You work hardware and software on the same concept in the same session, which is the whole pedagogical point of this phase. Primary CSLOs: 1 and 2.",
         "weeks": [
           {
+            "weekLabel": "Week 5 - Lab 5, Tue 9/15",
             "weekNumber": 5,
-            "dates": "9/14/2026 - 9/20/2026",
+            "dates": "9/14/2026 - 9/20/2026 &middot; <strong>Lab 5 &mdash; Tue 9/15, 2:00-3:20 PM</strong>",
             "topics": [
-              "CPU simulation tools",
-              "Instruction execution tracing",
-              "Control flow instructions",
-              "Branching and conditional execution"
+              "<strong>Lab 5 &mdash; The 8-Bit Register &amp; First MIPS Program</strong> [Finish on own]",
+              "<strong>Logisim (~50 min):</strong> instance eight of your own D flip-flops into a new tab; wire a shared clock",
+              "Add a LOAD control line so the register updates only when instructed; add tristate output enable so it can share a bus",
+              "Test protocol: load a value, change the inputs, confirm the stored value does not move",
+              "<strong>MARS (~40 min):</strong> tour the register file &mdash; <code>$zero</code>, <code>$t0-$t9</code>, <code>$s0-$s7</code>, <code>$a0-$a3</code>, <code>$v0-$v1</code>, <code>$ra</code>, <code>$sp</code> &mdash; and which you may clobber",
+              "Write and run a first program: load two immediates, add them, print with <code>syscall</code>",
+              "Single-step it and watch the Registers pane change one instruction at a time. Then the connection: <em>the register you just built is what <code>$t0</code> physically is</em>"
             ],
             "assignments": [
-              "Lab 5: CPU Simulation (20 pts)",
-              "Discussion 5: CPU Architecture (5 pts)"
+              "Completion check 5 (10 pts): working 8-bit register with LOAD and output enable, plus your first running MIPS program",
+              "Scaffolds CSC 210's Logisim Checkpoint 1 and MIPS Assignment 1 (graded in CSC 210, not here)"
             ],
-            "deliverableDueDate": "Week 5 Sunday 11:59 PM"
+            "deliverableDueDate": "Monday 9/21/2026 11:59 PM",
+            "notes": "Supports Lecture Step 5. First split-format session &mdash; have both tools open before 2:00."
           },
           {
+            "weekLabel": "Week 6 - Lab 6, Tue 9/22",
             "weekNumber": 6,
-            "dates": "9/21/2026 - 9/27/2026",
+            "dates": "9/21/2026 - 9/27/2026 &middot; <strong>Lab 6 &mdash; Tue 9/22, 2:00-3:20 PM</strong>",
             "topics": [
-              "Loop implementation in assembly",
-              "Subroutine creation and calling",
-              "Stack operations",
-              "Parameter passing techniques"
+              "<strong>Lab 6 &mdash; Building the ALU / MIPS Arithmetic</strong> [Finish on own]",
+              "<strong>Logisim (~50 min):</strong> start from your 8-bit adder and add subtraction by inverting operand B and forcing carry-in to 1 &mdash; two's complement stops being a formula and becomes a wire",
+              "Add AND, OR, and pass-through paths; <strong>use a decoder</strong> on the function-select lines to activate exactly one path",
+              "Add zero and negative flag outputs, needed for branches in Labs 11 and 14",
+              "Label and test <strong>unsigned overflow</strong> (255 + 1 &rarr; 0) and <strong>signed overflow</strong> (100 + 100 in two's complement) as two separate conditions with separate detection logic",
+              "<strong>MARS (~40 min):</strong> R-type drills <code>add sub and or nor slt</code>; I-type drills <code>addi andi ori slti</code>",
+              "Predict the register result before pressing step, every time",
+              "Closing connection: <code>add $t0, $t1, $t2</code> routes two registers through the exact circuit on your screen"
             ],
             "assignments": [
-              "Lab 6: Control Flow Programming (20 pts)",
-              "Discussion 6: Subroutine Design (5 pts)"
+              "Completion check 6 (10 pts): working 8-bit ALU with decoder-based function select and both overflow flags, plus the arithmetic/logic MIPS drills",
+              "Scaffolds CSC 210's Logisim Checkpoint 2 and MIPS Assignment 2"
             ],
-            "deliverableDueDate": "Week 6 Sunday 11:59 PM"
+            "deliverableDueDate": "Monday 9/28/2026 11:59 PM",
+            "notes": "Supports Lecture Step 6. <strong>Campus holiday is Friday 9/25; lab meets normally on Tuesday 9/22.</strong> Do not let unsigned and signed overflow blur together &mdash; they are different conditions with different detection logic."
           },
           {
+            "weekLabel": "Week 7 - Lab 7, Tue 9/29",
             "weekNumber": 7,
-            "dates": "9/28/2026 - 10/4/2026",
+            "dates": "9/28/2026 - 10/4/2026 &middot; <strong>Lab 7 &mdash; Tue 9/29, 2:00-3:20 PM</strong>",
             "topics": [
-              "Pipeline simulation",
-              "Pipeline hazard visualization",
-              "Performance measurement",
-              "Instruction-level parallelism"
+              "<strong>Lab 7 &mdash; Control Flow, Procedures, and the Stack</strong> [Finish on own] &mdash; MARS-dominant; the hardware track pauses to let assembly catch up",
+              "Branches: <code>beq</code>, <code>bne</code>, and building <code>blt</code> from <code>slt</code> + <code>bne</code>; watch the PC jump in the Text Segment pane",
+              "Loops: a counted loop and a sentinel loop, with breakpoints, stepped through",
+              "Jumps: <code>j</code>, <code>jal</code>, <code>jr</code> &mdash; and what <code>jal</code> actually does to <code>$ra</code>",
+              "<strong>The stack, visually:</strong> push and pop with <code>$sp</code>, watching the Data Segment pane grow downward in real time",
+              "Procedure calling convention: <code>$a0-$a3</code> in, <code>$v0-$v1</code> out, <code>$ra</code> for return, callee-saved vs. caller-saved",
+              "<strong>Recursion trace:</strong> step through a recursive factorial and watch stack frames stack up and unwind. Then the hardware hook &mdash; the ALU flags you built last week are what a branch instruction reads"
             ],
             "assignments": [
-              "Lab 7: Pipeline Simulation (20 pts)",
-              "Discussion 7: Pipeline Optimization (5 pts)"
+              "Completion check 7 (10 pts): a procedure-writing exercise with a required recursive component, running in MARS",
+              "Scaffolds CSC 210's MIPS Assignment 3"
             ],
-            "deliverableDueDate": "Week 7 Sunday 11:59 PM"
+            "deliverableDueDate": "Monday 10/5/2026 11:59 PM",
+            "notes": "Supports Lecture Step 7. Most students' first true understanding of the stack happens here rather than in lecture &mdash; watch the Data Segment pane, do not just read about it."
           },
           {
+            "weekLabel": "Week 8 - Lab 8, Tue 10/6",
             "weekNumber": 8,
-            "dates": "10/5/2026 - 10/11/2026",
+            "dates": "10/5/2026 - 10/11/2026 &middot; <strong>Lab 8 &mdash; Tue 10/6, 2:00-3:20 PM</strong>",
             "topics": [
-              "Midterm lab review",
-              "Integration exercises",
-              "Comprehensive programming challenge"
+              "<strong>Lab 8 &mdash; RAM Construction / MIPS Memory</strong> [Finish on own]",
+              "<strong>Logisim (~50 min):</strong> build a 4-to-16 decoder from gates, extending Lab 3's work",
+              "Instance sixteen 16-bit registers as rows and wire the decoder outputs to their LOAD lines &mdash; the 16x16 RAM matrix appears out of parts you already own",
+              "Add write-enable, a data bus, and a <strong>MAR</strong> to hold the address the CPU wants",
+              "Test: write to row 5, write something different to row 12, read both back",
+              "<strong>MARS (~40 min):</strong> <code>lw</code>, <code>sw</code>, <code>lb</code>, <code>sb</code>, and base + offset addressing",
+              "Declare an array in <code>.data</code>, walk it in a loop, watch the Data Segment pane light up; map <code>int a[10]</code> in C to 40 bytes to the addresses on screen",
+              "Closing connection: <code>lw $t0, 0($s0)</code> puts an address in the MAR, asserts read, and captures the output &mdash; the circuit you just built"
             ],
             "assignments": [
-              "Midterm Lab Exam (25 pts)",
-              "Discussion 8: Midterm Reflections (5 pts)"
+              "Completion check 8 (10 pts): working RAM matrix with MAR, plus the array manipulation program",
+              "Scaffolds CSC 210's Logisim Checkpoint 3 and MIPS Assignment 4"
             ],
-            "deliverableDueDate": "Week 8 Sunday 11:59 PM"
+            "deliverableDueDate": "Monday 10/12/2026 11:59 PM",
+            "notes": "Supports Lecture Step 8. <strong>CSC 210's midterm is this week</strong>, so the guided portion runs tight and the last 10 minutes are reserved for your questions. Come with them written down."
           }
         ]
       },
       {
-        "title": "Phase 3: Advanced Assembly Programming",
-        "description": "Complex assembly programs, memory management, and I/O operations",
-        "weekRange": {
-          "start": 9,
-          "end": 12
-        },
+        "title": "Phase 3: CPU Design (Labs 9-12, Weeks 9-12)",
+        "description": "The parts become a machine. Integration, the register file, the control unit, and the bus &mdash; plus the file-hygiene audit that prevents the most common submission failure in this course. Primary CSLOs: 1 and 2.",
         "weeks": [
           {
+            "weekLabel": "Week 9 - Lab 9, Tue 10/13",
             "weekNumber": 9,
-            "dates": "10/12/2026 - 10/18/2026",
+            "dates": "10/12/2026 - 10/18/2026 &middot; <strong>Lab 9 &mdash; Tue 10/13, 2:00-3:20 PM</strong>",
             "topics": [
-              "Array manipulation in assembly",
-              "String processing",
-              "Memory allocation techniques",
-              "Pointer operations"
+              "<strong>Lab 9 &mdash; Fetch-Decode-Execute &amp; File Consolidation</strong> [Completes in class]",
+              "<strong>Trace exercise:</strong> whiteboard the fetch-decode-execute cycle for a single instruction, naming which component holds what at each step &mdash; PC, IR, MAR, MDR, ALU, register file",
+              "Run the same instruction in MARS single-step mode and correlate each pane on screen with each box on the whiteboard",
+              "<strong>File audit &mdash; the real point of this lab:</strong> open your <code>.circ</code> file and verify every circuit so far is a tab <em>in that one file</em> &mdash; S-R latch, D flip-flop, register, adder, decoder, ALU, RAM, MAR. Anyone building in separate files fixes it now, with help",
+              "Begin the top-level <code>CPU</code> tab: place components on a shared bus, no logic yet. Just the floor plan"
             ],
             "assignments": [
-              "Lab 9: Array & String Programs (20 pts)",
-              "Discussion 9: Memory Management (5 pts)"
+              "Completion check 9 (10 pts): file audit passed &mdash; one <code>.circ</code> file, every circuit present as a tab, no external links &mdash; and the <code>CPU</code> floor-plan tab started"
             ],
-            "deliverableDueDate": "Week 9 Sunday 11:59 PM"
+            "deliverableDueDate": "Monday 10/19/2026 11:59 PM",
+            "notes": "Supports Lecture Step 9 (Von Neumann Model). A deliberate integration and hygiene lab before the hard build weeks. <strong>The file-structure failure is the single most common submission problem in this course, and Week 9 is the last moment where fixing it is cheap.</strong>"
           },
           {
+            "weekLabel": "Week 10 - Lab 10, Tue 10/20",
             "weekNumber": 10,
-            "dates": "10/19/2026 - 10/25/2026",
+            "dates": "10/19/2026 - 10/25/2026 &middot; <strong>Lab 10 &mdash; Tue 10/20, 2:00-3:20 PM</strong>",
             "topics": [
-              "I/O operations in assembly",
-              "System calls",
-              "File operations",
-              "User input handling"
+              "<strong>Lab 10 &mdash; Register File + ALU Integration</strong> [Finish on own]",
+              "Build the register file: R0-R3 plus PC and MAR, with <strong>decoder-based selection</strong> for read and write",
+              "Two read ports (the ALU needs two operands at once) and one write port",
+              "Wire the register file to the ALU: read A and read B into the ALU inputs, result back to the write port",
+              "Wire the flag outputs somewhere visible &mdash; they matter in Lab 11",
+              "Test protocol: load R1 and R2 by hand, select ADD, clock once, read R3",
+              "<strong>Last 20 minutes &mdash; Project Planning Workshop:</strong> draft your final project ISA on paper. Which instructions, what opcode encoding, what each does. The instructor circulates and reality-checks scope"
             ],
             "assignments": [
-              "Lab 10: I/O Programming (20 pts)",
-              "Discussion 10: System Interface (5 pts)"
+              "Completion check 10 (10 pts): register file wired to the ALU and passing the test protocol, plus your drafted ISA on paper",
+              "Scaffolds CSC 210's Logisim Checkpoint 4 and the CPU project plan"
             ],
-            "deliverableDueDate": "Week 10 Sunday 11:59 PM"
+            "deliverableDueDate": "Monday 10/26/2026 11:59 PM",
+            "notes": "Supports Lecture Step 10. Catching an over-ambitious ISA here saves you in Week 16 &mdash; bring your instruction ideas and let them get pushed back on now rather than later."
           },
           {
+            "weekLabel": "Week 11 - Lab 11, Tue 10/27",
             "weekNumber": 11,
-            "dates": "10/26/2026 - 11/1/2026",
+            "dates": "10/26/2026 - 11/1/2026 &middot; <strong>Lab 11 &mdash; Tue 10/27, 2:00-3:20 PM</strong>",
             "topics": [
-              "Debugging techniques",
-              "Performance optimization",
-              "Code analysis tools",
-              "Project 2: Assembly Programming Project"
+              "<strong>Lab 11 &mdash; The Control Unit</strong> [Finish on own]",
+              "Add the <strong>IR</strong> to hold the current instruction",
+              "<strong>Build the control table on paper first:</strong> rows = opcodes, columns = control signals (RegWrite, MemRead, MemWrite, ALUSrc, ALUOp, Branch). Fill it in for a 3-4 instruction subset before touching Logisim &mdash; students who skip this step build spaghetti",
+              "Build the opcode <strong>decoder</strong>, then wire each output through OR gates to produce each control signal. The paper table translates to wiring almost mechanically",
+              "Test protocol: hand-load an opcode into the IR, clock, confirm exactly the expected control lines assert",
+              "Timing discussion with probes: why everything must settle before the next clock edge"
             ],
             "assignments": [
-              "Project 2: Assembly Programming Project Due (25 pts)",
-              "Discussion 11: Debugging Strategies (5 pts)"
+              "Completion check 11 (10 pts): paper control table plus a working control unit for your instruction subset",
+              "Scaffolds CSC 210's Logisim Checkpoint 5"
             ],
-            "deliverableDueDate": "Week 11 Sunday 11:59 PM"
+            "deliverableDueDate": "Monday 11/2/2026 11:59 PM",
+            "notes": "Supports Lecture Step 11. The lab where the machine gets a brain &mdash; and where you discover the brain is just a truth table. Extend the paper table to your full project ISA on your own time."
           },
           {
+            "weekLabel": "Week 12 - Lab 12, Tue 11/3",
             "weekNumber": 12,
-            "dates": "11/2/2026 - 11/8/2026",
+            "dates": "11/2/2026 - 11/8/2026 &middot; <strong>Lab 12 &mdash; Tue 11/3, 2:00-3:20 PM</strong>",
             "topics": [
-              "High-level to assembly translation",
-              "Compiler output analysis",
-              "Optimization comparison",
-              "Code efficiency evaluation"
+              "<strong>Lab 12 &mdash; Bus, Memory Interface &amp; Memory-Mapped I/O</strong> [Completes in class]",
+              "<strong>Logisim (~45 min):</strong> connect the CPU core to the RAM built in Lab 8 &mdash; address lines, data lines, control lines",
+              "Add the <strong>MDR</strong> as the buffer between CPU and memory",
+              "Trace a complete memory read and a complete memory write with probes, naming which signal asserts when",
+              "<strong>MARS (~35 min):</strong> <code>syscall</code> in depth &mdash; print integer, print string, read integer, exit",
+              "<strong>MARS Tools &rarr; Keyboard and Display MMIO Simulator:</strong> write to a memory address and a character appears on a simulated display. Memory-mapped I/O stops being an abstraction in about thirty seconds",
+              "Discussion: your Logisim RAM decoder could reserve an address that is not memory at all &mdash; that is all memory-mapped I/O is",
+              "Last 10 minutes: Quiz 2 concept sweep across Phase 3"
             ],
             "assignments": [
-              "Lab 12: Compiler Analysis (20 pts)",
-              "Discussion 12: Optimization Results (5 pts)"
+              "Completion check 12 (10 pts): CPU-to-RAM interface with MDR, traced read and write, plus your MMIO demonstration"
             ],
-            "deliverableDueDate": "Week 12 Sunday 11:59 PM"
+            "deliverableDueDate": "Monday 11/9/2026 11:59 PM",
+            "notes": "Supports Lecture Step 12 and CSC 210's Quiz 2 week. <strong>College deadline: 11/6/2026</strong> is the last day to drop with a 'W' notation. Set by the college; the instructor cannot extend it. Talk to me and to Financial Aid before you drop."
           }
         ]
       },
       {
-        "title": "Phase 4: Memory & Performance Labs",
-        "description": "Memory hierarchy simulation, cache analysis, and performance measurement",
-        "weekRange": {
-          "start": 13,
-          "end": 15
-        },
+        "title": "Phase 4: Integration and Modern Topics (Labs 13-17, Weeks 13-17)",
+        "description": "The datapath comes alive, then the build sequence closes and the remaining sessions cover modern architecture, verify submissions, and reserve time for catch-up. <strong>Lab 14 is the last circuit-build lab of the semester.</strong> Primary CSLOs: 1 and 2.",
         "weeks": [
           {
+            "weekLabel": "Week 13 - Lab 13, Tue 11/10",
             "weekNumber": 13,
-            "dates": "11/9/2026 - 11/15/2026",
+            "dates": "11/9/2026 - 11/15/2026 &middot; <strong>Lab 13 &mdash; Tue 11/10, 2:00-3:20 PM</strong>",
             "topics": [
-              "Cache simulation tools",
-              "Cache performance analysis",
-              "Memory hierarchy visualization",
-              "Access pattern optimization"
+              "<strong>Lab 13 &mdash; Datapath Integration: First Instructions Execute</strong> [Finish on own] &mdash; the payoff week",
+              "Wire the complete datapath: PC &rarr; instruction memory &rarr; IR &rarr; control unit &rarr; register file / ALU &rarr; write-back",
+              "Get <strong>MOV, ADD, and SUB</strong> executing end to end from an instruction stored in memory",
+              "<strong>Debugging clinic &mdash; the real skill of this lab.</strong> A systematic method rather than flailing: (1) does the PC advance? (2) does the IR hold the right bits? (3) do the control lines match your paper table? (4) do the register file's read ports show the right operands? (5) does the ALU output what you expect? (6) does write-back land in the right register?",
+              "Find the first step that fails &mdash; the bug is there, not downstream. The instructor demonstrates on a deliberately broken circuit",
+              "Celebrate out loud when the first instruction executes"
             ],
             "assignments": [
-              "Lab 13: Cache Simulation (20 pts)",
-              "Discussion 13: Cache Performance (5 pts)"
+              "Completion check 13 (10 pts): MOV, ADD, and SUB executing reliably from instructions stored in memory",
+              "Scaffolds CSC 210's Logisim Checkpoint 6"
             ],
-            "deliverableDueDate": "Week 13 Sunday 11:59 PM"
+            "deliverableDueDate": "Monday 11/16/2026 11:59 PM",
+            "notes": "Supports Lecture Step 13. <strong>Veterans Day is Wednesday 11/11; lab meets normally on Tuesday 11/10.</strong> The debugging method taught here is the most transferable thing in the course &mdash; learn it deliberately, not accidentally."
           },
           {
+            "weekLabel": "Week 14 - Lab 14, Tue 11/17",
             "weekNumber": 14,
-            "dates": "11/16/2026 - 11/22/2026",
+            "dates": "11/16/2026 - 11/22/2026 &middot; <strong>Lab 14 &mdash; Tue 11/17, 2:00-3:20 PM &mdash; LAST CIRCUIT-BUILD LAB</strong>",
             "topics": [
-              "I/O simulation",
-              "Interrupt handling exercises",
-              "DMA operations",
-              "Storage system analysis"
+              "<strong>Lab 14 &mdash; Branches, Jumps, Memory Access, and Testing</strong> [Finish on own]",
+              "Implement branch: the ALU zero flag gates whether the PC loads a new value or increments. Everything needed was built in Labs 6, 10, and 11 &mdash; this is mostly wiring what already exists",
+              "Implement jump",
+              "Implement load and store against the RAM from Lab 8",
+              "<strong>Hand-assembly exercise:</strong> encode a short test program into your own machine code by hand and load it into instruction memory. Nothing teaches what an assembler does like being one for twenty minutes",
+              "<strong>Write your test program:</strong> one that exercises every implemented instruction, including a loop that terminates via branch. This is a CSC 210 final project deliverable &mdash; starting it here means it is not invented at 11 PM on 12/10"
             ],
             "assignments": [
-              "Lab 14: I/O & Interrupt Simulation (20 pts)",
-              "Discussion 14: I/O Performance (5 pts)"
+              "Completion check 14 (10 pts): 10 or more working instructions including branch, jump, and load/store, plus a passing test program",
+              "Scaffolds CSC 210's Logisim Checkpoint 7"
             ],
-            "deliverableDueDate": "Week 14 Sunday 11:59 PM"
+            "deliverableDueDate": "Monday 11/23/2026 11:59 PM",
+            "notes": "Supports Lecture Step 14. <strong>This is the last lab that builds circuitry together.</strong> The remaining sessions cover performance and modern architecture and reserve time for CPU catch-up, but from here forward progress on the simulation itself is self-directed. A student who leaves Lab 14 without branch, jump, and load/store working is relying on independent work from that point on &mdash; so push hard this week, and use the reserved time in Labs 15 and 16 if you fall behind."
           },
           {
+            "weekLabel": "Week 15 - Lab 15, Tue 11/24",
             "weekNumber": 15,
-            "dates": "11/23/2026 - 11/29/2026",
+            "dates": "11/23/2026 - 11/29/2026 &middot; <strong>Lab 15 &mdash; Tue 11/24, 2:00-3:20 PM</strong>",
             "topics": [
-              "Performance benchmarking",
-              "Amdahl's Law applications",
-              "Speedup calculations",
-              "Project 3: Performance Analysis Lab"
+              "<strong>Lab 15 &mdash; Performance Measurement</strong> [Completes in class] &mdash; a required session, deliberately light, with no new Logisim work",
+              "<strong>Performance measurement (~55 min). MARS Tools &rarr; Instruction Counter / Instruction Statistics:</strong> run two programs that compute the same result &mdash; one naive, one optimized &mdash; and compare instruction counts. Measured, not asserted",
+              "Apply the performance equation, Time = Instructions &times; CPI &times; Clock Period, to your own measured counts",
+              "<strong>Amdahl's Law worksheet:</strong> speed up the 20% of your program that dominates nothing by 10x and compute what actually happens. Do the arithmetic yourself &mdash; the result usually surprises people",
+              "Pipelining introduced as a paper exercise: the laundry / assembly-line analogy drawn as a timing chart, setting up Lab 16's hazard trace",
+              "<strong>Reserved catch-up time (~30 min):</strong> open one-on-one debugging on Labs 13 and 14. If your datapath is not executing, or branch/jump/memory are not working, this time is for you. If you are caught up, finish the worksheet and leave early"
             ],
             "assignments": [
-              "Project 3: Performance Analysis Lab Due (25 pts)",
-              "Discussion 15: Benchmarking Results (5 pts)",
-              "Note: Thanksgiving Break - No Class 11/25-11/29"
+              "Completion check 15 (10 pts): completed performance worksheet with your own measured instruction counts and Amdahl's Law calculations"
             ],
-            "deliverableDueDate": "Week 15 Sunday 11:59 PM"
-          }
-        ]
-      },
-      {
-        "title": "Phase 5: Final Project & Assessment",
-        "description": "Comprehensive lab project and final assessment",
-        "weekRange": {
-          "start": 16,
-          "end": 17
-        },
-        "weeks": [
-          {
-            "weekNumber": 16,
-            "dates": "11/30/2026 - 12/6/2026",
-            "topics": [
-              "Advanced architecture simulation",
-              "Multicore programming concepts",
-              "Final project work session",
-              "Lab techniques review"
-            ],
-            "assignments": [
-              "Lab 16: Advanced Architecture Lab (15 pts)",
-              "Discussion 16: Final Project Progress (5 pts)"
-            ],
-            "deliverableDueDate": "Week 16 Sunday 11:59 PM"
+            "deliverableDueDate": "Monday 11/30/2026 11:59 PM",
+            "notes": "Supports Lecture Step 15. <strong>Thanksgiving holiday is 11/25-11/29; lab meets normally on Tuesday 11/24.</strong> This session is entirely self-contained, requires no prior circuit, and nothing later depends on it &mdash; <strong>the worksheet and MARS tool steps are published in writing, so if you travel early you can complete it on your own without falling behind.</strong>"
           },
           {
-            "weekNumber": 17,
-            "dates": "12/7/2026 - 12/11/2026",
+            "weekLabel": "Week 16 - Lab 16, Tue 12/1",
+            "weekNumber": 16,
+            "dates": "11/30/2026 - 12/6/2026 &middot; <strong>Lab 16 &mdash; Tue 12/1, 2:00-3:20 PM &mdash; LAST STRUCTURED SESSION</strong>",
             "topics": [
-              "Final lab exam",
-              "Course synthesis",
-              "Skills assessment"
+              "<strong>Lab 16 &mdash; Cache Behavior, Pipeline Hazards &amp; Peer Testing</strong> [Completes in class]",
+              "<strong>Modern architecture (~50 min). MARS Tools &rarr; Data Cache Simulator:</strong> traverse a 2-D array row-major and record the hit rate, change one line to traverse it column-major and record it again. Same work, dramatically different performance &mdash; locality of reference becomes a number you produced yourself",
+              "Vary cache size, block size, and associativity in the tool, re-run, and chart the results",
+              "<strong>Pipeline hazard hand-trace:</strong> given a short MIPS sequence with a data dependency, draw the 5-stage pipeline diagram and identify where a stall or a forward is required",
+              "Place cache in the memory hierarchy against the RAM circuit built in Lab 8 &mdash; same address decoding idea, different speed tier",
+              "<strong>Peer testing &amp; submission verification (~35 min). Circuit swap:</strong> exchange <code>.circ</code> files and run each other's test programs on the partner's CPU. Fresh eyes find missing instructions, unhandled cases, and &mdash; critically &mdash; <strong>broken external file links</strong>, while there is still a week to fix them",
+              "<strong>Submission checklist, verified live on your own file:</strong> all circuits contained in this single <code>.circ</code> file with no external links; the file opens and functions on a machine that has never seen your other files; 10+ instructions implemented and tested; at least one branch or jump works; at least one load or store works; the test program exercises every implemented instruction; written documentation covers design decisions, ISA definition, and test results"
             ],
             "assignments": [
-              "Final Lab Exam (30 pts)",
-              "Course Evaluation"
+              "Completion check 16 (10 pts): cache experiment results, pipeline hazard trace, and a completed peer-test report on a partner's CPU"
             ],
-            "deliverableDueDate": "Week 17 - Final Exam Period"
+            "deliverableDueDate": "Monday 12/7/2026 11:59 PM",
+            "notes": "Supports Lecture Step 16 (Modern Architecture). <strong>Last structured session and the last time the whole room is together before the CSC 210 final project is due</strong>, so the submission checks happen here. Anyone flagged at risk during this session should plan to come to Lab 17."
+          },
+          {
+            "weekLabel": "Week 17 - Lab 17, Tue 12/8",
+            "weekNumber": 17,
+            "dates": "12/7/2026 - 12/11/2026 &middot; <strong>Lab 17 &mdash; Tue 12/8, 2:00-3:20 PM &mdash; open studio</strong>",
+            "topics": [
+              "<strong>Lab 17 &mdash; Free Work Period &amp; Open Q&amp;A</strong> [Unstructured] &mdash; no agenda: the room, the instructor, and three days before the deadline",
+              "<strong>Open Q&amp;A on the 8-bit CPU simulation</strong> &mdash; any question, any component, any bug. Students who have been quiet all semester tend to ask here; the space is left for it",
+              "<strong>Work time</strong> on the final project, with the instructor circulating for one-on-one debugging",
+              "<strong>Documentation help</strong> &mdash; the written component (design decisions, ISA definition, test results) is where otherwise-strong projects lose points. If you have a working circuit and no write-up, come here",
+              "<strong>Optional demos</strong> at the end if there is appetite: volunteers run their CPU for the room. Seeing four or five valid designs solving the same problem is a good last impression of the discipline"
+            ],
+            "assignments": [
+              "<strong>No completion check this week.</strong> Lab 17 is ungraded and attendance is not part of your lab grade",
+              "CSC 210 Final Project is due Friday 12/11/2026 (graded in CSC 210, not here)"
+            ],
+            "deliverableDueDate": "Nothing is due to CSC 210L this week",
+            "notes": "Supports Lecture Step 17 (Synthesis). Anyone flagged at risk in Lab 16 who shows up gets triaged first. This session carries no grade weight in either course &mdash; come if it helps you, skip it without penalty if it does not."
           }
         ]
       }
     ]
   },
   "grading": {
+    "_basis": "Completion checks on lab work, chosen by the instructor 2026-08-17 (Open Item #1 of the topical outline). Sixteen checks at 10 points each = 160 points. Lab 17 carries no check, so nothing in this course penalizes skipping the free work period. The grade is entirely independent of CSC 210: no CSC 210 grade depends on lab attendance or on any lab completion check, and no lab check requires a CSC 210 submission.",
     "breakdown": [
       {
-        "category": "Lab Exercises",
-        "weight": 50,
-        "points": 250,
-        "description": "Weekly lab assignments and exercises"
+        "category": "Phase 1 Completion Checks (Labs 1-4)",
+        "percentage": 25,
+        "points": 40,
+        "description": "Four checks at 10 points: toolchain and semester <code>.circ</code> file created (Lab 1); NAND-built gate library and De Morgan verifier (Lab 2); 8-bit adder and 3-to-8 decoder (Lab 3); S-R latch, gated D latch, D flip-flop, and timing diagrams (Lab 4)."
       },
       {
-        "category": "Projects",
-        "weight": 30,
-        "points": 150,
-        "description": "Three major lab projects (25 pts each + 30 pts final)"
+        "category": "Phase 2 Completion Checks (Labs 5-8)",
+        "percentage": 25,
+        "points": 40,
+        "description": "Four checks at 10 points: 8-bit register plus first MIPS program (Lab 5); ALU with decoder select and both overflow flags, plus arithmetic drills (Lab 6); recursive procedure exercise in MARS (Lab 7); RAM matrix with MAR plus array program (Lab 8)."
       },
       {
-        "category": "Exams",
-        "weight": 10,
-        "points": 50,
-        "description": "Midterm Lab (25 pts) and Final Lab (30 pts)"
+        "category": "Phase 3 Completion Checks (Labs 9-12)",
+        "percentage": 25,
+        "points": 40,
+        "description": "Four checks at 10 points: single-file audit passed and CPU floor plan started (Lab 9); register file wired to the ALU plus your drafted ISA (Lab 10); paper control table plus working control unit (Lab 11); CPU-to-RAM interface with MDR plus the MMIO demonstration (Lab 12)."
       },
       {
-        "category": "Discussion Participation",
-        "weight": 10,
-        "points": 50,
-        "description": "Weekly discussion forum participation"
+        "category": "Phase 4 Completion Checks (Labs 13-16)",
+        "percentage": 25,
+        "points": 40,
+        "description": "Four checks at 10 points: MOV/ADD/SUB executing (Lab 13); 10+ instructions with branch, jump, and load/store plus a test program (Lab 14); performance worksheet with your own measured counts (Lab 15); cache experiment, hazard trace, and peer-test report (Lab 16). <strong>Lab 17 has no check</strong> &mdash; the free work period is never graded."
       }
     ],
     "scale": [
-      {"grade": "A", "minPercent": 90},
-      {"grade": "B", "minPercent": 80},
-      {"grade": "C", "minPercent": 70},
-      {"grade": "D", "minPercent": 60}
-    ]
+      {
+        "grade": "A",
+        "range": "90-100%"
+      },
+      {
+        "grade": "B",
+        "range": "80-89%"
+      },
+      {
+        "grade": "C",
+        "range": "70-79%"
+      },
+      {
+        "grade": "D",
+        "range": "60-69%"
+      },
+      {
+        "grade": "F",
+        "range": "Below 60%"
+      }
+    ],
+    "totalPoints": 160
   },
   "materials": {
     "required": [
-      "Assembly language simulator/software (provided)",
-      "Digital logic simulation software (provided)",
-      "CPU architecture simulator (provided)"
+      "<strong>Logisim Classic 2.7.1</strong> - used for every circuit you build. <strong>Not Logisim Evolution</strong>; the two behave differently and this lab is built around Classic. Free download for Windows and macOS from the course SharePoint. Installed and verified in Lab 1.",
+      "<strong>MARS</strong> (MIPS Assembler and Runtime Simulator) - used for all assembly-language work. Free, Java-based. Installed and verified in Lab 1.",
+      "<strong>Your semester <code>.circ</code> file</strong> - you create <code>LastName_CSC210.circ</code> in Lab 1 and every circuit for the rest of the term becomes a new <em>tab</em> in that same file, never a separate file with external links. We do a 30-second file check at the start of every session.",
+      "<strong>The CSC 210 AI Tutor</strong> - the one approved AI tool for this course, web-based, introduced in Week 2. Free, no account beyond your college login. See the AI Policy under Policies &amp; Resources.",
+      "<strong>A laptop you can run Logisim and MARS on during the Zoom session</strong>, plus a reliable enough connection to share your screen when you need help debugging. Both tools are Java-based and run on Windows, macOS, and Linux.",
+      "<strong>No textbook purchase is required.</strong>"
     ],
     "optional": [
-      "CSC210 textbook for reference",
-      "Online assembly language resources",
-      "Additional practice problems"
+      "<strong>Primary reference (free):</strong> Saylor Academy, <em>CS301: Computer Architecture</em> - free, openly licensed, self-paced. Shared with CSC 210. <a href=\"https://learn.saylor.org/mod/page/view.php?id=20643\" target=\"_blank\" rel=\"noopener\">CS301 syllabus and units</a>",
+      "<strong>Recommended:</strong> Plantz, R. G., <em>Introduction to Computer Organization: An Under the Hood Look at Hardware and x86-64 Assembly</em> (No Starch Press). Pairs especially well with the 8-bit circuit builds in Labs 5-8.",
+      "<strong>Reference only, not assigned:</strong> Patterson, D. A., &amp; Hennessy, J. L., <em>Computer Organization and Design, MIPS Edition</em> (Morgan Kaufmann). A second reference for the MIPS instruction set and the performance and pipelining material in Labs 15-16.",
+      "<strong>Graph paper or a notebook.</strong> Labs 4, 11, 14, and 16 all involve drawing before building - timing diagrams, control tables, hand-assembly, and pipeline traces. Paper first is not optional advice; it is how these labs are designed."
     ]
   },
   "importantDates": [
     {
-      "event": "Project 1: Digital Logic Design Lab Due",
-      "date": "9/13/2026",
-      "week": 4
+      "week": 1,
+      "event": "Lab 1 - Tue 8/18 - Toolchain Setup",
+      "description": "First lab session. Install Logisim Classic 2.7.1 and MARS, and create the semester <code>.circ</code> file you will carry all term."
     },
     {
-      "event": "Midterm Lab Exam",
-      "date": "10/11/2026",
-      "week": 8
+      "week": 2,
+      "event": "AI Tutor Introduced",
+      "description": "Week of 8/24/2026. The one approved AI tool for CSC 210 and CSC 210L comes online. See the AI Policy under Policies &amp; Resources."
     },
     {
-      "event": "Project 2: Assembly Programming Project Due",
-      "date": "11/1/2026",
-      "week": 11
+      "week": 2,
+      "event": "College Deadline - Add/Drop and Refund",
+      "description": "8/28/2026. Last day to add, to drop without a notation, and for an enrollment-fee refund. Set by the college; see Important Semester Dates under Policies &amp; Resources."
     },
     {
-      "event": "Project 3: Performance Analysis Lab Due",
-      "date": "11/29/2026",
-      "week": 15
+      "week": 3,
+      "event": "Lab 3 - Tue 9/1 - First [Finish on own] Lab",
+      "description": "The first lab that intentionally does not finish in 90 minutes. The 8-bit adder and 3-to-8 decoder are both needed in Labs 5 and 8, so finish them."
     },
     {
-      "event": "Thanksgiving Break - No Class",
-      "date": "11/25/2026 - 11/29/2026",
-      "week": 15
+      "week": 4,
+      "event": "Lab 4 - Tue 9/8 - Logic Becomes Memory",
+      "description": "The pivot point of the course. Labor Day falls on Monday 9/7; lab meets normally Tuesday 9/8."
     },
     {
-      "event": "Final Lab Exam",
-      "date": "12/7/2026 - 12/11/2026",
-      "week": 17
+      "week": 9,
+      "event": "Lab 9 - Tue 10/13 - Single-File Audit",
+      "description": "Every circuit verified as a tab in one <code>.circ</code> file. The file-structure failure is the most common submission problem in this course, and this is the last moment where fixing it is cheap."
+    },
+    {
+      "week": 10,
+      "event": "Lab 10 - Tue 10/20 - Project Planning Workshop",
+      "description": "Last 20 minutes: draft your final project ISA on paper and get its scope reality-checked before you build it."
+    },
+    {
+      "week": 12,
+      "event": "College Deadline - Last Day to Drop with a 'W'",
+      "description": "11/6/2026. Set by the college; the instructor cannot extend it. Talk to me and to Financial Aid before you drop."
+    },
+    {
+      "week": 14,
+      "event": "Lab 14 - Tue 11/17 - LAST CIRCUIT-BUILD LAB",
+      "description": "The last lab that builds circuitry together. From here forward, progress on the CPU simulation is self-directed. Come ready to push."
+    },
+    {
+      "week": 15,
+      "event": "Lab 15 - Tue 11/24 - Thanksgiving Week",
+      "description": "Required but deliberately light, entirely self-contained, and no new Logisim work. The worksheet and MARS steps are published in writing, so you can complete it on your own if you travel early. Includes ~30 minutes of reserved catch-up time on Labs 13-14."
+    },
+    {
+      "week": 16,
+      "event": "Lab 16 - Tue 12/1 - Peer Testing &amp; Submission Verification",
+      "description": "Last structured session. Circuit swap with a partner, plus the submission checklist verified live on your own file - including the check for broken external file links."
+    },
+    {
+      "week": 17,
+      "event": "Lab 17 - Tue 12/8 - Free Work Period (ungraded)",
+      "description": "Open studio and Q&amp;A, three days before the CSC 210 final project is due Friday 12/11/2026. No completion check; attendance here is not part of your lab grade."
     }
   ],
   "workload": {
     "hoursPerWeek": 3,
-    "breakdown": {
-      "synchronous": "1 hour/week (Zoom lab session)",
-      "asynchronous": "2 hours/week (lab exercises, readings, discussions)"
-    }
+    "breakdown": "1.5 hrs synchronous Tuesday Zoom lab + approximately 1.5 hrs asynchronous work between sessions (finishing [Finish on own] builds, drills, and worksheets)",
+    "notes": "Ninety minutes of instruction every Tuesday across 17 weeks is about 25.5 synchronous contact hours, with a comparable asynchronous portion between sessions. The asynchronous load is not evenly distributed by design: labs marked <strong>[Completes in class]</strong> (Labs 1, 2, 4, 9, 12, 15, 16) leave you with little or nothing to finish, while labs marked <strong>[Finish on own]</strong> (Labs 3, 5, 6, 7, 8, 10, 11, 13, 14) deliberately send you home with a working partial circuit and a short remaining task, typically 45-90 minutes. Labs 13 and 14 run heaviest; Lab 15 is deliberately light and Lab 17 is unstructured. Circuit debugging is unpredictable by nature - start the remaining task early in the week rather than on Monday night."
   },
   "policies": {
-    "attendance": "Hybrid lab course requires attendance at synchronous Zoom lab sessions (Tuesdays 2:00-3:20 PM). More than 3 unexcused absences may impact your grade.",
-    "lateWork": "Lab submissions within 48 hours late receive 50% credit. After 48 hours, no credit unless prior arrangement made.",
-    "makeupExams": "Makeup lab exams require documented emergency and must be arranged within 48 hours of the original exam date.",
-    "academicIntegrity": "All work must be your own. Plagiarism or cheating will result in a minimum of failing the assignment and may result in course failure."
+    "attendance": "This lab meets live on Zoom every Tuesday from 2:00 to 3:20 PM, and the sessions are the point of the course - the guided build, the instructor at the front stopping at checkpoints, and the circulating help while you debug. Come. That said, <strong>your grade is based on the weekly completion checks, not on attendance</strong>, and every check is completable by a student who missed the session: the build steps and any worksheets are published in writing each week. If you have to miss a Tuesday, work through that week's material and submit the check on time; if you are missing several in a row, email me early rather than late. This course builds continuously - Lab 10's circuit instances Lab 4's flip-flop - so a missed week is not a week you can skip past. <strong>Lab 17 is ungraded and carries no attendance expectation at all.</strong>",
+    "lateWork": "Completion checks have a standing 48-hour grace window with no penalty and no need to ask; after that, contact me and we will work something out. Because each build feeds the next, a late check costs you more in momentum than in points - the grace window exists so that a hard week does not compound. This course-specific policy replaces the general late-submission statement shown under Policies &amp; Resources.",
+    "makeupExams": "<strong>There are no exams, quizzes, or a final exam in CSC 210L.</strong> The entire grade is the sixteen weekly completion checks. If an emergency costs you a week, submit the check late under the grace window or contact me - there is nothing here that has to be made up under exam conditions.",
+    "academicIntegrity": "<strong>See the AI Policy for This Course</strong> under Policies &amp; Resources for the governing statement on AI in CSC 210L. It is identical to the CSC 210 policy: the course AI Tutor is the one approved AI tool and you may use it as much as you like; general-purpose AI assistants are not permitted on graded work.<br><br>Beyond AI, ordinary academic honesty applies, with one lab-specific note: <strong>collaboration in this room is encouraged and expected.</strong> The whole point of the guided build is that we do it together, and Lab 16 has you deliberately test a partner's CPU. Working alongside someone, comparing approaches, and finding each other's bugs is exactly right. What is not right is submitting a circuit or a program you did not build - a partner's file, a downloaded file, or a generated one. You should be able to explain any part of what you submit on request. Academic dishonesty falls under the College Academic Honesty Policy (AP 5500.2) and may result in a failing grade on the assignment or in the course, plus referral for disciplinary action. If you are unsure whether something crosses a line, ask me before you submit.",
+    "_labIndependence": "Not rendered. Standing design constraint from the topical outline: lab is a recommended, not required, companion course. No CSC 210 grade may depend on lab attendance or on any CSC 210L completion check, and every Logisim Checkpoint, MIPS assignment, and the Final Project must remain fully completable by a student who never sets foot in lab. Lab reduces friction; it does not gate the grade."
   }
 }
