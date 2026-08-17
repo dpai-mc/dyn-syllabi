@@ -542,6 +542,11 @@
             if (courseData.metadata.meetingSchedule) {
                 html += `<strong>Meeting Schedule:</strong> ${courseData.metadata.meetingSchedule.days}, ${courseData.metadata.meetingSchedule.time} @ ${courseData.metadata.meetingSchedule.location}<br>`;
                 html += `<strong>Modality:</strong> ${courseData.metadata.meetingSchedule.modality}<br>`;
+                if (courseData.metadata.meetingSchedule.zoomLinkHtml) {
+                    html += `<strong>Class Zoom:</strong> ${courseData.metadata.meetingSchedule.zoomLinkHtml}<br>`;
+                } else if (courseData.metadata.meetingSchedule.zoomUrl) {
+                    html += `<strong>Class Zoom:</strong> <a href="${courseData.metadata.meetingSchedule.zoomUrl}" style="color: #1e3a8a;" target="_blank" rel="noopener">Join the class session</a><br>`;
+                }
             }
             html += `<strong>Credit Hours:</strong> ${courseData.metadata.credits} units (${courseData.metadata.creditBreakdown})<br>`;
             html += `<strong>Semester:</strong> ${courseData.metadata.term}<br>`;
@@ -697,9 +702,57 @@
             tab.innerHTML = html;
         }
 
+        // Course-specific AI policy. Renders only when the course JSON defines
+        // an "aiPolicy" object, so courses without one are unaffected.
+        function renderAIPolicySection() {
+            const ai = courseData.aiPolicy;
+            if (!ai) return '';
+
+            const list = (heading, items, accent) => {
+                if (!items || !items.length) return '';
+                let h = `<h3 style="color: ${accent};">${heading}</h3><ul style="list-style-type: disc; padding-left: 2rem; margin: 0.5rem 0 1.25rem;">`;
+                items.forEach(item => h += `<li style="margin: 0.5rem 0;">${item}</li>`);
+                return h + `</ul>`;
+            };
+
+            let html = `<section><h2>${ai.title || 'AI Policy for This Course'}</h2>`;
+            html += `<div class="phase-container">`;
+
+            if (ai.approach) {
+                html += `<p style="margin-bottom: 1rem;"><strong>Approach:</strong> ${ai.approach}</p>`;
+            }
+            if (ai.summary) {
+                html += `<div class="description-box"><p>${ai.summary}</p></div>`;
+            }
+            if (ai.scopeNote) {
+                html += `<p style="margin: 1rem 0; padding: 1rem; background-color: #fef3c7; border-radius: 6px;">${ai.scopeNote}</p>`;
+            }
+
+            html += list('What you may do', ai.permitted, '#1e3a8a');
+            html += list('What you must do', ai.required, '#1e3a8a');
+
+            if (ai.notPermitted && ai.notPermitted.length) {
+                html += `<div style="border-left: 4px solid #b45309; background-color: #fffbeb; padding: 1rem 1.25rem; border-radius: 6px; margin: 1rem 0;">`;
+                html += list(ai.notPermittedHeading || 'What you may not do', ai.notPermitted, '#b45309');
+                if (ai.whyThisLine) html += `<p style="margin-top: 0.5rem;"><strong>Why this line is here:</strong> ${ai.whyThisLine}</p>`;
+                html += `</div>`;
+            }
+
+            if (ai.consequences) {
+                html += `<h3>If the line gets crossed</h3><p>${ai.consequences}</p>`;
+            }
+            if (ai.uncertainty) {
+                html += `<p style="margin-top: 1rem; padding: 1rem; background-color: #ecfdf5; border-left: 4px solid #047857; border-radius: 6px;">${ai.uncertainty}</p>`;
+            }
+
+            html += `</div></section>`;
+            return html;
+        }
+
         function renderPoliciesTab() {
             const tab = document.getElementById('policies-tab');
-            let html = `<section><h2>Course Policies & Student Support</h2>`;
+            let html = renderAIPolicySection();
+            html += `<section><h2>Course Policies & Student Support</h2>`;
             
             policiesData.policies.forEach(policy => {
                 html += `<h3>${policy.title}</h3>`;
