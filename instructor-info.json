@@ -1,0 +1,29 @@
+{
+  "_updated": "2026-08-17b — Student hours consolidated: removed the CSC141-specific note \"immediately before and immediately after the Monday class session\" (this file is shared by every syllabus, so course-specific wording must not appear here), merged Monday and Tuesday under a single \"Online via Zoom\" heading, and added the by-appointment (M-Th) Calendly line. Earlier same-day version: data/old/instructor-info.2026-08-17b.json",
+  "name": "David Pai, PhD",
+  "email": "dpai@mendocino.edu",
+  "phone": "(707) 468-3126",
+  "office": {
+    "location": "Online via Zoom — all student hours are held online this term",
+    "building": "Library and Learning Resource Center (LLRC)",
+    "room": 4170
+  },
+  "zoom": {
+    "url": "https://mendocino-edu.zoom.us/my/davepai",
+    "label": "Join Dr. Pai's Zoom Room",
+    "note": "Use this link during online office hours or by appointment."
+  },
+  "studentHours": [
+    {
+      "_note": "Renderer emits one linked 'Online via Zoom' heading per entry and then prints `days` + ' ' + `time`. Values are injected as raw HTML, so all posted hours are kept in this single entry with <br> line breaks to avoid a repeated heading. Keep wording course-neutral: this file is shared by every syllabus.",
+      "type": "online",
+      "days": "Mondays 4:30 PM - 5:30 PM and 6:50 PM - 7:50 PM<br>Tuesdays 1:00 PM - 2:00 PM and 3:20 PM - 4:20 PM<br>OR by appointment (M-Th) - schedule at <a href=\"https://calendly.com/dpai\" target=\"_blank\" rel=\"noopener\">my calendar</a>",
+      "time": "",
+      "link": "https://mendocino-edu.zoom.us/my/davepai"
+    }
+  ],
+  "encouragementMessage": "Don't hesitate to reach out! Student hours are YOUR time. Whether you're stuck on an assignment, want a second opinion on something a tool told you, or just want to talk through where the course is going, I'm here to help. Students who use student hours consistently do better in the course. If none of the posted times work with your job or childcare, email me and we'll find a time that does.",
+  "bio": "Dr. Pai has been teaching computer science at Mendocino College since 2014. He specializes in programming education and believes in hands-on, project-based learning. His teaching philosophy centers on building confidence through incremental challenges and supportive feedback.",
+  "preferredContact": "Canvas InBox for course-related questions; email for personal/confidential matters",
+  "responseTime": "24-48 hours on weekdays; 72 hours on weekends"
+}
