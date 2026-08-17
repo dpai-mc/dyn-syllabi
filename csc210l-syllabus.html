@@ -565,16 +565,20 @@
             html += `<strong>Prerequisite:</strong> ${courseData.metadata.prerequisite}</p></div>`;
             
             html += `<h2>Student Hours (Office Hours)</h2><div class="phase-container">`;
+            let lastZoomLink = null;
             instructorData.studentHours.forEach(hours => {
                 if (hours.type === 'online') {
-                    html += `<h4><a href="${hours.link}" style="color: #1e3a8a;" target="_blank" rel="noopener">Online via Zoom</a></h4>`;
-                    html += `<p>${hours.days} ${hours.time}${hours.note ? ` (${hours.note})` : ''}</p>`;
+                    if (hours.link !== lastZoomLink) {
+                        html += `<h4><a href="${hours.link}" style="color: #1e3a8a;" target="_blank" rel="noopener">Online via Zoom</a></h4>`;
+                        lastZoomLink = hours.link;
+                    }
+                    html += `<p style="margin: 0.25rem 0;">${hours.days} ${hours.time}${hours.note ? ` (${hours.note})` : ''}</p>`;
                 } else if (hours.type === 'in-office') {
                     html += `<h4>In Office (${hours.location})</h4><ul style="list-style-type: disc; padding-left: 2rem; margin: 1rem 0;">`;
                     hours.schedule.forEach(s => html += `<li>${s.day}: ${s.time}</li>`);
                     html += `</ul>`;
                 } else if (hours.type === 'appointment') {
-                    html += `<h4>${hours.method}</h4><p>Schedule via <a href="${hours.link}" style="color: #1e3a8a;" target="_blank" rel="noopener">online calendar</a></p>`;
+                    html += `<p style="margin: 0.25rem 0;">${hours.method}${hours.link ? ` - schedule at <a href="${hours.link}" style="color: #1e3a8a;" target="_blank" rel="noopener">my calendar</a>` : ''}</p>`;
                 }
             });
             if (instructorData.encouragementMessage) {
