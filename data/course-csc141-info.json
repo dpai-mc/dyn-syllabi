@@ -1,8 +1,6 @@
 {
-  "_source": "Rebuilt 2026-08-17 for Fall 2026 from the approved CSC 141 syllabus (approved 2026-07-13, AI-tools section added 2026-08-12) and COR-csc-141 (Curriculum Committee / Board approval 2025-09-05, proposal start Fall 2026). Previous version backed up to data/old/course-csc141-info.2026-08-17.json. Keys beginning with an underscore are ignored by the renderer.",
+  "_source": "Rebuilt 2026-08-17 for Fall 2026 from the approved CSC 141 syllabus (approved 2026-07-13, AI-tools section added 2026-08-12) and COR-csc-141 (Curriculum Committee / Board approval 2025-09-05, proposal start Fall 2026). Meeting time, Zoom link, and the course AI Policy section added 2026-08-17. Previous version backed up to data/old/course-csc141-info.2026-08-17.json. Keys beginning with an underscore are ignored by the renderer.",
   "_todoBeforePosting": [
-    "Monday Zoom start/end time — metadata.meetingSchedule.time currently reads 'Time TBD'",
-    "Zoom meeting URL for the weekly session — metadata.meetingSchedule.zoomUrl",
     "Section number and CRN once registration assigns them",
     "Confirm the late-work policy text in policies.lateWork reflects your intent for Fall 2026",
     "Verify college key dates in college-policies.json against the official Fall 2026 academic calendar"
@@ -17,10 +15,11 @@
     "prerequisite": "None. Assumes basic computer and web skills only — browser, email, and file management. No programming and no math beyond arithmetic.",
     "meetingSchedule": {
       "days": "Mondays (first session Monday, August 17, 2026)",
-      "time": "Time TBD — 90 minutes",
+      "time": "5:30 PM - 6:50 PM Pacific",
       "location": "Online via Zoom",
-      "modality": "Hybrid: a 90-minute live Zoom session each Monday plus a 90-minute structured asynchronous block during the week. No on-campus meeting.",
-      "zoomUrl": "Zoom link TBD — posted in Canvas before the first session"
+      "modality": "Hybrid: an 80-minute live Zoom session each Monday, 5:30-6:50 PM, plus about 100 minutes of structured asynchronous work during the week. No on-campus meeting.",
+      "zoomUrl": "https://mendocino-edu.zoom.us/j/81563219466?pwd=cd8gaaq58fMdLMBRNAIMkuw4CruzVx.1",
+      "zoomLinkHtml": "<a href=\"https://mendocino-edu.zoom.us/j/81563219466?pwd=cd8gaaq58fMdLMBRNAIMkuw4CruzVx.1\" target=\"_blank\" rel=\"noopener\">Join the Monday class session on Zoom</a>"
     }
   },
   "description": {
@@ -40,8 +39,36 @@
     "Design personal guidelines for responsible AI use and develop strategies for lifelong AI literacy."
   ],
   "_sloNote": "CSLOs are quoted verbatim from the Course Outline of Record, as required by college syllabus policy. Expected SLO performance per the COR: 75% of students achieve each.",
+  "aiPolicy": {
+    "title": "AI Policy for This Course",
+    "approach": "Open — AI use is expected and taught, with required disclosure",
+    "scopeNote": "<strong>This policy applies to CSC 141 only.</strong> Every course sets its own AI policy, and what is expected here may be prohibited in your English, history, or math class. Always check each instructor's syllabus. Nothing in this policy gives you permission to use AI in another course.",
+    "summary": "This is a course <em>about</em> AI, so you will use AI extensively — that is the coursework, not a loophole. Two rules make it work: <strong>disclose what the tool did</strong>, and <strong>do your own evaluating</strong>. Everything below follows from those two.",
+    "permitted": [
+      "<strong>Use AI throughout the course.</strong> Brainstorming, drafting, summarizing, explaining a concept you did not follow in session, generating examples, comparing outputs across tools, translating something into plainer language, checking your own writing — all of it, on any assignment, unless a specific activity says otherwise.",
+      "<strong>Use whatever tool you like beyond the Gemini baseline.</strong> Demonstrations use Google Gemini so everyone sees the same screen, but once you are comfortable, your tool choices are your own. When an activity requires a particular tool, it will say so and explain why.",
+      "<strong>Use AI to help you study.</strong> Quiz yourself, ask for a different explanation, have it walk you through why an answer was wrong. Concept quizzes are open-resource and retake-friendly on purpose.",
+      "<strong>Generate material you will then analyze.</strong> Most module artifacts start with AI output you produced — a biased result, a weak citation, a set of three tool responses to the same prompt. Producing that material with AI is the assignment."
+    ],
+    "required": [
+      "<strong>Disclose your AI use on every submission that involved it.</strong> One or two sentences: which tool and version, what you asked it to do, and what you changed or verified yourself. There is no penalty for disclosing — the disclosure is part of the work, and a missing one is what causes problems.",
+      "<strong>Verify anything factual before you rely on it.</strong> Open the citation. Follow the link. Confirm the number. A citation tells you <em>where to check</em>; it is not proof that anyone checked.",
+      "<strong>Keep your prompts and sessions.</strong> Several artifacts ask you to show your process, not just your result. Screenshots or exported transcripts are the easiest way.",
+      "<strong>Protect other people's information.</strong> Never enter your student ID, your grades, another student's work, or anyone's personal information into any AI tool. If an assignment seems to require it, it does not — ask me and I will give you the workaround. Tools on your personal accounts run under that company's terms, which you accept yourself."
+    ],
+    "notPermittedHeading": "The one hard line: you do the evaluating",
+    "notPermitted": [
+      "<strong>Do not use AI to evaluate AI-generated content.</strong> When an assignment asks you to judge accuracy, detect bias, assess fairness, rate appropriateness, or check quality, that judgment must be <em>yours</em>. Do not paste an output into a second tool and ask it whether the first one was biased, accurate, or any good.",
+      "<strong>Do not use AI to write your reflections.</strong> Module reflections, the synthesis reflection, and your Personal AI Code are accounts of your own experience and thinking. A model cannot have had your week.",
+      "<strong>Do not let AI make the argument in your policy brief or your critique.</strong> You may use it to research, to check your reasoning, or to find the counterargument — but the position, and the justification for it, has to be yours.",
+      "<strong>Do not submit AI output as if you produced it.</strong> Undisclosed AI work that was supposed to be disclosed is an academic honesty matter under AP 5500.2, not a style problem."
+    ],
+    "whyThisLine": "Every one of this course's learning outcomes above the first is an <em>evaluation</em> or <em>creation</em> outcome — evaluating content for accuracy and bias, critiquing applications against ethical frameworks, designing your own guidelines. Outsourcing the evaluation outsources exactly the skill the course exists to build, and it is the skill that will still matter when today's tools are three generations obsolete. It is also the one thing on your transcript an employer cannot get from a subscription.",
+    "consequences": "Work that outsources the evaluation is graded on what it demonstrates, which is not much — it is a grading outcome, not a disciplinary one, and you will get the chance to redo it. Undisclosed AI use where disclosure was required, or submitting someone else's work as your own, falls under the College Academic Honesty Policy (AP 5500.2) and is handled accordingly.",
+    "uncertainty": "<strong>If you are not sure whether something is allowed, ask before you submit.</strong> Asking is always safe, it never counts against you, and in a course like this the question itself is usually worth class time."
+  },
   "schedule": {
-    "_rhythm": "Class meets Mondays, so each session is primed by the PREVIOUS week's work. Monday session = discussion of last week + launch of this week. During the week = 90-minute structured asynchronous block (activity or studio). By Sunday night = pre-work for next Monday. Weekly work is due Sunday 11:59 PM unless noted.",
+    "_rhythm": "Class meets Mondays 5:30-6:50 PM on Zoom, so each session is primed by the PREVIOUS week's work. Monday session = discussion of last week + launch of this week. During the week = about 100 minutes of structured asynchronous work (activity or studio). By Sunday night = pre-work for next Monday. Weekly work is due Sunday 11:59 PM unless noted.",
     "phases": [
       {
         "title": "Module 1: How AI Actually Works (Weeks 1-3)",
@@ -403,17 +430,36 @@
       }
     ],
     "scale": [
-      { "grade": "A", "range": "90-100%" },
-      { "grade": "B", "range": "80-89%" },
-      { "grade": "C", "range": "70-79%" },
-      { "grade": "D", "range": "60-69%" },
-      { "grade": "F", "range": "Below 60%" },
-      { "grade": "Pass/No Pass option", "range": "You may elect Pass/No Pass instead of a letter grade. Pass = 70% or higher. The election deadline is set by the college — see Important Semester Dates." }
+      {
+        "grade": "A",
+        "range": "90-100%"
+      },
+      {
+        "grade": "B",
+        "range": "80-89%"
+      },
+      {
+        "grade": "C",
+        "range": "70-79%"
+      },
+      {
+        "grade": "D",
+        "range": "60-69%"
+      },
+      {
+        "grade": "F",
+        "range": "Below 60%"
+      },
+      {
+        "grade": "Pass/No Pass option",
+        "range": "You may elect Pass/No Pass instead of a letter grade. Pass = 70% or higher. The election deadline is set by the college — see Important Semester Dates."
+      }
     ],
     "totalPoints": 800
   },
   "materials": {
     "required": [
+      "Zoom for the Monday class session, 5:30-6:50 PM Pacific: <a href=\"https://mendocino-edu.zoom.us/j/81563219466?pwd=cd8gaaq58fMdLMBRNAIMkuw4CruzVx.1\" target=\"_blank\" rel=\"noopener\">Join the CSC 141 Monday session</a>. Sessions are recorded and posted in Canvas.",
       "No textbook. All readings and interactive materials are provided through Canvas and the course app at no cost.",
       "A computer with a current web browser, your Mendocino College email, and Canvas. A phone alone is not enough for most coursework.",
       "Google Gemini — the baseline tool for this course. It comes free with your college Google Workspace account (@student.mendocino.edu); there is nothing to sign up for. Class demonstrations and walkthroughs use Gemini, so what is on your screen will match what is on the shared screen.",
@@ -427,26 +473,66 @@
     ]
   },
   "importantDates": [
-    { "week": 1, "event": "First Session and Baseline Artifact", "description": "Monday 8/17/2026. \"10 Things AI Can Help Me Do\" drafted live in session and filed in your portfolio." },
-    { "week": 3, "event": "Module 1 Artifact Due", "description": "Dataset Bias and Representation Analysis plus Module 1 Reflection — Sunday 9/6/2026." },
-    { "week": 4, "event": "No Class - Labor Day", "description": "Monday 9/7/2026. Module 1's wrap-up discussion moves to the course discussion board." },
-    { "week": 6, "event": "Module 2 Artifact Due", "description": "Prompt Engineering Casebook plus Module 2 Reflection — Sunday 9/27/2026." },
-    { "week": 8, "event": "Module 3 Artifact Due", "description": "Personal AI Code v1 and AI-assisted research exercise plus Module 3 Reflection — Sunday 10/11/2026." },
-    { "week": 11, "event": "Module 4 Artifact Due", "description": "Bias audit and personal data-protection assessment plus Module 4 Reflection — Sunday 11/1/2026." },
-    { "week": 14, "event": "Module 5 Artifact Due", "description": "Discipline-Specific AI Solution Mini-Project plus Module 5 Reflection — Sunday 11/22/2026. Last week for topic-track presentations." },
-    { "week": 15, "event": "Thanksgiving Week - Reduced Workload", "description": "Week of 11/23/2026. About 1.5 hours of work total, fitting Monday and Tuesday. Nothing is due over the holiday." },
-    { "week": 16, "event": "Module 6 Artifact Due and Portfolio Assembled", "description": "Policy brief, Personal AI Code v2, revised \"10 Things\", and Module 6 Reflection — Sunday 12/6/2026. Portfolio must be assembled and ready to present." },
-    { "week": 17, "event": "Portfolio Presentations and Final Submission", "description": "Presentations in the Monday 12/7/2026 session. Final portfolio and synthesis reflection due Thursday 12/10/2026. Semester ends Friday 12/11/2026." }
+    {
+      "week": 1,
+      "event": "First Session and Baseline Artifact",
+      "description": "Monday 8/17/2026. \"10 Things AI Can Help Me Do\" drafted live in session and filed in your portfolio."
+    },
+    {
+      "week": 3,
+      "event": "Module 1 Artifact Due",
+      "description": "Dataset Bias and Representation Analysis plus Module 1 Reflection — Sunday 9/6/2026."
+    },
+    {
+      "week": 4,
+      "event": "No Class - Labor Day",
+      "description": "Monday 9/7/2026. Module 1's wrap-up discussion moves to the course discussion board."
+    },
+    {
+      "week": 6,
+      "event": "Module 2 Artifact Due",
+      "description": "Prompt Engineering Casebook plus Module 2 Reflection — Sunday 9/27/2026."
+    },
+    {
+      "week": 8,
+      "event": "Module 3 Artifact Due",
+      "description": "Personal AI Code v1 and AI-assisted research exercise plus Module 3 Reflection — Sunday 10/11/2026."
+    },
+    {
+      "week": 11,
+      "event": "Module 4 Artifact Due",
+      "description": "Bias audit and personal data-protection assessment plus Module 4 Reflection — Sunday 11/1/2026."
+    },
+    {
+      "week": 14,
+      "event": "Module 5 Artifact Due",
+      "description": "Discipline-Specific AI Solution Mini-Project plus Module 5 Reflection — Sunday 11/22/2026. Last week for topic-track presentations."
+    },
+    {
+      "week": 15,
+      "event": "Thanksgiving Week - Reduced Workload",
+      "description": "Week of 11/23/2026. About 1.5 hours of work total, fitting Monday and Tuesday. Nothing is due over the holiday."
+    },
+    {
+      "week": 16,
+      "event": "Module 6 Artifact Due and Portfolio Assembled",
+      "description": "Policy brief, Personal AI Code v2, revised \"10 Things\", and Module 6 Reflection — Sunday 12/6/2026. Portfolio must be assembled and ready to present."
+    },
+    {
+      "week": 17,
+      "event": "Portfolio Presentations and Final Submission",
+      "description": "Presentations in the Monday 12/7/2026 session. Final portfolio and synthesis reflection due Thursday 12/10/2026. Semester ends Friday 12/11/2026."
+    }
   ],
   "workload": {
     "hoursPerWeek": 9,
-    "breakdown": "3 hrs in-class equivalent (90-min Monday Zoom session + 90-min structured asynchronous block) + 6 hrs out-of-class work on assignments, portfolio, and discussion pre-work",
+    "breakdown": "3 hrs in-class equivalent (80-min Monday Zoom session, 5:30-6:50 PM, plus about 100 min of structured asynchronous work) + 6 hrs out-of-class work on assignments, portfolio, and discussion pre-work",
     "notes": "This matches the Course Outline of Record: 51 in-class contact hours and 102 out-of-class hours across 17 weeks, for 153 total student learning hours. Studio weeks (3, 6, 8, 11, 14, 16) sit at the top of that range. Thanksgiving week (15) is deliberately light at about 1.5 hours total. If you are consistently well over 9 hours, email me — that usually means an instruction is unclear rather than that you are behind."
   },
   "policies": {
     "attendance": "Come to the Monday sessions when you can — the discussion is the course, and it works because people arrive having done the previous week's material. Sessions are recorded and posted in Canvas. If work, caregiving, or illness keeps you from attending live, watch the recording and post to that week's discussion board; you earn the same credit and you will not lose participation points for a schedule you cannot control. As a hybrid course, regular weekly engagement in Canvas and the course app is what demonstrates attendance. If your internet access is unreliable, tell me in week 1 — every graded activity has a low-bandwidth path, and the library loans laptops and hotspots.",
     "lateWork": "Module artifacts and reflections have a standing 48-hour grace window with no penalty and no need to ask. After that, contact me before the deadline if you can, or as soon as you are able if you cannot — I would much rather adjust a deadline than lose you. Discussion pre-work is credit/no credit and must be submitted before its Monday session to serve its purpose, so it is not accepted late; the two lowest pre-work scores are dropped to absorb the weeks life gets in the way. Concept quizzes are open for a window in Canvas with best-of-2 attempts and are not reopened afterward. The final portfolio and synthesis reflection cannot be accepted after Thursday 12/10/2026 because grades are due. This course-specific policy replaces the general late-submission statement shown under Policies &amp; Resources.",
     "makeupExams": "There are no exams in this course — no midterm, no final. Every assessment is open-resource by design and asks you to demonstrate the outcome through your own work: analysis of your own tool sessions, reflections tied to our discussions, and application in your own field. If you miss an oral presentation slot for a documented emergency, contact me within 48 hours and we will schedule a replacement.",
-    "academicIntegrity": "<strong>This is a course about AI, so of course you will use it — that is the assignment, not a loophole.</strong> In this course you may use generative AI tools as part of the learning process. Assignments are designed to encourage transparent and ethical AI use and include guidance for tracking and citing that use. (Open approach, adapted from the ASCCC resource document <em>Academic Integrity Policies in the Age of Artificial Intelligence</em>, 2023-2024.)<br><br><strong>What this course asks is that your use be visible.</strong> When AI helped, include a short disclosure note with your submission: which tool and version, what you asked it to do, and what you changed or verified yourself. One or two sentences is enough, and it costs you nothing.<br><br><strong>The line that matters:</strong> an artifact has to show <em>your</em> judgment. A prompt casebook full of outputs you never evaluated, or a reflection written by a model about experiences you did not have, does not demonstrate the outcome — and it is graded on that basis.<br><br><strong>Permission is course-by-course.</strong> What is expected here may be prohibited in your English or history class. Always check each instructor's policy. Unauthorized AI use in courses that prohibit it falls under the College Academic Honesty Policy (AP 5500.2).<br><br><strong>Protect your privacy and other people's.</strong> Never enter your student ID, your grades, another student's work, or anyone's personal information into any AI tool. If an assignment appears to require it, it does not — ask me and I will give you the workaround."
+    "academicIntegrity": "<strong>See the AI Policy for This Course</strong> under Policies &amp; Resources for the full statement on how AI may and may not be used in CSC 141 — it is the governing policy for this course and it is detailed, because the subject demands it. In short: use AI extensively and disclose it, but do your own evaluating.<br><br>Beyond AI, ordinary academic honesty applies. All work you submit must be your own effort, properly attributed. Academic dishonesty — cheating, plagiarism, fabrication, or submitting another person's work as yours — falls under the College Academic Honesty Policy (AP 5500.2) and may result in a failing grade on the assignment or in the course, plus referral for disciplinary action. If you are ever unsure whether something crosses a line, ask me before you submit. Asking is always safe."
   }
 }
