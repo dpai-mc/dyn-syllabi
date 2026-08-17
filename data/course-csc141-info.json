@@ -1,9 +1,8 @@
 {
-  "_source": "Rebuilt 2026-08-17 for Fall 2026 from the approved CSC 141 syllabus (approved 2026-07-13, AI-tools section added 2026-08-12) and COR-csc-141 (Curriculum Committee / Board approval 2025-09-05, proposal start Fall 2026). Meeting time, Zoom link, and the course AI Policy section added 2026-08-17. Previous version backed up to data/old/course-csc141-info.2026-08-17.json. Keys beginning with an underscore are ignored by the renderer.",
+  "_source": "Rebuilt 2026-08-17 for Fall 2026 from the approved CSC 141 syllabus (approved 2026-07-13, AI-tools section added 2026-08-12) and COR-csc-141 (Curriculum Committee / Board approval 2025-09-05, proposal start Fall 2026). Meeting time, Zoom link, and the course AI Policy section added 2026-08-17. Previous version backed up to data/old/course-csc141-info.2026-08-17.json. College add/drop (8/28/2026) and W-drop (11/6/2026) dates added to the week notes 2026-08-17. Keys beginning with an underscore are ignored by the renderer.",
   "_todoBeforePosting": [
     "Section number and CRN once registration assigns them",
-    "Confirm the late-work policy text in policies.lateWork reflects your intent for Fall 2026",
-    "Verify college key dates in college-policies.json against the official Fall 2026 academic calendar"
+    "Confirm the late-work policy text in policies.lateWork reflects your intent for Fall 2026"
   ],
   "metadata": {
     "code": "CSC141",
@@ -107,7 +106,8 @@
               "Discussion Pre-Work 2 (8 pts, credit/no credit)",
               "Guided activity: watch a model learn from data (asynchronous block)"
             ],
-            "deliverableDueDate": "Sunday 8/30/2026 11:59 PM"
+            "deliverableDueDate": "Sunday 8/30/2026 11:59 PM",
+            "notes": "College deadline: last day to add, to drop without a notation, and for an enrollment-fee refund is 8/28/2026."
           },
           {
             "weekLabel": "Week 3 (8/31/2026 - 9/6/2026)",
@@ -306,7 +306,8 @@
               "Module 4 Concept Quiz (30 pts, best of 2 attempts, in Canvas)",
               "Guided activity: AI in one job you might actually want (asynchronous block)"
             ],
-            "deliverableDueDate": "Sunday 11/8/2026 11:59 PM"
+            "deliverableDueDate": "Sunday 11/8/2026 11:59 PM",
+            "notes": "College deadline: last day to drop with a 'W' notation is 11/6/2026."
           },
           {
             "weekLabel": "Week 13 (11/9/2026 - 11/15/2026)",
@@ -479,6 +480,11 @@
       "description": "Monday 8/17/2026. \"10 Things AI Can Help Me Do\" drafted live in session and filed in your portfolio."
     },
     {
+      "week": 2,
+      "event": "College Deadline - Add/Drop and Refund",
+      "description": "8/28/2026. Last day to add, to drop without a notation, and for an enrollment-fee refund. Set by the college; see Important Semester Dates under Policies & Resources."
+    },
+    {
       "week": 3,
       "event": "Module 1 Artifact Due",
       "description": "Dataset Bias and Representation Analysis plus Module 1 Reflection — Sunday 9/6/2026."
@@ -502,6 +508,11 @@
       "week": 11,
       "event": "Module 4 Artifact Due",
       "description": "Bias audit and personal data-protection assessment plus Module 4 Reflection — Sunday 11/1/2026."
+    },
+    {
+      "week": 12,
+      "event": "College Deadline - Last Day to Drop with a 'W'",
+      "description": "11/6/2026. Set by the college; the instructor cannot extend it. Talk to me and to Financial Aid before you drop."
     },
     {
       "week": 14,

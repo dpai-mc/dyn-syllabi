@@ -1,325 +1,376 @@
 {
+  "_source": "Rebuilt 2026-08-17 for Fall 2026 from 'CSC 210 - Computer Organization and Architecture, Course Syllabus: Primary Learning Content Plan, Fall 2026' and COR-csc-210 (Mandatory Revision; C-ID COMP-142). Grading weights are the build-weighted split confirmed by the instructor 2026-08-17; the source syllabus lists assessments without weights. Previous version backed up to data/old/course-csc210-info.2026-08-17.json. College add/drop (8/28/2026) and W-drop (11/6/2026) dates confirmed 2026-08-17 as the values in college-policies.json; the source syllabus's 08/30 and 10/24 (est.) are superseded. Keys beginning with an underscore are ignored by the renderer.",
+  "_todoBeforePosting": [
+    "Section number and CRN once registration assigns them",
+    "AI Tutor URL and access instructions, to be added to materials.required and aiPolicy once the tool is live for Week 2",
+    "Confirm the late-work policy text in policies.lateWork reflects your intent for Fall 2026"
+  ],
   "metadata": {
     "code": "CSC210",
     "title": "Computer Organization and Architecture",
     "credits": "3",
     "creditBreakdown": "3 lecture",
-    "format": "Online",
+    "format": "Online (Asynchronous)",
     "term": "Fall 2026",
     "prerequisite": "CSC221 - Programming and Algorithms I",
-    "transferable": "UC/CSU Transferable"
+    "transferable": "Transferable to both UC and CSU (C-ID: COMP-142)",
+    "meetingSchedule": {
+      "days": "No scheduled meeting — fully asynchronous",
+      "time": "Work on your own schedule; weekly deliverables are due Sunday 11:59 PM",
+      "location": "Online through Canvas and the course learning modules",
+      "modality": "Fully asynchronous online. There are no live class sessions. All content is delivered through the course's interactive learning modules, with hands-on work in Logisim and MARS. Student hours are available online each week if you want to talk something through."
+    }
   },
   "description": {
-    "catalog": "Study of computer organization and architecture, including digital logic, assembly language programming, and the relationship between high-level languages and machine language.",
-    "expanded": "This course provides a comprehensive understanding of how computers work at the hardware and low-level software interface. Students will learn digital logic design, computer architecture fundamentals, assembly language programming, and how high-level programming constructs map to machine instructions."
+    "catalog": "This course will explore the organization and behavior of real computer systems at the assembly-language level. The mapping of statements and constructs in a high-level language onto sequences of machine instructions is studied, as well as the internal representation of simple data types and structures. Numerical computation is examined, noting the various data representation errors and potential procedural errors. (C-ID: COMP-142)",
+    "expanded": "CSC 210 is built as a <strong>single continuous progression</strong> — not a sequence of disconnected topics — running from raw voltage to a complete, working CPU simulation that you build yourself. Every new concept is introduced by naming what you can already do, surfacing the specific problem your current knowledge cannot solve, and showing the capability that closes the gap.<br><br>Starting in Phase 2, hardware and assembly language are deliberately interleaved: every instruction you write in MARS is tied to the circuit that will eventually execute it in Logisim, and every circuit you build is tied to the instruction it enables. The course ends with a CPU of your own design — one Logisim file, built from primitive gates, running a 10-instruction set you defined."
   },
   "purpose": {
-    "why": "This course builds essential understanding of computer systems from the ground up. You'll develop skills in low-level programming, understand how software interacts with hardware, and gain insights that improve your ability to write efficient code.",
-    "beyond": "Beyond technical skills, you'll develop systematic thinking about computational problems, understand performance trade-offs, and gain appreciation for the engineering decisions that shape modern computing systems."
+    "why": "Most programmers never see what happens under the abstraction. This course takes the lid off. By the end you will have built, gate by gate, the machine that runs your code — registers, an ALU, RAM, a control unit, a working datapath — and written assembly that executes on it. That changes how you read every program you write afterward: you know what a variable costs, why a branch is expensive, and what the compiler is actually doing.",
+    "beyond": "Beyond the hardware, this course builds a specific kind of persistence. Circuits fail silently and assembly language does exactly what you said rather than what you meant, so debugging here means forming a hypothesis, testing it, and narrowing down — the same discipline that separates working engineers from frustrated ones. The final project is also a genuine portfolio piece: a documented CPU you designed and can explain."
   },
   "slos": [
-    "Describe fundamental concepts of computer architecture and organization",
-    "Discuss the mapping from high-level programming languages to machine language",
-    "Write and debug assembly language programs",
-    "Analyze the performance implications of architectural design decisions"
+    "Describe basic computer architecture, organization and design.",
+    "Discuss how fundamental high-level language constructs are implemented at the machine-language level.",
+    "Write, execute and debug small programs or segments of larger programs using an assembly language."
   ],
+  "_sloNote": "CSLOs quoted from the Course Outline of Record, as required by college syllabus policy. Expected SLO performance per the COR: 75% of students achieve each. Course objectives per the COR: demonstrate development of programs using assembly language; introduce the basic organization and operation of a digital computer at machine-language level; demonstrate how to write, execute, and debug small assembly programs or segments; demonstrate how fundamental high-level language constructs are implemented at machine-language level.",
+  "aiPolicy": {
+    "title": "AI Policy for This Course",
+    "approach": "Restricted — one sanctioned AI tool, the course AI Tutor. Other AI assistants are not permitted on graded work.",
+    "scopeNote": "<strong>This policy applies to CSC 210 only.</strong> Every course sets its own AI policy, and this one is deliberately narrower than most. What is permitted in another class — including other computer science classes — is not permitted here unless it is the AI Tutor.",
+    "summary": "This course has <strong>one approved AI tool: the CSC 210 AI Tutor</strong>, a web-based tutor introduced in Week 2. It is a frontier language model tuned specifically for this course — it knows our constraints, our tools, and where we are in the progression. Use it as much as you like. <strong>General-purpose AI assistants are not permitted on graded work in this course.</strong>",
+    "permitted": [
+      "<strong>Use the AI Tutor freely, as often as you want, at any hour.</strong> It is available from Week 2 onward and there is no limit on how much you use it. Asking it for help is not a sign you are behind — it is how the tool is meant to be used.",
+      "<strong>Ask it to explain anything.</strong> Why NAND is universal, what a gated D latch is actually doing, why your ripple-carry adder is off by one, what the calling convention expects on the stack. Ask it the same question three different ways until it lands.",
+      "<strong>Ask it to help you debug your own work.</strong> Describe what your circuit does versus what you expected, or paste the assembly that is not behaving, and work through it together. Debugging with the tutor is real learning, not a shortcut.",
+      "<strong>Ask it to check your understanding before a quiz or checkpoint.</strong> Have it quiz you, or explain your design back to it and let it find the gap."
+    ],
+    "required": [
+      "<strong>You build the circuits and you write the assembly.</strong> The tutor helps you understand and debug; it does not produce your deliverables. Every <code>.circ</code> tab and every line of MIPS you submit must be work you constructed.",
+      "<strong>Note substantial AI Tutor help when you submit.</strong> One line is enough — for example, \"worked through the carry chain with the AI Tutor.\" This is not a penalty and never costs you points; it tells me where the course content needs to be clearer.",
+      "<strong>Be able to explain your own work.</strong> For any checkpoint or the final project, you should be able to walk me through why each part of your design is there. If you cannot explain it, it is not finished — regardless of whether it passes the test bench."
+    ],
+    "notPermittedHeading": "What is not permitted",
+    "notPermitted": [
+      "<strong>General-purpose AI assistants on graded work.</strong> ChatGPT, Gemini, Claude, Copilot, and similar tools are not permitted for the Logisim checkpoints, MIPS assignments, quizzes, exams, the research paper, or the final project.",
+      "<strong>Submitting AI-generated circuits or code as your own.</strong> A <code>.circ</code> file or an assembly listing that you did not build is not your work, whatever produced it.",
+      "<strong>Using AI to write the research paper.</strong> The Week 16 paper on a modern CPU feature is your reading, your synthesis, and your writing.",
+      "<strong>Sharing AI Tutor sessions as a substitute for another student's own build.</strong> Helping a classmate think is good; handing them a solution is not."
+    ],
+    "whyThisLine": "This is not a general suspicion of AI — it is specific to what this course does. <strong>The AI Tutor knows our constraints and general-purpose assistants do not.</strong> Ask ChatGPT how to build a register file and it will confidently hand you Logisim Evolution components, a built-in RAM block, and a multiplexer where this course requires a decoder — all of which are wrong here, and all of which will cost you a checkpoint. The tutor is tuned to Logisim Classic 2.7.1, primitive-gate construction, decoder-based selection, and the single-file build. Beyond that: two of the three CSLOs require that <em>you</em> write, execute, and debug the programs and describe the design. A circuit you did not build cannot demonstrate that, and the final project is where it shows.",
+    "consequences": "Work produced by a non-approved AI tool, or any work submitted as your own that you did not produce, falls under the College Academic Honesty Policy (AP 5500.2) and may result in a zero on the assignment, a failing grade in the course, and referral for disciplinary action. If you are behind and tempted, come to student hours instead — an extension is always available and costs you far less.",
+    "uncertainty": "<strong>If you are not sure whether a tool or a use is allowed, ask before you submit.</strong> Asking never counts against you. The short version: if it is the AI Tutor, yes; if it is anything else and the work is graded, no."
+  },
   "schedule": {
+    "_design": "Four phases across 17 weeks, 08/17/2026 - 12/11/2026. Weekly work is due Sunday 11:59 PM unless noted. Hardware and assembly tracks interleave from Phase 2 onward. Every Logisim checkpoint adds tabs to the same single .circ file the student carries all term.",
     "phases": [
       {
-        "title": "Phase 1: Digital Logic Fundamentals (Weeks 1-4)",
-        "description": "Build foundation in digital logic, Boolean algebra, and combinational circuits",
+        "title": "Phase 1: Digital Foundations (Weeks 1-4)",
+        "description": "From binary representation to sequential logic. By the end of this phase you can build circuits that compute and circuits that remember. COR unit: data representation; computer organization (digital logic circuits). Primary CSLO: 1.",
         "weeks": [
           {
+            "weekLabel": "Week 1 (8/17/2026 - 8/23/2026)",
             "weekNumber": 1,
             "dates": "8/17/2026 - 8/23/2026",
             "topics": [
-              "Course overview and expectations",
-              "Introduction to computer organization",
-              "Number systems and representations",
-              "Binary arithmetic and overflow"
+              "Bits, bytes, and words",
+              "Number bases and conversion",
+              "Signed and unsigned representation; two's complement",
+              "Floating point and data representation error",
+              "Character encoding",
+              "Memory layout of arrays and records"
             ],
             "assignments": [
-              "Assignment 1: Number Systems Exercises (20 pts)",
-              "Quiz 1: Course Introduction (10 pts)",
-              "Discussion 1: Computer Evolution (5 pts)"
+              "Course orientation and tool setup: download Logisim Classic 2.7.1 and MARS",
+              "Learning module: binary and number representation (ungraded practice)"
             ],
-            "deliverableDueDate": "Week 1 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 8/23/2026 11:59 PM",
+            "notes": "Install both tools this week. Logisim Classic 2.7.1 specifically — not Logisim Evolution. Both are on the course SharePoint for Windows and macOS."
           },
           {
+            "weekLabel": "Week 2 (8/24/2026 - 8/30/2026)",
             "weekNumber": 2,
             "dates": "8/24/2026 - 8/30/2026",
             "topics": [
-              "Boolean algebra fundamentals",
-              "Logic gates and truth tables",
-              "Karnaugh maps",
-              "Logic minimization techniques"
+              "Transistors as switches",
+              "AND, OR, NOT and the universality of NAND/NOR",
+              "Boolean algebra and simplification",
+              "First circuits in Logisim",
+              "Introduction to the course AI Tutor"
             ],
             "assignments": [
-              "Assignment 2: Boolean Algebra Lab (25 pts)",
-              "Quiz 2: Boolean Algebra (10 pts)",
-              "Discussion 2: Logic Design Applications (5 pts)"
+              "Learning module: logic gates and Boolean algebra (ungraded practice)",
+              "First Logisim circuits — build from primitive gates only",
+              "Meet the AI Tutor: the course's one approved AI tool, available from this week onward"
             ],
-            "deliverableDueDate": "Week 2 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 8/30/2026 11:59 PM",
+            "notes": "The AI Tutor comes online this week. See the AI Policy under Policies & Resources for what it is and what it replaces. College deadline: last day to add, to drop without a notation, and for an enrollment-fee refund is 8/28/2026."
           },
           {
+            "weekLabel": "Week 3 (8/31/2026 - 9/6/2026)",
             "weekNumber": 3,
             "dates": "8/31/2026 - 9/6/2026",
             "topics": [
-              "Combinational logic circuits",
-              "Adders and subtractors",
-              "Multiplexers and decoders",
-              "Encoders and comparators"
+              "Half adders and full adders",
+              "Ripple-carry addition",
+              "Multiplexers and demultiplexers",
+              "Decoders and encoders",
+              "Comparators"
             ],
             "assignments": [
-              "Assignment 3: Combinational Circuits Lab (25 pts)",
-              "Quiz 3: Combinational Logic (10 pts)",
-              "Discussion 3: Circuit Design Challenges (5 pts)"
+              "Learning module: combinational logic (ungraded practice)",
+              "Logisim practice builds: adder chain, decoder, comparator"
             ],
-            "deliverableDueDate": "Week 3 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 9/6/2026 11:59 PM",
+            "notes": "Decoders are used for control and addressing selection in this course; multiplexers are reserved for data-path routing. This distinction matters from here on."
           },
           {
+            "weekLabel": "Week 4 (9/7/2026 - 9/13/2026)",
             "weekNumber": 4,
             "dates": "9/7/2026 - 9/13/2026",
             "topics": [
-              "Sequential logic circuits",
-              "Flip-flops and latches",
-              "Registers and counters",
-              "Project 1: Digital Logic Design"
+              "The S-R latch",
+              "The gated D latch",
+              "The edge-triggered D flip-flop",
+              "Why storage requires feedback",
+              "Synchronous design and the clock"
             ],
             "assignments": [
-              "Project 1: Digital Logic Design Due (40 pts)",
-              "Quiz 4: Sequential Logic (10 pts)",
-              "Discussion 4: Sequential vs Combinational (5 pts)"
+              "Learning module: sequential logic (ungraded practice)",
+              "Quiz 1 - Digital Foundations, covering Weeks 1-4 (50 pts)"
             ],
-            "deliverableDueDate": "Week 4 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 9/13/2026 11:59 PM",
+            "notes": "Labor Day 9/7/2026 - campus holiday. This is an asynchronous course, so the week's work is unaffected; the deadline still falls on Sunday. The S-R latch is the one intentionally asynchronous circuit in the course."
           }
         ]
       },
       {
-        "title": "Phase 2: CPU Architecture & Instruction Sets (Weeks 5-8)",
-        "description": "Learn CPU organization, instruction set architecture, and processor design",
+        "title": "Phase 2: Assembly Language - interleaved hardware and MIPS tracks (Weeks 5-8)",
+        "description": "Two tracks running together. On the hardware side you build a register, an ALU, and a RAM matrix. On the software side you learn the MIPS instruction set in MARS. Each explains the other. COR units: assembly language constructs; systems programming. Primary CSLOs: 1, 2, 3.",
         "weeks": [
           {
+            "weekLabel": "Week 5 (9/14/2026 - 9/20/2026)",
             "weekNumber": 5,
             "dates": "9/14/2026 - 9/20/2026",
             "topics": [
-              "CPU organization and components",
-              "Instruction cycle and control unit",
-              "Instruction set architectures (RISC vs CISC)",
-              "Addressing modes"
+              "Hardware: the 8-bit register - flip-flops with load and output-enable",
+              "MIPS: instruction set architecture concepts",
+              "MIPS: the register file and register conventions",
+              "MIPS: instruction formats",
+              "MIPS: getting started in MARS"
             ],
             "assignments": [
-              "Assignment 4: CPU Components Analysis (25 pts)",
-              "Quiz 5: CPU Organization (10 pts)",
-              "Discussion 5: RISC vs CISC Debate (5 pts)"
+              "Logisim Checkpoint 1 - 8-bit register (25 pts)",
+              "MIPS Assignment 1 - first programs in MARS (35 pts)"
             ],
-            "deliverableDueDate": "Week 5 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 9/20/2026 11:59 PM"
           },
           {
+            "weekLabel": "Week 6 (9/21/2026 - 9/27/2026)",
             "weekNumber": 6,
             "dates": "9/21/2026 - 9/27/2026",
             "topics": [
-              "Instruction formats and encoding",
-              "Data path design",
-              "Hardwired vs microprogrammed control",
-              "Pipeline fundamentals"
+              "Hardware: the 8-bit ALU",
+              "MIPS: R-type arithmetic and logic instructions",
+              "MIPS: I-type instructions and immediates",
+              "Connecting the ALU you built to the instructions you write"
             ],
             "assignments": [
-              "Assignment 5: Instruction Encoding Lab (25 pts)",
-              "Quiz 6: Instruction Sets (10 pts)",
-              "Discussion 6: Pipeline Hazards (5 pts)"
+              "Logisim Checkpoint 2 - 8-bit ALU (30 pts)",
+              "MIPS Assignment 2 - arithmetic and logic (35 pts)"
             ],
-            "deliverableDueDate": "Week 6 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 9/27/2026 11:59 PM",
+            "notes": "Campus holiday 9/25/2026. Asynchronous course - the Sunday deadline is unchanged."
           },
           {
+            "weekLabel": "Week 7 (9/28/2026 - 10/4/2026)",
             "weekNumber": 7,
             "dates": "9/28/2026 - 10/4/2026",
             "topics": [
-              "Pipelining techniques",
-              "Pipeline hazards and solutions",
-              "Superscalar processors",
-              "Parallel processing concepts"
+              "Branches and conditional execution",
+              "Jumps and the program counter",
+              "The stack and the MIPS calling convention",
+              "Procedures, arguments, and return values",
+              "Recursion at the machine level"
             ],
             "assignments": [
-              "Assignment 7: Pipeline Analysis Exercise (25 pts)",
-              "Quiz 7: Pipelining (10 pts)",
-              "Discussion 7: Modern Processor Design (5 pts)"
+              "MIPS Assignment 3 - control flow and procedures (40 pts)"
             ],
-            "deliverableDueDate": "Week 7 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 10/4/2026 11:59 PM"
           },
           {
+            "weekLabel": "Week 8 (10/5/2026 - 10/11/2026)",
             "weekNumber": 8,
             "dates": "10/5/2026 - 10/11/2026",
             "topics": [
-              "Midterm review",
-              "Integration of digital logic and CPU design",
-              "Case studies in processor architecture"
+              "Hardware: the RAM matrix, address decoding, and the memory address register",
+              "MIPS: lw, sw, lb, sb",
+              "MIPS: arrays in memory and address arithmetic",
+              "How a load instruction becomes a memory access"
             ],
             "assignments": [
-              "Midterm Exam (40 pts)",
-              "Discussion 8: Midterm Reflections (5 pts)"
+              "Logisim Checkpoint 3 - 16x16 RAM matrix with MAR (40 pts)",
+              "MIPS Assignment 4 - memory and arrays (40 pts)",
+              "Midterm Exam, covering Weeks 1-8 (150 pts)"
             ],
-            "deliverableDueDate": "Week 8 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 10/11/2026 11:59 PM",
+            "notes": "Heaviest week of the term - a checkpoint, an assignment, and the midterm. Plan ahead, and start the checkpoint early in the week."
           }
         ]
       },
       {
-        "title": "Phase 3: Assembly Language Programming (Weeks 9-12)",
-        "description": "Master assembly language programming and low-level code development",
+        "title": "Phase 3: CPU Design Theory (Weeks 9-12)",
+        "description": "The parts become a machine. Von Neumann architecture, the fetch-decode-execute cycle, control signals, and the bus. This is where the pieces you have built start to look like a processor. COR unit: computer organization. Primary CSLOs: 1, 2.",
         "weeks": [
           {
+            "weekLabel": "Week 9 (10/12/2026 - 10/18/2026)",
             "weekNumber": 9,
             "dates": "10/12/2026 - 10/18/2026",
             "topics": [
-              "Assembly language fundamentals",
-              "Assembly language syntax and structure",
-              "Data movement instructions",
-              "Arithmetic and logic instructions"
+              "The Von Neumann architecture",
+              "The fetch-decode-execute cycle",
+              "Datapath versus control path",
+              "Stored-program computing and why it matters"
             ],
             "assignments": [
-              "Assignment 9: Basic Assembly Programs (25 pts)",
-              "Quiz 9: Assembly Basics (10 pts)",
-              "Discussion 9: Assembly vs High-Level Languages (5 pts)"
+              "Learning module: Von Neumann architecture and the instruction cycle (ungraded practice)"
             ],
-            "deliverableDueDate": "Week 9 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 10/18/2026 11:59 PM"
           },
           {
+            "weekLabel": "Week 10 (10/19/2026 - 10/25/2026)",
             "weekNumber": 10,
             "dates": "10/19/2026 - 10/25/2026",
             "topics": [
-              "Control flow instructions",
-              "Loops and branching",
-              "Subroutines and function calls",
-              "Stack operations"
+              "Integrating the register file with the ALU",
+              "Control signals and what asserts them",
+              "Status flags: zero, carry, negative, overflow",
+              "Single-bus architecture"
             ],
             "assignments": [
-              "Assignment 10: Control Flow Assembly Lab (25 pts)",
-              "Quiz 10: Control Flow (10 pts)",
-              "Discussion 10: Stack Management (5 pts)"
+              "Logisim Checkpoint 4 - register file plus ALU integration (35 pts)",
+              "CPU project plan due - your instruction set proposal and design sketch (required, feedback only)"
             ],
-            "deliverableDueDate": "Week 10 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 10/25/2026 11:59 PM",
+            "notes": "The project plan is where you define the instruction set you will implement. Getting feedback on it now is the single best predictor of a smooth final project."
           },
           {
+            "weekLabel": "Week 11 (10/26/2026 - 11/1/2026)",
             "weekNumber": 11,
             "dates": "10/26/2026 - 11/1/2026",
             "topics": [
-              "Memory addressing in assembly",
-              "Arrays and strings in assembly",
-              "Input/output operations",
-              "Project 2: Assembly Programming Project"
+              "Instruction decoding",
+              "Generating control signals",
+              "Hardwired versus microprogrammed control",
+              "Single-cycle versus multi-cycle execution"
             ],
             "assignments": [
-              "Project 2: Assembly Programming Project Due (40 pts)",
-              "Quiz 11: Memory & I/O (10 pts)",
-              "Discussion 11: Assembly Programming Challenges (5 pts)"
+              "Logisim Checkpoint 5 - control unit (40 pts)"
             ],
-            "deliverableDueDate": "Week 11 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 11/1/2026 11:59 PM"
           },
           {
+            "weekLabel": "Week 12 (11/2/2026 - 11/8/2026)",
             "weekNumber": 12,
             "dates": "11/2/2026 - 11/8/2026",
             "topics": [
-              "High-level to assembly mapping",
-              "Compiler fundamentals",
-              "Optimization techniques",
-              "Debugging assembly programs"
+              "The memory bus and the memory data register",
+              "Memory-mapped I/O",
+              "Software interrupts and syscall",
+              "How the operating system gets involved"
             ],
             "assignments": [
-              "Assignment 12: HLL to Assembly Translation (25 pts)",
-              "Quiz 12: Compiler Basics (10 pts)",
-              "Discussion 12: Optimization Strategies (5 pts)"
+              "Quiz 2 - CPU Design Theory, covering Weeks 9-12 (50 pts)"
             ],
-            "deliverableDueDate": "Week 12 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 11/8/2026 11:59 PM",
+            "notes": "College deadline: last day to drop with a 'W' notation is 11/6/2026."
           }
         ]
       },
       {
-        "title": "Phase 4: Memory & I/O Systems (Weeks 13-15)",
-        "description": "Study memory hierarchy, storage systems, and input/output organization",
+        "title": "Phase 4: Integration and Modern Topics (Weeks 13-17)",
+        "description": "Wire it all together into a working CPU, then look at what real processors do that ours does not. Ends with your complete, documented CPU simulation. COR units: assembly language constructs; systems programming. Primary CSLOs: 1, 2, 3.",
         "weeks": [
           {
+            "weekLabel": "Week 13 (11/9/2026 - 11/15/2026)",
             "weekNumber": 13,
             "dates": "11/9/2026 - 11/15/2026",
             "topics": [
-              "Memory hierarchy and organization",
-              "Cache memory and mapping",
-              "Virtual memory concepts",
-              "Memory management techniques"
+              "Complete datapath integration: PC to IR to control to ALU and register file",
+              "Implementing MOV, ADD, and SUB end to end",
+              "Timing and the clock in a full machine",
+              "Debugging a CPU that does almost the right thing"
             ],
             "assignments": [
-              "Assignment 13: Cache Performance Analysis (25 pts)",
-              "Quiz 13: Memory Hierarchy (10 pts)",
-              "Discussion 13: Cache Design Trade-offs (5 pts)"
+              "Logisim Checkpoint 6 - complete CPU executing MOV, ADD, SUB (40 pts)"
             ],
-            "deliverableDueDate": "Week 13 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 11/15/2026 11:59 PM",
+            "notes": "Veterans Day 11/11/2026 - campus holiday. Asynchronous course; the Sunday deadline is unchanged. This is the week the machine first runs a program."
           },
           {
+            "weekLabel": "Week 14 (11/16/2026 - 11/22/2026)",
             "weekNumber": 14,
             "dates": "11/16/2026 - 11/22/2026",
             "topics": [
-              "I/O organization and interfaces",
-              "Interrupt handling",
-              "DMA and I/O processors",
-              "Storage systems overview"
+              "Implementing branches and jumps",
+              "Wiring load and store into the datapath",
+              "Writing test programs for your own instruction set",
+              "Verification: proving your CPU does what you claim"
             ],
             "assignments": [
-              "Assignment 14: Interrupt Handling Lab (25 pts)",
-              "Quiz 14: I/O Systems (10 pts)",
-              "Discussion 14: Modern I/O Architectures (5 pts)"
+              "Logisim Checkpoint 7 - full CPU with 10 or more instructions, including at least one branch/jump and one load/store (40 pts)",
+              "Instructor project feedback returned this week"
             ],
-            "deliverableDueDate": "Week 14 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 11/22/2026 11:59 PM",
+            "notes": "Checkpoint 7 is effectively the working draft of your final project. Everything after this is refinement, testing, and documentation."
           },
           {
+            "weekLabel": "Week 15 (11/23/2026 - 11/29/2026)",
             "weekNumber": 15,
             "dates": "11/23/2026 - 11/29/2026",
             "topics": [
-              "Performance measurement and analysis",
-              "Amdahl's Law and speedup",
-              "Benchmarking techniques",
-              "Project 3: Performance Analysis Report"
+              "Clock rate, CPI, and execution time",
+              "Amdahl's Law",
+              "Introduction to pipelining"
             ],
             "assignments": [
-              "Project 3: Performance Analysis Report Due (40 pts)",
-              "Discussion 15: Performance Optimization (5 pts)",
-              "Note: Thanksgiving Break - No Class 11/25-11/29"
+              "Learning module: performance and pipelining - reading and short exercises only"
             ],
-            "deliverableDueDate": "Week 15 Sunday 11:59 PM"
-          }
-        ]
-      },
-      {
-        "title": "Phase 5: Advanced Topics & Final Assessment (Weeks 16-17)",
-        "description": "Explore advanced architecture topics and course synthesis",
-        "weeks": [
+            "deliverableDueDate": "Nothing is due over the holiday",
+            "notes": "THANKSGIVING WEEK 11/25-11/29/2026 - light week by design. No new Logisim work is assigned. If you are behind on Checkpoint 7, this is the week to catch up without falling further behind."
+          },
           {
+            "weekLabel": "Week 16 (11/30/2026 - 12/6/2026)",
             "weekNumber": 16,
             "dates": "11/30/2026 - 12/6/2026",
             "topics": [
-              "Advanced processor architectures",
-              "Multicore and many-core processors",
-              "GPU architecture overview",
-              "Future trends in computer architecture"
+              "Cache and the memory hierarchy",
+              "Pipeline hazards and how real processors handle them",
+              "Multicore and cache coherence",
+              "What your CPU does not do, and why real ones do"
             ],
             "assignments": [
-              "Assignment 16: Advanced Architecture Research (20 pts)",
-              "Quiz 16: Advanced Topics (10 pts)",
-              "Discussion 16: Future of Computing (5 pts)"
+              "Research Paper - short paper on a modern CPU feature (100 pts)",
+              "Final project work: testing, refinement, and documentation"
             ],
-            "deliverableDueDate": "Week 16 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 12/6/2026 11:59 PM",
+            "notes": "The paper is your own reading and writing - see the AI Policy. Pick a feature your own CPU lacks and explain what problem it solves."
           },
           {
+            "weekLabel": "Week 17 (12/7/2026 - 12/11/2026)",
             "weekNumber": 17,
             "dates": "12/7/2026 - 12/11/2026",
             "topics": [
-              "Course review and synthesis",
-              "Final exam preparation",
-              "Career pathways in computer architecture"
+              "Course synthesis: from transistor to executing program",
+              "Presenting and documenting your design",
+              "Where computer architecture goes next"
             ],
             "assignments": [
-              "Final Exam (50 pts)",
-              "Course Evaluation"
+              "Final Project - complete documented CPU simulation, due Friday 12/11/2026 (250 pts)"
             ],
-            "deliverableDueDate": "Week 17 - Final Exam Period"
+            "deliverableDueDate": "Friday 12/11/2026 - hard deadline, grades are due",
+            "notes": "Final week. Submit the single .circ file you have built all term, your instruction set documentation, and your test programs. Directly assesses all three CSLOs at once."
           }
         ]
       }
@@ -328,96 +379,156 @@
   "grading": {
     "breakdown": [
       {
-        "category": "Assignments",
-        "weight": 35,
-        "points": 280,
-        "description": "Weekly assignments, labs, and exercises"
+        "category": "Logisim Checkpoints (7)",
+        "percentage": 25,
+        "points": 250,
+        "description": "The continuous build, one checkpoint at a time: 8-bit register (25), 8-bit ALU (30), RAM matrix (40), register file + ALU (35), control unit (40), complete CPU with MOV/ADD/SUB (40), full CPU with 10+ instructions (40). All tabs live in the single .circ file you carry all term."
       },
       {
-        "category": "Quizzes",
-        "weight": 20,
-        "points": 160,
-        "description": "Weekly knowledge checks"
+        "category": "Final Project - CPU Simulation",
+        "percentage": 25,
+        "points": 250,
+        "description": "Your complete, documented CPU: one Logisim file built from primitive gates, executing a self-defined instruction set of 10 or more instructions including at least one branch/jump and one memory load/store, with test programs and documentation. Due Friday 12/11/2026. Assesses all three CSLOs simultaneously."
       },
       {
-        "category": "Projects",
-        "weight": 20,
-        "points": 160,
-        "description": "Three major projects (40 pts each + 40 pts final)"
+        "category": "MIPS Programming Assignments (4)",
+        "percentage": 15,
+        "points": 150,
+        "description": "Weeks 5-8 in MARS: first programs (35), arithmetic and logic (35), control flow and procedures (40), memory and arrays (40)."
       },
       {
-        "category": "Exams",
-        "weight": 15,
-        "points": 120,
-        "description": "Midterm (40 pts) and Final (50 pts) + extra credit"
+        "category": "Midterm Exam",
+        "percentage": 15,
+        "points": 150,
+        "description": "Week 8, covering Weeks 1-8: data representation, digital logic, the hardware builds through the RAM matrix, and MIPS assembly."
       },
       {
-        "category": "Discussion Participation",
-        "weight": 10,
-        "points": 80,
-        "description": "Weekly discussion forum participation"
+        "category": "Quizzes (2)",
+        "percentage": 10,
+        "points": 100,
+        "description": "Quiz 1 in Week 4 covers Digital Foundations (50 pts). Quiz 2 in Week 12 covers CPU Design Theory (50 pts)."
+      },
+      {
+        "category": "Research Paper",
+        "percentage": 10,
+        "points": 100,
+        "description": "Week 16: a short paper on a modern CPU feature - cache, pipelining, out-of-order execution, multicore, or another feature your own CPU does not implement. Your reading, your synthesis, your writing."
       }
     ],
     "scale": [
-      {"grade": "A", "minPercent": 90},
-      {"grade": "B", "minPercent": 80},
-      {"grade": "C", "minPercent": 70},
-      {"grade": "D", "minPercent": 60}
-    ]
+      {
+        "grade": "A",
+        "range": "90-100%"
+      },
+      {
+        "grade": "B",
+        "range": "80-89%"
+      },
+      {
+        "grade": "C",
+        "range": "70-79%"
+      },
+      {
+        "grade": "D",
+        "range": "60-69%"
+      },
+      {
+        "grade": "F",
+        "range": "Below 60%"
+      }
+    ],
+    "totalPoints": 1000
   },
   "materials": {
     "required": [
-      "Computer Organization and Design: The Hardware/Software Interface (Patterson & Hennessy)",
-      "Assembly language simulator/software (provided)"
+      "<strong>Logisim Classic 2.7.1</strong> - used for every circuit you build. <strong>Not Logisim Evolution</strong>; the two behave differently and the course is built around Classic. Free download for Windows and macOS from the course SharePoint.",
+      "<strong>MARS</strong> (MIPS Assembler and Runtime Simulator) - used for all assembly-language programming. Free.",
+      "<strong>The CSC 210 AI Tutor</strong> - the course's one approved AI tool, web-based, introduced in Week 2. Free, no account beyond your college login. See the AI Policy under Policies &amp; Resources.",
+      "A computer capable of running Logisim and MARS (both are Java-based and run on Windows, macOS, and Linux), plus Canvas access.",
+      "<strong>No textbook purchase is required.</strong> The primary learning content is delivered through the course's own interactive modules, assignments, and Logisim/MARS activities."
     ],
     "optional": [
-      "Digital logic simulation software (free versions available)",
-      "Online assembly language resources",
-      "Processor architecture reference materials"
+      "<strong>Primary reference (free):</strong> Saylor Academy, <em>CS301: Computer Architecture</em> - a free, openly licensed, self-paced online course used as this course's reference text. Its nine units map onto our four phases: Unit 3 with Phase 1, Units 2 and 4 with Phase 2, Unit 5 with Phase 3, and Units 6-8 with Phase 4. <a href=\"https://learn.saylor.org/mod/page/view.php?id=20643\" target=\"_blank\" rel=\"noopener\">CS301 syllabus and units</a>",
+      "<strong>Recommended:</strong> Plantz, R. G., <em>Introduction to Computer Organization: An Under the Hood Look at Hardware and x86-64 Assembly</em> (No Starch Press). Especially useful alongside the 8-bit circuit builds in Weeks 5-8; Plantz's hardware-level treatment pairs well with the Logisim checkpoints.",
+      "<strong>Reference only, not assigned:</strong> Patterson, D. A., &amp; Hennessy, J. L., <em>Computer Organization and Design, MIPS Edition: The Hardware/Software Interface</em> (Morgan Kaufmann). A second reference for the MIPS instruction set and the pipelining and performance topics in Weeks 5-7 and 15-16."
     ]
   },
   "importantDates": [
     {
-      "event": "Project 1: Digital Logic Design Due",
-      "date": "9/13/2026",
-      "week": 4
+      "week": 1,
+      "event": "Course Begins - Tool Setup",
+      "description": "Week of 8/17/2026. Install Logisim Classic 2.7.1 and MARS from the course SharePoint."
     },
     {
-      "event": "Midterm Exam",
-      "date": "10/11/2026",
-      "week": 8
+      "week": 2,
+      "event": "AI Tutor Introduced",
+      "description": "Week of 8/24/2026. The course's one approved AI tool comes online. See the AI Policy under Policies & Resources."
     },
     {
-      "event": "Project 2: Assembly Programming Project Due",
-      "date": "11/1/2026",
-      "week": 11
+      "week": 2,
+      "event": "College Deadline - Add/Drop and Refund",
+      "description": "8/28/2026. Last day to add, to drop without a notation, and for an enrollment-fee refund. Set by the college; see Important Semester Dates under Policies & Resources."
     },
     {
-      "event": "Project 3: Performance Analysis Report Due",
-      "date": "11/29/2026",
-      "week": 15
+      "week": 4,
+      "event": "Quiz 1 - Digital Foundations",
+      "description": "Covers Weeks 1-4. Labor Day 9/7/2026 falls in this week; asynchronous course, deadline unchanged."
     },
     {
-      "event": "Thanksgiving Break - No Class",
-      "date": "11/25/2026 - 11/29/2026",
-      "week": 15
+      "week": 5,
+      "event": "Logisim Checkpoint 1",
+      "description": "8-bit register. The first tab in the .circ file you will carry all term."
     },
     {
-      "event": "Final Exam",
-      "date": "12/7/2026 - 12/11/2026",
-      "week": 17
+      "week": 8,
+      "event": "Midterm Exam, Checkpoint 3, and MIPS Assignment 4",
+      "description": "Heaviest week of the term - RAM matrix checkpoint, memory and arrays assignment, and the midterm covering Weeks 1-8. Start early."
+    },
+    {
+      "week": 10,
+      "event": "CPU Project Plan Due",
+      "description": "Your instruction set proposal and design sketch. Feedback only, but the best predictor of a smooth final project."
+    },
+    {
+      "week": 12,
+      "event": "College Deadline - Last Day to Drop with a 'W'",
+      "description": "11/6/2026. Set by the college; the instructor cannot extend it. Talk to me and to Financial Aid before you drop."
+    },
+    {
+      "week": 13,
+      "event": "Logisim Checkpoint 6 - First Working CPU",
+      "description": "Complete CPU executing MOV, ADD, SUB. Veterans Day 11/11/2026 falls in this week."
+    },
+    {
+      "week": 14,
+      "event": "Logisim Checkpoint 7 - Full CPU",
+      "description": "10 or more instructions including a branch/jump and a load/store. Effectively the working draft of your final project."
+    },
+    {
+      "week": 15,
+      "event": "Thanksgiving Week - Light Week",
+      "description": "11/25-11/29/2026. No new Logisim work assigned. Use it to catch up if you need to."
+    },
+    {
+      "week": 16,
+      "event": "Research Paper Due",
+      "description": "Short paper on a modern CPU feature - Sunday 12/6/2026."
+    },
+    {
+      "week": 17,
+      "event": "Final Project Due",
+      "description": "Complete documented CPU simulation - Friday 12/11/2026. Hard deadline; grades are due."
     }
   ],
   "workload": {
     "hoursPerWeek": 9,
-    "breakdown": {
-      "asynchronous": "9 hours/week (lectures, labs, readings, assignments, discussions)"
-    }
+    "breakdown": "3 hrs of learning content and lecture-equivalent modules + 6 hrs out-of-class work on Logisim builds, MIPS programming, and reading",
+    "notes": "This matches the Course Outline of Record: 51 in-class contact hours and 102 out-of-class hours across 17 weeks, for 153 total student learning hours. Week 8 (midterm plus a checkpoint plus an assignment) and Weeks 13-14 (CPU integration) run heavier; Week 15 is deliberately light. Circuit debugging is unpredictable by nature - start checkpoints early in the week rather than on Saturday."
   },
   "policies": {
-    "attendance": "Fully online asynchronous course. Regular participation in weekly activities and discussions is expected.",
-    "lateWork": "Assignments submitted within 48 hours late receive 50% credit. After 48 hours, no credit unless prior arrangement made.",
-    "makeupExams": "Makeup exams require documented emergency and must be arranged within 48 hours of the original exam date.",
-    "academicIntegrity": "All work must be your own. Plagiarism or cheating will result in a minimum of failing the assignment and may result in course failure."
+    "attendance": "This is a fully asynchronous online course with no scheduled meetings, so attendance is demonstrated by regular weekly engagement: working through the learning modules, submitting deliverables, and staying in contact. Log in and make progress at least twice a week - this course builds continuously, and a week missed is not a week you can skip past, because Week 10's circuit depends on Week 5's. If you fall behind, email me early. Getting back on track is very doable in week two and very hard in week twelve.",
+    "lateWork": "Logisim checkpoints and MIPS assignments have a standing 48-hour grace window with no penalty and no need to ask; after that, contact me and we will work something out. Because each checkpoint feeds the next, a late checkpoint costs you more in momentum than in points - the grace window exists so a hard week does not compound. Quizzes and the midterm are open for a set window in Canvas and are not reopened afterward except for documented emergencies. <strong>The final project cannot be accepted after Friday 12/11/2026</strong> because grades are due. This course-specific policy replaces the general late-submission statement shown under Policies &amp; Resources.",
+    "makeupExams": "Makeup quizzes and a makeup midterm are available for documented emergencies. Contact me within 48 hours of the missed window. There is no final exam in this course - the final project takes its place.",
+    "academicIntegrity": "<strong>See the AI Policy for This Course</strong> under Policies &amp; Resources for the governing statement on AI in CSC 210. In short: the course AI Tutor is the one approved AI tool and you may use it as much as you like; general-purpose AI assistants are not permitted on graded work.<br><br>Beyond AI, ordinary academic honesty applies. Discussing concepts with classmates is encouraged; submitting a circuit or a program you did not build is not. Every <code>.circ</code> file and every line of assembly you submit must be your own construction, and you should be able to explain any part of it on request. Academic dishonesty falls under the College Academic Honesty Policy (AP 5500.2) and may result in a failing grade on the assignment or in the course, plus referral for disciplinary action. If you are unsure whether something crosses a line, ask me before you submit."
   }
 }
