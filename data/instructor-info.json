@@ -1,4 +1,9 @@
 {
+  "_updated": "2026-08-17 — Fall 2026 review. Standardized all Zoom links to the mendocino-edu.zoom.us domain (the file previously mixed mendocino.zoom.us/my/dpai with mendocino-edu.zoom.us/my/davepai). Replaced the CSC222-specific wording in encouragementMessage with course-neutral text, since this file is shared by every syllabus. Student hours below are carried over from Spring 2026 and NEED CONFIRMATION for Fall 2026. Previous version: data/old/instructor-info.2026-08-17.json",
+  "_todo": [
+    "Confirm Fall 2026 student hours (days, times, in-office room)",
+    "Confirm the correct personal Zoom room URL"
+  ],
   "name": "David Pai, PhD",
   "email": "dpai@mendocino.edu",
   "phone": "(707) 468-3126",
@@ -8,7 +13,7 @@
     "room": 4170
   },
   "zoom": {
-    "url": "https://mendocino.zoom.us/my/dpai",
+    "url": "https://mendocino-edu.zoom.us/my/davepai",
     "label": "Join Dr. Pai's Zoom Room",
     "note": "Use this link during online office hours or by appointment."
   },
@@ -43,7 +48,7 @@
       "note": "Drop-in welcome, no appointment needed"
     }
   ],
-  "encouragementMessage": "Don't hesitate to reach out! Office hours are YOUR time. Whether you're stuck on a lab, confused about pointers, or just want to discuss programming, I'm here to help. Students who use office hours consistently perform better in the course.",
+  "encouragementMessage": "Don't hesitate to reach out! Student hours are YOUR time. Whether you're stuck on an assignment, want a second opinion on something a tool told you, or just want to talk through where the course is going, I'm here to help. Students who use student hours consistently do better in the course. If none of the posted times work with your job or childcare, email me and we'll find a time that does.",
   "bio": "Dr. Pai has been teaching computer science at Mendocino College since 2014. He specializes in programming education and believes in hands-on, project-based learning. His teaching philosophy centers on building confidence through incremental challenges and supportive feedback.",
   "preferredContact": "Canvas InBox for course-related questions; email for personal/confidential matters",
   "responseTime": "24-48 hours on weekdays; 72 hours on weekends"

@@ -1,4 +1,12 @@
 {
+  "_source": "Rebuilt 2026-08-17 for Fall 2026 from the approved CSC 141 syllabus (approved 2026-07-13, AI-tools section added 2026-08-12) and COR-csc-141 (Curriculum Committee / Board approval 2025-09-05, proposal start Fall 2026). Previous version backed up to data/old/course-csc141-info.2026-08-17.json. Keys beginning with an underscore are ignored by the renderer.",
+  "_todoBeforePosting": [
+    "Monday Zoom start/end time — metadata.meetingSchedule.time currently reads 'Time TBD'",
+    "Zoom meeting URL for the weekly session — metadata.meetingSchedule.zoomUrl",
+    "Section number and CRN once registration assigns them",
+    "Confirm the late-work policy text in policies.lateWork reflects your intent for Fall 2026",
+    "Verify college key dates in college-policies.json against the official Fall 2026 academic calendar"
+  ],
   "metadata": {
     "code": "CSC141",
     "title": "AI Literacy",
@@ -6,347 +14,361 @@
     "creditBreakdown": "3 lecture",
     "format": "Hybrid",
     "term": "Fall 2026",
-    "prerequisite": "None",
+    "prerequisite": "None. Assumes basic computer and web skills only — browser, email, and file management. No programming and no math beyond arithmetic.",
     "meetingSchedule": {
-      "days": "Wednesday",
-      "time": "2:00 PM - 3:20 PM",
-      "location": "Room 1280",
-      "modality": "In-person (Hybrid course: 1/2 in-person, 1/2 asynchronous online)"
+      "days": "Mondays (first session Monday, August 17, 2026)",
+      "time": "Time TBD — 90 minutes",
+      "location": "Online via Zoom",
+      "modality": "Hybrid: a 90-minute live Zoom session each Monday plus a 90-minute structured asynchronous block during the week. No on-campus meeting.",
+      "zoomUrl": "Zoom link TBD — posted in Canvas before the first session"
     }
   },
   "description": {
-    "catalog": "Introduction to artificial intelligence concepts, tools, and applications. Students will learn to use AI tools effectively, understand AI limitations, and develop critical thinking skills for evaluating AI-generated content.",
-    "expanded": "This course provides a comprehensive foundation in artificial intelligence literacy, covering fundamental concepts, practical tool usage, prompt engineering, ethical considerations, and the societal impact of AI. Students will develop the skills needed to navigate an AI-augmented world responsibly and effectively."
+    "catalog": "This course provides students from all disciplines with essential AI literacy skills needed to navigate an AI-integrated world. Students will develop a foundational understanding of AI technologies, learn to interact responsibly with AI tools, critically evaluate ethical implications, and explore AI's societal impact across various fields. The course emphasizes hands-on experience with AI applications while fostering critical thinking about AI's role in personal, academic, and professional contexts.",
+    "expanded": "AI is already part of how you study, work, and live — this course makes you fluent in it. You will get hands-on with real AI tools every week: learning how they work under the hood (no coding required), how to prompt them well, how to catch them being wrong or biased, and how to decide when using them is smart, ethical, or neither. You will leave with a portfolio of real work — prompts, analyses, a personal AI code of conduct, a policy recommendation — that shows you can work <em>with</em> AI thoughtfully in your own field, whatever that field is. <strong>Google Gemini is the baseline tool</strong> and comes free with your college Google Workspace account; nothing in this course requires you to pay for anything."
   },
   "purpose": {
-    "why": "This course prepares you to work effectively with AI tools in academic, professional, and personal contexts. You'll develop critical evaluation skills, understand ethical implications, and gain practical experience with current AI technologies. These competencies are essential for success in any field in the AI era.",
-    "beyond": "Beyond technical skills, you'll develop critical thinking about AI's role in society, understand bias and fairness issues, and learn to protect your data privacy while leveraging AI capabilities."
+    "why": "Every field you might enter is being reshaped by tools that produce confident, fluent, sometimes wrong answers. The skill that matters is not knowing which product is best this month — that changes faster than a semester does — but being able to look at any AI output and judge what it is worth. That is what this course builds, and it transfers: to your other classes, to your job, and to decisions you make about AI as a citizen.",
+    "beyond": "Beyond tool skills, you will develop critical thinking about AI's role in society, learn to recognize bias and evaluate fairness, protect your own data and privacy, and write a personal code for responsible AI use that you revise as you learn. Every assessment in this course is open-resource by design and asks for work AI cannot do <em>for</em> you — analysis of your own tool sessions, reflections tied to class discussions, and application in your own field. This course models the academic integrity it teaches."
   },
   "slos": [
-    "Define key artificial intelligence terminology and concepts",
-    "Demonstrate proficiency in using AI tools for various tasks",
-    "Design effective prompts for AI systems",
-    "Evaluate AI-generated content for accuracy and quality",
-    "Apply data protection principles when using AI tools",
-    "Analyze ethical frameworks related to AI development and use"
+    "Define AI terminology, identify types of machine learning, and explain how AI systems function.",
+    "Demonstrate effective and ethical use of AI technologies in academic and professional contexts.",
+    "Evaluate AI-generated content for accuracy, bias, and appropriateness using established criteria.",
+    "Critique AI applications using ethical frameworks and justify decisions about AI use and development.",
+    "Integrate AI concepts with field-specific knowledge and create solutions for discipline-specific challenges.",
+    "Design personal guidelines for responsible AI use and develop strategies for lifelong AI literacy."
   ],
+  "_sloNote": "CSLOs are quoted verbatim from the Course Outline of Record, as required by college syllabus policy. Expected SLO performance per the COR: 75% of students achieve each.",
   "schedule": {
+    "_rhythm": "Class meets Mondays, so each session is primed by the PREVIOUS week's work. Monday session = discussion of last week + launch of this week. During the week = 90-minute structured asynchronous block (activity or studio). By Sunday night = pre-work for next Monday. Weekly work is due Sunday 11:59 PM unless noted.",
     "phases": [
       {
-        "title": "Phase 1: AI Foundations (Weeks 1-4)",
-        "description": "Build foundational understanding of AI concepts, history, and machine learning fundamentals",
+        "title": "Module 1: How AI Actually Works (Weeks 1-3)",
+        "description": "Build a working understanding of what AI is, how machine learning works, and where training data comes from. COR topics: Introduction to AI; Machine Learning Fundamentals; Understanding Data in AI. Primary SLOs: 1, with SLO 3 introduced.",
         "weeks": [
           {
+            "weekLabel": "Week 1 (8/17/2026 - 8/23/2026)",
             "weekNumber": 1,
             "dates": "8/17/2026 - 8/23/2026",
             "topics": [
-              "Course overview, expectations, and resources",
-              "What is Artificial Intelligence?",
-              "History and evolution of AI",
-              "Types of AI: narrow, general, and superintelligent",
-              "AI in everyday life"
+              "Course orientation, expectations, and how the weekly rhythm works",
+              "What artificial intelligence is — and is not",
+              "History and evolution of AI; narrow vs. general AI",
+              "AI vs. machine learning vs. deep learning",
+              "AI in everyday applications: phones, social media, transportation"
             ],
             "assignments": [
-              "Assignment 1: AI Tools Setup & Introduction (20 pts)",
-              "Quiz 1: Course Introduction & AI Basics (10 pts)",
-              "Discussion 1: AI in Your Daily Life (5 pts)"
+              "\"10 Things AI Can Help Me Do\" baseline list — drafted live in session, filed in your portfolio (ungraded baseline artifact)",
+              "Tool onboarding: set up and explore Google Gemini on your college account (asynchronous block)"
             ],
-            "deliverableDueDate": "Week 1 Sunday 11:59 PM"
+            "deliverableDueDate": "Baseline list filed by Sunday 8/23/2026 11:59 PM",
+            "notes": "First day of the course — no pre-work is possible, and none is assigned. Session 1 is a designed cold open: we draft the \"10 Things\" list before any instruction, on purpose, because the gut-level version is the honest one to measure growth against."
           },
           {
+            "weekLabel": "Week 2 (8/24/2026 - 8/30/2026)",
             "weekNumber": 2,
             "dates": "8/24/2026 - 8/30/2026",
             "topics": [
-              "AI vs. traditional programming",
-              "Key AI terminology and concepts",
-              "Neural networks overview",
-              "Deep learning fundamentals",
-              "AI capabilities and limitations"
+              "Machine learning fundamentals",
+              "Supervised, unsupervised, and reinforcement learning",
+              "Training data and model development",
+              "Pattern recognition and prediction",
+              "Introduction to algorithms — basic concepts, no coding"
             ],
             "assignments": [
-              "Assignment 2: AI Terminology & Concepts (20 pts)",
-              "Quiz 2: AI Fundamentals (10 pts)",
-              "Discussion 2: AI Capabilities Discussion (5 pts)"
+              "Discussion Pre-Work 2 (8 pts, credit/no credit)",
+              "Guided activity: watch a model learn from data (asynchronous block)"
             ],
-            "deliverableDueDate": "Week 2 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 8/30/2026 11:59 PM"
           },
           {
+            "weekLabel": "Week 3 (8/31/2026 - 9/6/2026)",
             "weekNumber": 3,
             "dates": "8/31/2026 - 9/6/2026",
             "topics": [
-              "Machine Learning overview",
-              "Supervised learning concepts",
-              "Unsupervised learning concepts",
-              "Training data and models",
-              "Common ML applications"
+              "Understanding data in AI: big data and where training sets come from",
+              "Data collection methods",
+              "Data bias and representation issues",
+              "Privacy, consent, and data protection — first pass"
             ],
             "assignments": [
-              "Assignment 3: Machine Learning Basics (20 pts)",
-              "Quiz 3: Machine Learning Fundamentals (10 pts)",
-              "Discussion 3: ML in the Real World (5 pts)"
+              "Discussion Pre-Work 3 (8 pts, credit/no credit)",
+              "STUDIO: Module 1 Artifact — Dataset Bias and Representation Analysis (40 pts)",
+              "Module 1 Reflection (15 pts)"
             ],
-            "deliverableDueDate": "Week 3 Sunday 11:59 PM"
-          },
+            "deliverableDueDate": "Sunday 9/6/2026 11:59 PM",
+            "notes": "Studio week. Export your artifact and reflection to PDF and file them in your own portfolio — the course app does not store them for you."
+          }
+        ]
+      },
+      {
+        "title": "Module 2: Generative AI and the Art of the Prompt (Weeks 4-6)",
+        "description": "How generative systems produce text and images, how to prompt them well, and where models run — frontier services versus open-weight models on local hardware. COR topics: Introduction to Generative AI; Effective Prompt Engineering. Primary SLOs: 1, 2.",
+        "weeks": [
           {
+            "weekLabel": "Week 4 (9/7/2026 - 9/13/2026)",
             "weekNumber": 4,
             "dates": "9/7/2026 - 9/13/2026",
             "topics": [
-              "Reinforcement learning",
-              "Transfer learning",
-              "Model evaluation metrics",
-              "Overfitting and underfitting",
-              "Phase 1 review and assessment"
+              "Introduction to generative AI",
+              "Large language models — the basics",
+              "Text, image, audio, and video generation",
+              "Training process overview, without the technical details",
+              "Generative AI vs. traditional AI"
             ],
             "assignments": [
-              "Assignment 4: ML Applications Analysis (20 pts)",
-              "Quiz 4: ML Concepts Review (10 pts)",
-              "Project 1: AI Foundations Report (30 pts)"
+              "Discussion Pre-Work 4 (8 pts, credit/no credit) — posted to the discussion board this week",
+              "Module 1 Concept Quiz (30 pts, best of 2 attempts, in Canvas)",
+              "Module 1 wrap-up discussion — on the discussion board, not in a session"
             ],
-            "deliverableDueDate": "Week 4 Sunday 11:59 PM"
-          }
-        ]
-      },
-      {
-        "title": "Phase 2: Generative AI & Prompt Engineering (Weeks 5-8)",
-        "description": "Explore generative AI technologies and master prompt engineering techniques",
-        "weeks": [
+            "deliverableDueDate": "Sunday 9/13/2026 11:59 PM",
+            "notes": "NO LIVE SESSION — Monday 9/7/2026 is Labor Day. Module 1's wrap-up conversation moves to the course discussion board this week."
+          },
           {
+            "weekLabel": "Week 5 (9/14/2026 - 9/20/2026)",
             "weekNumber": 5,
             "dates": "9/14/2026 - 9/20/2026",
             "topics": [
-              "Introduction to Generative AI",
-              "Large Language Models (LLMs) overview",
-              "How LLMs work",
-              "Popular LLM platforms and tools",
-              "Getting started with AI chatbots"
+              "Anatomy of an effective prompt",
+              "Prompt techniques: specificity, context, examples",
+              "Iterative prompt refinement",
+              "Domain-specific prompting strategies"
             ],
             "assignments": [
-              "Assignment 5: LLM Platform Exploration (20 pts)",
-              "Quiz 5: Generative AI Basics (10 pts)",
-              "Discussion 5: First Impressions with LLMs (5 pts)"
+              "Discussion Pre-Work 5 (8 pts, credit/no credit)",
+              "Prompting practice across a range of tasks (asynchronous block)"
             ],
-            "deliverableDueDate": "Week 5 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 9/20/2026 11:59 PM",
+            "notes": "Topic-track oral presentations begin this week and run through week 14 — one or two slots per session. Topics require instructor approval."
           },
           {
+            "weekLabel": "Week 6 (9/21/2026 - 9/27/2026)",
             "weekNumber": 6,
             "dates": "9/21/2026 - 9/27/2026",
             "topics": [
-              "Prompt engineering fundamentals",
-              "Prompt design principles",
-              "Clear and specific prompting",
-              "Context and examples in prompts",
-              "Iterative refinement techniques"
+              "The AI landscape: frontier models vs. local and open-weight models",
+              "What open-weight models on ordinary hardware can do today",
+              "Tradeoffs — capability against privacy, cost, and control",
+              "Comparing outputs across tools"
             ],
             "assignments": [
-              "Assignment 6: Basic Prompt Engineering (20 pts)",
-              "Quiz 6: Prompt Design Principles (10 pts)",
-              "Discussion 6: Prompt Challenges (5 pts)"
+              "Discussion Pre-Work 6 (8 pts, credit/no credit)",
+              "STUDIO: Module 2 Artifact — Prompt Engineering Casebook (60 pts). The same task run through Gemini plus any two tools of your choice; three results total.",
+              "Module 2 Reflection (15 pts)"
             ],
-            "deliverableDueDate": "Week 6 Sunday 11:59 PM"
-          },
+            "deliverableDueDate": "Sunday 9/27/2026 11:59 PM",
+            "notes": "Studio week. Frontier-vs-local returns in Module 4 as a data-protection strategy."
+          }
+        ]
+      },
+      {
+        "title": "Module 3: AI as a Learning Partner - Honestly (Weeks 7-8)",
+        "description": "Using AI to learn without outsourcing the learning, and reading an answer well enough to know whether anything was actually looked up. COR topics: AI Tools for Learning; Academic Integrity and AI. Primary SLOs: 2, with SLO 6 drafted.",
+        "weeks": [
           {
+            "weekLabel": "Week 7 (9/28/2026 - 10/4/2026)",
             "weekNumber": 7,
             "dates": "9/28/2026 - 10/4/2026",
             "topics": [
-              "Advanced prompt techniques",
-              "Chain-of-thought prompting",
-              "Few-shot and zero-shot learning",
-              "Role-based prompting",
-              "Multi-step prompting strategies"
+              "AI-powered research tools; writing assistance and editing tools",
+              "Study aids, tutoring systems, and productivity tools",
+              "The model vs. the app around it — did it look this up, or is it telling me what it remembers?",
+              "Why the two ways of answering fail differently: invented citations collapse under checking, but a real link that does not support the claim slips past a casual glance",
+              "Treating a citation as where to check, not as proof that anyone checked"
             ],
             "assignments": [
-              "Assignment 7: Advanced Prompting Techniques (20 pts)",
-              "Quiz 7: Advanced Prompt Engineering (10 pts)",
-              "Discussion 7: Prompt Engineering Success Stories (5 pts)"
+              "Discussion Pre-Work 7 (8 pts, credit/no credit)",
+              "Module 2 Concept Quiz (30 pts, best of 2 attempts, in Canvas)",
+              "Activity: read the evidence off an answer — verify three citations end to end (asynchronous block)"
             ],
-            "deliverableDueDate": "Week 7 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 10/4/2026 11:59 PM"
           },
           {
+            "weekLabel": "Week 8 (10/5/2026 - 10/11/2026)",
             "weekNumber": 8,
             "dates": "10/5/2026 - 10/11/2026",
             "topics": [
-              "Image generation with AI",
-              "Video and audio generation",
-              "Multimodal AI systems",
-              "AI content creation workflows",
-              "Phase 2 review and midterm preparation"
+              "Promoting a culture of academic integrity",
+              "Authorship and AI collaboration",
+              "Citation standards for AI-generated content",
+              "Institutional policies and best practices"
             ],
             "assignments": [
-              "Assignment 8: Multimodal AI Exploration (20 pts)",
-              "Quiz 8: Generative AI Review (10 pts)",
-              "Midterm Exam: Covers Weeks 1-8 (50 pts)"
+              "Discussion Pre-Work 8 (8 pts, credit/no credit)",
+              "STUDIO: Module 3 Artifact — Personal AI Code v1 plus an AI-assisted research exercise with full disclosure (50 pts)",
+              "Module 3 Reflection (15 pts)"
             ],
-            "deliverableDueDate": "Week 8 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 10/11/2026 11:59 PM",
+            "notes": "Studio week."
           }
         ]
       },
       {
-        "title": "Phase 3: AI Evaluation & Academic Integrity (Weeks 9-11)",
-        "description": "Develop critical evaluation skills and understand AI in academic contexts",
+        "title": "Module 4: When AI Gets It Wrong - Bias, Privacy and Security (Weeks 9-11)",
+        "description": "Where bias comes from, how to audit for it, and how to protect your own data while still using these tools. COR topics: AI Bias and Fairness; Privacy, Security, and AI. Primary SLOs: 3, 4.",
         "weeks": [
           {
+            "weekLabel": "Week 9 (10/12/2026 - 10/18/2026)",
             "weekNumber": 9,
             "dates": "10/12/2026 - 10/18/2026",
             "topics": [
-              "Evaluating AI-generated content",
-              "Fact-checking AI outputs",
-              "Identifying AI hallucinations",
-              "Quality assessment criteria",
-              "Verification strategies"
+              "Sources of bias in AI systems",
+              "Algorithmic discrimination",
+              "Fairness metrics and their trade-offs",
+              "Bias mitigation strategies"
             ],
             "assignments": [
-              "Assignment 9: AI Content Evaluation (20 pts)",
-              "Quiz 9: Evaluation Techniques (10 pts)",
-              "Discussion 9: AI Hallucination Examples (5 pts)"
+              "Discussion Pre-Work 9 (8 pts, credit/no credit)",
+              "Module 3 Concept Quiz (30 pts, best of 2 attempts, in Canvas)",
+              "Guided activity: finding bias in a real output (asynchronous block)"
             ],
-            "deliverableDueDate": "Week 9 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 10/18/2026 11:59 PM"
           },
           {
+            "weekLabel": "Week 10 (10/19/2026 - 10/25/2026)",
             "weekNumber": 10,
             "dates": "10/19/2026 - 10/25/2026",
             "topics": [
-              "AI and academic integrity",
-              "Proper AI use in academic work",
-              "Citation and attribution guidelines",
-              "Institutional AI policies",
-              "Plagiarism and AI-generated content"
+              "Data privacy in AI systems",
+              "AI and surveillance",
+              "Cybersecurity threats and AI",
+              "Personal data protection strategies — including running models locally"
             ],
             "assignments": [
-              "Assignment 10: Academic Integrity Case Studies (20 pts)",
-              "Quiz 10: AI in Academia (10 pts)",
-              "Discussion 10: AI Policy Perspectives (5 pts)"
+              "Discussion Pre-Work 10 (8 pts, credit/no credit)",
+              "Activity: audit what you have already given away (asynchronous block)"
             ],
-            "deliverableDueDate": "Week 10 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 10/25/2026 11:59 PM"
           },
           {
+            "weekLabel": "Week 11 (10/26/2026 - 11/1/2026)",
             "weekNumber": 11,
             "dates": "10/26/2026 - 11/1/2026",
             "topics": [
-              "AI detection tools",
-              "Best practices for AI-assisted writing",
-              "Disclosure and transparency",
-              "Building AI literacy in others",
-              "Phase 3 review and assessment"
+              "Putting it together: auditing a real system",
+              "Assessing your own exposure",
+              "Choosing protection strategies that you will actually use"
             ],
             "assignments": [
-              "Assignment 11: AI Disclosure Guidelines (20 pts)",
-              "Quiz 11: Academic Integrity Review (10 pts)",
-              "Project 2: AI Evaluation Report (30 pts)"
+              "Discussion Pre-Work 11 (8 pts, credit/no credit)",
+              "STUDIO: Module 4 Artifact — Bias audit of a real AI output plus a personal data-protection and security assessment (60 pts)",
+              "Module 4 Reflection (15 pts)"
             ],
-            "deliverableDueDate": "Week 11 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 11/1/2026 11:59 PM",
+            "notes": "Studio week."
           }
         ]
       },
       {
-        "title": "Phase 4: Ethics, Privacy & Society (Weeks 12-15)",
-        "description": "Explore ethical frameworks, privacy concerns, and societal impact of AI",
+        "title": "Module 5: AI in Your World - Work and Your Field (Weeks 12-14)",
+        "description": "What is actually changing about work, and what AI looks like inside your own discipline. COR topics: AI and Employment; AI Across Disciplines. Primary SLOs: 4, 5.",
         "weeks": [
           {
+            "weekLabel": "Week 12 (11/2/2026 - 11/8/2026)",
             "weekNumber": 12,
             "dates": "11/2/2026 - 11/8/2026",
             "topics": [
-              "AI bias and fairness",
-              "Sources of bias in AI systems",
-              "Detecting biased outputs",
-              "Mitigation strategies",
-              "Fairness in AI decision-making"
+              "Job displacement vs. job transformation",
+              "New AI-related roles and skills",
+              "Working alongside AI systems",
+              "Preparing for an AI-augmented workforce"
             ],
             "assignments": [
-              "Assignment 12: Bias Analysis Exercise (20 pts)",
-              "Quiz 12: AI Bias & Fairness (10 pts)",
-              "Discussion 12: Bias in AI Systems (5 pts)"
+              "Discussion Pre-Work 12 (8 pts, credit/no credit)",
+              "Module 4 Concept Quiz (30 pts, best of 2 attempts, in Canvas)",
+              "Guided activity: AI in one job you might actually want (asynchronous block)"
             ],
-            "deliverableDueDate": "Week 12 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 11/8/2026 11:59 PM"
           },
           {
+            "weekLabel": "Week 13 (11/9/2026 - 11/15/2026)",
             "weekNumber": 13,
             "dates": "11/9/2026 - 11/15/2026",
             "topics": [
-              "Privacy and data protection",
-              "Data collection practices in AI",
-              "Privacy risks of AI tools",
-              "Protection strategies",
-              "GDPR and AI regulations"
+              "AI across disciplines — healthcare, business, education, the arts, trades, and the sciences",
+              "Human-AI collaboration patterns that hold up",
+              "Finding the real problems in your own field"
             ],
             "assignments": [
-              "Assignment 13: Privacy Risk Assessment (20 pts)",
-              "Quiz 13: Data Privacy & Protection (10 pts)",
-              "Discussion 13: Privacy vs. Convenience (5 pts)"
+              "Discussion Pre-Work 13 (8 pts, credit/no credit)",
+              "Mini-project proposal: scope an AI solution in your own field (submitted for feedback, not separately graded)"
             ],
-            "deliverableDueDate": "Week 13 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 11/15/2026 11:59 PM"
           },
           {
+            "weekLabel": "Week 14 (11/16/2026 - 11/22/2026)",
             "weekNumber": 14,
             "dates": "11/16/2026 - 11/22/2026",
             "topics": [
-              "AI and employment",
-              "Job displacement concerns",
-              "New AI-related careers",
-              "Skills for AI-augmented work",
-              "Preparing for the AI workforce"
+              "Building something in your field",
+              "Testing whether it actually helps",
+              "Documenting what you tried and what you rejected"
             ],
             "assignments": [
-              "Assignment 14: AI Career Impact Analysis (20 pts)",
-              "Quiz 14: AI & Employment (10 pts)",
-              "Discussion 14: Your Career in the AI Era (5 pts)"
+              "Discussion Pre-Work 14 (8 pts, credit/no credit)",
+              "STUDIO: Module 5 Artifact — Discipline-Specific AI Solution Mini-Project (60 pts)",
+              "Module 5 Reflection (15 pts)"
             ],
-            "deliverableDueDate": "Week 14 Sunday 11:59 PM"
-          },
+            "deliverableDueDate": "Sunday 11/22/2026 11:59 PM",
+            "notes": "Studio week. Last week of topic-track oral presentations."
+          }
+        ]
+      },
+      {
+        "title": "Module 6: Governing AI and Owning Your Future (Weeks 15-17)",
+        "description": "Who governs these systems, where the rules are heading, and what your own standing policy is going to be. COR topics: AI Governance and Policy; Future of AI and Society. Primary SLOs: 4, 6, plus a portfolio capstone touching all six.",
+        "weeks": [
           {
+            "weekLabel": "Week 15 (11/23/2026 - 11/29/2026)",
             "weekNumber": 15,
             "dates": "11/23/2026 - 11/29/2026",
             "topics": [
               "AI governance and policy",
-              "Regulatory frameworks",
-              "Industry standards",
-              "Future policy directions",
-              "NO CLASS: Thanksgiving Break 11/25-11/29"
+              "Regulatory frameworks and industry standards",
+              "Where policy appears to be heading"
             ],
             "assignments": [
-              "Assignment 15: AI Policy Research (20 pts)",
-              "Quiz 15: AI Governance (10 pts)",
-              "Project 3: Ethical AI Framework (30 pts)"
+              "Discussion Pre-Work 15 (8 pts, credit/no credit)",
+              "Short primer for the policy brief — about 1.5 hours total, designed to fit Monday and Tuesday"
             ],
-            "deliverableDueDate": "Week 15 Sunday 11:59 PM"
-          }
-        ]
-      },
-      {
-        "title": "Phase 5: Integration & Final Assessment (Weeks 16-17)",
-        "description": "Synthesize learning and complete final assessments",
-        "weeks": [
+            "deliverableDueDate": "Nothing is due over the holiday",
+            "notes": "THANKSGIVING WEEK — reduced workload. The Monday session meets; all assigned work fits Monday and Tuesday. Module 6's remaining content moves into week 16. No due date in this course lands on a holiday."
+          },
           {
+            "weekLabel": "Week 16 (11/30/2026 - 12/6/2026)",
             "weekNumber": 16,
             "dates": "11/30/2026 - 12/6/2026",
             "topics": [
-              "Course content review",
-              "AI literacy best practices summary",
-              "Future trends in AI",
-              "Building ongoing AI literacy",
-              "Final exam preparation"
+              "Future of AI and society",
+              "What you are actually paying for — subscriptions, aggregators, and stacked free tiers",
+              "Revisiting the \"10 Things\" list with everything you now know",
+              "Writing a policy recommendation that someone could act on"
             ],
             "assignments": [
-              "Assignment 16: Course Reflection (20 pts)",
-              "Quiz 16: Comprehensive Review (10 pts)",
-              "Discussion 16: Course Takeaways (5 pts)"
+              "Discussion Pre-Work 16 (8 pts, credit/no credit)",
+              "STUDIO: Module 6 Artifact — AI Policy Recommendation Brief (1-2 pages), Personal AI Code v2 with justification, and the revised \"10 Things\" pair (50 pts)",
+              "Module 6 Reflection (15 pts)",
+              "Portfolio assembled and ready for presentation"
             ],
-            "deliverableDueDate": "Week 16 Sunday 11:59 PM"
+            "deliverableDueDate": "Sunday 12/6/2026 11:59 PM",
+            "notes": "Combined governance and future-of-AI discussion in this session, since week 17 opens with presentations. Your portfolio must be assembled by Sunday — if you have been exporting at each studio close, this is a check, not a scramble."
           },
           {
+            "weekLabel": "Week 17 (12/7/2026 - 12/11/2026)",
             "weekNumber": 17,
             "dates": "12/7/2026 - 12/11/2026",
             "topics": [
-              "Final exam",
-              "Course evaluation",
-              "Next steps in AI learning",
-              "Resource recommendations",
-              "Course closure"
+              "Portfolio presentations",
+              "Synthesis: baseline vs. final, and what changed",
+              "Strategies for staying AI-literate after this course ends"
             ],
             "assignments": [
-              "Final Exam: Comprehensive Assessment (75 pts)",
-              "Course Evaluation (required)"
+              "Oral Presentation (80 pts) — portfolio track, 4-5 minutes plus one live Q&A question, in the Monday session",
+              "Final Portfolio Assembly and Synthesis Reflection (70 pts)"
             ],
-            "deliverableDueDate": "Week 17 (Finals Week) - See Canvas for specific due dates"
+            "deliverableDueDate": "Thursday 12/10/2026 11:59 PM — semester ends Friday 12/11/2026",
+            "notes": "Final week. Students who presented on the topic track in weeks 5-14 still submit the full portfolio; the topic track replaces only the presentation."
           }
         ]
       }
@@ -355,29 +377,29 @@
   "grading": {
     "breakdown": [
       {
-        "category": "Assignments",
-        "percentage": 35,
-        "description": "Weekly assignments (16 assignments @ 20 pts each = 320 pts)"
+        "category": "Module Artifacts",
+        "percentage": 40,
+        "description": "Six signature artifacts, one per module, graded against a rubric as each module closes (40 + 60 + 50 + 60 + 60 + 50 = 320 pts). Each is hands-on application verifying that module's outcomes."
       },
       {
-        "category": "Quizzes",
+        "category": "Semester Portfolio",
         "percentage": 20,
-        "description": "Weekly quizzes (16 quizzes @ 10 pts each = 160 pts, lowest 2 dropped)"
+        "description": "Six module reflections (15 pts each = 90 pts) plus the final assembly and synthesis reflection (70 pts) = 160 pts. Student-created and student-maintained: export each artifact and reflection at studio close and file it in your own portfolio."
       },
       {
-        "category": "Projects",
-        "percentage": 20,
-        "description": "Three major projects (3 projects @ 30 pts each = 90 pts)"
-      },
-      {
-        "category": "Exams",
+        "category": "Concept Quizzes",
         "percentage": 15,
-        "description": "Midterm (50 pts) + Final Exam (75 pts) = 125 pts"
+        "description": "Four low-stakes quizzes covering Modules 1-4 (30 pts each = 120 pts), delivered in the Canvas quiz system. Retake-friendly: best of 2 attempts, with any time limits managed by Canvas."
       },
       {
-        "category": "Discussions",
+        "category": "Discussion Pre-Work",
+        "percentage": 15,
+        "description": "Weekly, credit/no credit, weeks 2-16 (8 pts each = 120 pts). This is the primer that makes the Monday discussions work. Week 1 has no pre-work by design."
+      },
+      {
+        "category": "Oral Presentation",
         "percentage": 10,
-        "description": "Weekly discussion forums (16 discussions @ 5 pts each = 80 pts)"
+        "description": "80 pts. Choose one track. Portfolio track (week 17): a 4-5 minute highlight-reel walkthrough plus one live Q&A question. Topic track (weeks 5-14, instructor approval required): a short deep dive on any AI topic you want to go further on. Everyone submits the full portfolio either way."
       }
     ],
     "scale": [
@@ -385,59 +407,46 @@
       { "grade": "B", "range": "80-89%" },
       { "grade": "C", "range": "70-79%" },
       { "grade": "D", "range": "60-69%" },
-      { "grade": "F", "range": "Below 60%" }
+      { "grade": "F", "range": "Below 60%" },
+      { "grade": "Pass/No Pass option", "range": "You may elect Pass/No Pass instead of a letter grade. Pass = 70% or higher. The election deadline is set by the college — see Important Semester Dates." }
     ],
     "totalPoints": 800
   },
   "materials": {
     "required": [
-      "Access to computer with internet connectivity",
-      "Access to AI tools (free tiers provided: ChatGPT, Claude, or similar)",
-      "Access to Canvas learning management system",
-      "Various open educational resources (provided via Canvas)"
+      "No textbook. All readings and interactive materials are provided through Canvas and the course app at no cost.",
+      "A computer with a current web browser, your Mendocino College email, and Canvas. A phone alone is not enough for most coursework.",
+      "Google Gemini — the baseline tool for this course. It comes free with your college Google Workspace account (@student.mendocino.edu); there is nothing to sign up for. Class demonstrations and walkthroughs use Gemini, so what is on your screen will match what is on the shared screen.",
+      "NotebookLM and Microsoft Copilot (web) — also free with your college login, used where comparing tools teaches something.",
+      "Nothing in this course requires you to pay for anything. Every activity can be completed on free tiers, and nearly all of them on your college account alone. You never need an account outside the college."
     ],
     "optional": [
-      "Artificial Intelligence: A Modern Approach by Stuart Russell and Peter Norvig",
-      "Prompt Engineering Guide (online resource: promptengineering.guide)",
-      "AI literacy resources from reputable sources (MIT, Stanford, etc.)"
+      "Personal free tiers on your own account and your own terms: ChatGPT, Claude, Grok, DeepSeek, Perplexity, and others. Several assignments invite you to compare tools; those will say exactly what is required. If you use one of these you are agreeing to that company's terms yourself — never put your student ID, your grades, other students' work, or anyone's personal information into it.",
+      "Tool guides for each supported tool, linked from the course homepage: setup, interface, free-tier limits, what the tool does with your data, and what it is bad at. These are ungraded reference material and are never required reading — every graded concept is taught in the lessons themselves.",
+      "Tool guides carry an \"accurate as of\" date. AI products change faster than a semester does, so if what you see on screen does not match the guide, trust the screen and tell me. Noticing that gap is itself an AI-literacy skill."
     ]
   },
   "importantDates": [
-    {
-      "week": 4,
-      "event": "Project 1 Due",
-      "description": "AI Foundations Report"
-    },
-    {
-      "week": 8,
-      "event": "Midterm Exam",
-      "description": "Covers Weeks 1-8: AI Foundations and Generative AI"
-    },
-    {
-      "week": 11,
-      "event": "Project 2 Due",
-      "description": "AI Evaluation Report"
-    },
-    {
-      "week": 15,
-      "event": "Project 3 Due & Thanksgiving Break",
-      "description": "Ethical AI Framework; No class 11/25-11/29/2026"
-    },
-    {
-      "week": 17,
-      "event": "Final Exam",
-      "description": "Comprehensive assessment covering all course content"
-    }
+    { "week": 1, "event": "First Session and Baseline Artifact", "description": "Monday 8/17/2026. \"10 Things AI Can Help Me Do\" drafted live in session and filed in your portfolio." },
+    { "week": 3, "event": "Module 1 Artifact Due", "description": "Dataset Bias and Representation Analysis plus Module 1 Reflection — Sunday 9/6/2026." },
+    { "week": 4, "event": "No Class - Labor Day", "description": "Monday 9/7/2026. Module 1's wrap-up discussion moves to the course discussion board." },
+    { "week": 6, "event": "Module 2 Artifact Due", "description": "Prompt Engineering Casebook plus Module 2 Reflection — Sunday 9/27/2026." },
+    { "week": 8, "event": "Module 3 Artifact Due", "description": "Personal AI Code v1 and AI-assisted research exercise plus Module 3 Reflection — Sunday 10/11/2026." },
+    { "week": 11, "event": "Module 4 Artifact Due", "description": "Bias audit and personal data-protection assessment plus Module 4 Reflection — Sunday 11/1/2026." },
+    { "week": 14, "event": "Module 5 Artifact Due", "description": "Discipline-Specific AI Solution Mini-Project plus Module 5 Reflection — Sunday 11/22/2026. Last week for topic-track presentations." },
+    { "week": 15, "event": "Thanksgiving Week - Reduced Workload", "description": "Week of 11/23/2026. About 1.5 hours of work total, fitting Monday and Tuesday. Nothing is due over the holiday." },
+    { "week": 16, "event": "Module 6 Artifact Due and Portfolio Assembled", "description": "Policy brief, Personal AI Code v2, revised \"10 Things\", and Module 6 Reflection — Sunday 12/6/2026. Portfolio must be assembled and ready to present." },
+    { "week": 17, "event": "Portfolio Presentations and Final Submission", "description": "Presentations in the Monday 12/7/2026 session. Final portfolio and synthesis reflection due Thursday 12/10/2026. Semester ends Friday 12/11/2026." }
   ],
   "workload": {
     "hoursPerWeek": 9,
-    "breakdown": "3 hrs lecture/content + 6 hrs out-of-class work",
-    "notes": "Peak weeks (4, 8, 11, 15, 17) with projects and exams may require 10-12 hours"
+    "breakdown": "3 hrs in-class equivalent (90-min Monday Zoom session + 90-min structured asynchronous block) + 6 hrs out-of-class work on assignments, portfolio, and discussion pre-work",
+    "notes": "This matches the Course Outline of Record: 51 in-class contact hours and 102 out-of-class hours across 17 weeks, for 153 total student learning hours. Studio weeks (3, 6, 8, 11, 14, 16) sit at the top of that range. Thanksgiving week (15) is deliberately light at about 1.5 hours total. If you are consistently well over 9 hours, email me — that usually means an instruction is unclear rather than that you are behind."
   },
   "policies": {
-    "attendance": "As an online course, regular engagement is expected. Weekly participation in discussions and timely submission of assignments demonstrates attendance.",
-    "lateWork": "Assignments: 10% penalty per day (max 3 days). Projects: 10% penalty per day (max 5 days). Quizzes: no late submissions (lowest 2 dropped). Discussions: 50% credit within 3 days.",
-    "makeupExams": "No makeup exams except documented emergencies. Must contact instructor within 24 hours of emergency. Must achieve minimum 60% on final to pass course.",
-    "academicIntegrity": "All work must be your own. AI tools may be used as specified in course assignments. Unauthorized AI use or plagiarism results in zero on assignment and possible course failure. See Week 10 for detailed AI use guidelines."
+    "attendance": "Come to the Monday sessions when you can — the discussion is the course, and it works because people arrive having done the previous week's material. Sessions are recorded and posted in Canvas. If work, caregiving, or illness keeps you from attending live, watch the recording and post to that week's discussion board; you earn the same credit and you will not lose participation points for a schedule you cannot control. As a hybrid course, regular weekly engagement in Canvas and the course app is what demonstrates attendance. If your internet access is unreliable, tell me in week 1 — every graded activity has a low-bandwidth path, and the library loans laptops and hotspots.",
+    "lateWork": "Module artifacts and reflections have a standing 48-hour grace window with no penalty and no need to ask. After that, contact me before the deadline if you can, or as soon as you are able if you cannot — I would much rather adjust a deadline than lose you. Discussion pre-work is credit/no credit and must be submitted before its Monday session to serve its purpose, so it is not accepted late; the two lowest pre-work scores are dropped to absorb the weeks life gets in the way. Concept quizzes are open for a window in Canvas with best-of-2 attempts and are not reopened afterward. The final portfolio and synthesis reflection cannot be accepted after Thursday 12/10/2026 because grades are due. This course-specific policy replaces the general late-submission statement shown under Policies &amp; Resources.",
+    "makeupExams": "There are no exams in this course — no midterm, no final. Every assessment is open-resource by design and asks you to demonstrate the outcome through your own work: analysis of your own tool sessions, reflections tied to our discussions, and application in your own field. If you miss an oral presentation slot for a documented emergency, contact me within 48 hours and we will schedule a replacement.",
+    "academicIntegrity": "<strong>This is a course about AI, so of course you will use it — that is the assignment, not a loophole.</strong> In this course you may use generative AI tools as part of the learning process. Assignments are designed to encourage transparent and ethical AI use and include guidance for tracking and citing that use. (Open approach, adapted from the ASCCC resource document <em>Academic Integrity Policies in the Age of Artificial Intelligence</em>, 2023-2024.)<br><br><strong>What this course asks is that your use be visible.</strong> When AI helped, include a short disclosure note with your submission: which tool and version, what you asked it to do, and what you changed or verified yourself. One or two sentences is enough, and it costs you nothing.<br><br><strong>The line that matters:</strong> an artifact has to show <em>your</em> judgment. A prompt casebook full of outputs you never evaluated, or a reflection written by a model about experiences you did not have, does not demonstrate the outcome — and it is graded on that basis.<br><br><strong>Permission is course-by-course.</strong> What is expected here may be prohibited in your English or history class. Always check each instructor's policy. Unauthorized AI use in courses that prohibit it falls under the College Academic Honesty Policy (AP 5500.2).<br><br><strong>Protect your privacy and other people's.</strong> Never enter your student ID, your grades, another student's work, or anyone's personal information into any AI tool. If an assignment appears to require it, it does not — ask me and I will give you the workaround."
   }
 }

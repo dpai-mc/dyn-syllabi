@@ -1,6 +1,7 @@
 {
   "institution": "Mendocino College",
-  "academicYear": "2025-2026",
+  "academicYear": "2026-2027",
+  "_updated": "2026-08-17 — academicYear rolled to 2026-2027 for the Fall 2026 term. keyDates below were already Fall 2026 dates; verify them against the official Mendocino College academic calendar before posting. Previous version: data/old/college-policies.2026-08-17.json",
   "policies": [
     {
       "code": "CANVAS",
